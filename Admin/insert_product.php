@@ -18,21 +18,25 @@ include("includes/db.php");  // db connections
     </script> -->
 
     <title>Inserting Product</title>
+<link rel = "stylesheet" type="text/css" href = "../Styles/insert_product.css">
 </head>
 <body >
     
     <form action="insert_product.php" method="post" enctype="multipart/form-data">
-        <table align="center" width="750" border ="2">
-            <tr align="center">
+    <br>
+        <table id="tab" align="center" width="600" border ="3"> 
+            <tr id="ins" align="center">
                 <td colspan = 4><h2>Insert New Product Here</h2></td>
             </tr>
+            
+            
 
-            <tr>
+            <tr id="protitle" >
                 <td align="center"><b>Product Title:</b></td>
-                <td colspan = 2><input type="text" name="product_title" size = "60" required></td>
+                <td colspan = 2><input type="text" name="product_title" size = "65" required></td>
             </tr>
 
-            <tr>
+            <tr id="procat">
                 <td align="center"><b>Product Categories:</b></td>
                 <td colspan = 2>
                     <select name="product_cat" required>
@@ -54,39 +58,40 @@ include("includes/db.php");  // db connections
                     </td>
             </tr>
 
-            <tr>
+            <tr id="proimg">
                 <td align="center"><b>Product Image :</b></td>
                 <td colspan = 2><input type="file" name="product_image" ></td>
             </tr>
 
-            <tr>
+            <tr id="prostock">
                 <td align="center"><b>Product Stock : <br>(In kg)</b></td>
                 <td colspan = 2><input type="text" name="product_stock" required ></td>
             </tr>
 
-            <tr>
+            <tr id="proprice">
                 <td align="center"><b>Product Price : <br>(Per kg)</b></td>
                 <td colspan = 2><input type="text" name="product_price" required ></td>
             </tr>
 
-            <tr>
+            <tr id="prodesc">
+
                 <td align="center"><b>Product Description:</b></td>
                 <td colspan = 2><textarea name="product_desc" id="" cols="40" rows="8" ></textarea></td>
             </tr>
 
-            <tr>
+            <tr id="prokey">
                 <td align="center"><b>Product Keywords:</b></td>
                 <td colspan = 2><input type="text" name="product_keywords" size = "60" ></td>
             </tr>
             
-            <tr>
+            <tr id="dev">
                 <td align="center"><b>Delivery :</b></td>
-                <td ><input type="radio" name="product_delivery" value = "yes" >Yes</td>
-                <td ><input type="radio" name="product_delivery" value = "no" >No</td>
+                <td id="yes"><input type="radio" name="product_delivery" value = "yes" >Yes</td>
+                <td id="no" ><input type="radio" name="product_delivery" value = "no" >No</td>
             </tr>
 
             <tr align ="center">
-                <td colspan = 4><input type="submit" name="insert_post" value="Insert Product Now"></td>
+                <td colspan = 4><input type="submit" id="insnow" name="insert_post" value="Insert Product Now"></td>
             </tr>
         </table>
     </form>

@@ -26,9 +26,12 @@
 </html>
 
 <?php 
+include(Includes/db.php);
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+
+
 
 
 

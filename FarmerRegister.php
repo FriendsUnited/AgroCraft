@@ -26,8 +26,7 @@
 	</body>
 </html>
 
-
 <?php 
-include(Includes/db.php);
+include("Includes/db.php");
 
 ?>

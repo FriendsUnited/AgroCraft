@@ -40,23 +40,29 @@ input{font-size:30px;
 	border-right: none;
 	border-color: black;
 }
+
 #downlabel{
 	margin-left:-30%;
 	margin-right:30%
-
 }
+
 #forgotlabel{
 	margin-right: -30%;
 	margin-left:20%;
 	font-size:15px;
 }
 
-/*#divid{*/
-	/*margin-bottom:-40%;*/
-	/*margin: auto;*/
-
-/*}*/
 #fs{
 font-size:35px;
+}
 
+#downlabel a{
+	color: black;
+	text-decoration: none;
+	
+}
+
+#link {
+	color: black;
+	text-decoration: none;
 }

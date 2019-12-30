@@ -18,6 +18,10 @@
 				<br><p></p>
 			</div>
 	</form>
+	<div>
+			<label id="forgotPassword" for="forgot password" ><a id = 'link' href="BuyerForgotPassword.php" >Forgot your password ?</a></label>
+			<label id="account" for="create new account"><a id = 'link' href="BuyerRegistration.php" >Create New Account</a></label>
+		</div>
 	</body>
 </html>
 

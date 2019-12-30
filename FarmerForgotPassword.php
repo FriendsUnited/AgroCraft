@@ -19,7 +19,31 @@
     </body>
 </html>
 
+
 <?php 
-include("Includes/db.php");
+    include("Includes/db.php");
+    if(isset($_POST['register'])) {
+        $phonenumber = $_POST['phonenumber'];
+        $pan = $_POST['pan'];
+        $password = $_POST['password'];
+        $confirmpassword = $_POST['confirmpassword'];
+
+        $query = "select * from farmerregistration where farmer_phone = '$phonenumber' and farmer_pan = '$pan'";
+        $run_query = mysqli_query($con,$query);
+        $count_rows = mysqli_num_rows($run_query);
+        
+        if ($count_rows != 0) {
+            $update_query = "update farmerregistration set farmer_password = '$password' ,
+            farmer_conf_pswd = '$confirmpassword' where farmer_phone = '$phonenumber' and farmer_pan = '$pan' ";
+
+            $run_query = mysqli_query($con,$update_query);
+
+            echo "<script>alert('Password Updated Successfully');</script>";
+            echo "<script>window.open('FarmerLogin.php','_self')</script>";
+        }
+        else if ($count_rows == 0) {
+            echo "<script>alert('Please Enter Valid Details');</script>";
+        }
+    }
 
 ?>

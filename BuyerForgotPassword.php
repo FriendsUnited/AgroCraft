@@ -18,3 +18,8 @@
         </form>
     </body>
 </html>
+
+<?php 
+include(Includes/db.php);
+
+?>

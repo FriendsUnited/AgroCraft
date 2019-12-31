@@ -3,7 +3,7 @@
 
 	<head>
 		<title>Farmer Login portal</title>
-		<link rel="stylesheet" type="text/css" href="Styles/FarmerLogin.css">
+		<link rel="stylesheet" type="text/css" href="../Styles/FarmerLogin.css">
 		<meta name="viewport" content="width=device-width,inital-scale=1">
 		<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 	</head>
@@ -31,7 +31,7 @@
 </html>
 
 <?php 
-	include("Includes/db.php");
+	include("../Includes/db.php");
 	if(isset($_POST['login'])){
 
 		$phonenumber = $_POST['phonenumber'];

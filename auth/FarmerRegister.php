@@ -29,7 +29,7 @@
 
 <?php 
 
-	include("Includes/db.php");
+	include("../Includes/db.php");
 
 	if (isset($_POST['register'])) {
 		$name = $_POST['name'];

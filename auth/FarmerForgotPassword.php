@@ -21,7 +21,7 @@
 
 
 <?php 
-    include("Includes/db.php");
+    include("../Includes/db.php");
     if(isset($_POST['register'])) {
         $phonenumber = $_POST['phonenumber'];
         $pan = $_POST['pan'];

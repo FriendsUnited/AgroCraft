@@ -46,7 +46,7 @@
 			echo "<script>window.open('FarmerLogin.php','_self')</script>";
 		}
 
-		echo "<script>window.open('Homepage.php','_self')</script>";
+		echo "<script>window.open('../Homepage.php','_self')</script>";
 	}
 
 ?>

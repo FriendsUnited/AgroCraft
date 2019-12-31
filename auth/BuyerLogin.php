@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Buyer login</title>
-	<link rel="stylesheet" type="text/css" href="Styles/BuyerLogin.css">
+	<link rel="stylesheet" type="text/css" href="../Styles/BuyerLogin.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 </head>
 	<body>
@@ -27,7 +27,7 @@
 
 
 <?php 
-	include("Includes/db.php");
+	include("../Includes/db.php");
 	if(isset($_POST['login'])){
 
 		$username = $_POST['username'];

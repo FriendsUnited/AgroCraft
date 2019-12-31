@@ -7,7 +7,7 @@
 		<form action="FarmerRegister.php" method = "post">
 			<input type="text" name="name" placeholder="Name"><br>
 
-			<input type="phonenumber" name="phonenumber" placeholder="Phone Number"><br>
+			<input type="number" name="phonenumber" placeholder="Phone Number"><br>
 
 			<textarea rows="4" cols="25" name = "address" placeholder="Address"></textarea><br>
 

@@ -5,22 +5,100 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Forgot Password</title>
+        <style>
+        h1 {
+            background-color: transparent;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            cursor: pointer;
+            color:rgb(0, 61, 153);
+        }
+        
+        .box {
+            color: rgb(6, 36, 7);
+            width: 350px;
+            line-height: 40px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            padding: 5px;
+            border-style : outset;
+            border-width: 5px;
+            border-radius: 16px;
+            border-color:rgb(0, 172, 230);
+        }
+        
+        body {
+            /* background-image: url(Images/Website/FarmerLogin.jpg); */
+            /* background: black; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            background-image:url(../Images/Website/BuyerLogin.jpeg);
+            border: chartreuse;
+        }
+        
+        form {
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(247, 248, 247);
+            
+        }
+        
+        input {
+            padding: 7px;
+            margin: 10px;
+            border-color: rgb(0, 172, 230);
+            display: inline-block;
+            border-radius: 16px;
+        }
+        
+        input[type="submit"] {
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(246, 248, 246);
+            background-color: rgb(0, 191, 255);
+            border-radius: 16px;
+            border-color: rgb(0, 172, 230);
+            width: 44%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: rgb(0, 153, 255);
+            outline: none;
+            color:  rgb(255,255,255);
+            border-radius: 20%;
+            border-style: outset;
+            border-color: rgb(0, 57, 230);
+            font-weight: bolder;
+            width: 54%;
+            font-size: 18px;
+            
+        }
+    </style>
     </head>
     <body>
-        <form action="BuyerForgotPassword.php" method = "post">
-            <input type="text" name = "phonenumber" placeholder = "Phone Number" required><br>
-            <input type="text" name = "pan" placeholder = "Pan Number" required><br>
-            
-            <input type ="password" name="password" placeholder="Password" required><br>
-		    <input type ="password" name="confirmpassword" placeholder="Confirm Password" required><br><br>
-            
-            <input type="submit" name="register" value = "Update Password">
-        </form>
+        <div class="box">
+            <form action="BuyerForgotPassword.php" method = "post">
+                <h1>FORGOT PASSWORD</h1>
+
+                <input type="number" name = "phonenumber" placeholder = "Phone Number" required><br>
+                <input type="text" name = "pan" placeholder = "Pan Number" required><br>
+                
+                <input type ="password" name="password" placeholder="Password" required><br>
+                <input type ="password" name="confirmpassword" placeholder="Confirm Password" required><br>
+                <span style = " display:block;  margin-bottom: .75em; "></span>
+                
+                <input type="submit" name="register" value = "Update Password">
+            </form>
+        </div>
     </body>
 </html>
 
 <?php 
-    include("Includes/db.php");
+    include("../Includes/db.php");
     if(isset($_POST['register'])) {
         $phonenumber = $_POST['phonenumber'];
         $pan = $_POST['pan'];

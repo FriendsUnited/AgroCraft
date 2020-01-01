@@ -42,10 +42,16 @@
             background-color: cadetblue;
             font-family: 'Times New Roman', Times, serif;
         }
-        
-        h3 {
-            background-color: darkcyan;
+        .trans{
+            clear:left;
+            background-color:red;
         }
+        h3 {
+            /* background-color: darkcyan; */
+        
+        
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -66,39 +72,39 @@
         </div>
         <h1>HELLO,USER</h1>
     </div>
-
+<div>
+<h3>ALL PRODUCTS</h3> </div>       
 
 
     <div class="wrapper">
-
+        
         <br>
-        <br>
-        <h3>ALL PRODUCTS</h3>
-        <?php
-            include("../Includes/db.php");
-            include("../Functions/functions.php");
-            getFarmerProducts(); 
-      ?>
-            <tr>
- 
-                <td><img src="../Images/Crops/Coffee.jpg" alt="#" height=180 width=300 border="5"></td>
-                <td><img src="../Images/Crops/Coconut.jpg" alt="#" height=180 width=300 border="5"></td>
-                <td><img src="../Images/Crops/Maize.jpg" alt="#" height=180 width=300 border="5"></td>
+        
+        <div>
+            <?php
+                include("../Includes/db.php");
+                include("../Functions/functions.php");
+                getFarmerProducts(); 
+                //echo "<button>Add product</button>";
+            ?>
+            <br>
             
-            <tr>
-                <th>Coffee 12/-kg</th>
-                <th>Coconut 13/-kg</th>
-                <th>maize 13/-kg</th>
+        </div>
+    </div>
+    
+       <div class="trans">
 
-            </tr>
-
-        </table>
-        <br>
-        <button>Add product</button>
-        <h3>TRANSACTION HISTORY</h3>
-        <table border="2">
-
-            <tr>
+       <h3>TRANSACTION HISTORY</h3>
+       </div> 
+    
+    
+    <div>
+    <br>
+    <br>
+    
+    <table border="2">
+    
+        <tr>
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>
@@ -118,9 +124,8 @@
             <tr></tr>
             <tr></tr>
         </table>
-        </table>
     </div>
-
+    
 </body>
 
 </html>

@@ -50,6 +50,7 @@
         }
     }
     function getFarmerProducts() {
+            global $con;
             $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=128071232 and farmer_password='pass')";
             $run_query=mysqli_query($con,$query);
             $resultCheck=mysqli_num_rows($run_query);
@@ -58,18 +59,17 @@
                     $type =  $row['product_type'];
                     $image =  $row['product_image'];
                     $price =  $row['product_price'];
-                    
                     $path = "../Admin/product_images/" . $image ;
         
-                    
-                    //printf('<table border=1><td><img src = ' . $path . ' alt="Image Not Found" height=180 width=300 border="5"></td>');
-                
                 echo "
                     <div style = 'float:left; margin-left:30px;padding :10px; ' >
-                        <img src=' . $path . '  alt='Image Not Found' width=180 height=300 border=5/>
-                        <p>Price : Rs $price</p>
-                        </div> "; 
-                        //$s = trim($s); 
+                        <img src= '$path'  alt='Image Not Found' width=200 height=150 border=5/>
+                        <div>
+                        <p style='text-align:center'>$type</p>
+                        <p style='text-align:center'>Price : Rs $price</p>
+                        </div>
+                        </div> 
+                        "; 
                 }      
             }  
         }

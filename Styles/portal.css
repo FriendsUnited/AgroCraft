@@ -1,10 +1,15 @@
-#list {
-    margin-top: 0px;
-    height: 50px;
-    background-color: black;
-    margin-bottom: 0px;
-    list-style: none;
-    overflow: auto;
+
+#list{
+	margin-top: 0px;
+	height: 50px;
+	background-color: green;
+margin-bottom: 0px;
+	list-style: none;
+	overflow: auto;
+
+
+
+
 }
 
 #logo {
@@ -33,6 +38,35 @@ body {
 	padding-top: 12px;*/
 }
 
+#newlabel{
+	border: none;
+	float: left;
+	margin-left: 700px;
+	margin-top: 10px;
+		background-color: green;
+	color:white ;
+font-weight: 10;
+}
+#login{
+	background-color: green;
+	color: white;
+}
+
+
+
+
+#list2{
+	display: block;
+	float: right;
+	clear: left;
+	padding: 10px;
+}
+#list3{
+	display: block;
+	float: right;
+	padding: 10px;
+}
+
 #input1 {
     background-color: #FFD700;
     /*border-radius: 30%;*/
@@ -44,7 +78,7 @@ body {
     /*min-width: 100%;*/
     /*max-width: 100%;*/
     height: 25px;
-}
+s}
 
 #a {
     float: left;
@@ -91,13 +125,17 @@ body {
     height: 50px;
 }
 
+
+*{
+	background-color: white;
+	
+}
 #abc {
     float: right;
     /*margin-top: 15px;*/
     background-color: #FFD700;
     height: 50px;
 }
-
 #cde {
     float: left;
     margin-left: 680px;
@@ -133,6 +171,22 @@ justify-content: center;*/
     margin-top: 10px;
 }
 
+.carousel-control-next{
+	margin-right: 60px;
+}
+.wrapper
+{
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+grid-column-gap: 20px;
+grid-row-gap: 10px;
+}
+.inputwrapper{
+	border-color: black;
+border-style: solid;
+border-width: 2px;
+text-align: center; 
+}
 .carousel-control-next {
     margin-right: 60px;
 }
@@ -150,6 +204,40 @@ justify-content: center;*/
     border-width: 2px;
     text-align: center;
 }
+
+.addtocart{
+	background-color: #FFD700;
+}
+
+.numberinput{
+width:35px;
+
+}
+
+.tabless{
+	border-collapse: separate ;
+	border-spacing: 20px;
+	padding: 20px;
+	border-style: solid;
+	margin: 10px;
+	/*background-color: red;*/
+	  border-width: 5px;
+            border-radius: 16px;
+            border-color:black;
+            text-align: center;
+            align-items: center;
+}          }
+
+
+.picha{
+	height: 300px;
+width: 500px;
+background-color: red;
+}
+.images{
+	box-shadow: 5px 5px 10px grey;
+}
+
 
 #heading {
     font-size: 20px;

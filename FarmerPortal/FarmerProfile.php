@@ -8,49 +8,30 @@
 </head>
 <body>
 <h1>PROFILE</h1>
-<form action="" method = "post">
-    <!-- <input type="text" name="name" placeholder = "Name" readonly>        <br>
-    <input type="text" name="Phone" placeholder = "Phone" readonly>      <br>
-    <input type="text" name="address" placeholder = "Address" readonly>  <br>
-    <input type="text" name="pan" placeholder = "Pan Card Number" readonly> <br>
-    <input type="text" name="bank" placeholder = "Account Number" readonly> <br> -->
+<form action="EditProfile.php" method = "post">
+
 <?php
     include("../Includes/db.php");
-    $sql="select * from farmerregistration where farmer_phone = 9182736455 and farmer_password  = 'pass'";
+    $sql="select * from farmerregistration where farmer_phone = 1234567890 and farmer_password  = 'qwerty'";
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
         $name = $row['farmer_name'];
-        echo $name,"<br>"; 
+        echo "Name :",$name,"<br>"; 
         $phone = $row['farmer_phone'];
-        echo $phone,"<br>"; 
+        echo "Phone :",$phone,"<br>"; 
         $address = $row['farmer_address'];
-        echo $address,"<br>"; 
+        echo "Address :",$address,"<br>"; 
         $pan = $row['farmer_pan'];
-        echo $pan,"<br>"; 
+        echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
-        echo $bank,"<br>";
+        echo "Account Number :",$bank,"<br>";
     }
 
 ?>
 
-    <input type = "button" name="change" value="Change Password">
-    <input type = "button" name="edit" value= "Edit Profile">
+    <input type = "submit" name="edit" value= "Edit Profile">
 </form>
 
 </body>
 </html>
-
-<!-- <?php
-    include("../Includes/db.php");
-    $sql="select * from farmerregistration where farmer_phone = 9182736455 and farmer_password  = 'pass'";
-    $run_query = mysqli_query($con,$sql);
-    while($row = mysqli_fetch_array($run_query))
-    {
-        $name = $row['farmer_name'];
-        echo $name;
-    }
-
-
-
-?> -->

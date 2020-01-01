@@ -71,7 +71,7 @@
             /* display: inline-block; */
             /*border-radius: 0px;*/
             border-color: rgb(3, 66, 34);
-            width: 15%;
+            width: 25%;
         }
         
         input[type="submit"]:hover {
@@ -83,19 +83,35 @@
             border-style: outset;
             border-color: rgb(155, 248, 4);
             font-weight: bolder;
-            width: 20%;
+            width: 29%;
             font-size: 18px;
             
+           
+        }
+        .box {
+            color: rgb(6, 36, 7);
+            width: 400px;
+            line-height: 40px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            padding: 0px;
+            border-style: outset;
+            border-width: 5px;
+        
+            border-radius: 0px;
+            border-color:green;
         }
     </style>
 	</head>
 	<body>
+    <div class="box">
 		<form action="FarmerRegister.php" method = "post">
 			<h1> FARMER REGISTRATION </h1> <input type="text" name="name" placeholder="Name"><br>
 
 			<input type="number" name="phonenumber" placeholder="Phone Number"><br>
 
-			<textarea rows="4" cols="25" name = "address" placeholder="Address"></textarea><br>
+			<textarea rows="1" cols="25" name = "address" placeholder="Address"></textarea><br>
 
 			<input type="text" name="pan" placeholder="Pan Number"><br>
 
@@ -108,7 +124,7 @@
 			<input type="submit" name="register" value = "Register">
 
 		</form>
-
+    </div>
 	</body>
 </html>
 

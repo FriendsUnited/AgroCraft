@@ -50,8 +50,9 @@ border-top: transparent;
 }
 
 @keyframes twist{
-	
+
 from{ transform: rotateZ(90deg);}
 to{transform: rotateZ(180deg);}
+
 }
 

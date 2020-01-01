@@ -48,13 +48,13 @@
             // echo "<li><a href = '#'>$product_type</a></li>";
             echo $product_type;
         }
-
-        function getFarmerProducts() {
+    }
+    function getFarmerProducts() {
             $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=128071232 and farmer_password='pass')";
             $run_query=mysqli_query($con,$query);
             $resultCheck=mysqli_num_rows($run_query);
-            if($resultCheck>0) {   
-                while($row=mysqli_fetch_assoc($run_query)){
+        if($resultCheck>0) {   
+            while($row=mysqli_fetch_assoc($run_query)){
                     $type =  $row['product_type'];
                     $image =  $row['product_image'];
                     $price =  $row['product_price'];
@@ -73,13 +73,5 @@
                 }      
             }  
         }
-    }
-
-
-
-
-
-
-
 
 ?>

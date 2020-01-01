@@ -50,18 +50,28 @@
             border-color: rgb(78, 180, 121);
             display: inline-block;
             border-radius: 16px;
+
+        }
+        textarea{
+            padding: 7px;
+            margin: 10px;
+            border-color: rgb(78, 180, 121);
+            display: inline-block;
+            border-radius: 16px;
+
+            
         }
         
         input[type="submit"] {
             cursor: pointer;
-            font-size: 12px;
+            font-size: 16px;
             font-weight: bold;
             color: rgb(246, 248, 246);
             background-color: green;
             /* display: inline-block; */
-            border-radius: 16px;
+            /*border-radius: 0px;*/
             border-color: rgb(3, 66, 34);
-            width: 44%;
+            width: 15%;
         }
         
         input[type="submit"]:hover {
@@ -69,11 +79,11 @@
             outline: none;
             border-color: blanchedalmond;
             color: rgb(155, 248, 4);
-            border-radius: 20%;
+            /*border-radius: 0px;*/
             border-style: outset;
             border-color: rgb(155, 248, 4);
             font-weight: bolder;
-            width: 54%;
+            width: 20%;
             font-size: 18px;
             
         }

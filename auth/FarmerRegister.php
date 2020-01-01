@@ -40,7 +40,7 @@
 			
             margin: 10px;
             padding: 10px;
-            /*background-color: rgb(247, 248, 247);*/
+            background-color: rgb(247, 248, 247);
             
         }
         
@@ -59,6 +59,7 @@
             display: inline-block;
             border-radius: 16px;
 
+        
             
         }
         
@@ -95,11 +96,11 @@
             margin: auto;
             text-align: center;
             margin-top: 50px;
-            padding: 0px;
+            padding: 5px;
             border-style: outset;
             border-width: 5px;
-        
-            border-radius: 0px;
+            background-color: white;
+            border-radius: 16px;
             border-color:green;
         }
     </style>
@@ -111,7 +112,7 @@
 
 			<input type="number" name="phonenumber" placeholder="Phone Number"><br>
 
-			<textarea rows="1" cols="25" name = "address" placeholder="Address"></textarea><br>
+			<textarea rows="3" cols="20" name = "address" placeholder="Address"></textarea><br>
 
 			<input type="text" name="pan" placeholder="Pan Number"><br>
 
@@ -119,7 +120,7 @@
 
 			<input type ="password" name="password" placeholder="Password" required><br>
 
-			<input type ="password" name="confirmpassword" placeholder="Confirm Password" required><br><br>
+			<input type ="password" name="confirmpassword" placeholder="Confirm Password" required><br>
 
 			<input type="submit" name="register" value = "Register">
 

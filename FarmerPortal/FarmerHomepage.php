@@ -68,31 +68,23 @@
     </div>
 
 
-    <!-- <div id="logo"> 
 
-        <i class="fa fa-user fa-3x"></i>
-     </div> -->
     <div class="wrapper">
 
-        <!-- <table cellspacing="10px"> 
-            <th>
-                <h2>hello , User</h2>
-            </th>
-            <td><i class="fa fa-user fa-3x"></i></td>
-          </table>  -->
         <br>
         <br>
         <h3>ALL PRODUCTS</h3>
-        <table border="1">
-
+        <?php
+            include("../Includes/db.php");
+            include("../Functions/functions.php");
+            getFarmerProducts(); 
+      ?>
             <tr>
-                <!-- <tr>
-                    <th>all products</th>
-                </tr> -->
+ 
                 <td><img src="../Images/Crops/Coffee.jpg" alt="#" height=180 width=300 border="5"></td>
                 <td><img src="../Images/Crops/Coconut.jpg" alt="#" height=180 width=300 border="5"></td>
                 <td><img src="../Images/Crops/Maize.jpg" alt="#" height=180 width=300 border="5"></td>
-            </tr>>
+            
             <tr>
                 <th>Coffee 12/-kg</th>
                 <th>Coconut 13/-kg</th>
@@ -126,14 +118,9 @@
             <tr></tr>
             <tr></tr>
         </table>
-
-
-
-
-
-
         </table>
     </div>
+
 </body>
 
 </html>

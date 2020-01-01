@@ -6,54 +6,48 @@ mydb = mysql.connector.connect(
   host="localhost",
   user="root",
   passwd="",
-database="agrocraft"
+  database="agrocraft"
 )
 
 mycursor = mydb.cursor()
 
-# mycursor.execute("show databases")
-#
-# for x in mycursor:
-#     print(x)
-
 firebase = firebase.FirebaseApplication("https://farmer-order.firebaseio.com/",None)
+
 
 
 results = firebase.get('/','')
 
-    # for key,value in results.items():
-    #     print("\n")
-    #     attributes = value
-        # print(key)
-        # phone = attributes.get('phone','Not_Found')
-        # password = attributes.get('password','Not_Found')
-        # prod_title = attributes.get('prod_title','Not_Found')
-        # prod_cat = attributes.get('prod_cat','Not_Found')
-        # stock = attributes.get('stock', 'Not_Found')
-        # price = attributes.get('price', 'Not_Found')
-        # prod_key = attributes.get('prod_key', 'Not_Found')
-        # delivery = attributes.get('delivery', 'Not_Found')
-        # print("\n")
+for key,value in results.items():
+    attributes = value
+    print(key)
+    phone = key
+    password = attributes.get('password','Not_Found')
+    print(password)
+    prod_title = attributes.get('product title','Not_Found')
+    prod_cat = attributes.get('product category','Not_Found')
+    stock = attributes.get('Stock', 'Not_Found')
+    price = attributes.get('price', 'Not_Found')
+    prod_key = attributes.get('product key', 'Not_Found')
+    delivery = attributes.get('Delivery', 'Not_Found')
 
-phone = 123
-password = "abjb12"
-prod_title = "abhishek"
-prod_cat = "1"
-stock = 123
-price = 123
-prod_key = "test"
-delivery = "1"
+    Security_check = 'select * from farmerregistration where farmer_password = "{}" and farmer_phone = {}'.format(password,phone)
 
+    rows = mycursor.execute(Security_check)
 
-# sql = "insert into products (product_title,product_cat,product_stock,product_price,product_keywords,product_delivery) values (%s,%s,%d,%d,%s,%s)"
-# val = ('tetsing','dgdd',1,2,'fs','fdf')
+    myresult = mycursor.fetchall()
+    count = 0
+    for x in myresult:
+        count += 1
+    print(count)
 
-query = "insert into products () values (6,'trest')"
+    if mycursor.rowcount == 1 :
+        query = 'insert into products (product_title,product_cat,product_stock,product_price,product_keywords,product_delivery)' \
+                    ' values ("{}","{}",{},{},"{}","{}")'.format(prod_title, prod_cat, stock, price, prod_key, delivery)
 
-mycursor.execute(query)
-mydb.commit()
+        mycursor.execute(query)
+        mydb.commit()
 
-print(mycursor.rowcount, "record inserted.")
+        firebase.delete('/', key)
+    else :
+        pass
 
-
-        # firebase.delete('/',key)

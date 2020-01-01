@@ -22,6 +22,7 @@ for key,value in results.items():
     print(key)
     phone = key
     password = attributes.get('password','Not_Found')
+    print(password)
     prod_title = attributes.get('product title','Not_Found')
     prod_cat = attributes.get('product category','Not_Found')
     stock = attributes.get('Stock', 'Not_Found')
@@ -29,14 +30,19 @@ for key,value in results.items():
     prod_key = attributes.get('product key', 'Not_Found')
     delivery = attributes.get('Delivery', 'Not_Found')
 
-    Security_check = "select * from farmerregistration where farmer_password = '{}' and farmer_phone = {}".format(password,phone)
+    Security_check = 'select * from farmerregistration where farmer_password = "{}" and farmer_phone = {}'.format(password,phone)
 
-    mycursor.execute(Security_check)
-    print(mycursor.rowcount, "record inserted.")
+    rows = mycursor.execute(Security_check)
+
+    myresult = mycursor.fetchall()
+    count = 0
+    for x in myresult:
+        count += 1
+    print(count)
 
     if mycursor.rowcount == 1 :
         query = 'insert into products (product_title,product_cat,product_stock,product_price,product_keywords,product_delivery)' \
-                ' values ("{}","{}",{},{},"{}","{}")'.format(prod_title, prod_cat, stock, price, prod_key, delivery)
+                    ' values ("{}","{}",{},{},"{}","{}")'.format(prod_title, prod_cat, stock, price, prod_key, delivery)
 
         mycursor.execute(query)
         mydb.commit()

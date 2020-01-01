@@ -2,10 +2,86 @@
 <html>
 	<head>
 		<title>Farmer Registration Portal</title>
+		<style>
+        h1 {
+            background-color: transparent;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            cursor: pointer
+        }
+        
+        .box {
+            color: rgb(6, 36, 7);
+            width: 350px;
+            line-height: 40px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            padding: 5px;
+            border-style : outset;
+            border-width: 5px;
+            border-radius: 16px;
+            border-color:green;
+        }
+        
+        body {
+             
+			/* background: black; */
+			background-image: url(../Images/Website/FarmerLogin.jpg); 
+			text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /*background-image:url(../Images/Website/forgotpassword.jpg);*/
+            border: chartreuse;
+        }
+        
+        form {
+			
+            margin: 10px;
+            padding: 10px;
+            /*background-color: rgb(247, 248, 247);*/
+            
+        }
+        
+        input {
+            padding: 7px;
+            margin: 10px;
+            border-color: rgb(78, 180, 121);
+            display: inline-block;
+            border-radius: 16px;
+        }
+        
+        input[type="submit"] {
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(246, 248, 246);
+            background-color: green;
+            /* display: inline-block; */
+            border-radius: 16px;
+            border-color: rgb(3, 66, 34);
+            width: 44%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: rgb(97, 16, 33);
+            outline: none;
+            border-color: blanchedalmond;
+            color: rgb(155, 248, 4);
+            border-radius: 20%;
+            border-style: outset;
+            border-color: rgb(155, 248, 4);
+            font-weight: bolder;
+            width: 54%;
+            font-size: 18px;
+            
+        }
+    </style>
 	</head>
 	<body>
 		<form action="FarmerRegister.php" method = "post">
-			<input type="text" name="name" placeholder="Name"><br>
+			<h1> FARMER REGISTRATION </h1> <input type="text" name="name" placeholder="Name"><br>
 
 			<input type="number" name="phonenumber" placeholder="Phone Number"><br>
 

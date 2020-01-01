@@ -1,4 +1,5 @@
 <?php 
+
         $con = mysqli_connect("localhost","root","","agrocraft");
 
         if (mysqli_connect_errno()) {

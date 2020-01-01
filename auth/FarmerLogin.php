@@ -40,13 +40,17 @@
 		$query = "select * from farmerregistration where farmer_phone = '$phonenumber' and farmer_password = '$password'";
 		$run_query = mysqli_query($con,$query);
 		$count_rows = mysqli_num_rows($run_query);
+		while($row = mysqli_fetch_array($run_query)){
+			$id = $row['farmer_id'];
+		}
 
 		if ($count_rows == 0) {
 			echo "<script>alert('Please Enter Valid Details');</script>";
 			echo "<script>window.open('FarmerLogin.php','_self')</script>";
 		}
 
-		echo "<script>window.open('../Homepage.php','_self')</script>";
+		$link = "../portal.html?id='$id'";
+		echo "<script>window.open('$link','_self')</script>";
 	}
 
 ?>

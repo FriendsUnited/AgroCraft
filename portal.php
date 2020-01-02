@@ -75,8 +75,6 @@
 	<option class="items1" value="0" selected="" disabled="">crops</option>
 	<option class="items1">rice </option>
 	<option class="items1">bajra</option>
-	<option class="items1"></option>
-	<option class="items1"></option>
 </select>
 <select id="cde" name="crops">
 	<option class="items" value="0" selected="" disabled="">fruits</option>

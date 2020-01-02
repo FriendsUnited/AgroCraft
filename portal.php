@@ -150,33 +150,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- <img src="portal_files/pic1.jpg"> -->
 <!-- <table>
 	<tr>
@@ -212,104 +185,10 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 <div>
-	<div class="wrapper">
-		        <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<!-- <div class="shop "> -->
-        		
-        	<label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-        
-
-        </div >       <div class="inputwrapper">
-
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	<label>ANSH</label>
-        	<br>
-        	<label>Item:-</label>
-        	<br>
-        	<label>PRICE:- 100 RS/kg</label>
-        	<br>
-        	<label>Farmer</label>
-        	<input type="radio" name="availability" value="Available">
-        Available
-            <input type="radio" name="availability" value="Not Available">Not Available
-            <br>
-            <button class="addtocart">ADD TO CART</button>
-            <br>
-
-
-
-
-        </div>
-        <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	<label>ANSH</label>
-        	<br>
-        	<label>Item:-</label>
-        	<br>
-        	<label>PRICE:- 100 RS/kg</label>
-        	<br>
-        	<label>Farmer</label>
-        	<input type="radio" name="availability" value="Available">
-        Available
-            <input type="radio" name="availability" value="Not Available">Not Available
-            <br>
-            <button class="addtocart">ADD TO CART</button>
-            <br>
-
-
-        </div>
-        <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	<label>ANSH</label>
-        	<br>
-        	<label>Item:-</label>
-        	<br>
-        	<label>PRICE:- 100 RS/kg</label>
-        	<br>
-        	<label>Farmer</label>
-        	<input type="radio" name="availability" value="Available">
-        Available
-            <input type="radio" name="availability" value="Not Available">Not Available
-            <br>
-            <button class="addtocart">ADD TO CART</button>
-             <br>
-
-        </div>
-    </div>
-        <!-- <input type="" name=""> -->
-
-</div></body></html>
+	<?php 
+		include("Functions/functions.php");
+		getProducts(); ?>
+</div>
+</body>
+</html>

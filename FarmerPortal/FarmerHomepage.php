@@ -51,7 +51,6 @@
             background-color:red;
         }
         h3 {
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(8, 116, 53);
         }
@@ -100,15 +99,14 @@
         .button {
             position: absolute;
             margin-left: 130px;
+            float:right;
         }
         
         h2 {
             color: darkgreen;
-=======
             /* background-color: darkcyan; */
         
         
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
         }
 
     </style>
@@ -137,20 +135,16 @@
         </ul> -->
         </div>
     </div>
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
     <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
 
-=======
 <div>
 <h3>ALL PRODUCTS</h3> </div>       
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
 
 
     <div class="wrapper">
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
 
 
         <br>
@@ -181,7 +175,6 @@
         <table border="2">
 
             <tr>
-=======
         
         <br>
         
@@ -210,7 +203,6 @@
     <table border="2">
     
         <tr>
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>

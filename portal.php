@@ -183,9 +183,7 @@
 
 
 <div>
-	<?php 
-		include("Functions/functions.php");
-		getProducts(); ?>
+	
 </div>
 </body>
 </html>

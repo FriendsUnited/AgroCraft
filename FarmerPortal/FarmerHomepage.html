@@ -5,25 +5,74 @@
 
     <title></title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type="text/css">
-        .wrapper {}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* background-image: url(images/Website/FarmerLogin.jpg); */
+            background-size: cover;
+            background-position: center;
+            box-sizing: border-box;
+        }
+        
+        .wrapper {
+            /* width: 300px; */
+            background-image: 100px;
+        }
+        
+        #logo {
+            float: right;
+            margin-right: 2em;
+            margin-bottom: 52em;
+        }
+        /* ul li {
+            display: none;
+        } */
+        
+        ul li:hover ul li {
+            display: block;
+        }
+        
+        ul li a {
+            display: block;
+        }
+        
+        #header {
+            background-color: cadetblue;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        h3 {
+            background-color: darkcyan;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 </head>
 
 <body>
+    <div id="header">
+        <div id="logo">
 
-    <div id="logo">
-        <i class="fa fa-user fa-3x"></i>
+            <i class="fa fa-user fa-3x"></i>
+            <ul>
+                <li>
+                    <a>log out</a>
+                </li>
+                <li><a>edit</a></li>
+            </ul>
+        </div>
+        <h1>HELLO,USER</h1>
     </div>
-    <div class="wrapper">
-        <p>
-            <h2>hello , User</h2>
-            <span class="tab"></span>
-        </p>
 
+
+    <!-- <div id="logo"> 
+
+        <i class="fa fa-user fa-3x"></i>
+     </div> -->
+    <div class="wrapper">
 
         <!-- <table cellspacing="10px"> 
             <th>
@@ -33,24 +82,28 @@
           </table>  -->
         <br>
         <br>
-        <table border="5">
+        <h3>ALL PRODUCTS</h3>
+        <table border="1">
 
             <tr>
-                <tr>
+                <!-- <tr>
                     <th>all products</th>
-                </tr>
-                <td><img src="../Images/Crops/Coffee.jpg" alt="#" height=180 width=250></td>
-                <td><img src="../Images/Crops/Coconut.jpg" alt="#" height=180 width=250></td>
-                <td><img src="../Images/Crops/Maize.jpg" alt="#" height=180 width=250></td>
+                </tr> -->
+                <td><img src="../Images/Crops/Coffee.jpg" alt="#" height=180 width=300 border="5"></td>
+                <td><img src="../Images/Crops/Coconut.jpg" alt="#" height=180 width=300 border="5"></td>
+                <td><img src="../Images/Crops/Maize.jpg" alt="#" height=180 width=300 border="5"></td>
             </tr>>
             <tr>
-                <td>Coffee</td>
-                <td>Coconut</td>
-                <td>maize</td>
+                <th>Coffee 12/-kg</th>
+                <th>Coconut 13/-kg</th>
+                <th>maize 13/-kg</th>
 
             </tr>
+
         </table>
-        <h3>transaction history</h3>
+        <br>
+        <button>Add product</button>
+        <h3>TRANSACTION HISTORY</h3>
         <table border="2">
 
             <tr>
@@ -62,7 +115,14 @@
                 <th width=200px>price</th>
 
             </tr>
-            <tr></tr>
+            <tr>
+                <td>12-1-2000</td>
+                <td>melissa</td>
+                <td>1234567890</td>
+                <td>sajgdkagdd</td>
+                <td>500</td>
+                <td>200</td>
+            </tr>
             <tr></tr>
             <tr></tr>
         </table>

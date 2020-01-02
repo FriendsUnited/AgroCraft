@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <!-- saved from url=(0070)file:///C:/Users/Ansh/Desktop/gitttttt/AgroCraft/AgroCraft/portal.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	
 	<title>PORTAL</title>
-	<link rel="stylesheet" type="text/css" href="./portal_files/portal.css">
-	<link rel="stylesheet" href="./portal_files/font-awesome.min.css">
-	<script src="./portal_files/c587fc1763.js.download" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./portal_files/bootstrap.min.css">
-  <script src="./portal_files/jquery.min.js.download"></script>
-  <script src="./portal_files/popper.min.js.download"></script>
-  <script src="./portal_files/bootstrap.min.js.download"></script>
+	<link rel="stylesheet" type="text/css" href="Styles/portal.css">
+	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
+	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="portal_files/bootstrap.min.css">
+  <script src="portal_files/jquery.min.js.download"></script>
+  <script src="portal_files/popper.min.js.download"></script>
+  <script src="portal_files/bootstrap.min.js.download"></script>
   </head>
 <body>
 	<!-- <div class="navbar"> -->
 	<!-- <div class="flex-container"> -->
 <div class="div">
-	<img id="logo" src="./portal_files/logo.jpg">
+	<img id="logo" src="portal_files/logo.jpg">
 
 <ul id="list">
 <!-- <li>	</li> -->
@@ -29,17 +39,33 @@
 </li>
 
 <li id="list1">
-<!-- 	<i class="fas fa-search" style="font-size:20px;color:red " ></i> -->
+	<!-- <i class="fas fa-search" style="font-size:20px;color:red " ></i> -->
 <div id="a">	<i class="fas fa-search" style="font-size:20px;color:red "></i>
 </div>
 <div id="b">
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
-<!-- <li>Profile</li> -->
+<?php
+	session_start();
+	include("Includes/db.php");
+	if(!isset($_SESSION['phonenumber'])) {
+	echo '<li id="newlabel"><label id="login">Login/Sign up</label></li>';
+	}
+	else {
+		$phonenumber = $_SESSION['phonenumber'];
+		$query = "select * from buyerregistration where buyer_phone = '$phonenumber'";
+		$run_query = mysqli_query($con,$query);
+		while($row = mysqli_fetch_array($run_query)){
+			$name =  $row['buyer_name'];
+			
+		}
+		echo "<li id='newlabel'><label id='login'>Hello,$name</label></li>";
+		
+}
 
 
-
+?>
 </ul>
 
 </div>
@@ -73,14 +99,14 @@
   <div class="carousel-inner">
   
     <div class="carousel-item">
-      <img class="images1" src="./portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+      <img class="images1" src="portal_files/same1.jpg" height="500px" width="1300px" alt="...">
     </div>
    
     <div class="carousel-item active">
-      <img class="images1" src="./portal_files/same6.jpg" height="500px" width="1300px" alt="...">
+      <img class="images1" src="portal_files/same6.jpg" height="500px" width="1300px" alt="...">
     </div>
     <div class="carousel-item">
-      <img class="images1" src="./portal_files/same3.jpg" height="500px" width="1300px" alt="...">
+      <img class="images1" src="portal_files/same3.jpg" height="500px" width="1300px" alt="...">
     </div>
   
   </div>
@@ -95,10 +121,78 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  <!-- <img src="portal_files/pic1.jpg"> -->
+<!-- <table>
+	<tr>
+		<td>a<img src="portal_files/pic1.jpg"></td>
+		<td><img src="portal_files/pic1.jpg"></td>
+</tr>
+<tr>
+	<td><img src="portal_files/pic1.jpg"></td>
+	<td><img src="portal_files/pic1.jpg"></td>
+
+</tr>
+</table>
+ -->
+<!-- <div class="picha">
+	<img id="picha1 " src="portal_files/pic1.jpg">
+	<img id="picha2 " src="portal_files/pic1.jpg">
+</div> -->
+<table class="tabless" > 
+	<tr>
+		<th rowspan="2" colspan="2"><a href="#"><img class="images "src="portal_files/pic1.jpg" ></a></th>
+		<td><a href="#"><img class="images " src="portal_files/pic2.jpg" height="300px" width="400px"></a></td>
+		<td><a href="#"><img class="images " src="portal_files/pic3.jpg" height="300px" width="400px" ></a></td>
+	</tr>
+		<td><a href="#"><img class="images "src="portal_files/Cherry-Heart.jpg" height="300px" width="400px"></a></td>
+		<td><a href="#"><img class="images "src="portal_files/pic1.jpg"height="300px" width="400px"></a></td>
+	<tr>
+		
+	</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div>
 	<div class="wrapper">
-		<div>
+		<div class="inputwrapper">
 			<br>
 			<label id="heading">Best Sellers</label>
 			<br>
@@ -114,49 +208,32 @@
            <label class="head1">Calista </label> 
             <br>
         </div>
-        <div>
-        	<img src="./portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
+        <div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
         	<br>
         	<br>
-        	<label>ANSH</label>
+        	
+        	
+        	<label>Ramlal patotoes</label>
         	<br>
-        	<label>Item:-</label>
+        	<label>PRICE:- 100 Rs/kg</label>
         	<br>
-        	<label>PRICE:- 100 RS/kg</label>
+        	<!-- <div class="shop "> -->
+        		
+        	<label id="shop2">Delivery by Farmer</label>
         	<br>
-        	<label>Farmer</label>
-        	<input type="radio" name="availability" value="Available">
-        Available
-            <input type="radio" name="availability" value="Not Available">Not Available
+        	Qty:-
+        	
+            <input class="numberinput" type="number" name="number"  >
+
+            <button class="addtocart">ADD 
+            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
             <br>
-            <button class="addtocart">ADD TO CART</button>
-            <br>
-        </div>
-        <div>
+        
 
-        	<img src="./portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	<label>ANSH</label>
-        	<br>
-        	<label>Item:-</label>
-        	<br>
-        	<label>PRICE:- 100 RS/kg</label>
-        	<br>
-        	<label>Farmer</label>
-        	<input type="radio" name="availability" value="Available">
-        Available
-            <input type="radio" name="availability" value="Not Available">Not Available
-            <br>
-            <button class="addtocart">ADD TO CART</button>
-            <br>
+        </div >       <div class="inputwrapper">
 
-
-
-
-        </div>
-        <div>
-        	<img src="./portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
         	<br>
         	<br>
         	<label>ANSH</label>
@@ -174,9 +251,31 @@
             <br>
 
 
+
+
         </div>
-        <div>
-        	<img src="./portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
+        <div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
+        	<br>
+        	<br>
+        	<label>ANSH</label>
+        	<br>
+        	<label>Item:-</label>
+        	<br>
+        	<label>PRICE:- 100 RS/kg</label>
+        	<br>
+        	<label>Farmer</label>
+        	<input type="radio" name="availability" value="Available">
+        Available
+            <input type="radio" name="availability" value="Not Available">Not Available
+            <br>
+            <button class="addtocart">ADD TO CART</button>
+            <br>
+
+
+        </div>
+        <div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
         	<br>
         	<br>
         	<label>ANSH</label>

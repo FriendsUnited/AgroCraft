@@ -46,8 +46,12 @@
             color: rgb(20, 83, 31);
             font-family: 'Times New Roman', Times, serif;
         }
-        
+        .trans{
+            clear:left;
+            background-color:red;
+        }
         h3 {
+<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(8, 116, 53);
         }
@@ -100,7 +104,13 @@
         
         h2 {
             color: darkgreen;
+=======
+            /* background-color: darkcyan; */
+        
+        
+>>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
         }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -127,18 +137,20 @@
         </ul> -->
         </div>
     </div>
+<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
     <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
 
+=======
+<div>
+<h3>ALL PRODUCTS</h3> </div>       
+>>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
 
 
-    <!-- <div id="logo"> 
-
-        <i class="fa fa-user fa-3x"></i>
-     </div> -->
     <div class="wrapper">
+<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
 
 
         <br>
@@ -169,6 +181,36 @@
         <table border="2">
 
             <tr>
+=======
+        
+        <br>
+        
+        <div>
+            <?php
+                include("../Includes/db.php");
+                include("../Functions/functions.php");
+                getFarmerProducts(); 
+                //echo "<button>Add product</button>";
+            ?>
+            <br>
+            
+        </div>
+    </div>
+    
+       <div class="trans">
+
+       <h3>TRANSACTION HISTORY</h3>
+       </div> 
+    
+    
+    <div>
+    <br>
+    <br>
+    
+    <table border="2">
+    
+        <tr>
+>>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>
@@ -188,14 +230,8 @@
             <tr></tr>
             <tr></tr>
         </table>
-
-
-
-
-
-
-        </table>
     </div>
+    
 </body>
 
 </html>

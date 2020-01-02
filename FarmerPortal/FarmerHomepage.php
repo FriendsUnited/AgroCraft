@@ -51,7 +51,6 @@
             background-color:red;
         }
         h3 {
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(8, 116, 53);
         }
@@ -104,11 +103,6 @@
         
         h2 {
             color: darkgreen;
-=======
-            /* background-color: darkcyan; */
-        
-        
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
         }
 
     </style>
@@ -125,7 +119,7 @@
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="#">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 
@@ -137,20 +131,14 @@
         </ul> -->
         </div>
     </div>
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
     <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
 
-=======
-<div>
-<h3>ALL PRODUCTS</h3> </div>       
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
 
 
     <div class="wrapper">
-<<<<<<< HEAD:FarmerPortal/FarmerHomepage.html
 
 
         <br>
@@ -181,36 +169,6 @@
         <table border="2">
 
             <tr>
-=======
-        
-        <br>
-        
-        <div>
-            <?php
-                include("../Includes/db.php");
-                include("../Functions/functions.php");
-                getFarmerProducts(); 
-                //echo "<button>Add product</button>";
-            ?>
-            <br>
-            
-        </div>
-    </div>
-    
-       <div class="trans">
-
-       <h3>TRANSACTION HISTORY</h3>
-       </div> 
-    
-    
-    <div>
-    <br>
-    <br>
-    
-    <table border="2">
-    
-        <tr>
->>>>>>> 7d4b2f5bb1da795d20c5d26c82181b6d00baf780:FarmerPortal/FarmerHomepage.php
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>

@@ -12,7 +12,9 @@
 
 <?php
     include("../Includes/db.php");
-    $sql="select * from farmerregistration where farmer_phone = 1234567890 and farmer_password  = 'qwerty'";
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
@@ -30,7 +32,7 @@
 
 ?>
 
-    <input type = "submit" name="edit" value= "Edit Profile">
+    <input type = "submit" name="editProf" value= "Edit Profile">
 </form>
 
 </body>

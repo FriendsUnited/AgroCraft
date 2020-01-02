@@ -8,33 +8,50 @@
 </head>
 <body>
 <?php
+
     include("../Includes/db.php");
-    $sql="select * from farmerregistration where farmer_phone = 1234567890 and farmer_password  = 'qwerty'";
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
         $name = $row['farmer_name'];
         echo "Name :",$name,"<br><br>"; 
         $pan = $row['farmer_pan'];
-        // echo "Pan Number :",$pan,"<br><br>"; 
+        echo "Pan Number :",$pan,"<br><br>"; 
         $phone = $row['farmer_phone'];
         $address = $row['farmer_address'];
         $bank= $row['farmer_bank']; 
     }
-    
 ?>
-<form action="FarmerProfile.php" method="post">
-    
-    <input type="number" name="phonenumber" value="<?php echo $phone;?>" /> <br><br>
-    <input type="text" name="address" value="<?php echo $address;?>" />     <br><br>
 
-    <?php echo "Pan Number :",$pan,"<br><br>"; ?>
-
-    <input type="number" name="bank" value="<?php echo $bank;?>" />         <br><br>
-    <input type="submit" name="confirm," value = "Confirm">                
-    
+<form action="" method="post">  
+    Phone :<input type="number" name="phonenumber" value="<?php echo $phone;?>" /> <br><br>
+    Address :<input type="text" name="address" value="<?php echo $address;?>" />   <br><br>
+    Account No. :<input type="number" name="bank" value="<?php echo $bank;?>" />   <br><br>
+    <input type = "submit" name = "confirm" value = "Confirm">                  
     </form>
+
+    <a href="ChangePassword.php"><button>Change Password</button></a>
 
 
 </body>
 </html>
+
+<?php
+
+    include("../Includes/db.php");
+
+    if (isset($_POST['confirm']))
+    {
+        $phone = $_POST['phonenumber'];
+        $address = $_POST['address'];
+        $bank = $_POST['bank'];
+        
+        $query = "update farmerregistration set farmer_phone = $phone, farmer_address = $address, farmer_bank = $bank where farmer_name='ram'"; 
+        $run = mysqli_query($con, $query);
+    }
+
+
+?>

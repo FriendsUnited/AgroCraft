@@ -96,7 +96,7 @@
             echo "<div class='example'>
                     <div class='wrapper'>
                         <div class='inputwrapper'>
-                            
+                            <br>
                             <img src='./Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	

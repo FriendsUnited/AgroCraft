@@ -111,12 +111,13 @@ if(isset($_POST['insert_post'])){    // when button is clicked
     // getting the text data from fields
     $product_title = $_POST['product_title'];
     $product_cat = $_POST['product_cat'];
+    $product_type = $_POST['product_type'];
     $product_stock = $_POST['product_stock'];
     $product_price = $_POST['product_price'];
     $product_desc = $_POST['product_desc'];
     $product_keywords = $_POST['product_keywords'];
     $product_delivery = $_POST['product_delivery'];
-    $product_type = $_POST['product_type'];
+    
 
     
     // getting image
@@ -125,9 +126,9 @@ if(isset($_POST['insert_post'])){    // when button is clicked
 
     move_uploaded_file($product_image_tmp,"product_images/$product_image");
 
-    $insert_product = "insert into products (product_cat,product_title,product_stock,product_price,
+    $insert_product = "insert into products (product_cat,product_title,product_type,product_stock,product_price,
                         product_desc,product_image,product_keywords,product_delivery) 
-                        values ('$product_cat','$product_title','$product_stock','$product_price'
+                        values ('$product_cat','$product_title','$product_type','$product_stock','$product_price'
                                 ,'$product_desc','$product_image','$product_keywords','$product_delivery')";
     
     $insert_pro = mysqli_query($con,$insert_product);
@@ -135,6 +136,8 @@ if(isset($_POST['insert_post'])){    // when button is clicked
     if($insert_pro){
        echo "<script>alert('Product has been added')</script>";
        echo "<script>window.open('insert_product.php','_self')</script>";
+    }else{
+        echo "error";
     }
 
 

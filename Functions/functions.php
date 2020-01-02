@@ -14,8 +14,7 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            // echo "<li><a href = '#'>$product_type</a></li>";
-            echo $product_type;
+            echo "<option class='items1'>$product_type</option>";
         }
     }
 
@@ -30,8 +29,7 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            // echo "<li><a href = '#'>$product_type</a></li>";
-            echo $product_type;
+            echo "<option class='items1'>$product_type</option>";
         }
     }
 
@@ -46,8 +44,7 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            // echo "<li><a href = '#'>$product_type</a></li>";
-            echo $product_type;
+            echo "<option class='items1'>$product_type</option>";
         }
     }
     function getFarmerProducts() {

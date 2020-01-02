@@ -64,13 +64,17 @@
                 echo "
                     <div style = 'float:left; margin-left:30px;padding :10px; ' >
                         <img src= '$path'  alt='Image Not Found' width=200 height=150 border=5/>
+                        
+                
                         <div>
                         <p style='text-align:center'>$type</p>
                         <p style='text-align:center'>Price : Rs $price</p>
                         </div>
                         </div> 
-                        "; 
-                }      
+                        
+                        ";
+                } echo "<div><button clas-s='button'><i  class='fa fa-plus fa-3x'></i></button></div>"; 
+                     
             }  
         }
 

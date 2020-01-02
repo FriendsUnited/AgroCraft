@@ -1,4 +1,5 @@
 <?php
+    
 
     $con = mysqli_connect("localhost","root" ,"","agrocraft");
 
@@ -47,7 +48,12 @@
         }
     }
     function getFarmerProducts() {
-            global $con;
+        include("../Includes/db.php");
+        global $con;
+        session_start();
+            $sess_phone_number=$_SESSION['phonenumber'];
+            echo $sess_phone_number;
+            
             $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=128071232 and farmer_password='pass')";
             $run_query=mysqli_query($con,$query);
             $resultCheck=mysqli_num_rows($run_query);

@@ -26,10 +26,10 @@
     }
 ?>
 
-<form action="" method="post">  
-    Phone :<input type="number" name="phonenumber" value="<?php echo $phone;?>" /> <br><br>
-    Address :<input type="text" name="address" value="<?php echo $address;?>" />   <br><br>
-    Account No. :<input type="number" name="bank" value="<?php echo $bank;?>" />   <br><br>
+<form action="EditProfile.php" method="post">  
+    Phone :<input type="number" name="phonenumber" value="<?php  $phone=$_POST['phonenumber'];?>" /> <br><br>
+    Address :<input type="text" name="address" value="<?php $address=$_POST['address'];?>" />   <br><br>
+    Account No. :<input type="number" name="bank" value="<?php $bank=$_POST['bank'];?>" />   <br><br>
     <input type = "submit" name = "confirm" value = "Confirm">                  
     </form>
 
@@ -48,8 +48,10 @@
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];
         $bank = $_POST['bank'];
+
+
         
-        $query = "update farmerregistration set farmer_phone = $phone, farmer_address = $address, farmer_bank = $bank where farmer_name='ram'"; 
+        $query = "update farmerregistration set farmer_phone = '$phone', farmer_address = '$address', farmer_bank = '$bank' where farmer_id in (select farmer_id from farmerregistraion where farmer_phone='$sessphonenumber')"; 
         $run = mysqli_query($con, $query);
     }
 

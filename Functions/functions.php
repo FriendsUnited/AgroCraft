@@ -14,7 +14,8 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            echo "<option class='items1'>$product_type</option>";
+            // echo "<li><a href = '#'>$product_type</a></li>";
+            echo $product_type;
         }
     }
 
@@ -29,7 +30,8 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            echo "<option class='items1'>$product_type</option>";
+            // echo "<li><a href = '#'>$product_type</a></li>";
+            echo $product_type;
         }
     }
 
@@ -44,42 +46,14 @@
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
 
-            echo "<option class='items1'>$product_type</option>";
+            // echo "<li><a href = '#'>$product_type</a></li>";
+            echo $product_type;
         }
     }
     function getFarmerProducts() {
         include("../Includes/db.php");
         global $con;
-        session_start();
-            $sess_phone_number=$_SESSION['phonenumber'];
-            echo $sess_phone_number;
-            
-            $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=128071232 and farmer_password='pass')";
-            $run_query=mysqli_query($con,$query);
-            $resultCheck=mysqli_num_rows($run_query);
-        if($resultCheck>0) {   
-            while($row=mysqli_fetch_assoc($run_query)){
-                    $type =  $row['product_type'];
-                    $image =  $row['product_image'];
-                    $price =  $row['product_price'];
-                    $path = "../Admin/product_images/" . $image ;
         
-                echo "
-                    <div style = 'float:left; margin-left:30px;padding :10px; ' >
-                        <img src= '$path'  alt='Image Not Found' width=200 height=150 border=5/>
-                        
-                
-                        <div>
-                        <p style='text-align:center'>$type</p>
-                        <p style='text-align:center'>Price : Rs $price</p>
-                        </div>
-                        </div> 
-                        
-                        ";
-                } //echo "<div><button clas-s='button'><i  class='fa fa-plus fa-3x'></i></button></div>"; 
-                     
-            }  
-                 
         }  
     
 
@@ -93,6 +67,7 @@
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
 
+<<<<<<< HEAD
             echo "<div class='example'>
                     <div class='wrapper'>
                         <div class='inputwrapper'>
@@ -105,6 +80,20 @@
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>
                         </div>      
                 </div></div>";
+=======
+            echo "<div class='wrapper'>
+                    <div class='inputwrapper'>
+                        <img src='./Admin/product_images/$product_image' alt= 'Image Not Available' style='height: 100px; width: 100px;'><br><br>
+                        <label>$product_title</label><br>
+                        <label>PRICE:- $product_price Rs/kg</label><br>	
+                        <label id='shop2'>Delivery by Farmer</label><br>Qty:-
+                        <input class='numberinput' type='number' name='number'  >
+            
+                        <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button>
+                        <br><br>
+                    </div >      
+                </div><br><br>";
+>>>>>>> 54e3b7302c6e789979c9909ab1efe9b38096ed42
 
         }
     }

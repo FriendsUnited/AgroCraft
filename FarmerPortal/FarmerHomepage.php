@@ -105,29 +105,23 @@
         .button {
             position: absolute;
             margin-left: 130px;
-<<<<<<< HEAD
             float:right;
             /* margin-left: 130px; */
             float:right;
 
-=======
->>>>>>> 9e661c728d3196f74b1450b371ffefb6a9316f01
         }
         
         h2 {
             color: darkgreen;
-<<<<<<< HEAD
             /* background-color: darkcyan; */
         
         
 
             /* background-color: darkcyan; */
         
-=======
             /* background-color: darkcyan; */
         
         
->>>>>>> 9e661c728d3196f74b1450b371ffefb6a9316f01
         }
 
     </style>
@@ -144,8 +138,8 @@
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="#">Edit <i class="fa fa-edit fa-2x"></i></a><br>
-            <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
+            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="EditProfile.php">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 
             <!-- <ul>
@@ -166,13 +160,10 @@
 
 
     <div class="wrapper">
-<<<<<<< HEAD
 <div>
     <div class="wrapper">
-=======
 
 
->>>>>>> 9e661c728d3196f74b1450b371ffefb6a9316f01
         <br>
         <h2>ALL PRODUCTS</h2>
         <table border="1">
@@ -201,21 +192,16 @@
         <table border="2">
 
             <tr>
-<<<<<<< HEAD
     
-=======
         
->>>>>>> 9e661c728d3196f74b1450b371ffefb6a9316f01
         <br>
         
         <div>
             <?php
                 include("../Includes/db.php");
-<<<<<<< HEAD
                 include("../Functions/functions.php");
                 getFarmerProducts(); 
                 //echo "<button>Add product</button>";
-=======
                 $sess_phone_number=$_SESSION['phonenumber'];
             
             $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
@@ -245,7 +231,6 @@
             }  
                  
                 
->>>>>>> 3bc14363dab48a1bc8a0fc46b41fd3ab542f08ba
             ?>
             <br>
             
@@ -265,10 +250,7 @@
     <table border="2">
     
         <tr>
-<<<<<<< HEAD
 
-=======
->>>>>>> 9e661c728d3196f74b1450b371ffefb6a9316f01
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>

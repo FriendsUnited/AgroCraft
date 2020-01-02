@@ -47,10 +47,26 @@
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
-<li id="newlabel"><label id="login">Login/Sign up</label></li>
+<?php
+	session_start();
+	include("Includes/db.php");
+	if(!isset($_SESSION['phonenumber'])) {
+	echo '<li id="newlabel"><label id="login">Login/Sign up</label></li>';
+	}
+	else {
+		$phonenumber = $_SESSION['phonenumber'];
+		$query = "select * from buyerregistration where buyer_phone = '$phonenumber'";
+		$run_query = mysqli_query($con,$query);
+		while($row = mysqli_fetch_array($run_query)){
+			$name =  $row['buyer_name'];
+			
+		}
+		echo "<li id='newlabel'><label id='login'>Hello,$name</label></li>";
+		
+}
 
 
-
+?>
 </ul>
 
 </div>

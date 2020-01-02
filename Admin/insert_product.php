@@ -24,7 +24,7 @@ include("includes/db.php");  // db connections
     
     <form action="insert_product.php" method="post" enctype="multipart/form-data">
     <br>
-        <table id="tab" align="center" width="600" border ="3"> 
+        <table id="tab" align="center" width="600" border =3> 
             <tr id="ins" align="center">
                 <td colspan = 4><h2>Insert New Product Here</h2></td>
             </tr>
@@ -56,6 +56,11 @@ include("includes/db.php");  // db connections
                         ?>
                     </select>
                     </td>
+            </tr>
+
+            <tr id="prostock">
+                <td align="center"><b>Product type : <br></b></td>
+                <td colspan = 2><input type="text" name="product_type" required ></td>
             </tr>
 
             <tr id="proimg">
@@ -111,6 +116,8 @@ if(isset($_POST['insert_post'])){    // when button is clicked
     $product_desc = $_POST['product_desc'];
     $product_keywords = $_POST['product_keywords'];
     $product_delivery = $_POST['product_delivery'];
+    $product_type = $_POST['product_type'];
+
     
     // getting image
     $product_image = $_FILES['product_image']['name'];

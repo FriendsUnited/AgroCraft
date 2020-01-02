@@ -1,13 +1,9 @@
 <?php 
-
     session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <title></title>
     <meta charset="utf-8" />
     <style>
@@ -134,7 +130,6 @@
 
     <!-- <div id="logo"> -->
     <div class="dropdown">
-
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
@@ -142,58 +137,21 @@
             <a href="EditProfile.php">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 
-            <!-- <ul>
-            <li>
-                <a>log out</a>
-            </li>
-            <li><a>edit</a></li>
-        </ul> -->
+            
         </div>
     </div>
-    <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
-
-<div>
-<h3>ALL PRODUCTS</h3> </div>       
-
-
-    <div class="wrapper">
-<div>
+    <div>
     <div class="wrapper">
 
 
         <br>
-        <h2>ALL PRODUCTS</h2>
-        <table border="1">
-
-            <tr>
-                <td><img src="../Images/Crops/Coffee.jpg" alt="#" height=180 width=300 border="3"></td>
-                <td><img src="../Images/Crops/Coconut.jpg" alt="#" height=180 width=300 border="3"></td>
-                <td><img src="../Images/Crops/Maize.jpg" alt="#" height=180 width=300 border="3"></td>
-                <div class="new">
-                    <td width=300> <button class="button"><i  class="fa fa-plus fa-3x"></i></button></td>
-                </div>
-            </tr>
-
-            <tr>
-                <th>Coffee 12/-kg</th>
-                <th>Coconut 13/-kg</th>
-                <th>maize 13/-kg</th>
-
-            </tr>
-
-        </table>
+        <h2>ALL PRODUCTS 
+        <div><a href="../Admin/insert_product.php"><button class='button'><i  class='fa fa-plus fa-3x'></i></button><a></div> 
+        </h2>
         <br>
-
-
-        <h2>TRANSACTION HISTORY</h2>
-        <table border="2">
-
-            <tr>
-    
-        
         <br>
         
         <div>
@@ -226,7 +184,7 @@
                         </div> 
                         
                         ";
-                } //echo "<div><button clas-s='button'><i  class='fa fa-plus fa-3x'></i></button></div>"; 
+                } 
                      
             }  
                  

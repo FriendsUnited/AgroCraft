@@ -47,26 +47,10 @@
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
-<?php
-	session_start();
-	include("Includes/db.php");
-	if(!isset($_SESSION['phonenumber'])) {
-	echo '<li id="newlabel"><label id="login">Login/Sign up</label></li>';
-	}
-	else {
-		$phonenumber = $_SESSION['phonenumber'];
-		$query = "select * from buyerregistration where buyer_phone = '$phonenumber'";
-		$run_query = mysqli_query($con,$query);
-		while($row = mysqli_fetch_array($run_query)){
-			$name =  $row['buyer_name'];
-			
-		}
-		echo "<li id='newlabel'><label id='login'>Hello,$name</label></li>";
-		
-}
+<li id="newlabel"><label id="login">Login/Sign up</label></li>
 
 
-?>
+
 </ul>
 
 </div>
@@ -150,6 +134,33 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- <img src="portal_files/pic1.jpg"> -->
 <!-- <table>
 	<tr>
@@ -185,10 +196,29 @@
 
 
 
-<div>
-	<?php 
-		include("Functions/functions.php");
-		getProducts(); ?>
-</div>
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="example">
+		<div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
+        	
+        	<label>Ramlal patotoes</label><br>
+        	<label>PRICE:- 100 Rs/kg</label><br>
+        		
+        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
+        	
+          <input class="numberinput" type="number" name="number"  >
+
+            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+       </div>
+              
+</div></body></html>

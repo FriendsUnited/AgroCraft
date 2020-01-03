@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Edit Profile</title>
-    <style>
-        <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forgot Password</title>
+    <title>Edit Password</title>
 
     <style>
         h1 {
@@ -124,50 +116,47 @@
     </head>
 
     <body>
+    
+    <?php
+
+        include("../Includes/db.php");
+        session_start();
+        $sessphonenumber = $_SESSION['phonenumber'];
+        $sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
+        $run_query = mysqli_query($con,$sql);
+        while($row = mysqli_fetch_array($run_query))
+        {
+            $name = $row['farmer_name'];
+            $pan = $row['farmer_pan'];
+            $phone = $row['farmer_phone'];
+            $address = $row['farmer_address'];
+            $account= $row['farmer_bank']; 
+        }
+    ?>
     <div class="just"><a  href="#"> <i class="fa fa-home fa-3x"></i></a></div>
         <div class="box">
-            <form action="FarmerForgotPassword.php" method="post">
+            <form action="EditProfile.php" method="post">
                 <h1> EDIT PROFILE</h1>
                 <div class="in-icons">
-                <textarea rows="2" column="18" disabled>Name</textarea><br>
-                <textarea rows="2" column="20" disabled>Pan number</textarea><br>
-                <!-- <label class="two">$name</label><br>
-                <label class="two">$pan</label> <br> -->
-                    <input type="number" name="phonenumber" placeholder="Phone Number"> <br>
-                    <input type="text" name="address" placeholder="address" required><br>
-                    <input type="number" name="accountnumber" placeholder="account Number"><br>
+                <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
+                <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
+                    <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                    <input type="text" name="address" value="<?php echo $address;?> "/> <br>
+                    <input type="number" name="bank" value="<?php echo $account; ?>" />    <br>
  
                     <span style=" display:block;  margin-bottom: .75em; "></span>
 
                     <input type="submit" name="register" value="Confirm">
-                    <input type="submit" name="register" value="Change Password">
+                    
 
                 </div>
             </form>
+            <a href="ChangePassword.php"><button>Change Password</button></a>
         </div>
     
 
     
 </head>
-
-<?php
-
-    include("../Includes/db.php");
-    session_start();
-    $sessphonenumber = $_SESSION['phonenumber'];
-    $sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
-    $run_query = mysqli_query($con,$sql);
-    while($row = mysqli_fetch_array($run_query))
-    {
-        $name = $row['farmer_name'];
-        echo "Name :   ",$name,"<br><br>"; 
-        $pan = $row['farmer_pan'];
-        echo "Pan Number :   ",$pan,"<br><br>"; 
-        $phone = $row['farmer_phone'];
-        $address = $row['farmer_address'];
-        $bank= $row['farmer_bank']; 
-    }
-?>
 
 </body>
 </html>
@@ -176,15 +165,15 @@
 
     include("../Includes/db.php");
 
-    if (isset($_POST['confirm']))
+    if (isset($_POST['register']))
     {
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];
-        $bank = $_POST['bank'];      
+        $account = $_POST['bank'];      
         
         $query = "update farmerregistration 
                   set farmer_phone = '$phone',
-                  farmer_address = '$address', farmer_bank = '$bank' where farmer_id 
+                  farmer_address = '$address', farmer_bank = '$account' where farmer_id 
                   in (select farmer_id from farmerregistration 
                   where farmer_phone='$sessphonenumber')"; 
         $run = mysqli_query($con, $query);

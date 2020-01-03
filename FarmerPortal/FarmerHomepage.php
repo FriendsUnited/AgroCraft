@@ -1,9 +1,13 @@
 <?php 
+
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <title></title>
     <meta charset="utf-8" />
     <style>
@@ -21,6 +25,11 @@
             /* width: 300px; */
             background-image: 100px;
         }
+        .add_button{
+            clear:left;
+            margin-left:450px;
+            float:right;
+        }
         
         .dropdown {
             float: right;
@@ -35,14 +44,16 @@
         
         ul li:hover ul li {
             display: block;
-            width: 30px
+            /* width: 30px; */
         }
         
         ul li a {
             display: block;
-            width: 30px
+            /* width: 30px; */
         }
-        
+        .products:last-child{
+              
+        }
         h1 {
             color: rgb(20, 83, 31);
             font-family: 'Times New Roman', Times, serif;
@@ -73,7 +84,7 @@
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             font-size: 20px;
             background-color: transparent;
-            width: 100px;
+            /* width: 100px; */
             font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
         }
         
@@ -95,7 +106,6 @@
             /* display: table-cell;
             vertical-align: middle; */
             text-align: center;
-            margin-right:50px;
         }
         
         .button {
@@ -103,6 +113,7 @@
             margin-left: 130px;
             float:right;
             /* margin-left: 130px; */
+            float:right;
 
         }
         
@@ -110,21 +121,10 @@
             color: darkgreen;
             /* background-color: darkcyan; */
         
+        
 
             /* background-color: darkcyan; */
         
-<<<<<<< HEAD
-            /* background-color: darkcyan; */
-        
-        
-        
-        }
-        .one{
-            float:right;
-            margin-right:4em;
-=======
-
->>>>>>> d16e2299ac8c9603bc61a57814d7839660f0476e
         }
 
     </style>
@@ -137,36 +137,50 @@
 
     <!-- <div id="logo"> -->
     <div class="dropdown">
+
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
-            <a href="EditProfile.php">Logout <i class="fa-sign-out fa-2x"></i></a>
+            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 
-            
+            <!-- <ul>
+            <li>
+                <a>log out</a>
+            </li>
+            <li><a>edit</a></li>
+        </ul> -->
         </div>
     </div>
+    <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
-    <div>
+
+<div>
+<h3>ALL PRODUCTS</h3> </div>       
+
+
     <div class="wrapper">
+<div>
+    <div class="wrapper">
+        <br>
+       <br>
 
 
-        <br>
-        <h2>ALL PRODUCTS 
-        <div class="one"><a href="../Admin/insert_product.php"><button class="button"><i  class="fa fa-plus fa-3x"></i></button><a></div> 
-        </h2>
-        <br>
+        <h2>ALL PRODUCTS</h2>
+        <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                     
+
+        <table border="2">
+
+            <tr>
+    
         <br>
         
         <div>
             <?php
-                include("../includes/db.php");
-                include("../Functions/functions.php");
-                getFarmerProducts(); 
-                //echo "<button>Add product</button>";
+                include("../Includes/db.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
             
             $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
@@ -191,12 +205,13 @@
                         </div> 
                         
                         ";
-                } 
+                } //echo "<div><button clas-s='button'><i  class='fa fa-plus fa-3x'></i></button></div>"; 
                      
             }  
                  
                 
             ?>
+    
             <br>
             
         </div>
@@ -240,3 +255,4 @@
 </body>
 
 </html>
+

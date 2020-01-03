@@ -12,13 +12,21 @@
             background-color: transparent;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             text-align: center;
-            cursor: pointer
+            cursor: pointer;
+            /* font-size:20px; */
+        }
+        textarea{
+            font-size:20px;
+            border-radius:15px;
+            text-align:center;
+            border-color:green;
+            background-color:transparent;
         }
         
         .box {
             color: rgb(6, 36, 7);
             width: 450px;
-             line-height: 80px; 
+             line-height: 30px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
@@ -27,6 +35,7 @@
             /* border-width: 5px;
             border-radius: 16px; */
             border-color: green;
+            /* font-size:20px; */
         }
         
         body {
@@ -94,9 +103,9 @@
         
             
         }
-        .three{
-            width:100px;
-            font-size:54px;
+        /* .three{
+            width:70%;
+             font-size:54px; 
             background:transparent;
             border:3px;
             border-color:green;
@@ -105,7 +114,11 @@
             height:60px;
 
         }
-        
+        $address{
+            width:50%;
+            text-align:left;
+        } 
+          */
        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -117,14 +130,19 @@
     <div class="box">
         <form action="FarmerForgotPassword.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
-            
-                <label class="two">$name</label><br>
+            <textarea rows="2" column="10" disabled>Name</textarea><br>
+                <!-- <label class="two">$name</label><br>
 
-               <label class="two">$phone</label> <br>
-               <label class="three">$address</label> <br>
-               <label class="two">$pan</label> <br>
+               <label class="two">$phone</label> <br> -->
+               
+               <textarea rows="2" column="10" disabled>Phone No.</textarea><br>
+               <textarea rows="3" column="56" disabled>Address</textarea><br>
+               <textarea rows="2" column="10" disabled>Pan number</textarea><br>
+               <textarea rows="2" column="10"disabled>Account number</textarea><br>
+               <!-- <label class="three">$address</label> <br> -->
+               <!-- <label class="two">$pan</label> <br>
                <label class="two">$bank</label> <br>
-                
+                 -->
                 
                 
                 <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->
@@ -158,7 +176,9 @@
         echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
         echo "Account Number :",$bank,"<br>";
-    }  
+    }   
+    
+
 ?>
 
     

@@ -139,9 +139,9 @@
     while($row = mysqli_fetch_array($run_query))
     {
         $name = $row['farmer_name'];
-        echo "Name :",$name,"<br><br>"; 
+        echo "Name :   ",$name,"<br><br>"; 
         $pan = $row['farmer_pan'];
-        echo "Pan Number :",$pan,"<br><br>"; 
+        echo "Pan Number :   ",$pan,"<br><br>"; 
         $phone = $row['farmer_phone'];
         $address = $row['farmer_address'];
         $bank= $row['farmer_bank']; 

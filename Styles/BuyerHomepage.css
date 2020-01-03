@@ -1,28 +1,29 @@
   .header{
-height: 50px;
+height: 69px;
 width: 100%;
 background-color:   #00b300;
   }
 #logo {
-    height: 50px;
-    width: 100px;
+    height: 66px;
+    width: 110px;
     text-align: left;
     float: left;
 }
-.search_input{
+.search_input input{
   float:left;
+  width:700px;
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .proicon{
   float: right;
   margin-right: 10px;
-  margin-top: 10px;
+  /* margin-top: 5px; */
 }
 .icon2{
   float: right;
    margin-right: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 
 }
 .loginz{
@@ -31,7 +32,8 @@ background-color:   #00b300;
  
  /*margin-left: 570px;*/
   margin-right: 10px;
-  margin-top: 10px;
+  color: azure;
+  /* margin-top: 20px; */
 
 }
 *{

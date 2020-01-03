@@ -110,11 +110,14 @@
             <form action="FarmerForgotPassword.php" method="post">
                 <h1>PROFILE</h1>
                 <div class="in-icons">
-                    <input type="number" name="phonenumber" placeholder="Phone Number"> <i class="fa fa-phone fa-2x" aria-hidden="true"></i> <br>
-                    <input type="text" name="pan" placeholder="Pan Number"><br>
+                <label class="two">$name</label><br>
+                <label class="two">$pan</label> <br>
+                    <input type="number" name="phonenumber" placeholder="Phone Number"> ss<br>
+                    <input type="text" name="address" placeholder="address" required><br>
+                    <input type="number" name="accountnumber" placeholder="account Number"><br>
 
-                    <input type="password" name="password" placeholder="Password" required><br>
-                    <input type="password" name="confirmpassword" placeholder="Confirm Password" required><br>
+                    <input type="text" name="address" placeholder="address" required><br>
+                    
                     <span style=" display:block;  margin-bottom: .75em; "></span>
 
                     <input type="submit" name="register" value="Update Password">

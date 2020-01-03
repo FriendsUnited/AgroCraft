@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>PORTAL</title>
-	<link rel="stylesheet" type="text/css" href="Styles/FarmerHomepage.css">
+	<link rel="stylesheet" type="text/css" href="Styles/BuyerHomepage.css">
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

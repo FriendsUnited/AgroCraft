@@ -213,7 +213,7 @@ while($row = mysqli_fetch_array($run_query))
                         <label><b>Phone :</b></label>
                     </td>
                     <td>
-                        <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/> <br>
                     </td>
                 </tr>
                 <tr align = "center">
@@ -235,7 +235,7 @@ while($row = mysqli_fetch_array($run_query))
                 </tr>
                 <tr colspan =2>
                     <td colspan =2>
-                        <input type="submit" name="register" value="Confirm">
+                        <input type="submit" name="confirm" value="Confirm">
                     </td>
                 </tr>
             </table>
@@ -253,7 +253,7 @@ while($row = mysqli_fetch_array($run_query))
 <?php
 
 
-    if (isset($_POST['register']))
+    if (isset($_POST['confirm']))
     {
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];

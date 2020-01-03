@@ -40,8 +40,8 @@
         
         .box {
             color: rgb(6, 36, 7);
-            width: 350px;
-            line-height: 40px;
+            width: 450px;
+            line-height: 40px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
@@ -49,7 +49,8 @@
             border-style: outset;
             border-width: 5px;
             border-radius: 16px;
-            border-color: green;
+            border-color:rgb(0, 172, 230);
+        
         }
         
         body {
@@ -59,11 +60,11 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: white;
-            background-image: url(../Images/Website/forgotpassword.jpg);
+            background-image: url(../Images/Website/buyerLogin.jpeg);
             border: chartreuse;
         }
         
-        form {
+        #innerbox {
             margin: 10px;
             padding: 10px;
             background-color: rgb(247, 248, 247);
@@ -72,7 +73,7 @@
         input {
             padding: 7px;
             margin: 10px;
-            border-color: rgb(78, 180, 121);
+             border-color:rgb(0, 172, 230);
             display: inline-block;
             border-radius: 16px;
         }
@@ -82,21 +83,19 @@
             font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
+            background-color: rgb(0, 191, 255);
             border-radius: 16px;
-            border-color: rgb(3, 66, 34);
+            border-color: rgb(0, 172, 230);
             width: 44%;
         }
         
         input[type="submit"]:hover {
-            background-color: rgb(97, 16, 33);
+                background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
             width: 54%;
             font-size: 18px;
@@ -104,7 +103,7 @@
         textarea{
              border-width: 3px; 
              border-radius: 16px; 
-            border-color: rgb(78, 180, 121);
+             border-color:rgb(0, 172, 230);
             
             
         }
@@ -146,30 +145,36 @@
             font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
-            border-radius: 16px;
             border-color: rgb(3, 66, 34);
-            /* width: 96%; */
+            width: 96%;
             padding : 10px;
             padding-left:10px;
             padding-right:10px;
-            
-            
-            
+            background-color: rgb(0, 191, 255);
+            border-radius: 16px;
+            border-color: rgb(0, 172, 230);    
         }
+
         .say:hover{
-            background-color: rgb(97, 16, 33);
+            background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
-            width: 94%;
+            width: 80%;
             font-size: 18px;
 
+        }
+        .just{
+            float:left;
+            margin-left:1%;
+            margin:20px;
+            position:absolute;
+            left:0;
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
         }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -181,11 +186,13 @@
     
 
     <div class="just">
-        <a  href="FarmerHomepage.php"> <i class="fa fa-home fa-4x"></i></a>
+        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
+
     <div class="box">
-        <form action="" method="post">
+        <div id = "innerbox">
+        <form action="BuyerProfile.php" method = "post">
              <table align = "center" >
 
                 <tr colspan = 2>
@@ -256,7 +263,7 @@
                         <label><b>Phone :</b></label>
                     </td>
                     <td>
-                        <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/> <br>
                     </td>
                 </tr>
 
@@ -278,18 +285,24 @@
                     </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>
                 </tr>
-                <tr colspan =2>
+
+                <tr colspan =2 align = "center">
                     <td colspan =2>
                         <input type="submit" name="confirm" value="Confirm">
                     </td>
                 </tr>
+                
+                <tr colspan =2 align = "center">
+                <div class="again">
+                    <td colspan =2><a href="BuyerChangePassword.php"><button class="say">Change Password</button></a></td>
+                </div>
+                </tr>
             </table>
-        </form>
-        <div class="again">
-            <a href="ChangePassword.php"><button class="say">Change Password</button></a>
-        </div>
+            </form>
+            </div>
+ 
     </div>
-    
+  
 
 
 </body>

@@ -14,10 +14,10 @@
             }
 
             echo "<label id='login'>Hello ,$buyer_name</label>";
-            echo "<li id='newlabel'><label id='login'></label></li>";
+
         }
         else {
-            echo "<label id='login'>Login/Sign up</label>";
+            echo "<label style = 'margin-left: 325px;'><a href = '../auth/BuyerLogin.php' style = 'color: azure;'>Login/Sign up</a></label>";
         }
        
     }

@@ -54,15 +54,15 @@
         .box {
             color: rgb(6, 36, 7);
             width: 450px;
-             line-height: 40px; 
+            line-height: 40px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
             padding: 5px;
             border-style: outset;
-            /* border-width: 5px;
-            border-radius: 16px; */
-            border-color: green;
+            border-width: 5px;
+            border-radius: 16px;
+            border-color:rgb(0, 172, 230);
             /* font-size:20px; */
         }
         
@@ -73,7 +73,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: white;
-            background-image: url(../Images/Website/forgotpassword.jpg);
+            background-image: url(../Images/Website/buyerLogin.jpeg);
             border: chartreuse;
         }
         
@@ -93,24 +93,22 @@
         
         input[type="submit"] {
             cursor: pointer;
-            font-size: 22px;
+            font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
+            background-color: rgb(0, 191, 255);
             border-radius: 16px;
-            border-color: rgb(3, 66, 34);
-            width: 64%;
+            border-color: rgb(0, 172, 230);
+            width: 44%;
         }
         
         input[type="submit"]:hover {
-            background-color: rgb(97, 16, 33);
+                background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
             width: 54%;
             font-size: 18px;
@@ -132,7 +130,6 @@
             
         }
         .just{
-          
             float:left;
             margin-left:1%;
             margin:20px;
@@ -140,8 +137,8 @@
             left:0;
             top:0px; 
             text-shadow: 1px 1px 1px black;
-             
         }
+
 
        
     </style>
@@ -151,13 +148,16 @@
 </head>
 
 <body>
+    <div class="just">
+        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+    </div>
 
     <div class="box">
         <form action="BuyerEditProfile.php" method="post">
 
             <table align = "center">
                 <tr colspan = 2>
-                    <h1> FARMER'S  PROFILE</h1>
+                    <h1> BUYER'S  PROFILE</h1>
                 </tr>
 
                 <tr align = "center">
@@ -204,7 +204,7 @@
                     <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
                 </tr>
                 
-                <tr colspan =2>
+                <tr colspan =2 align = "center">
                     <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
                 </tr>
             </table>

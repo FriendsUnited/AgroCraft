@@ -27,20 +27,11 @@ background-color:   #00b300;
 
 }
 .loginz{
-    float: right;
- /*margin-right: 80px;*/
- 
- /*margin-left: 570px;*/
-  margin-right: 10px;
+    
+  margin-left: 325px;
   color: azure;
-  /* margin-top: 20px; */
-
 }
-*{
-    margin: 0;
-    /*background-color: blue;*/
 
-}
 
 .slideshow{
     margin-top: 20px;

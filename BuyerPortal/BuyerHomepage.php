@@ -31,23 +31,23 @@
 
 
 <div class="header" >
-    <img id="logo" src="../portal_files/logo.jpg">
+    	<a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 <div class="search_input">
     <i class="fas fa-search" style="font-size:20px;color:white " ></i>
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 
+
 <div class="proicon">
-<a href="#"> <i class="far fa-user-circle" style="font-size:30px; color: white"></i></a>
+<a href="BuyerProfile.php"> <i class="far fa-user-circle" style="font-size:30px; color: white"></i></a>
 </div>
 
 <div class="icon2">
-  
-<i class="fa" style="font-size:30px; color:white">&#61562;</i>
+<a href="#"> <i class="fa" style="font-size:30px; color:white">&#61562;</i></a>
     <span id="icon"> 5 </span></div>
-
+   
+    <?php getUsername(); ?>
 <div class="loginz">
 <!-- <label id="login">Login/Sign up</label> -->
-<?php getUsername(); ?>
 </div>
 </div>
 </div>
@@ -130,7 +130,7 @@
 
 
 </table><br>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>VEGETABLES</b></label></div>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
 	<?php getVegetablesHomepage(); ?>
 	<!-- <div class="veg">
@@ -151,7 +151,7 @@
 <br>
 
 
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>CROPS </b></label></div>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
 <?php getCropsHomepage(); ?>
 <!-- <div class="crop">

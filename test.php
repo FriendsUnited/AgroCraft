@@ -1,28 +1,26 @@
-<?php 
+<!-- <?php 
 	include("Functions/functions.php");
-?>
+?> -->
 
 <!DOCTYPE html>
-<!-- saved from url=(0070)file:///C:/Users/Ansh/Desktop/gitttttt/AgroCraft/AgroCraft/portal.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>PORTAL</title>
-	<link rel="stylesheet" type="text/css" href="Styles/portal.css">
+	<link rel="stylesheet" type="text/css" href="Styles/FarmerHomepage.css">
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 
-
-
-
-
-<link rel="stylesheet" href="portal_files/bootstrap.min.css">
-  <script src="portal_files/jquery.min.js.download"></script>
-  <script src="portal_files/popper.min.js.download"></script>
-  <script src="portal_files/bootstrap.min.js.download"></script>
-  </head>
+	<link rel="stylesheet" href="portal_files/bootstrap.min.css">
+  	<script src="portal_files/jquery.min.js.download"></script>
+  	<script src="portal_files/popper.min.js.download"></script>
+  	<script src="portal_files/bootstrap.min.js.download"></script>
+ </head>
 <body>
 	<!-- <div class="navbar"> -->
 	<!-- <div class="flex-container"> -->
@@ -87,6 +85,7 @@
     <div class="carousel-item">
       <img class="images1" src="portal_files/same1.jpg" height="500px" width="1300px" alt="...">
     </div>
+
    
     <div class="carousel-item active">
       <img class="images1" src="portal_files/same6.jpg" height="500px" width="1300px" alt="...">
@@ -210,8 +209,45 @@
 
 
 <!-- <div class = "ProductItems">
-	<div class="example">
+	<div class="example"> -->
+		<div class="wrapper">
 		<div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
+        	
+        	<label>Ramlal patotoes</label><br>
+        	<label>PRICE:- 100 Rs/kg</label><br>
+        		
+        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
+        	
+            <input class="numberinput" type="number" name="number"  >
+
+            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+       </div>   
+       <div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
+        	
+        	<label>Ramlal patotoes</label><br>
+        	<label>PRICE:- 100 Rs/kg</label><br>
+        		
+        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
+        	
+            <input class="numberinput" type="number" name="number"  >
+
+            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+       </div>     
+         <div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
+        	
+        	<label>Ramlal patotoes</label><br>
+        	<label>PRICE:- 100 Rs/kg</label><br>
+        		
+        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
+        	
+            <input class="numberinput" type="number" name="number"  >
+
+            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+       </div>       
+         <div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>
@@ -224,12 +260,13 @@
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
        </div>            
 	</div>
+<!-- </div>
 </div> -->
-<div>
+<!-- <div>
 	<?php 
 		
 		getProducts(); ?>
-</div>
+</div> -->
 
 
 

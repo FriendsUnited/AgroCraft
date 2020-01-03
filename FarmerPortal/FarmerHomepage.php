@@ -110,11 +110,9 @@
         
         .button {
             position: absolute;
-            margin-left: 130px;
-            float:right;
             /* margin-left: 130px; */
-            float:right;
-
+            float:left;
+            margin-bottom:250px;
         }
         
         h2 {
@@ -172,52 +170,23 @@
         <h2>ALL PRODUCTS</h2>
         <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                     
 
-        <table border="2">
-
-            <tr>
-    
         <br>
         
         <div>
             <?php
                 include("../Includes/db.php");
+                include("../Functions/functions.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
-            
-            $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
-            $run_query=mysqli_query($con,$query);
-            $resultCheck=mysqli_num_rows($run_query);
-        if($resultCheck>0) {   
-            while($row=mysqli_fetch_assoc($run_query)){
-                    $type =  $row['product_type'];
-                    $image =  $row['product_image'];
-                    $price =  $row['product_price'];
-                    $path = "../Admin/product_images/" . $image ;
-        
-                echo "
-                    <div style = 'float:left; margin-left:30px;padding :10px; ' >
-                        <img src= '$path'  alt='Image Not Found' width=200 height=150 border=5/>
-                        
-                
-                        <div>
-                        <p style='text-align:center'>$type</p>
-                        <p style='text-align:center'>Price : Rs $price</p>
-                        </div>
-                        </div> 
-                        
-                        ";
-                } //echo "<div><button clas-s='button'><i  class='fa fa-plus fa-3x'></i></button></div>"; 
-                     
-            }  
-                 
-                
+                getFarmerProducts();
+       
             ?>
     
-            <br>
             
         </div>
     </div>
     
        <div class="trans">
+        
 
        <h3>TRANSACTION HISTORY</h3>
        </div> 
@@ -230,13 +199,12 @@
     <table border="2">
     
         <tr>
-
-                <th width=200px>date</th>
-                <th width=200px>name</th>
-                <th width=200px>phone no</th>
-                <th width=200px> address</th>
-                <th width=200px>quantity</th>
-                <th width=200px>price</th>
+                <th width=200px>Date</th>
+                <th width=200px>Name</th>
+                <th width=200px>Phone Number</th>
+                <th width=200px>Address</th>
+                <th width=200px>Quantity</th>
+                <th width=200px>Price</th>
 
             </tr>
             <tr>

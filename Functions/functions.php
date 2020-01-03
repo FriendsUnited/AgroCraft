@@ -48,12 +48,40 @@
             echo "<option class='items1'>$product_type</option>";
         }
     }
+
+
     function getFarmerProducts() {
-        include("../Includes/db.php");
+        include("../includes/db.php");
         global $con;
+        $sess_phone_number=$_SESSION['phonenumber'];
+        $query="select product_type,product_image,product_price from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
+            $run_query=mysqli_query($con,$query);
+            $resultCheck=mysqli_num_rows($run_query);
+        if($resultCheck>0) {   
+            while($row=mysqli_fetch_assoc($run_query)){
+                    $type =  $row['product_type'];
+                    $image =  $row['product_image'];
+                    $price =  $row['product_price'];
+                    $path = "../Admin/product_images/" . $image ;
         
-        }  
-    
+                echo "
+                    <div style = 'float:left;margin : 15px; margin-left:30px;padding :15px; border-style : outline; border:2px solid ;border-color:green; border-radius:10px;' >
+
+                        <a href='#'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
+                        style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
+                        
+                
+                        <div>
+                        <p style='text-align:center; text-decoration:underline;'><b>$type</b></p>
+                        <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
+                        </div>
+                        </div> 
+                        
+                        ";
+                }                     
+           }       
+
+    }    
 
     function getProducts() {
         global $con;
@@ -66,18 +94,15 @@
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
 
-
             echo "<div class='example'>
                     <div class='wrapper'>
                         <div class='inputwrapper'>
                             <br>
-                            <a href='#'><img src='./Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
-                            <label id='shop2'>Delivery by Farmer</label><br>Qty:-
-                            <input class='numberinput' type='number' name='number'  >
-                            <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
-                        </div></div></div> ";
+                              
+                        </div></div> ";
 
         }
     }
@@ -137,6 +162,12 @@
                     <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";    
         }
+    }
+
+    function getProductDetails(){
+        global $con;
+        $query="select * from products where product_id in (select product_id from products where product_image=$product_image)";
+        $run_query = mysqli_query($con,$query);
     }
 
 ?>

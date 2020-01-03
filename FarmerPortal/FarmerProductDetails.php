@@ -1,6 +1,3 @@
-<?php 
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +9,10 @@
 <body>
     <div>
         <?php 
-            include("includes/db.php");
-            include("Functions/functions.php");
+            include("../includes/db.php");
+            include("../Functions/functions.php");
             $sess_phone_number=$_SESSION['phonenumber'];    
-            getProductDetails();
+            getFarmerProductDetails();
 
 
         ?>

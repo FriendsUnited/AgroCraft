@@ -137,7 +137,7 @@ if(isset($_POST['insert_post'])){    // when button is clicked
        echo "<script>alert('Product has been added')</script>";
        echo "<script>window.open('insert_product.php','_self')</script>";
     }else{
-        echo "error";
+        echo "<script>alert('Error Uploading Data Please Check your Connections ')</script>";
     }
 
 

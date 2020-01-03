@@ -57,7 +57,7 @@
 
     function getProducts() {
         global $con;
-        $query = "select * from products  order by RAND() LIMIT 0,4";
+        $query = "select * from products  order by RAND() LIMIT 0,8";
         $run_query = mysqli_query($con,$query);
         echo "<br>";
         while($rows = mysqli_fetch_array($run_query)){
@@ -80,6 +80,43 @@
                         </div>      
                 </div></div>";
 
+        }
+    }
+
+
+    function getVegetablesHomepage(){
+        global $con;
+        $query = "select * from products where product_cat = 2 order by RAND() LIMIT 0,4";
+        $run_query = mysqli_query($con,$query);
+        while($rows = mysqli_fetch_array($run_query)){
+            $product_title = $rows['product_title'];
+            $product_image = $rows['product_image'];
+            $product_price = $rows['product_price'];
+            $product_delivery = $rows['product_delivery'];
+            $product_cat = $rows['product_cat'];
+
+            echo "<div class='veg'>
+                    <img src='Admin/product_images/$product_image' height='250px' width='300px' >
+                    </div>";
+            
+            
+        }
+    }
+
+    function getCropsHomepage(){
+        global $con;
+        $query = "select * from products where product_cat = 1 order by RAND() LIMIT 0,4";
+        $run_query = mysqli_query($con,$query);
+        while($rows = mysqli_fetch_array($run_query)){
+            $product_title = $rows['product_title'];
+            $product_image = $rows['product_image'];
+            $product_price = $rows['product_price'];
+            $product_delivery = $rows['product_delivery'];
+            $product_cat = $rows['product_cat'];
+
+            echo "<div class='veg'>
+                    <img src='Admin/product_images/$product_image' height='250px' width='300px' >
+                    </div>";    
         }
     }
 

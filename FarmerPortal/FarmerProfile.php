@@ -10,7 +10,7 @@
         $phone = $row['farmer_phone'];
         $address = $row['farmer_address'];
         $pan = $row['farmer_pan'];
-        $bank= $row['farmer_bank'];
+        $bank = $row['farmer_bank'];
     }  
 ?>
 
@@ -154,9 +154,6 @@
         <form action="EditProfile.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
             <textarea rows="2" column="10" disabled>Name</textarea><br>
-                <!-- <label class="two">$name</label><br>
-
-               <label class="two">$phone</label> <br> -->
                
                <textarea rows="2" column="10" disabled>Phone No.</textarea><br>
                <textarea rows="3" column="56" disabled>Address</textarea><br>

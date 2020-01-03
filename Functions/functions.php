@@ -68,7 +68,6 @@
 
            
             echo "
-                    <div class='wrapper'>
                         <div class='inputwrapper'>
                             <br>
                             <a href='#'><img src='./Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
@@ -76,9 +75,8 @@
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
-                            <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>
-                        </div>      
-                </div> ";
+                            <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
+                        </div> ";
 
         }
     }

@@ -1,3 +1,21 @@
+<?php
+
+include("../Includes/db.php");
+session_start();
+$sessphonenumber = $_SESSION['phonenumber'];
+$sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
+$run_query = mysqli_query($con,$sql);
+while($row = mysqli_fetch_array($run_query))
+{
+    $name = $row['farmer_name'];
+    $pan = $row['farmer_pan'];
+    $phone = $row['farmer_phone'];
+    $address = $row['farmer_address'];
+    $account= $row['farmer_bank']; 
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,6 +127,50 @@
              top:0px; 
         
         }
+        .again{
+            cursor: pointer;
+            font-size: 24px; 
+            font-weight: bold;
+            color: rgb(246, 248, 246);
+            /* background-color: green; */
+            /* display: inline-block; */
+            border-radius: 16px;
+            border-color: rgb(3, 66, 34);
+            width: 44%;
+            margin-left:100px;
+
+
+        }
+        .say{
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(246, 248, 246);
+            background-color: green;
+            /* display: inline-block; */
+            border-radius: 16px;
+            border-color: rgb(3, 66, 34);
+            /* width: 96%; */
+            padding : 10px;
+            padding-left:10px;
+            padding-right:10px;
+            
+            
+            
+        }
+        .say:hover{
+            background-color: rgb(97, 16, 33);
+            outline: none;
+            border-color: blanchedalmond;
+            color: rgb(155, 248, 4);
+            border-radius: 20%;
+            border-style: outset;
+            border-color: rgb(155, 248, 4);
+            font-weight: bolder;
+            width: 94%;
+            font-size: 18px;
+
+        }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -117,23 +179,8 @@
 
     <body>
     
-    <?php
 
-        include("../Includes/db.php");
-        session_start();
-        $sessphonenumber = $_SESSION['phonenumber'];
-        $sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
-        $run_query = mysqli_query($con,$sql);
-        while($row = mysqli_fetch_array($run_query))
-        {
-            $name = $row['farmer_name'];
-            $pan = $row['farmer_pan'];
-            $phone = $row['farmer_phone'];
-            $address = $row['farmer_address'];
-            $account= $row['farmer_bank']; 
-        }
-    ?>
-    <div class="just"><a  href="#"> <i class="fa fa-home fa-3x"></i></a></div>
+    <div class="just"><a  href="FarmerHomepage.php"> <i class="fa fa-home fa-3x"></i></a></div>
         <div class="box">
             <form action="EditProfile.php" method="post">
                 <h1> EDIT PROFILE</h1>
@@ -147,11 +194,16 @@
                     <span style=" display:block;  margin-bottom: .75em; "></span>
 
                     <input type="submit" name="register" value="Confirm">
-                    
-
-                </div>
-            </form>
-            <a href="ChangePassword.php"><button>Change Password</button></a>
+                    </form>
+                  
+                    </div>
+                    <div class="again">
+                        <a href="ChangePassword.php"><button class="say">Change Password</button></a>
+                    </div>
+                   
+               
+            
+           
         </div>
     
 

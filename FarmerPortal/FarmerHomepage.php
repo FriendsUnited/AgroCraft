@@ -103,7 +103,6 @@
             margin-left: 130px;
             float:right;
             /* margin-left: 130px; */
-            float:right;
 
         }
         
@@ -111,10 +110,10 @@
             color: darkgreen;
             /* background-color: darkcyan; */
         
-        
 
             /* background-color: darkcyan; */
         
+<<<<<<< HEAD
             /* background-color: darkcyan; */
         
         
@@ -123,6 +122,9 @@
         .one{
             float:right;
             margin-right:4em;
+=======
+
+>>>>>>> d16e2299ac8c9603bc61a57814d7839660f0476e
         }
 
     </style>
@@ -138,7 +140,7 @@
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="EditProfile.php">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 

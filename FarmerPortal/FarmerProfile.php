@@ -158,9 +158,7 @@
         echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
         echo "Account Number :",$bank,"<br>";
-    }   
-    
-
+    }  
 ?>
 
     

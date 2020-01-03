@@ -103,7 +103,6 @@
             margin-left: 130px;
             float:right;
             /* margin-left: 130px; */
-            float:right;
 
         }
         
@@ -111,13 +110,10 @@
             color: darkgreen;
             /* background-color: darkcyan; */
         
-        
 
             /* background-color: darkcyan; */
         
-            /* background-color: darkcyan; */
-        
-        
+
         }
 
     </style>

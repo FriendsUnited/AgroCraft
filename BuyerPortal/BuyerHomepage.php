@@ -86,10 +86,10 @@
 
    
     <div class="carousel-item active">
-      <img class="images1" src="../portal_files/same6.jpg" height="500px" width="1300px" alt="...">
+      <img class="images1" src="../portal_files/same6.jpg" height="500px" width="1350px" alt="...">
     </div>
     <div class="carousel-item">
-      <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1300px" alt="...">
+      <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
     </div>
   
   </div>
@@ -130,7 +130,7 @@
 
 
 </table><br>
-<div class=content_item><label>VEGETABLES</label></div>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>VEGETABLES</b></label></div>
 	<div id="vegs">
 	<?php getVegetablesHomepage(); ?>
 	<!-- <div class="veg">
@@ -151,7 +151,7 @@
 <br>
 
 
-<div class=content_item><label>CROPS </label></div>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>CROPS </b></label></div>
 <div id="crops">
 <?php getCropsHomepage(); ?>
 <!-- <div class="crop">
@@ -169,10 +169,8 @@
 </div>
 
 
-
-<!-- <div class = "ProductItems">
-	<div class="example"> -->
-		<div class="wrapper">
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
+	<?php getProducts(); ?>
 		<!-- <div class="inputwrapper">
         	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
@@ -220,15 +218,11 @@
             <input class="numberinput" type="number" name="number"  >
 
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>            
-	</div> -->
-<!-- </div>
-</div> -->
-<div>
-	<?php 
-		
-		getProducts(); ?>
-</div>
+       </div>             -->
+	<!-- </div> -->
+ <!-- </div> -->
+<!-- </div>  -->
+
 
 
 

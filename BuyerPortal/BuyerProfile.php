@@ -151,38 +151,69 @@
 </head>
 
 <body>
-<div class="just"><a  href="../BuyerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
+
     <div class="box">
-        <form action="BuyerEditProfile.php" method="post">
-            <h1> BUYER'S  PROFILE</h1>
-            <textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br>  
-            <textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br>
-            <textarea rows="3" column="56" disabled> <?php echo $phone?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $address?> </textarea><br>
-            <textarea rows="2" column="10"disabled> <?php echo $comp?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br>
-            <textarea rows="3" column="56" disabled> <?php echo $pan?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br>
-            <textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br>
-               <!-- <label class="three">$address</label> <br> -->
-               <!-- <label class="two">$pan</label> <br>
-               <label class="two">$bank</label> <br>
-                 -->
+        <form action="EditProfile.php" method="post">
+        <table align = "center">
+            <tr colspan = 2>
+                <h1> FARMER'S  PROFILE</h1>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Name :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>User Name :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Phone Number :</b></label></td>
+                <td><textarea rows="1" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Address :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Pan Number :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Account Number :</b></label></td>
+                <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Company :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $comp?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>license :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Mail ID :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
+            </tr>
+            <tr colspan =2>
+                <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
+            </tr>
+            </table>
             
-                <!-- <label class="two"><?php echo $name; ?></label><br>
-               <label class="two"><?php echo $phone; ?></label> <br>
-               <label class="three"><?php echo $address; ?></label> <br>
-               <label class="two"><?php echo $pan; ?></label> <br>
-               <label class="two"><?php echo $bank; ?></label> <br> -->
-                
-                
-                
-                <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->
-                <input type = "submit" name="editProf" value= "Edit Profile">
-
         </form>
+ 
     </div>
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

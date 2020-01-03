@@ -140,22 +140,6 @@
             top:0px; 
             text-shadow: 1px 1px 1px black;
         }
-        /* .three{
-            width:70%;
-             font-size:54px; 
-            background:transparent;
-            border:3px;
-            border-color:green;
-            border-style:solid;
-            border-width:2px;
-            height:60px;
-
-        }
-        $address{
-            width:50%;
-            text-align:left;
-        } 
-          */
        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

@@ -134,10 +134,12 @@
         .just{
           
             float:left;
-            margin:0px;
+            margin-left:1%;
+            margin:20px;
             position:absolute;
             left:0;
-             top:0px; 
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
              
         }
 
@@ -151,7 +153,7 @@
 <body>
 <div class="just"><a  href="../BuyerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
     <div class="box">
-        <form action="EditProfile.php" method="post">
+        <form action="BuyerEditProfile.php" method="post">
             <h1> BUYER'S  PROFILE</h1>
             <textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br>  
             <textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br>
@@ -181,10 +183,6 @@
         </form>
     </div>
 
-<form action="BuyerEditProfile.php" method = "post">
-
-    
-</form>
 
 </body>
 </html>

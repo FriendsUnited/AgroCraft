@@ -1,3 +1,4 @@
+
 <?php
     include("../Includes/db.php");
     session_start();
@@ -6,12 +7,19 @@
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
-        $name = $row['farmer_name']; 
+        $name = $row['farmer_name'];
+        // echo "Name :",$name,"<br>"; 
         $phone = $row['farmer_phone'];
+        // echo "Phone :",$phone,"<br>"; 
         $address = $row['farmer_address'];
+        // echo "Address :",$address,"<br>"; 
         $pan = $row['farmer_pan'];
+        // echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
-    }  
+        // echo "Account Number :",$bank,"<br>";
+    }   
+    
+
 ?>
 
 
@@ -122,8 +130,13 @@
             
         }
         .just{
-            margin-top:0px;
+          
             float:left;
+            margin:0px;
+            position:absolute;
+            left:0;
+             top:0px; 
+             
         }
         /* .three{
             width:70%;
@@ -149,19 +162,15 @@
 </head>
 
 <body>
-<div class="just"><a  href="#"> <i class="fa fa-home fa-2x"></i></a></div>
+<div class="just"><a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
     <div class="box">
         <form action="EditProfile.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
-            <textarea rows="2" column="10" disabled>Name</textarea><br>
-                <!-- <label class="two">$name</label><br>
-
-               <label class="two">$phone</label> <br> -->
-               
-               <textarea rows="2" column="10" disabled>Phone No.</textarea><br>
-               <textarea rows="3" column="56" disabled>Address</textarea><br>
-               <textarea rows="2" column="10" disabled>Pan number</textarea><br>
-               <textarea rows="2" column="10"disabled>Account number</textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br>  
+            <textarea rows="2" column="10" disabled> <?php echo $phone?> </textarea><br>
+            <textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br>
+             <textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br>
                <!-- <label class="three">$address</label> <br> -->
                <!-- <label class="two">$pan</label> <br>
                <label class="two">$bank</label> <br>
@@ -188,29 +197,6 @@
 
 
 <form action="EditProfile.php" method = "post">
-
-<?php
-    include("../Includes/db.php");
-    session_start();
-    $sessphonenumber = $_SESSION['phonenumber'];
-    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
-    $run_query = mysqli_query($con,$sql);
-    while($row = mysqli_fetch_array($run_query))
-    {
-        $name = $row['farmer_name'];
-        echo "Name :",$name,"<br>"; 
-        $phone = $row['farmer_phone'];
-        echo "Phone :",$phone,"<br>"; 
-        $address = $row['farmer_address'];
-        echo "Address :",$address,"<br>"; 
-        $pan = $row['farmer_pan'];
-        echo "Pan Number :",$pan,"<br>"; 
-        $bank= $row['farmer_bank'];
-        echo "Account Number :",$bank,"<br>";
-    }   
-    
-
-?>
 
     
 </form>

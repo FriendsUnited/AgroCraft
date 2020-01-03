@@ -8,7 +8,7 @@
     while($row = mysqli_fetch_array($run_query))
     {
         $password = $row['farmer_password'];    
-        echo $password;
+        // echo $password;
         $conf_password = $row['farmer_conf_pswd'];
         
     }
@@ -39,17 +39,16 @@
         $currentpassword = $_POST['currentpassword'];
         $newpassword = $_POST['newpassword'];
         $confirmpassword = $_POST['confirmpassword'];
-        echo $newpassword, "<br>";
-        echo $confirmpassword, "<br>";
-        echo $currentpassword, "<br>";
+        // echo $newpassword, "<br>";
+        // echo $confirmpassword, "<br>";
+        // echo $currentpassword, "<br>";
     
         if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
         {
             $sql = "update farmerregistration 
-            set farmer_password='$newpassword' and farmer_conf_pswd='$confirmpassword'
-            where farmer_phone='$sessphonenumber'";
+            set farmer_password='$newpassword' ,farmer_conf_pswd='$confirmpassword'
+            where farmer_phone=$sessphonenumber";
             $run = mysqli_query($con, $sql);
-            echo $sql;
 
         }
     }

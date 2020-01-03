@@ -173,21 +173,43 @@
 </table>
 
 
+</table><br>
+<div class=content_item><label>VEGETABLES</label></div>
+<div id="vegs">
+
+<div class="veg">
+<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
+</div>
+<div class="veg">
+<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
+</div>
+<div class="veg">
+<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
+</div>
+<div class="veg">
+<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
+</div>
+</div>
+<br>
+<div class=content_item><label>CROPS </label></div>
+<div id="crops">
+<div class="crop">
+<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
+</div>
+<div class="crop">
+<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
+</div>
+<div class="crop">
+<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
+</div>
+<div class="crop">
+<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
+</div>
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+<div class = "ProductItems">
 	<div class="example">
 		<div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
@@ -197,9 +219,13 @@
         		
         	<label id="shop2">Delivery by Farmer</label><br>Qty:-
         	
-          <input class="numberinput" type="number" name="number"  >
+            <input class="numberinput" type="number" name="number"  >
 
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>
-              
-</div></body></html>
+       </div>            
+	</div>
+</div>
+
+
+
+</body></html>

@@ -103,7 +103,6 @@
             margin-left: 130px;
             float:right;
             /* margin-left: 130px; */
-            float:right;
 
         }
         
@@ -111,13 +110,10 @@
             color: darkgreen;
             /* background-color: darkcyan; */
         
-        
 
             /* background-color: darkcyan; */
         
-            /* background-color: darkcyan; */
-        
-        
+
         }
 
     </style>
@@ -133,7 +129,7 @@
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="EditProfile.php">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 

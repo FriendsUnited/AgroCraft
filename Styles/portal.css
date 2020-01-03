@@ -175,36 +175,26 @@ justify-content: center;*/
 .carousel-control-next{
 	margin-right: 60px;
 }
+
 .wrapper
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
-grid-column-gap: 20px;
-grid-row-gap: 10px;
-}
-.inputwrapper{
-	border-color: black;
-border-style: solid;
-border-width: 2px;
-text-align: center; 
-}
-.carousel-control-next {
-    margin-right: 60px;
-}
-
-/*.wrapper {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
     grid-column-gap: 20px;
     grid-row-gap: 10px;
 }
 
-.wrapper>div {
-    border-color: black;
+.inputwrapper{
+	border-color: black;
     border-style: solid;
     border-width: 2px;
-    text-align: center;
-}*/
+    text-align: center; 
+}
+
+.carousel-control-next {
+    margin-right: 60px;
+}
+
 
 
 .addtocart{

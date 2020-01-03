@@ -102,32 +102,18 @@
             position: absolute;
             margin-left: 130px;
             float:right;
-<<<<<<< HEAD
-=======
             /* margin-left: 130px; */
-            float:right;
 
->>>>>>> 9434e777e0e69fa9e21ee24032cfd1ecbc2917af
         }
         
         h2 {
             color: darkgreen;
             /* background-color: darkcyan; */
         
-<<<<<<< HEAD
 
             /* background-color: darkcyan; */
         
 
-=======
-        
-
-            /* background-color: darkcyan; */
-        
-            /* background-color: darkcyan; */
-        
-        
->>>>>>> 9434e777e0e69fa9e21ee24032cfd1ecbc2917af
         }
 
     </style>
@@ -153,33 +139,6 @@
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
-<<<<<<< HEAD
-
-<div>
-<h3>ALL PRODUCTS</h3> </div>       
-
-
-
-
-    <div class="wrapper">
-
-
-
-<div>
-    <div class="wrapper">
-
-        <br>
-       <br>
-
-
-        <h2>ALL PRODUCTS</h2>
-        <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                     
-
-        <table border="2">
-
-            <tr>
-        
-=======
     <div>
     <div class="wrapper">
 
@@ -189,7 +148,6 @@
         <div><a href="../Admin/insert_product.php"><button class='button'><i  class='fa fa-plus fa-3x'></i></button><a></div> 
         </h2>
         <br>
->>>>>>> 9434e777e0e69fa9e21ee24032cfd1ecbc2917af
         <br>
         
         <div>

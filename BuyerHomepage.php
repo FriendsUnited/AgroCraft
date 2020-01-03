@@ -1,6 +1,6 @@
-<!-- <?php 
+<?php 
 	include("Functions/functions.php");
-?> -->
+?>
 
 <!DOCTYPE html>
 
@@ -142,8 +142,8 @@
 </table><br>
 <div class=content_item><label>VEGETABLES</label></div>
 	<div id="vegs">
-<!-- 	<?php getVegetablesHomepage(); ?> -->
-	<div class="veg">
+	<?php getVegetablesHomepage(); ?>
+	<!-- <div class="veg">
 		<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 	</div>
 	<div class="veg">
@@ -154,7 +154,7 @@
 	</div>
 	<div class="veg">
 		<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div>
+	</div> -->
 </div>
 
 
@@ -163,8 +163,8 @@
 
 <div class=content_item><label>CROPS </label></div>
 <div id="crops">
-<!-- <?php getCropsHomepage(); ?> -->
-<div class="crop">
+<?php getCropsHomepage(); ?>
+<!-- <div class="crop">
 <img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -175,7 +175,7 @@
 </div>
 <div class="crop">
 <img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
+</div> -->
 </div>
 
 
@@ -183,7 +183,9 @@
 <!-- <div class = "ProductItems">
 	<div class="example"> -->
 		<div class="wrapper">
-		<div class="inputwrapper">
+			<div><?php getProducts(); ?></div>
+
+		<!-- <div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>
@@ -230,15 +232,11 @@
             <input class="numberinput" type="number" name="number"  >
 
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>            
+       </div>             -->
 	</div>
 <!-- </div>
 </div> -->
-<!-- <div>
-	<?php 
-		
-		getProducts(); ?>
-</div> -->
+
 
 
 

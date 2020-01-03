@@ -1,6 +1,6 @@
 <?php
     
-
+    session_start(); 
     $con = mysqli_connect("localhost","root" ,"","agrocraft");
 
     function getCrops(){
@@ -67,7 +67,7 @@
             $product_delivery = $rows['product_delivery'];
 
 
-            echo "<div class='example'>
+            echo "
                     <div class='wrapper'>
                         <div class='inputwrapper'>
                             <br>
@@ -77,7 +77,7 @@
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
-                        </div></div></div> ";
+                        </div></div> ";
 
         }
     }
@@ -137,6 +137,12 @@
                     <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";    
         }
+    }
+
+    function getUser() {
+        global $con;
+        
+
     }
 
 ?>

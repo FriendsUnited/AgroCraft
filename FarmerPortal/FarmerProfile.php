@@ -1,3 +1,21 @@
+<?php
+    include("../Includes/db.php");
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
+    $run_query = mysqli_query($con,$sql);
+    while($row = mysqli_fetch_array($run_query))
+    {
+        $name = $row['farmer_name']; 
+        $phone = $row['farmer_phone'];
+        $address = $row['farmer_address'];
+        $pan = $row['farmer_pan'];
+        $bank= $row['farmer_bank'];
+    }  
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -118,12 +136,12 @@
         <form action="FarmerForgotPassword.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
             
-                <label class="two">$name</label><br>
+                <label class="two"><?php echo $name; ?></label><br>
 
-               <label class="two">$phone</label> <br>
-               <label class="three">$address</label> <br>
-               <label class="two">$pan</label> <br>
-               <label class="two">$bank</label> <br>
+               <label class="two"><?php echo $phone; ?></label> <br>
+               <label class="three"><?php echo $address; ?></label> <br>
+               <label class="two"><?php echo $pan; ?></label> <br>
+               <label class="two"><?php echo $bank; ?></label> <br>
                 
                 
                 
@@ -136,33 +154,6 @@
     </div>
 
 
-
-
-<form action="EditProfile.php" method = "post">
-
-<?php
-    include("../Includes/db.php");
-    session_start();
-    $sessphonenumber = $_SESSION['phonenumber'];
-    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
-    $run_query = mysqli_query($con,$sql);
-    while($row = mysqli_fetch_array($run_query))
-    {
-        $name = $row['farmer_name'];
-        echo "Name :",$name,"<br>"; 
-        $phone = $row['farmer_phone'];
-        echo "Phone :",$phone,"<br>"; 
-        $address = $row['farmer_address'];
-        echo "Address :",$address,"<br>"; 
-        $pan = $row['farmer_pan'];
-        echo "Pan Number :",$pan,"<br>"; 
-        $bank= $row['farmer_bank'];
-        echo "Account Number :",$bank,"<br>";
-    }  
-?>
-
-    
-</form>
 
 </body>
 </html>

@@ -172,8 +172,8 @@
 </table><br>
 <div class=content_item><label>VEGETABLES</label></div>
 	<div id="vegs">
-	<?php getVegetablesHomepage(); ?>
-	<!-- <div class="veg">
+<!-- 	<?php getVegetablesHomepage(); ?> -->
+	<div class="veg">
 		<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 	</div>
 	<div class="veg">
@@ -184,7 +184,7 @@
 	</div>
 	<div class="veg">
 		<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div> -->
+	</div>
 </div>
 
 
@@ -193,8 +193,8 @@
 
 <div class=content_item><label>CROPS </label></div>
 <div id="crops">
-<?php getCropsHomepage(); ?>
-<!-- <div class="crop">
+<!-- <?php getCropsHomepage(); ?> -->
+<div class="crop">
 <img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -205,7 +205,7 @@
 </div>
 <div class="crop">
 <img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div> -->
+</div>
 </div>
 
 

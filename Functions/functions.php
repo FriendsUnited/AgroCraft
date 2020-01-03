@@ -1,7 +1,26 @@
-<?php
-
-    $con = mysqli_connect("localhost","root" ,"","agrocraft");
+ <?php 
     session_start(); 
+    $con = mysqli_connect("localhost","root" ,"","agrocraft");
+
+    function getUsername(){
+        if(!isset($_GET['phonenumber'])){
+            $phonenumber = $_SESSION['phonenumber'];
+            global $con;
+            $query = "select * from buyerregistration where buyer_phone = $phonenumber";
+            $run_query = mysqli_query($con,$query);
+
+            while ($row_cat = mysqli_fetch_array($run_query)) {
+                $buyer_name = $row_cat['buyer_name'];
+            }
+
+            echo "<li id='newlabel'><label id='login'>Hello ,$buyer_name</label></li>";
+        }
+        else {
+            echo "<li id='newlabel'><label id='login'>Login/Sign up</label></li>";
+        }
+       
+    }
+
     function getCrops(){
 
         global $con;
@@ -12,8 +31,6 @@
 
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
-
-            
             echo "<option class='items1'>$product_type</option>";
         }
     }

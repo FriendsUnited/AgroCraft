@@ -47,7 +47,8 @@
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
-<li id="newlabel"><label id="login">Login/Sign up</label></li>
+<!-- <li id="newlabel"><label id="login">Login/Sign up</label></li> -->
+<?php getUsername(); ?>
 
 
 
@@ -106,6 +107,34 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- <img src="portal_files/pic1.jpg"> -->

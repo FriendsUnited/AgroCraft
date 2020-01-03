@@ -14,8 +14,6 @@
 
 
 
-
-
 <link rel="stylesheet" href="portal_files/bootstrap.min.css">
   <script src="portal_files/jquery.min.js.download"></script>
   <script src="portal_files/popper.min.js.download"></script>

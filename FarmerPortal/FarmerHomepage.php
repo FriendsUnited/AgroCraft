@@ -69,7 +69,7 @@
         
         .dropdown-content {
             display: none;
-            position: sticky;
+             position: sticky; 
             background-color: transparent;
             min-width: 250px;
             z-index: 1;
@@ -84,7 +84,7 @@
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             font-size: 20px;
             background-color: transparent;
-            /* width: 100px; */
+             width: 100px; 
             font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
         }
         

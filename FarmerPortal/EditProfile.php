@@ -86,6 +86,13 @@
             width: 54%;
             font-size: 18px;
         }
+        textarea{
+             border-width: 3px; 
+             border-radius: 16px; 
+            border-color: rgb(78, 180, 121);
+            
+            
+        }
    
            
             
@@ -99,6 +106,17 @@
                 left: 600px;
                 top: 175px;
             }
+            .just{
+               
+        
+             /* margin-top:2em;  */
+            float:left;
+            margin:0px;
+            position:absolute;
+            left:0;
+             top:0px; 
+        
+        }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -106,20 +124,23 @@
     </head>
 
     <body>
+    <div class="just"><a  href="#"> <i class="fa fa-home fa-3x"></i></a></div>
         <div class="box">
             <form action="FarmerForgotPassword.php" method="post">
-                <h1>PROFILE</h1>
+                <h1> EDIT PROFILE</h1>
                 <div class="in-icons">
-                <label class="two">$name</label><br>
-                <label class="two">$pan</label> <br>
-                    <input type="number" name="phonenumber" placeholder="Phone Number"> ss<br>
+                <textarea rows="2" column="18" disabled>Name</textarea><br>
+                <textarea rows="2" column="20" disabled>Pan number</textarea><br>
+                <!-- <label class="two">$name</label><br>
+                <label class="two">$pan</label> <br> -->
+                    <input type="number" name="phonenumber" placeholder="Phone Number"> <br>
                     <input type="text" name="address" placeholder="address" required><br>
                     <input type="number" name="accountnumber" placeholder="account Number"><br>
  
                     <span style=" display:block;  margin-bottom: .75em; "></span>
 
-                    <input type="submit" name="register" value="confirm">
-                    <input type="submit" name="register" value="change password">
+                    <input type="submit" name="register" value="Confirm">
+                    <input type="submit" name="register" value="Change Password">
 
                 </div>
             </form>

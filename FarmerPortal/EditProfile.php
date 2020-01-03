@@ -27,9 +27,15 @@
 ?>
 
 <form action="EditProfile.php" method="post">  
+<<<<<<< HEAD
     Phone :<input type="number" name="phonenumber" value="<?php echo $phone;?>" /> <br><br>
     Address :<input type="text" name="address" value="<?php echo $address;?>" />   <br><br>
     Account No. :<input type="number" name="bank" value="<?php echo $bank;?>" />   <br><br>
+=======
+    Phone :<input type="number" name="phonenumber" value="<?php  $phone=$_POST['phonenumber'];?>" /> <br><br>
+    Address :<input type="text" name="address" value="<?php $address=$_POST['address'];?>" />   <br><br>
+    Account No. :<input type="number" name="bank" value="<?php $bank=$_POST['bank'];?>" />   <br><br>
+>>>>>>> 9434e777e0e69fa9e21ee24032cfd1ecbc2917af
     <input type = "submit" name = "confirm" value = "Confirm">                  
     </form>
 
@@ -47,6 +53,7 @@
     {
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];
+<<<<<<< HEAD
         $bank = $_POST['bank'];      
         
         $query = "update farmerregistration 
@@ -54,6 +61,13 @@
                   farmer_address = '$address', farmer_bank = '$bank' where farmer_id 
                   in (select farmer_id from farmerregistration 
                   where farmer_phone='$sessphonenumber')"; 
+=======
+        $bank = $_POST['bank'];
+
+
+        
+        $query = "update farmerregistration set farmer_phone = '$phone', farmer_address = '$address', farmer_bank = '$bank' where farmer_id in (select farmer_id from farmerregistraion where farmer_phone='$sessphonenumber')"; 
+>>>>>>> 9434e777e0e69fa9e21ee24032cfd1ecbc2917af
         $run = mysqli_query($con, $query);
         $_SESSION['phonenumber'] = $phone;
         echo "<script>window.open('FarmerProfile.php','_self')</script>";

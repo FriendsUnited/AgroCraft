@@ -60,8 +60,7 @@
 	<option class="items1" value="0" selected="" disabled="">crops</option>
 	<option class="items1">rice </option>
 	<option class="items1">bajra</option>
-	<option class="items1"></option>
-	<option class="items1"></option>
+	<option class="items1">bajra</option>
 </select>
 <select id="cde" name="crops">
 	<option class="items" value="0" selected="" disabled="">fruits</option>
@@ -107,27 +106,11 @@
     <span class="sr-only">Next</span>
   </a>
   <div>
-  <div class="bestselers">
-  	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
-<label>ANSH</label>
-</div>
-<div class="bestselers">
-  	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
-<label>ANSH</label>
-</div>
+	<?php 
+		include("Functions/functions.php");
+		getProducts(); ?>
 
-<div class="bestselers">
-  	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
-<label>ANSH</label>
-</div>
-<div class="bestselers" >
-  	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
-<label>ANSH</label>
-</div>
-<div class="bestselers" >
-  	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
-<label>ANSH</label>
-</div>
+
 </div>
 
 
@@ -177,9 +160,7 @@
 	<img id="picha2 " src="portal_files/pic1.jpg">
 </div> -->
 <table class="tabless" > 
-    <div>
-	<h1 id="fruits">FRUITS</h1>
-    <tr>
+	<tr>
 		<th rowspan="2" colspan="2"><a href="#"><img class="images "src="portal_files/pic1.jpg" ></a></th>
 		<td><a href="#"><img class="images " src="portal_files/pic2.jpg" height="300px" width="400px"></a></td>
 		<td><a href="#"><img class="images " src="portal_files/pic3.jpg" height="300px" width="400px" ></a></td>
@@ -189,7 +170,9 @@
 	<tr>
 		
 	</tr>
-</div>
+</table>
+
+
 </table><br>
 <div class=content_item><label>VEGETABLES</label></div>
 <div id="vegs">
@@ -226,94 +209,23 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<<!-- div class="example">
-		        <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
+<div class = "ProductItems">
+	<div class="example">
+		<div class="inputwrapper">
+        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
+        	<label>Ramlal patotoes</label><br>
+        	<label>PRICE:- 100 Rs/kg</label><br>
         		
-<!--         	<label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
+        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
         	
             <input class="numberinput" type="number" name="number"  >
 
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
-               <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
-        		
-        	<!-- <label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
+            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+       </div>            
+	</div>
+</div>
 
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
-               <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
-        		
-       <!--  	<label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
 
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
- -->
-       <!-- </div> -->
+
 </body></html>

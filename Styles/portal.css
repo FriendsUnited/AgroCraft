@@ -21,6 +21,7 @@ margin-bottom: 0px;
 
 body {
     margin: 0;
+    background-color: blue;
 }
 
 
@@ -145,7 +146,7 @@ font-weight: 10;
 }
 
 * {
-    /*background-color: white*/
+    /*background-color:blue;*/
 }
 
 .carousel-indicators {
@@ -174,7 +175,7 @@ justify-content: center;*/
 .carousel-control-next{
 	margin-right: 60px;
 }
-/*.wrapper
+.wrapper
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
@@ -186,7 +187,7 @@ grid-row-gap: 10px;
 border-style: solid;
 border-width: 2px;
 text-align: center; 
-}*/
+}
 .carousel-control-next {
     margin-right: 60px;
 }
@@ -204,30 +205,6 @@ text-align: center;
     border-width: 2px;
     text-align: center;
 }*/
-.wrapper
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .addtocart{
@@ -298,6 +275,7 @@ text-align: center;
 margin-left: 60px;
 width: 300px;
 margin-bottom:20px;
+clear:auto;
 }
 .inputwrapper:last-child
 {
@@ -305,7 +283,70 @@ margin-bottom:20px;
 	/*background-color: red;*/
 }
 
-
+#fruits{
+    text-align: center;
+}
 /*.bestselers:first-child{
 margin-left: 80px;
 }*/
+.veg{
+/*    height: 210px;
+    width: 300px;
+*/    background-color: blue;
+    float:left;
+  /*  height: 200px;
+    width: 300px;*/
+    margin-left: 30px;
+    border-style: solid;
+    margin-top: 10px;
+}
+#vegs{
+  height: 270px;
+    width: 1498px;
+    /*margin: 20px;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    /*background-color: blue;*/
+    border-style: double;
+    margin-top: 20px;
+
+}
+.veg:first-child{
+    margin-left:80px;
+}
+.veg:last-child{
+    margin-right: 20px;
+}
+#crops{
+  height: 270px;
+    width: 1498px;
+    /*margin: 20px;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    /*background-color: blue;*/
+    border-style: double;
+    margin-top: 20px;
+
+}
+.crop:first-child{
+    margin-left:80px;
+}
+.crop:last-child{
+    margin-right: 20px;
+}
+.crop{
+/*    height: 210px;
+    width: 300px;
+*/    background-color: blue;
+    float:left;
+  /*  height: 200px;
+    width: 300px;*/
+    margin-left: 30px;
+    border-style: solid;
+    margin-top: 10px;
+}
+.content_item{
+text-align: center;
+justify-content: center;
+
+}

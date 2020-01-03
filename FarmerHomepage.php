@@ -47,11 +47,34 @@
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
+<?php
+  session_start();
+  include("Includes/db.php");
+  if(!isset($_SESSION['phonenumber'])) {
+  echo '<li id="newlabel"><label id="login">Login/Sign up</label></li>';
+  }
+  else {
+    $phonenumber = $_SESSION['phonenumber'];
+    $query = "select * from buyerregistration where buyer_phone = '$phonenumber'";
+    $run_query = mysqli_query($con,$query);
+    while($row = mysqli_fetch_array($run_query)){
+      $name =  $row['buyer_name'];
+      
+    }
+    echo "<li id='newlabel'><label id='login'>Hello,$name</label></li>";
+    
+}
+
+
+?>
+
 <li id="newlabel"><label id="login">Login/Sign up</label></li>
 
 
 
 </ul>
+
+
 
 </div>
 
@@ -128,6 +151,8 @@
   	<img src="portal_files/logo.jpg" height="200px" width="210px"><br>
 <label>ANSH</label>
 </div>
+
+
 </div>
 
 
@@ -177,9 +202,7 @@
 	<img id="picha2 " src="portal_files/pic1.jpg">
 </div> -->
 <table class="tabless" > 
-    <div>
-	<h1 id="fruits">FRUITS</h1>
-    <tr>
+	<tr>
 		<th rowspan="2" colspan="2"><a href="#"><img class="images "src="portal_files/pic1.jpg" ></a></th>
 		<td><a href="#"><img class="images " src="portal_files/pic2.jpg" height="300px" width="400px"></a></td>
 		<td><a href="#"><img class="images " src="portal_files/pic3.jpg" height="300px" width="400px" ></a></td>
@@ -189,40 +212,7 @@
 	<tr>
 		
 	</tr>
-</div>
-</table><br>
-<div class=content_item><label>VEGETABLES</label></div>
-<div id="vegs">
-
-<div class="veg">
-<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
-</div>
-<div class="veg">
-<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
-</div>
-<div class="veg">
-<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
-</div>
-<div class="veg">
-<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
-</div>
-<br>
-<div class=content_item><label>CROPS </label></div>
-<div id="crops">
-<div class="crop">
-<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
-</div>
-<div class="crop">
-<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
-</div>
-<div class="crop">
-<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
-</div>
-<div class="crop">
-<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
-</div>
+</table>
 
 
 
@@ -240,80 +230,9 @@
 
 
 
+<?php 
+    include("Functions/functions.php");
+    getProducts(); ?>
 
-
-
-
-
-
-
-	<<!-- div class="example">
-		        <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
-        		
-<!--         	<label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
-               <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
-        		
-        	<!-- <label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
-               <div class="inputwrapper">
-        	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;">
-        	<br>
-        	<br>
-        	
-        	
-        	<label>Ramlal patotoes</label>
-        	<br>
-        	<label>PRICE:- 100 Rs/kg</label>
-        	<br>
-        	<div class="shop "> -->
-        		
-       <!--  	<label id="shop2">Delivery by Farmer</label>
-        	<br>
-        	Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD 
-            	TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button>
-            <br>
-       </div>
- -->
-       <!-- </div> -->
-</body></html>
+              
+</div></body></html>

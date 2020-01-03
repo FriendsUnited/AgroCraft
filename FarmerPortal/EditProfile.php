@@ -245,8 +245,7 @@ while($row = mysqli_fetch_array($run_query))
         </div>
     </div>
     
-    
-</head>
+
 
 </body>
 </html>

@@ -1,22 +1,23 @@
 <?php
 
-include("../Includes/db.php");
-session_start();
-$sessphonenumber = $_SESSION['phonenumber'];
-$sql="select * from buyerregistration where buyer_phone = $sessphonenumber";
-$run_query = mysqli_query($con,$sql);
-while($row = mysqli_fetch_array($run_query))
-{
-    $name = $row['farmer_name'];
-    $pan = $row['farmer_pan'];
-    $phone = $row['farmer_phone'];
-    $address = $row['farmer_address'];
-    $account= $row['farmer_bank']; 
-    $comp = $row['buyer_comp'];
-    $license = $row['buyer_license'];
-    $mail = $row['buyer_mail'];
-    $user = $row['buyer_username'];
-}
+    include("../Includes/db.php");
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from buyerregistration where buyer_phone = $sessphonenumber";
+    $run_query = mysqli_query($con,$sql);
+    while($row = mysqli_fetch_array($run_query))
+    {
+        $name = $row['buyer_name'];
+        $pan = $row['buyer_pan'];
+        $phone = $row['buyer_phone'];
+        $address = $row['buyer_addr'];
+        $account= $row['buyer_bank']; 
+        $comp = $row['buyer_comp'];
+        $license = $row['buyer_license'];
+        $mail = $row['buyer_mail'];
+        $user = $row['buyer_username'];
+       // echo $user;
+    }
 ?>
 
 
@@ -109,19 +110,16 @@ while($row = mysqli_fetch_array($run_query))
         }
    
             
-            .in-icons {
-                text-align: center;
-            }
+        .in-icons {
+           text-align: center;
+        }
             
-            .in-icons i {
-                position: absolute;
-                left: 600px;
-                top: 175px;
-            }
-            .just{
-               
-        
-             /* margin-top:2em;  */
+        .in-icons i {
+            position: absolute;
+            left: 600px;
+            top: 175px;
+        }
+        .just{
             float:left;
             margin:0px;
             position:absolute;
@@ -182,35 +180,117 @@ while($row = mysqli_fetch_array($run_query))
     <body>
     
 
-    <div class="just"><a  href="FarmerHomepage.php"> <i class="fa fa-home fa-3x"></i></a></div>
-        <div class="box">
-            <form action="EditProfile.php" method="post">
-                <h1> EDIT PROFILE</h1>
-                <div class="in-icons">
-                <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
-                <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
-                    <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
-                    <input type="text" name="address" value="<?php echo $address;?> "/> <br>
-                    <input type="number" name="bank" value="<?php echo $account; ?>" />    <br>
- 
+    <div class="just">
+        <a  href="FarmerHomepage.php"> <i class="fa fa-home fa-4x"></i></a>
+    </div>
+
+    <div class="box">
+        <form action="" method="post">
+             <table align = "center" >
+
+                <tr colspan = 2>
+                    <h1> EDIT PROFILE</h1>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>Name :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <td>
+                        <label><b>Pan :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>Company :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $comp;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>License :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $license;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>Email ID :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $mail;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <td>
+                    <label><b>Username :</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" value="<?php echo $user; ?>" />  <br> 
+                    </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>
+                </tr>
 
-                    <input type="submit" name="register" value="Confirm">
-                    </form>
-                  
-                    </div>
-                    <div class="again">
-                        <a href="ChangePassword.php"><button class="say">Change Password</button></a>
-                    </div>
-                   
-               
-            
-           
+                <tr align = "center">
+                    <td>
+                        <label><b>Phone :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <td>
+                        <label><b>Address :</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="address" value="<?php echo $address;?> "/> <br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <td>
+                    <label><b>Bank :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" name="bank" value="<?php echo $account; ?>" />  <br> 
+                    </td>
+                    <span style=" display:block;  margin-bottom: .75em; "></span>
+                </tr>
+                <tr colspan =2>
+                    <td colspan =2>
+                        <input type="submit" name="confirm" value="Confirm">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div class="again">
+            <a href="ChangePassword.php"><button class="say">Change Password</button></a>
         </div>
+    </div>
     
 
-    
-</head>
 
 </body>
 </html>
@@ -219,19 +299,22 @@ while($row = mysqli_fetch_array($run_query))
 
     include("../Includes/db.php");
 
-    if (isset($_POST['register']))
+    if (isset($_POST['confirm']))
     {
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];
-        $account = $_POST['bank'];      
+        $account = $_POST['bank'];   
+        $user = $_POST['username'];   
         
-        $query = "update farmerregistration 
-                  set farmer_phone = '$phone',
-                  farmer_address = '$address', farmer_bank = '$account' where farmer_id 
-                  in (select farmer_id from farmerregistration 
-                  where farmer_phone='$sessphonenumber')"; 
+        $query = "update buyerregistration 
+                  set buyer_phone = '$phone', buyer_username = '$user', 
+                  buyer_address = '$address', buyer_bank = '$account' 
+                  where buyer_id in 
+                  (select buyer_id from buyerregistration 
+                  where buyer_phone='$sessphonenumber')"; 
         $run = mysqli_query($con, $query);
+
         $_SESSION['phonenumber'] = $phone;
-        echo "<script>window.open('FarmerProfile.php','_self')</script>";
+        echo "<script>window.open('BuyerProfile.php','_self')</script>";
     }
 ?>

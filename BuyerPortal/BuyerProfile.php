@@ -153,50 +153,60 @@
 <body>
 
     <div class="box">
-        <form action="EditProfile.php" method="post">
-        <table align = "center">
-            <tr colspan = 2>
-                <h1> FARMER'S  PROFILE</h1>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Name :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>User Name :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Phone Number :</b></label></td>
-                <td><textarea rows="1" column="10" disabled> <?php echo $phone?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Address :</b></label></td>
-                <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Pan Number :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Account Number :</b></label></td>
-                <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Company :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $comp?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>license :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Mail ID :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
-            </tr>
-            <tr colspan =2>
-                <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
-            </tr>
+        <form action="BuyerEditProfile.php" method="post">
+
+            <table align = "center">
+                <tr colspan = 2>
+                    <h1> FARMER'S  PROFILE</h1>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>User Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Phone Number :</b></label></td>
+                    <td><textarea rows="1" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+                </tr>
+                <tr align = "center">
+                    <td><label><b>Address :</b></label></td>
+                    <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Pan Number :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Account Number :</b></label></td>
+                    <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Company :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $comp?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>license :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Mail ID :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
+                </tr>
+                
+                <tr colspan =2>
+                    <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
+                </tr>
             </table>
             
         </form>

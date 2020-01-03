@@ -3,7 +3,7 @@
     $con = mysqli_connect("localhost","root" ,"","agrocraft");
 
     function getUsername(){
-        if(!isset($_GET['phonenumber'])){
+        if(isset($_SESSION['phonenumber'])){
             $phonenumber = $_SESSION['phonenumber'];
             global $con;
             $query = "select * from buyerregistration where buyer_phone = $phonenumber";
@@ -13,10 +13,11 @@
                 $buyer_name = $row_cat['buyer_name'];
             }
 
-            echo "<li id='newlabel'><label id='login'>Hello ,$buyer_name</label></li>";
+            echo "<label id='login'>Hello ,$buyer_name</label>";
+            echo "<li id='newlabel'><label id='login'></label></li>";
         }
         else {
-            echo "<li id='newlabel'><label id='login'>Login/Sign up</label></li>";
+            echo "<label id='login'>Login/Sign up</label>";
         }
        
     }
@@ -84,7 +85,7 @@
                   <div class='wrapper'>
                         <div class='inputwrapper'>
                             <br>
-                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
@@ -128,7 +129,7 @@
             $product_cat = $rows['product_cat'];
 
             echo "<div class='veg'>
-                    <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
+                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";
             
             
@@ -147,7 +148,7 @@
             $product_cat = $rows['product_cat'];
 
             echo "<div class='veg'>
-                    <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
+                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";    
         }
     }

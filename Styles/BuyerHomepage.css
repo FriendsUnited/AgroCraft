@@ -126,6 +126,7 @@ justify-content: center;*/
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
+<<<<<<< HEAD
 
     grid-column-gap: 20px;
     grid-row-gap: 10px;
@@ -146,6 +147,24 @@ width: 300px;
 margin-bottom:20px;
 clear:auto;
 }
+=======
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    margin-left: 30px;
+}
+
+.inputwrapper{
+    float: left;
+    border-style: double;
+    text-align: center;
+    margin-left: 80px;
+    width: 300px;
+    margin-bottom:20px;
+    clear:auto;
+    }
+
+
+>>>>>>> 43ac2bdee997cf2bfb14e71d87bfb0274d89142b
 .inputwrapper:last-child
 {
 margin-right:30px; 

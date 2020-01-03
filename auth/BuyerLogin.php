@@ -49,7 +49,7 @@
 
 		
 		$_SESSION['phonenumber'] = $phonenumber;
-		echo "<script>window.open('../portal.php','_self')</script>";
+		echo "<script>window.open('../BuyerHomepage.php','_self')</script>";
 		
 	}
 

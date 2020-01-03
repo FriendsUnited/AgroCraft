@@ -3,26 +3,28 @@
     include("../Includes/db.php");
     session_start();
     $sessphonenumber = $_SESSION['phonenumber'];
-    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
+    $sql="select * from buyerregistration where buyer_phone = '$sessphonenumber'";
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
-        $name = $row['farmer_name'];
+        $name = $row['buyer_name'];
         // echo "Name :",$name,"<br>"; 
-        $phone = $row['farmer_phone'];
+        $phone = $row['buyer_phone'];
         // echo "Phone :",$phone,"<br>"; 
-        $address = $row['farmer_address'];
+        $address = $row['buyer_addr'];
         // echo "Address :",$address,"<br>"; 
-        $pan = $row['farmer_pan'];
+        $pan = $row['buyer_pan'];
         // echo "Pan Number :",$pan,"<br>"; 
-        $bank= $row['farmer_bank'];
+        $bank = $row['buyer_bank'];
         // echo "Account Number :",$bank,"<br>";
+        $comp = $row['buyer_comp'];
+        $license = $row['buyer_license'];
+        $mail = $row['buyer_mail'];
+        $user = $row['buyer_username'];
     }   
     
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,7 +32,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Farmer Profile</title>
+    <title>Buyer Profile</title>
     
 
     <style>
@@ -138,22 +140,7 @@
              top:0px; 
              
         }
-        /* .three{
-            width:70%;
-             font-size:54px; 
-            background:transparent;
-            border:3px;
-            border-color:green;
-            border-style:solid;
-            border-width:2px;
-            height:60px;
 
-        }
-        $address{
-            width:50%;
-            text-align:left;
-        } 
-          */
        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -162,22 +149,25 @@
 </head>
 
 <body>
-<div class="just"><a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
+<div class="just"><a  href="../BuyerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
     <div class="box">
         <form action="EditProfile.php" method="post">
-            <h1> FARMER'S  PROFILE</h1>
+            <h1> BUYER'S  PROFILE</h1>
             <textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br>  
-            <textarea rows="2" column="10" disabled> <?php echo $phone?> </textarea><br>
-            <textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br>
-             <textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br>
+            <textarea rows="3" column="56" disabled> <?php echo $phone?> </textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $address?> </textarea><br>
+            <textarea rows="2" column="10"disabled> <?php echo $comp?> </textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br>
+            <textarea rows="3" column="56" disabled> <?php echo $pan?> </textarea><br>
+            <textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br>
+            <textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br>
                <!-- <label class="three">$address</label> <br> -->
                <!-- <label class="two">$pan</label> <br>
                <label class="two">$bank</label> <br>
                  -->
             
                 <!-- <label class="two"><?php echo $name; ?></label><br>
-
                <label class="two"><?php echo $phone; ?></label> <br>
                <label class="three"><?php echo $address; ?></label> <br>
                <label class="two"><?php echo $pan; ?></label> <br>
@@ -188,15 +178,10 @@
                 <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->
                 <input type = "submit" name="editProf" value= "Edit Profile">
 
-                
-            
         </form>
     </div>
 
-
-
-
-<form action="EditProfile.php" method = "post">
+<form action="BuyerEditProfile.php" method = "post">
 
     
 </form>

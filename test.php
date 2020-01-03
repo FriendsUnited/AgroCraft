@@ -1,3 +1,7 @@
+<?php 
+	include("Functions/functions.php");
+?>
+
 <!DOCTYPE html>
 <!-- saved from url=(0070)file:///C:/Users/Ansh/Desktop/gitttttt/AgroCraft/AgroCraft/portal.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -105,11 +109,6 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <div>
-	<?php 
-		include("Functions/functions.php");
-		getProducts(); ?>
-</div>
 
 
 
@@ -212,7 +211,7 @@
 
 
 
-<div class = "ProductItems">
+<!-- <div class = "ProductItems">
 	<div class="example">
 		<div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
@@ -227,7 +226,13 @@
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
        </div>            
 	</div>
+</div> -->
+<div>
+	<?php 
+		
+		getProducts(); ?>
 </div>
+
 
 
 

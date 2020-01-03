@@ -115,12 +115,12 @@
                     <input type="number" name="phonenumber" placeholder="Phone Number"> ss<br>
                     <input type="text" name="address" placeholder="address" required><br>
                     <input type="number" name="accountnumber" placeholder="account Number"><br>
-
-                    <input type="text" name="address" placeholder="address" required><br>
-                    
+ 
                     <span style=" display:block;  margin-bottom: .75em; "></span>
 
-                    <input type="submit" name="register" value="Update Password">
+                    <input type="submit" name="register" value="confirm">
+                    <input type="submit" name="register" value="change password">
+
                 </div>
             </form>
         </div>
@@ -147,16 +147,6 @@
         $bank= $row['farmer_bank']; 
     }
 ?>
-
-<form action="EditProfile.php" method="post">  
-    Phone :<input type="number" name="phonenumber" value="<?php echo $phone;?>" /> <br><br>
-    Address :<input type="text" name="address" value="<?php echo $address;?>" />   <br><br>
-    Account No. :<input type="number" name="bank" value="<?php echo $bank;?>" />   <br><br>
-    <input type = "submit" name = "confirm" value = "Confirm">                  
-    </form>
-
-    <a href="ChangePassword.php"><button>Change Password</button></a>
-
 
 </body>
 </html>

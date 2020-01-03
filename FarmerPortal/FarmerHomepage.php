@@ -118,6 +118,11 @@
             /* background-color: darkcyan; */
         
         
+        
+        }
+        .one{
+            float:right;
+            margin-right:4em;
         }
 
     </style>
@@ -149,14 +154,14 @@
 
         <br>
         <h2>ALL PRODUCTS 
-        <div><a href="../Admin/insert_product.php"><button class='button'><i  class='fa fa-plus fa-3x'></i></button><a></div> 
+        <div class="one"><a href="../Admin/insert_product.php"><button class="button"><i  class="fa fa-plus fa-3x"></i></button><a></div> 
         </h2>
         <br>
         <br>
         
         <div>
             <?php
-                include("../Includes/db.php");
+                include("../includes/db.php");
                 include("../Functions/functions.php");
                 getFarmerProducts(); 
                 //echo "<button>Add product</button>";

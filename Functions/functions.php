@@ -67,7 +67,6 @@
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
 
-<<<<<<< HEAD
             echo "<div class='example'>
                     <div class='wrapper'>
                         <div class='inputwrapper'>
@@ -80,20 +79,6 @@
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>
                         </div>      
                 </div></div>";
-=======
-            echo "<div class='wrapper'>
-                    <div class='inputwrapper'>
-                        <img src='./Admin/product_images/$product_image' alt= 'Image Not Available' style='height: 100px; width: 100px;'><br><br>
-                        <label>$product_title</label><br>
-                        <label>PRICE:- $product_price Rs/kg</label><br>	
-                        <label id='shop2'>Delivery by Farmer</label><br>Qty:-
-                        <input class='numberinput' type='number' name='number'  >
-            
-                        <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button>
-                        <br><br>
-                    </div >      
-                </div><br><br>";
->>>>>>> 54e3b7302c6e789979c9909ab1efe9b38096ed42
 
         }
     }

@@ -133,7 +133,7 @@
 
 <body>
     <div class="box">
-        <form action="FarmerForgotPassword.php" method="post">
+        <form action="EditProfile.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
             
                 <label class="two"><?php echo $name; ?></label><br>

@@ -7,6 +7,6 @@
     <title>Change Password</title>
 </head>
 <body>
-    <h1>CHANGE PASSWORD    </h1>
+    <h1>CHANGE PASSWORD   </h1>
 </body>
 </html>

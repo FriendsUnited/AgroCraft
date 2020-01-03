@@ -1,7 +1,25 @@
-<?php
-    
+<?php 
     session_start(); 
     $con = mysqli_connect("localhost","root" ,"","agrocraft");
+
+    function getUsername(){
+        if(!isset($_GET['phonenumber'])){
+            $phonenumber = $_SESSION['phonenumber'];
+            global $con;
+            $query = "select * from buyerregistration where buyer_phone = $phonenumber";
+            $run_query = mysqli_query($con,$query);
+
+            while ($row_cat = mysqli_fetch_array($run_query)) {
+                $buyer_name = $row_cat['buyer_name'];
+            }
+
+            echo "<li id='newlabel'><label id='login'>Hello ,$buyer_name</label></li>";
+        }
+        else {
+            echo "<li id='newlabel'><label id='login'>Login/Sign up</label></li>";
+        }
+       
+    }
 
     function getCrops(){
 
@@ -13,8 +31,6 @@
 
         while ($row_cat = mysqli_fetch_array($run_query)) {
             $product_type = $row_cat['product_type'];
-
-            
             echo "<option class='items1'>$product_type</option>";
         }
     }
@@ -71,13 +87,9 @@
                             <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
-<<<<<<< HEAD
-                              </div>
-=======
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
->>>>>>> d0fdd52d24eb4b35b79d40c7bbc4252729d883c7
                         </div></div> ";
 
         }

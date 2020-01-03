@@ -110,30 +110,18 @@
         
         .button {
             position: absolute;
-<<<<<<< HEAD
             margin-left: 130px;
             float:right;
-=======
-            /* margin-left: 130px; */
-            float:right;
-
->>>>>>> 633dbad743fab2d45be3e659c2ed99e139a9b0a4
         }
         
         h2 {
             color: darkgreen;
-<<<<<<< HEAD
             /* background-color: darkcyan; */
         
-        
-=======
-<<<<<<< HEAD
-=======
+
             /* background-color: darkcyan; */
         
-        
->>>>>>> 4f9726a67d88ffe4578cd1cd9c20ffb0111193bf
->>>>>>> 633dbad743fab2d45be3e659c2ed99e139a9b0a4
+
         }
 
     </style>
@@ -167,21 +155,19 @@
     <h3>Welcome to Agrocraft</h3>
 
 
-<<<<<<< HEAD
 <div>
 <h3>ALL PRODUCTS</h3> </div>       
-=======
-<<<<<<< HEAD
->>>>>>> 633dbad743fab2d45be3e659c2ed99e139a9b0a4
+
+
 
 
     <div class="wrapper">
 
 
-=======
+
 <div>
     <div class="wrapper">
->>>>>>> 4f9726a67d88ffe4578cd1cd9c20ffb0111193bf
+
         <br>
        <br>
 
@@ -192,11 +178,6 @@
         <table border="2">
 
             <tr>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 633dbad743fab2d45be3e659c2ed99e139a9b0a4
         
         <br>
         
@@ -252,10 +233,7 @@
     <table border="2">
     
         <tr>
-<<<<<<< HEAD
-=======
->>>>>>> 4f9726a67d88ffe4578cd1cd9c20ffb0111193bf
->>>>>>> 633dbad743fab2d45be3e659c2ed99e139a9b0a4
+
                 <th width=200px>date</th>
                 <th width=200px>name</th>
                 <th width=200px>phone no</th>

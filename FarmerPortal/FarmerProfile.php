@@ -28,8 +28,7 @@
         echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
         echo "Account Number :",$bank,"<br>";
-    }
-
+    }  
 ?>
 
     <input type = "submit" name="editProf" value= "Edit Profile">

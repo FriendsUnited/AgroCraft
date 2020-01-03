@@ -1,3 +1,7 @@
+<?php 
+	include("Functions/functions.php");
+?>
+
 <!DOCTYPE html>
 <!-- saved from url=(0070)file:///C:/Users/Ansh/Desktop/gitttttt/AgroCraft/AgroCraft/portal.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
@@ -9,8 +13,6 @@
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-
-
 
 
 
@@ -105,13 +107,6 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <div>
-	<?php 
-		include("Functions/functions.php");
-		getProducts(); ?>
-
-
-</div>
 
 
 
@@ -175,24 +170,29 @@
 
 </table><br>
 <div class=content_item><label>VEGETABLES</label></div>
-<div id="vegs">
+	<div id="vegs">
+<!-- 	<?php getVegetablesHomepage(); ?> -->
+	<div class="veg">
+		<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
+	</div>
+	<div class="veg">
+		<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
+	</div>
+	<div class="veg">
+		<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
+	</div>
+	<div class="veg">
+		<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
+	</div>
+</div>
 
-<div class="veg">
-<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
-</div>
-<div class="veg">
-<img src="Images/Vegetables/veg1.jpg" height="250px" width="300px">
-</div>
-<div class="veg">
-<img src="Images/Vegetables/brocoli.jpg"height="250px" width="300px">
-</div>
-<div class="veg">
-<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
-</div>
+
 <br>
+
+
 <div class=content_item><label>CROPS </label></div>
 <div id="crops">
+<!-- <?php getCropsHomepage(); ?> -->
 <div class="crop">
 <img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
@@ -209,7 +209,7 @@
 
 
 
-<div class = "ProductItems">
+<!-- <div class = "ProductItems">
 	<div class="example">
 		<div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
@@ -224,7 +224,13 @@
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
        </div>            
 	</div>
+</div> -->
+<div>
+	<?php 
+		
+		getProducts(); ?>
 </div>
+
 
 
 

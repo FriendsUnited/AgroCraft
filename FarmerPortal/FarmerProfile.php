@@ -1,3 +1,21 @@
+<?php
+    include("../Includes/db.php");
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
+    $run_query = mysqli_query($con,$sql);
+    while($row = mysqli_fetch_array($run_query))
+    {
+        $name = $row['farmer_name']; 
+        $phone = $row['farmer_phone'];
+        $address = $row['farmer_address'];
+        $pan = $row['farmer_pan'];
+        $bank= $row['farmer_bank'];
+    }  
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +44,7 @@
         .box {
             color: rgb(6, 36, 7);
             width: 450px;
-             line-height: 30px; 
+             line-height: 40px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
@@ -103,6 +121,10 @@
         
             
         }
+        .just{
+            margin-top:0px;
+            float:left;
+        }
         /* .three{
             width:70%;
              font-size:54px; 
@@ -127,8 +149,9 @@
 </head>
 
 <body>
+<div class="just"><a  href="#"> <i class="fa fa-home fa-2x"></i></a></div>
     <div class="box">
-        <form action="FarmerForgotPassword.php" method="post">
+        <form action="EditProfile.php" method="post">
             <h1> FARMER'S  PROFILE</h1>
             <textarea rows="2" column="10" disabled>Name</textarea><br>
                 <!-- <label class="two">$name</label><br>
@@ -143,6 +166,14 @@
                <!-- <label class="two">$pan</label> <br>
                <label class="two">$bank</label> <br>
                  -->
+            
+                <!-- <label class="two"><?php echo $name; ?></label><br>
+
+               <label class="two"><?php echo $phone; ?></label> <br>
+               <label class="three"><?php echo $address; ?></label> <br>
+               <label class="two"><?php echo $pan; ?></label> <br>
+               <label class="two"><?php echo $bank; ?></label> <br> -->
+                
                 
                 
                 <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->

@@ -185,45 +185,66 @@ while($row = mysqli_fetch_array($run_query))
         <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
-        <div class="box">
-            <form action="EditProfile.php" method="post">
-                <table align = "center" border=2>
+    <div class="box">
+        <form action="EditProfile.php" method="post">
+             <table align = "center" border=2>
                 <tr colspan = 2>
-                <h1> EDIT PROFILE</h1>
+                    <h1> EDIT PROFILE</h1>
                 </tr>
                 <tr align = "center">
                     <div class="in-icons">
-                    <td><label><b>Name :</b></label></td>
-                    <td><textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br></td>
+                    <td>
+                        <label><b>Name :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
+                    </td>
                 </tr>
                 <tr align = "center">
-                    <td><label><b>Phone Number :</b></label></td>
-                    <td><textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br></td>
+                    <td>
+                        <label><b>Pan :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
+                    </td>
                 </tr>
                 <tr align = "center">
-                    <td><label><b>Address :</b></label></td>
-                    <td><input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br></td>
+                    <td>
+                        <label><b>Phone :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                    </td>
                 </tr>
                 <tr align = "center">
-                    <td><label><b>Pan Number :</b></label></td>
-                    <td><input type="text" name="address" value="<?php echo $address;?> "/> <br></td>
+                    <td>
+                        <label><b>Address :</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="address" value="<?php echo $address;?> "/> <br>
+                    </td>
                 </tr>
                 <tr align = "center">
-                    <td><label><b>Account Number :</b></label></td>
-                    <td><input type="number" name="bank" value="<?php echo $account; ?>" />  <br>  </td>
+                    <td>
+                    <label><b>Bank :</b></label>
+                    </td>
+                    <td>
+                        <input type="number" name="bank" value="<?php echo $account; ?>" />  <br> 
+                    </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>
                 </tr>
                 <tr colspan =2>
-                    <td colspan =2><input type="submit" name="register" value="Confirm"></td>
-                    </form>
-
-            </div>
+                    <td colspan =2>
+                        <input type="submit" name="register" value="Confirm">
+                    </td>
                 </tr>
-                </table>
-
-                <div class="again">
-                <a href="ChangePassword.php"><button class="say">Change Password</button></a>
-                </div>
+            </table>
+        </form>
+        <div class="again">
+            <a href="ChangePassword.php"><button class="say">Change Password</button></a>
+        </div>
+    </div>
+    
     
 </head>
 

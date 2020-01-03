@@ -57,7 +57,7 @@
 
     function getProducts() {
         global $con;
-        $query = "select * from products  order by RAND() LIMIT 0,4";
+        $query = "select * from products  order by RAND() LIMIT 0,8";
         $run_query = mysqli_query($con,$query);
         echo "<br>";
         while($rows = mysqli_fetch_array($run_query)){

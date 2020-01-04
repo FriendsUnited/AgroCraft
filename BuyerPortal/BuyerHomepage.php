@@ -295,7 +295,7 @@
 		background-color: red;
 		}
 		.images{
-		min-width: 400px;
+			/* min-width: 400px; */
 			box-shadow: 5px 5px 10px grey;
 		}
 
@@ -415,8 +415,10 @@
 	<a href="BuyerProfile.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 	    
 	<div class="search_input">
-		<i class="fas fa-search" style="font-size:20px;color:white; " ></i>
-		<input type="text" id="input1" name="search" placeholder="Search..">
+		<form action="SearchResults.php" method = "get" enctype = "multipart/form-data">
+			<i class="fas fa-search" style="font-size:20px;color:white; " ></i>
+			<input type="text" id="input1" name="search" placeholder="Search...">
+		</form>
 	</div>
 	<div class="dropdown">
 		<!-- <select class="select_element" name="drop">
@@ -518,21 +520,16 @@
 
 
 
-
-
-
-
-
-
-
+<hr>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
 <table class="tabless" > 
 	<tr>
-		<th rowspan="2" colspan="2"><a href="#"><img class="images "src="../portal_files/pic1.jpg" ></a></th>
-		<td><a href="#"><img class="images " src="../portal_files/pic2.jpg" height="300px" width="400px"></a></td>
-		<td><a href="#"><img class="images " src="../portal_files/pic3.jpg" height="300px" width="400px" ></a></td>
+		<th rowspan=2 colspan= 2><a href="../BuyerPortal/BuyerProductDetails.php?id=31"><img class="images "src="../Admin/product_images/strawberry.jpg" width = 600px height =400px ></a></th>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=17"><img class="images " src="../Admin/product_images/Bananas.jpg" height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=24"><img class="images " src="../Admin/product_images/Apple.jpg" height="200px" width="300px" ></a></td>
 	</tr>
-		<td><a href="#"><img class="images "src="../portal_files/Cherry-Heart.jpg" height="300px" width="400px"></a></td>
-		<td><a href="#"><img class="images "src="../portal_files/pic1.jpg"height="300px" width="400px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=27"><img class="images "src="../Admin/product_images/Mango.jpg" height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=32"><img class="images "src="../Admin/product_images/orange.jpg"height="200px" width="300px"></a></td>
 	<tr>
 		
 	</tr>
@@ -540,6 +537,7 @@
 
 
 </table><br>
+<hr>
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
 	<?php getVegetablesHomepage(); ?>
@@ -560,7 +558,6 @@
 
 <br>
 
-
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
 <?php getCropsHomepage(); ?>
@@ -578,7 +575,7 @@
 </div> -->
 </div>
 
-
+<hr>
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
 	<?php getProducts(); ?>
 	<?php getBuyerProductDetails(); ?>

@@ -212,31 +212,30 @@
                         </div>
                         </div> 
                         ";
-                }                     
-           }       
-
-        } 
+            }                     
+        }       
+    } 
         //function which is linked with BuyerProductDetails
-        function getBuyerProductDetails(){
-            include("../includes/db.php");
-            global $con;
-            $sess_phone_number = $_SESSION['phonenumber'];
-            if(isset($_GET['id'])){
-                $prod_id = $_GET['id'];
-                $query="select * from products where product_id=" . $prod_id;
-                $run_query = mysqli_query($con,$query);
-                $resultCheck=mysqli_num_rows($run_query);
-                if($resultCheck>0) {
-                    while($rows = mysqli_fetch_array($run_query)){
-                        $product_title = $rows['product_title'];
-                        $product_image = $rows['product_image'];
-                        $product_type=$rows['product_type'];
-                        $product_stock=$rows['product_stock'];
-                        $product_description=$rows['product_desc'];
-                        $product_price = $rows['product_price'];
-                        $product_delivery = $rows['product_delivery'];
-                        $product_cat = $rows['product_cat'];
-                        echo "<div>
+    function getBuyerProductDetails(){
+        include("../includes/db.php");
+        global $con;
+        $sess_phone_number = $_SESSION['phonenumber'];
+        if(isset($_GET['id'])){
+            $prod_id = $_GET['id'];
+            $query="select * from products where product_id=" . $prod_id;
+            $run_query = mysqli_query($con,$query);
+            $resultCheck=mysqli_num_rows($run_query);
+            if($resultCheck>0) {
+                while($rows = mysqli_fetch_array($run_query)){
+                    $product_title = $rows['product_title'];
+                    $product_image = $rows['product_image'];
+                    $product_type=$rows['product_type'];
+                    $product_stock=$rows['product_stock'];
+                    $product_description=$rows['product_desc'];
+                    $product_price = $rows['product_price'];
+                    $product_delivery = $rows['product_delivery'];
+                    $product_cat = $rows['product_cat'];
+                    echo "<div>
                         <img src='../Admin/product_images/$product_image' height='250px' width='300px' ><br>"
                         ." product title  :  ".$product_title."<br>"
                         ." product type  :  ".$product_type."<br>"
@@ -246,30 +245,88 @@
                         ." product Delivery  :  ".$product_delivery."<br>"
                         ." product category  :  ".$product_cat."<br>"
                         ."<button href=''>ADD TO CART</button>"
-                            ."</div>";
+                    ."</div>";
 
-                        if(isset($_SESSION['phonenumber'])) {
-                            $query = "select * from products where product_id=" . $prod_id;
-                            $run = mysqli_query($con,$query);
-                            while ($row = mysqli_fetch_array($run)) {
-                                $farmerid = $row['farmer_fk']; 
-                            }
-
-                            $query = "select * from farmerregistration where farmer_id = $farmerid";
-                            $run = mysqli_query($con,$query);
-                            while ($row = mysqli_fetch_array($run)) {
-                                $farmer_name = $row['farmer_name']; 
-                                $farmer_phone = $row['farmer_phone'];
-                                $farmer_address = $row['farmer_address'];
-                            }
-                            echo "farmer Name : " . $farmer_name . "<br>farmer Phone Number : " . $farmer_phone . "<br> Farmer Address" . $farmer_address;
-
-
+                    if(isset($_SESSION['phonenumber'])) {
+                        $query = "select * from products where product_id=" . $prod_id;
+                        $run = mysqli_query($con,$query);
+                        while ($row = mysqli_fetch_array($run)) {
+                            $farmerid = $row['farmer_fk']; 
                         }
 
+                        $query = "select * from farmerregistration where farmer_id = $farmerid";
+                        $run = mysqli_query($con,$query);
+                        while ($row = mysqli_fetch_array($run)) {
+                            $farmer_name = $row['farmer_name']; 
+                            $farmer_phone = $row['farmer_phone'];
+                            $farmer_address = $row['farmer_address'];
                         }
+                        echo "farmer Name : " . $farmer_name . "<br>farmer Phone Number : " . $farmer_phone . "<br> Farmer Address" . $farmer_address;
+                    }
                 }
             }
         }
+    }
+
+    // Checkout System Functions
+    function cart(){
+        if (isset($_GET['add_cart'])) {
+    
+            global $con;
+            $ip = getIp();
+            $p_id = $_GET['add_cart'];
+    
+            $check_pro = "select * from cart where ip_addr = '$ip' and p_id='$p_id' ";
+    
+            $run_check = mysqli_query($con,$check_pro);
+            
+            if(mysqli_num_rows($run_check)>0) {
+                echo "";
+            }
+            else {
+                $insert_pro = "insert into cart (p_id,ip_addr) values ('$p_id','$ip')";
+                $run_insert_pro = mysqli_query($con,$insert_pro);
+                echo "<script>window.open('index.php','_self')</script>";
+            }
+    
+        }
+    }
+    
+    
+    function total_items(){
+        global $con;
+        $ip = getIp();
+    
+        $get_items = "select * from cart where ip_addr = '$ip'";
+        $run_items =  mysqli_query($con,$get_items);
+        $count_items =  mysqli_num_rows($run_items);
+        echo $count_items;
+    }
+    
+    function total_price(){
+        $total =0;
+        global $con;
+        $ip = getIp();
+    
+        $sel_price = "select * from cart where ip_addr = '$ip'";
+        $run_price = mysqli_query($con,$sel_price);
+    
+        while($p_price = mysqli_fetch_array($run_price)){
+            $pro_id = $p_price['p_id'];
+    
+            $pro_price = "select * from products where product_id='$pro_id'";
+            $run_pro_price = mysqli_query($con,$pro_price);
+            while($pp_price = mysqli_fetch_array($run_pro_price)){
+                $product_price = array($pp_price['product_price']);
+    
+                $values = array_sum($product_price);
+                $total += $values;
+            }
+        }
+    
+        echo "Rs" . $total;
+    
+    }
+
 
 ?>

@@ -19,7 +19,9 @@
 	<link rel="stylesheet" href="../portal_files/bootstrap.min.css">
   	<script src="../portal_files/jquery.min.js.download"></script>
   	<script src="../portal_files/popper.min.js.download"></script>
-  	<script src="../portal_files/bootstrap.min.js.download"></script>
+	<script src="../portal_files/bootstrap.min.js.download"></script>
+	  
+	
 
 </head>
 <body>
@@ -51,11 +53,12 @@
 	
 	
 	<div class="loginz">
-	<!-- <?php getUsername(); ?> -->
-		<label id="login">Login/Sign up</label>
+	<?php getUsername(); ?>
+		<!-- <label id="login">Login/Sign up</label> -->
 	</div>
 
-</div>
+
+
 
 
 <!-- <div id="opt">

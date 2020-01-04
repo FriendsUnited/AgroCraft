@@ -4,9 +4,6 @@ width: 100%;
 background-color:   #00b300;
   }
 
-body{
-    background-color:   #00b300;
-}
 #logo {
     height: 66px;
     width: 110px;
@@ -18,6 +15,7 @@ body{
   width:500px;
   margin-left: 50px;
   margin-top: 20px;
+  border-color: green;
 }
 .proicon{
   float: right;
@@ -32,12 +30,13 @@ body{
 }
 .loginz{
     float:right;
-  /* margin-left: 325px; */
+  margin-right:200px;
   color: azure;
+  l
 }
 .loginz a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 
@@ -47,10 +46,7 @@ body{
     margin-bottom: 20px;
     /*background-color: black;*/
 }
-/*.images{
-    border-color:  black;
-    border-style: solid;
-}*/
+
 
 #input1 {
     
@@ -133,20 +129,6 @@ justify-content: center;*/
     margin-left: 30px;
 }
 
-/* .inputwrapper{
-    float: left;
-    border-style: double;
-    text-align: center;
-    margin-left: 80px;
-    width: 300px;
-    margin-bottom:20px;
-    clear:auto;
-}
-.inputwrapper:last-child{
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    margin-left: 30px;
-} */
 
 .inputwrapper{
     float: left;

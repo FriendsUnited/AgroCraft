@@ -166,7 +166,13 @@
                 include("../Includes/db.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
                 getFarmerProducts();
+<<<<<<< HEAD
+            ?>
+    
+            
+=======
             ?>        
+>>>>>>> 3f0b888e7862883c54a322ea73c5d9c70f90c3d5
         </div>
     </div>
     

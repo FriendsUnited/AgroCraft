@@ -39,6 +39,7 @@ CREATE TABLE `farmerregistration` (
  CREATE TABLE `products` (
   `product_id` int(100) NOT NULL AUTO_INCREMENT,
   `product_title` varchar(100) NOT NULL,
+  `farmer_fk` varchar(100) NOT NULL,
   `product_cat` varchar(100) NOT NULL,
   `product_image` text NOT NULL,
   `product_stock` int(100) NOT NULL,

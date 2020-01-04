@@ -1,4 +1,3 @@
-
 .header {
     height: 50px;
     width: 100%;
@@ -88,8 +87,6 @@
     background-color: transparent;
 }
 
-
-
 .carousel-control-prev {
     margin-left: 60px;
     /*color: red;*/
@@ -125,7 +122,6 @@
     grid-row-gap: 10px;
     margin-left: 30px;
 }
-
 
 .carousel-control-next {
     margin-right: 60px;
@@ -165,8 +161,6 @@
     box-shadow: 5px 5px 10px grey;
 }
 
-
-
 #heading {
     font-size: 20px;
     color: white;
@@ -174,8 +168,6 @@
     background-color: black;
     justify-content: center;
 }
-
-
 
 .addtocart {
     background-color: #FFD700;

@@ -115,7 +115,7 @@
     border-style: double;
     text-align: center;
     margin-left: 80px;
-    width: 300px;
+    width: 200px;
     margin-bottom: 20px;
     clear: auto;
 }
@@ -126,20 +126,6 @@
     margin-left: 30px;
 }
 
-.inputwrapper {
-    float: left;
-    border-style: double;
-    text-align: center;
-    margin-left: 80px;
-    width: 300px;
-    margin-bottom: 20px;
-    clear: auto;
-}
-
-.inputwrapper:last-child {
-    margin-right: 30px;
-    /*background-color: red;*/
-}
 
 .carousel-control-next {
     margin-right: 60px;

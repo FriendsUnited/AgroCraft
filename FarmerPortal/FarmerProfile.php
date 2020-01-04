@@ -148,8 +148,8 @@
 </head>
 
 <body>
-<div class="just">
-    <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+    <div class="just">
+        <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
     
     <div class="box">
@@ -178,7 +178,7 @@
                 <td><label><b>Account Number :</b></label></td>
                 <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
             </tr>
-            <tr colspan =2>
+            
                 <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
             </tr>
             </table>

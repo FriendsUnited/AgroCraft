@@ -1,8 +1,8 @@
-  .header{
-height: 69px;
-width: 100%;
-background-color:   #00b300;
-  }
+.header{
+    height: 69px;
+    width: 100%;
+    background-color:   #00b300;
+}
 
 #logo {
     height: 66px;
@@ -28,16 +28,15 @@ background-color:   #00b300;
   /* margin-top: 10px; */
 
 }
-.loginz{
+/* .loginz{
     float:right;
   margin-right:200px;
   color: azure;
-  l
 }
 .loginz a {
     text-decoration: none;
     color: white;
-}
+} */
 
 
 .slideshow{

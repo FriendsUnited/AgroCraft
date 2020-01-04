@@ -9,15 +9,16 @@
             $query = "select * from buyerregistration where buyer_phone = $phonenumber";
             $run_query = mysqli_query($con,$query);
 
-            while ($row_cat = mysqli_fetch_array($run_query)) {
+            while($row_cat = mysqli_fetch_array($run_query)) {
                 $buyer_name = $row_cat['buyer_name'];
             }
-
-            echo "<label id='login'>Hello ,$buyer_name</label>";
+            
+            echo "<label>Hello ,$buyer_name</label>";
+            
 
         }
         else {
-            echo "<label id='login'><a href = '../auth/BuyerLogin.php' >Login/Sign up</a></label>";
+            echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
         }
        
     }

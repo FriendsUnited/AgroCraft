@@ -82,16 +82,12 @@
 		margin-top: 20px;
 
 		}
-		#login{
-			float:left ;
-		/* margin-right: -70px; */
-		
-		margin-left: 870px;
-		/* margin-right: 10px; */
+		.loginz{
+			float:right ;
+		margin-right: 20px;
 		margin-top: 20px;
-		
-
 		}
+		
 		 .headerdown{
 			height:50px;
 			width:100%;
@@ -281,14 +277,17 @@
 		width: 500px;
 		background-color: red;
 		}
-		.images{
-			/* min-width: 400px; */
+		.images:hover{
+			width :625px;
+			height:425px;
+			box-shadow: 5px 5px 10px grey;
+		}
+		.small_images:hover{
+			height :215px;
+			width:315px;
 			box-shadow: 5px 5px 10px grey;
 		}
 
-		.images1{
-
-		}
 		#heading {
 			font-size: 20px;
 			color: white;
@@ -297,7 +296,7 @@
 			justify-content: center;
 		}
 
-		.head1 {}
+
 
 		.addtocart {
 			background-color: #FFD700;
@@ -468,6 +467,8 @@ margin-top:-60px;
 		}
 
 
+
+
 			</style>
 			
 </head>
@@ -499,8 +500,8 @@ margin-top:-60px;
 
 		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">	</span></button>
     <ul class="dropdown-menu etc" >
-      <li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"><label class="makeitgreen" >Profile</label></a></li>
-      <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"><label class="makeitgreen">Logout</label></a></li>
+      <li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="BuyerProfile.php"><label class="makeitgreen" >Profile</label></a></li>
+      <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="../Includes/logout.php"><label class="makeitgreen">Logout</label></a></li>
       
 	</div>	 
 	<div class="proicon">
@@ -518,8 +519,8 @@ margin-top:-60px;
 	
 	
 	<div class="loginz">
-	<!-- <?php getUsername(); ?> -->
-		<label id="login">Login/Sign up</label>
+	<?php getUsername(); ?>
+		<!-- <label>Login/Sign up</label> -->
 	</div>
 </div>
 
@@ -593,12 +594,12 @@ margin-top:-60px;
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
 <table class="tabless" > 
 	<tr>
-		<th rowspan=2 colspan= 2><a href="../BuyerPortal/BuyerProductDetails.php?id=31"><img class="images "src="../Admin/product_images/strawberry.jpg" width = 600px height =400px ></a></th>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=17"><img class="images " src="../Admin/product_images/Bananas.jpg" height="200px" width="300px"></a></td>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=24"><img class="images " src="../Admin/product_images/Apple.jpg" height="200px" width="300px" ></a></td>
+		<th rowspan=2 colspan= 2><a href="../BuyerPortal/BuyerProductDetails.php?id=31"><img class="images " src="../Admin/product_images/strawberry.jpg" width = 600px height =400px ></a></th>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=17"><img class="small_images" src="../Admin/product_images/Bananas.jpg" height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=24"><img class="small_images " src="../Admin/product_images/Apple.jpg" height="200px" width="300px" ></a></td>
 	</tr>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=27"><img class="images "src="../Admin/product_images/Mango.jpg" height="200px" width="300px"></a></td>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=32"><img class="images "src="../Admin/product_images/orange.jpg"height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=27"><img class="small_images "src="../Admin/product_images/Mango.jpg" height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=32"><img class="small_images "src="../Admin/product_images/orange.jpg"height="200px" width="300px"></a></td>
 	<tr>
 		
 	</tr>
@@ -606,27 +607,10 @@ margin-top:-60px;
 
 
 </table><br>
-<<<<<<< HEAD
-<hr>
-=======
-
->>>>>>> f1ecd6b70ef1a8d3ecc0f13c21f9d8d2a1f3f607
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
-	<!-- <?php getVegetablesHomepage(); ?> -->
-	<div class="veg">
-		<img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
-	
-	</div>
-	<div class="veg">
-		<img src="../Images/Vegetables/veg1.jpg" height="250px" width="300px">
-	</div>
-	<div class="veg">
-		<img src="../Images/Vegetables/brocoli.jpg"height="250px" width="300px">
-	</div>
-	<div class="veg">
-		<img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div>
+	<?php getVegetablesHomepage(); ?>
+
 </div>
 
 
@@ -634,88 +618,22 @@ margin-top:-60px;
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
-<!-- <?php getCropsHomepage(); ?> -->
-<div class="crop">
-<img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
+<?php getCropsHomepage(); ?>
 </div>
-<div class="crop">
-<img src="../Images/Vegetables/veg1.jpg" height="250px" width="300px">
-</div>
-<div class="crop">
-<img src="../Images/Vegetables/brocoli.jpg"height="250px" width="300px">
-</div>
-<div class="crop">
-<img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
-</div>
-
-<<<<<<< HEAD
-<hr>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
+<hr><br>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br><hr>
+	<div>
 	<?php getProducts(); ?>
-	<?php getBuyerProductDetails(); ?>
-		<!-- <div class="inputwrapper">
-=======
-<br><br>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br><br>
-	<!-- <?php getProducts(); ?> -->
-		<div class="inputwrapper">
->>>>>>> f1ecd6b70ef1a8d3ecc0f13c21f9d8d2a1f3f607
-        	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
-        	
-        	<label>Ramlal patotoes</label><br>
-        	<label>PRICE:- 100 Rs/kg</label><br>
-        		
-        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>   
-       <div class="inputwrapper">
-        	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
-        	
-        	<label>Ramlal patotoes</label><br>
-        	<label>PRICE:- 100 Rs/kg</label><br>
-        		
-        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>     
-         <div class="inputwrapper">
-        	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
-        	
-        	<label>Ramlal patotoes</label><br>
-        	<label>PRICE:- 100 Rs/kg</label><br>
-        		
-        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>       
-         <div class="inputwrapper">
-        	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
-        	
-        	<label>Ramlal patotoes</label><br>
-        	<label>PRICE:- 100 Rs/kg</label><br>
-        		
-        	<label id="shop2">Delivery by Farmer</label><br>Qty:-
-        	
-            <input class="numberinput" type="number" name="number"  >
-
-			<button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-			
-
 	</div>
-       </div>             
+
+
 <div class="footer">
+<hr>
+
 <label class="payment">Payment Options:-</label>
 <div class="cash"><img src="../Images/Website/cash.jpg"height="75px" width="125px" ></div>
 <div class="patym"><img src="../Images/Website/petm.jpg"height="75px" width="125px"></div>
-	</div>
+	</div><br><br>
  	<h3><span> GET SOCIAL WITH US </span></h3></div>
 	
 	 <div class="morefooter">

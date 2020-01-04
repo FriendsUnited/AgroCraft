@@ -15,6 +15,7 @@
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 	<link rel="stylesheet" href="../portal_files/bootstrap.min.css">
   	<script src="../portal_files/jquery.min.js.download"></script>
@@ -71,7 +72,8 @@
 			/* font-weight:bold; */
 			color:yellow;
 			margin-left:20px;
-			width:20px;
+			width:25px;
+			margin-right:50px;
 			
 		 } 
 		.icon2{
@@ -230,26 +232,11 @@
 		border-style: double;
 		text-align: center;
 		margin-left: 80px;
-		width: 300px;
+		width: 280px;
 		margin-bottom:20px;
 		clear:auto;
 		}
-		.inputwrapper:last-child{
-			grid-column-gap: 20px;
-			grid-row-gap: 10px;
-			margin-left: 30px;
-		}
-
-		.inputwrapper{
-			float: left;
-			border-style: double;
-			text-align: center;
-			margin-left: 80px;
-			width: 300px;
-			margin-bottom:20px;
-			clear:auto;
-			}
-
+		
 
 		.inputwrapper:last-child
 		{
@@ -340,6 +327,11 @@
 			border-style: solid;
 			margin-top: 10px;
 		}
+		.veg img:hover{
+			height: 270px;
+			width: 350px;
+
+		}
 		#vegs{
 		height: 270px;
 			width: 1498px;
@@ -347,7 +339,6 @@
 			margin-right: 10px;
 			margin-left: 10px;
 			/*background-color: blue;*/
-			border-style: double;
 			margin-top: 20px;
 
 		}
@@ -364,7 +355,6 @@
 			margin-right: 10px;
 			margin-left: 10px;
 			/*background-color: blue;*/
-			border-style: double;
 			margin-top: 20px;
 
 		}
@@ -385,6 +375,11 @@
 			border-style: solid;
 			margin-top: 10px;
 		}
+		.crop img:hover{
+			height: 270px;
+			width: 350px;
+
+		}
 		.content_item{
 		text-align: center;
 		justify-content: center;
@@ -399,8 +394,82 @@
 		.crop_items{
 			color:green;
 		}
+		.footer{
+			height:70px;
+			width:100%;
+			/* background-color:red; */
+			clear:both;
+
+		}
+		.payment{
+			float:left;
+		/* size:20% 50%;
+		 */
+		 margin-left:520px;
+		 font-size:20px;
+		margin-top:25px;
+		}
 		
+		.cash{
+			float:left;
+			margin-top:0px;
+			margin-left:20px;
+			margin-right:20px;
+		}
+		.paytm{
+			float:left;
+			/* margin-left:500px; */
+		}
+		h3 { width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; } 
+		h3 span { background:#fff; padding:0 10px; }
+		
+        .morefooter{
+			height:100px;
+			width:100%;
+			background-color:white;
+
+		}
+		.call{
+			float:left;
+			font-size:20px;
+			margin-left:150px;
+			margin-top:25px;
+		}
+		.gmail{
+			margin-top:10px;
+			float:right;
+			margin-right:150px;
+
+		}
+		.instagram{
+			margin-top:10px;
+			float:left;
+			margin-left:420px;
+		}
+		.instaid{
+height:10px;
+width:100%;
+
+		}
+		.text{
+float:left;
+margin-left:735px;
+margin-top:-50px;
+		}
+		.gmailid{
+			float:right;
+margin-right:80px;
+margin-top:-60px;
+		}
+		.copy{
+			float:left;
+			margin-top:-65px;
+			/* background-color:grey; */
+		}
+
+
 			</style>
+			
 </head>
 <body>
 
@@ -428,12 +497,12 @@
 			 -->
 		<!-- </select>  -->
 
-		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">	</span></button>
+		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">	</span></button>
     <ul class="dropdown-menu etc" >
       <li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"><label class="makeitgreen" >Profile</label></a></li>
       <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"><label class="makeitgreen">Logout</label></a></li>
       
-	</div>	
+	</div>	 
 	<div class="proicon">
 		
     <i class="far fa-user-circle" style="font-size:30px; color: white"></i>
@@ -443,7 +512,7 @@
 	</div>
 
 	<div class="icon2">
-		<a href="#"> <i class="fa" style="font-size:30px; color:white">&#61562;</i></a>
+		<a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
 		<span id="icon"> 5 </span>
 	</div>
 	
@@ -537,12 +606,17 @@
 
 
 </table><br>
+<<<<<<< HEAD
 <hr>
+=======
+
+>>>>>>> f1ecd6b70ef1a8d3ecc0f13c21f9d8d2a1f3f607
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
-	<?php getVegetablesHomepage(); ?>
-	<!-- <div class="veg">
+	<!-- <?php getVegetablesHomepage(); ?> -->
+	<div class="veg">
 		<img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
+	
 	</div>
 	<div class="veg">
 		<img src="../Images/Vegetables/veg1.jpg" height="250px" width="300px">
@@ -552,7 +626,7 @@
 	</div>
 	<div class="veg">
 		<img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div> -->
+	</div>
 </div>
 
 
@@ -560,8 +634,8 @@
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
-<?php getCropsHomepage(); ?>
-<!-- <div class="crop">
+<!-- <?php getCropsHomepage(); ?> -->
+<div class="crop">
 <img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -572,14 +646,21 @@
 </div>
 <div class="crop">
 <img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div> -->
+</div>
 </div>
 
+<<<<<<< HEAD
 <hr>
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
 	<?php getProducts(); ?>
 	<?php getBuyerProductDetails(); ?>
 		<!-- <div class="inputwrapper">
+=======
+<br><br>
+<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br><br>
+	<!-- <?php getProducts(); ?> -->
+		<div class="inputwrapper">
+>>>>>>> f1ecd6b70ef1a8d3ecc0f13c21f9d8d2a1f3f607
         	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>
@@ -625,15 +706,40 @@
         	
             <input class="numberinput" type="number" name="number"  >
 
-            <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>             -->
-	<!-- </div> -->
- <!-- </div> -->
-<!-- </div> 
+			<button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
+			
+
+	</div>
+       </div>             
+<div class="footer">
+<label class="payment">Payment Options:-</label>
+<div class="cash"><img src="../Images/Website/cash.jpg"height="75px" width="125px" ></div>
+<div class="patym"><img src="../Images/Website/petm.jpg"height="75px" width="125px"></div>
+	</div>
+ 	<h3><span> GET SOCIAL WITH US </span></h3></div>
+	
+	 <div class="morefooter">
+		 <div class="call">
+		 <i class="fas fa-phone-alt call_color"></i>
+		 <a href="#" style = "color:black;" >+91-8191046421</a>
+	</div>
+
+<div class="instagram"><img src="../Images/Website/Insta.jpg"height="45px" width="60px" > 
+</div>
+
+<div class="gmail">
+<img src="../Images/Website/gmail.jpg"height="30px" width="50px" >
+</div>
+
+	</div>
+	<div class="instaid">
+	<div class="text"><a href="#" style = "color:black;" >@AgroCraft</a></div>
+	<div class="gmailid">
+	<a href="#" class="hypher" style = "color:black;" >agrocraft6@gmail.com</a></div>
+	
+</div>
 
 
-
-
-
+	<div class="copy"><h5 style = "test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5></div>
 </body>
 </html>

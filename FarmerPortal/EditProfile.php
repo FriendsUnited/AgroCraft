@@ -197,7 +197,7 @@ while($row = mysqli_fetch_array($run_query))
                         <label><b>Name :</b></label>
                     </td>
                     <td>
-                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea>
                     </td>
                 </tr>
                 <tr align = "center">
@@ -205,7 +205,7 @@ while($row = mysqli_fetch_array($run_query))
                         <label><b>Pan :</b></label>
                     </td>
                     <td>
-                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
+                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea>
                     </td>
                 </tr>
                 <tr align = "center">
@@ -213,7 +213,7 @@ while($row = mysqli_fetch_array($run_query))
                         <label><b>Phone :</b></label>
                     </td>
                     <td>
-                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/> <br>
+                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/>
                     </td>
                 </tr>
                 <tr align = "center">
@@ -221,7 +221,7 @@ while($row = mysqli_fetch_array($run_query))
                         <label><b>Address :</b></label>
                     </td>
                     <td>
-                        <input type="text" name="address" value="<?php echo $address;?> "/> <br>
+                        <input type="text" name="address" value="<?php echo $address;?> "/> 
                     </td>
                 </tr>
                 <tr align = "center">
@@ -229,7 +229,7 @@ while($row = mysqli_fetch_array($run_query))
                     <label><b>Bank :</b></label>
                     </td>
                     <td>
-                        <input type="number" name="bank" value="<?php echo $account; ?>" />  <br> 
+                        <input type="number" name="bank" value="<?php echo $account; ?>" />  
                     </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>
                 </tr>

@@ -105,7 +105,7 @@ include("includes/db.php");  // db connections
 </html>
 
 <?php 
-
+session_start();
 if(isset($_POST['insert_post'])){    // when button is clicked
    
     // getting the text data from fields
@@ -118,26 +118,32 @@ if(isset($_POST['insert_post'])){    // when button is clicked
     $product_keywords = $_POST['product_keywords'];
     $product_delivery = $_POST['product_delivery'];
     
-
-    
     // getting image
     $product_image = $_FILES['product_image']['name'];
     $product_image_tmp = $_FILES['product_image']['tmp_name'];  // for server
 
-    move_uploaded_file($product_image_tmp,"product_images/$product_image");
+    if (isset($_SESSION['phonenumber'])){
+        move_uploaded_file($product_image_tmp,"product_images/$product_image");
 
-    $insert_product = "insert into products (product_cat,product_title,product_type,product_stock,product_price,
-                        product_desc,product_image,product_keywords,product_delivery) 
-                        values ('$product_cat','$product_title','$product_type','$product_stock','$product_price'
-                                ,'$product_desc','$product_image','$product_keywords','$product_delivery')";
-    
-    $insert_pro = mysqli_query($con,$insert_product);
+        $phone = $_SESSION['phonenumber'];
+        $getting_id = "select * from farmerregistration where farmer_phone = $phone";
+        $run = mysqli_query($con,$getting_id);
+        $row = mysqli_fetch_array($run);
+        $id = $row['farmer_id'];
+        $insert_product = "insert into products (farmer_fk,product_cat,product_title,product_type,product_stock,product_price,
+                            product_desc,product_image,product_keywords,product_delivery) 
+                            values ('$id','$product_cat','$product_title','$product_type','$product_stock','$product_price'
+                                    ,'$product_desc','$product_image','$product_keywords','$product_delivery')";
+        
+        $insert_pro = mysqli_query($con,$insert_product);
 
-    if($insert_pro){
-       echo "<script>alert('Product has been added')</script>";
-       echo "<script>window.open('insert_product.php','_self')</script>";
-    }else{
-        echo "<script>alert('Error Uploading Data Please Check your Connections ')</script>";
+        if($insert_pro){
+        echo "<script>alert('Product has been added')</script>";
+        echo "<script>window.open('insert_product.php','_self')</script>";
+        }
+        else{
+            echo "<script>alert('Error Uploading Data Please Check your Connections ')</script>";
+        }
     }
 
 

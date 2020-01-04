@@ -1,6 +1,5 @@
-<?php 
-
-    session_start();
+<?php
+    include("../Functions/functions.php");
 ?>
 
 <!DOCTYPE html>
@@ -139,7 +138,7 @@
         <i class="fa fa-user fa-3x"></i>
         <div class="dropdown-content">
 
-            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
 
 
@@ -165,12 +164,15 @@
         <div>
             <?php
                 include("../Includes/db.php");
-                include("../Functions/functions.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
                 getFarmerProducts();
+<<<<<<< HEAD
             ?>
     
             
+=======
+            ?>        
+>>>>>>> 3f0b888e7862883c54a322ea73c5d9c70f90c3d5
         </div>
     </div>
     

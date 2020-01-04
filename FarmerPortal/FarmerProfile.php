@@ -1,3 +1,4 @@
+
 <?php
     include("../Includes/db.php");
     session_start();
@@ -6,12 +7,19 @@
     $run_query = mysqli_query($con,$sql);
     while($row = mysqli_fetch_array($run_query))
     {
-        $name = $row['farmer_name']; 
+        $name = $row['farmer_name'];
+        // echo "Name :",$name,"<br>"; 
         $phone = $row['farmer_phone'];
+        // echo "Phone :",$phone,"<br>"; 
         $address = $row['farmer_address'];
+        // echo "Address :",$address,"<br>"; 
         $pan = $row['farmer_pan'];
-        $bank = $row['farmer_bank'];
-    }  
+        // echo "Pan Number :",$pan,"<br>"; 
+        $bank= $row['farmer_bank'];
+        // echo "Account Number :",$bank,"<br>";
+    }   
+    
+
 ?>
 
 
@@ -39,6 +47,7 @@
             text-align:center;
             border-color:green;
             background-color:transparent;
+            margin-top:10px;
         }
         
         .box {
@@ -122,25 +131,15 @@
             
         }
         .just{
-            margin-top:0px;
+            
             float:left;
+            margin-left:1%;
+            margin:20px;
+            position:absolute;
+            left:0;
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
         }
-        /* .three{
-            width:70%;
-             font-size:54px; 
-            background:transparent;
-            border:3px;
-            border-color:green;
-            border-style:solid;
-            border-width:2px;
-            height:60px;
-
-        }
-        $address{
-            width:50%;
-            text-align:left;
-        } 
-          */
        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -149,68 +148,46 @@
 </head>
 
 <body>
-<div class="just"><a  href="#"> <i class="fa fa-home fa-2x"></i></a></div>
+    <div class="just">
+        <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+    </div>
+    
     <div class="box">
         <form action="EditProfile.php" method="post">
-            <h1> FARMER'S  PROFILE</h1>
-            <textarea rows="2" column="10" disabled>Name</textarea><br>
-               
-               <textarea rows="2" column="10" disabled>Phone No.</textarea><br>
-               <textarea rows="3" column="56" disabled>Address</textarea><br>
-               <textarea rows="2" column="10" disabled>Pan number</textarea><br>
-               <textarea rows="2" column="10"disabled>Account number</textarea><br>
-               <!-- <label class="three">$address</label> <br> -->
-               <!-- <label class="two">$pan</label> <br>
-               <label class="two">$bank</label> <br>
-                 -->
+        <table align = "center">
+            <tr colspan = 2>
+                <h1> FARMER'S  PROFILE</h1>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Name :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Phone Number :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Address :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Pan Number :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Account Number :</b></label></td>
+                <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
+            </tr>
             
-                <!-- <label class="two"><?php echo $name; ?></label><br>
-
-               <label class="two"><?php echo $phone; ?></label> <br>
-               <label class="three"><?php echo $address; ?></label> <br>
-               <label class="two"><?php echo $pan; ?></label> <br>
-               <label class="two"><?php echo $bank; ?></label> <br> -->
-                
-                
-                
-                <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->
-                <input type = "submit" name="editProf" value= "Edit Profile">
+                <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
+            </tr>
+            </table>
 
                 
             
         </form>
+ 
     </div>
-
-
-
-
-<form action="EditProfile.php" method = "post">
-
-<?php
-    include("../Includes/db.php");
-    session_start();
-    $sessphonenumber = $_SESSION['phonenumber'];
-    $sql="select * from farmerregistration where farmer_phone = '$sessphonenumber' ";
-    $run_query = mysqli_query($con,$sql);
-    while($row = mysqli_fetch_array($run_query))
-    {
-        $name = $row['farmer_name'];
-        echo "Name :",$name,"<br>"; 
-        $phone = $row['farmer_phone'];
-        echo "Phone :",$phone,"<br>"; 
-        $address = $row['farmer_address'];
-        echo "Address :",$address,"<br>"; 
-        $pan = $row['farmer_pan'];
-        echo "Pan Number :",$pan,"<br>"; 
-        $bank= $row['farmer_bank'];
-        echo "Account Number :",$bank,"<br>";
-    }   
-    
-
-?>
-
-    
-</form>
 
 </body>
 </html>

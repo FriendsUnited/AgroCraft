@@ -1,18 +1,23 @@
 <?php
 
-include("../Includes/db.php");
-session_start();
-$sessphonenumber = $_SESSION['phonenumber'];
-$sql="select * from farmerregistration where farmer_phone = $sessphonenumber";
-$run_query = mysqli_query($con,$sql);
-while($row = mysqli_fetch_array($run_query))
-{
-    $name = $row['farmer_name'];
-    $pan = $row['farmer_pan'];
-    $phone = $row['farmer_phone'];
-    $address = $row['farmer_address'];
-    $account= $row['farmer_bank']; 
-}
+    include("../Includes/db.php");
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+    $sql="select * from buyerregistration where buyer_phone = $sessphonenumber";
+    $run_query = mysqli_query($con,$sql);
+    while($row = mysqli_fetch_array($run_query))
+    {
+        $name = $row['buyer_name'];
+        $pan = $row['buyer_pan'];
+        $phone = $row['buyer_phone'];
+        $address = $row['buyer_addr'];
+        $account= $row['buyer_bank']; 
+        $comp = $row['buyer_comp'];
+        $license = $row['buyer_license'];
+        $mail = $row['buyer_mail'];
+        $user = $row['buyer_username'];
+       // echo $user;
+    }
 ?>
 
 
@@ -35,8 +40,8 @@ while($row = mysqli_fetch_array($run_query))
         
         .box {
             color: rgb(6, 36, 7);
-            width: 350px;
-            line-height: 40px;
+            width: 450px;
+            line-height: 40px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
@@ -44,7 +49,8 @@ while($row = mysqli_fetch_array($run_query))
             border-style: outset;
             border-width: 5px;
             border-radius: 16px;
-            border-color: green;
+            border-color:rgb(0, 172, 230);
+        
         }
         
         body {
@@ -54,11 +60,11 @@ while($row = mysqli_fetch_array($run_query))
             background-repeat: no-repeat;
             background-position: center;
             background-color: white;
-            background-image: url(../Images/Website/forgotpassword.jpg);
+            background-image: url(../Images/Website/buyerLogin.jpeg);
             border: chartreuse;
         }
         
-        form {
+        #innerbox {
             margin: 10px;
             padding: 10px;
             background-color: rgb(247, 248, 247);
@@ -67,7 +73,7 @@ while($row = mysqli_fetch_array($run_query))
         input {
             padding: 7px;
             margin: 10px;
-            border-color: rgb(78, 180, 121);
+             border-color:rgb(0, 172, 230);
             display: inline-block;
             border-radius: 16px;
         }
@@ -77,21 +83,19 @@ while($row = mysqli_fetch_array($run_query))
             font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
+            background-color: rgb(0, 191, 255);
             border-radius: 16px;
-            border-color: rgb(3, 66, 34);
+            border-color: rgb(0, 172, 230);
             width: 44%;
         }
         
         input[type="submit"]:hover {
-            background-color: rgb(97, 16, 33);
+                background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
             width: 54%;
             font-size: 18px;
@@ -99,33 +103,27 @@ while($row = mysqli_fetch_array($run_query))
         textarea{
              border-width: 3px; 
              border-radius: 16px; 
-            border-color: rgb(78, 180, 121);
+             border-color:rgb(0, 172, 230);
             
             
         }
    
-           
             
+        .in-icons {
+           text-align: center;
+        }
             
-            .in-icons {
-                text-align: center;
-            }
-            
-            .in-icons i {
-                position: absolute;
-                left: 600px;
-                top: 175px;
-            }
-            .just{
-               
-        
-                float:left;
-            margin-left:1%;
-            margin:20px;
+        .in-icons i {
+            position: absolute;
+            left: 600px;
+            top: 175px;
+        }
+        .just{
+            float:left;
+            margin:0px;
             position:absolute;
             left:0;
-            top:0px; 
-            text-shadow: 1px 1px 1px black;
+             top:0px; 
         
         }
         .again{
@@ -147,30 +145,36 @@ while($row = mysqli_fetch_array($run_query))
             font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
-            border-radius: 16px;
             border-color: rgb(3, 66, 34);
-            /* width: 96%; */
+            width: 96%;
             padding : 10px;
             padding-left:10px;
             padding-right:10px;
-            
-            
-            
+            background-color: rgb(0, 191, 255);
+            border-radius: 16px;
+            border-color: rgb(0, 172, 230);    
         }
+
         .say:hover{
-            background-color: rgb(97, 16, 33);
+            background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
-            width: 94%;
+            width: 80%;
             font-size: 18px;
 
+        }
+        .just{
+            float:left;
+            margin-left:1%;
+            margin:20px;
+            position:absolute;
+            left:0;
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
         }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -182,58 +186,107 @@ while($row = mysqli_fetch_array($run_query))
     
 
     <div class="just">
-        <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
+
     <div class="box">
-        <form action="EditProfile.php" method="post">
+        <div id = "innerbox">
+        <form action="BuyerProfile.php" method = "post">
              <table align = "center" >
+
                 <tr colspan = 2>
                     <h1> EDIT PROFILE</h1>
                 </tr>
+
                 <tr align = "center">
                     <div class="in-icons">
                     <td>
                         <label><b>Name :</b></label>
                     </td>
                     <td>
-                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $name;?></textarea><br>
                     </td>
                 </tr>
+
                 <tr align = "center">
                     <td>
                         <label><b>Pan :</b></label>
                     </td>
                     <td>
-                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea>
+                        <textarea rows="2" column="20" disabled><?php echo $pan;?></textarea><br>
                     </td>
                 </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>Company :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $comp;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>License :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $license;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <div class="in-icons">
+                    <td>
+                        <label><b>Email ID :</b></label>
+                    </td>
+                    <td>
+                        <textarea rows="2" column="18" value="" disabled><?php echo $mail;?></textarea><br>
+                    </td>
+                </tr>
+
+                <tr align = "center">
+                    <td>
+                    <label><b>Username :</b></label>
+                    </td>
+                    <td>
+                        <input type="text" name="username" value="<?php echo $user; ?>" />  <br> 
+                    </td>
+                    <span style=" display:block;  margin-bottom: .75em; "></span>
+                </tr>
+
                 <tr align = "center">
                     <td>
                         <label><b>Phone :</b></label>
                     </td>
                     <td>
-                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/>
+                        <input type="phonenumber" name="phonenumber" value="<?php echo $phone;?>"/> <br>
                     </td>
                 </tr>
+
                 <tr align = "center">
                     <td>
                         <label><b>Address :</b></label>
                     </td>
                     <td>
-                        <input type="text" name="address" value="<?php echo $address;?> "/> 
+                        <input type="text" name="address" value="<?php echo $address;?> "/> <br>
                     </td>
                 </tr>
+
                 <tr align = "center">
                     <td>
                     <label><b>Bank :</b></label>
                     </td>
                     <td>
-                        <input type="number" name="bank" value="<?php echo $account; ?>" />  
+                        <input type="number" name="bank" value="<?php echo $account; ?>" />  <br> 
                     </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>
                 </tr>
-                <tr colspan =2>
+
+                <tr colspan =2 align = "center">
                     <td colspan =2>
                         <input type="submit" name="confirm" value="Confirm">
                     </td>
@@ -241,10 +294,11 @@ while($row = mysqli_fetch_array($run_query))
             </table>
         </form>
         <div class="again">
-            <a href="ChangePassword.php"><button class="say">Change Password</button></a>
+            <td colspan =2><a href="BuyerChangePassword.php"><button class="say">Change Password</button></a></td>
         </div>
+ 
     </div>
-    
+  
 
 
 </body>
@@ -252,20 +306,24 @@ while($row = mysqli_fetch_array($run_query))
 
 <?php
 
+    include("../Includes/db.php");
 
     if (isset($_POST['confirm']))
     {
         $phone = $_POST['phonenumber'];
         $address = $_POST['address'];
-        $account = $_POST['bank'];      
+        $account = $_POST['bank'];   
+        $user = $_POST['username'];   
         
-        $query = "update farmerregistration 
-                  set farmer_phone = '$phone',
-                  farmer_address = '$address', farmer_bank = '$account' where farmer_id 
-                  in (select farmer_id from farmerregistration 
-                  where farmer_phone='$sessphonenumber')"; 
+        $query = "update buyerregistration 
+                  set buyer_phone = '$phone', buyer_username = '$user', 
+                  buyer_address = '$address', buyer_bank = '$account' 
+                  where buyer_id in 
+                  (select buyer_id from buyerregistration 
+                  where buyer_phone='$sessphonenumber')"; 
         $run = mysqli_query($con, $query);
+
         $_SESSION['phonenumber'] = $phone;
-        echo "<script>window.open('FarmerProfile.php','_self')</script>";
+        echo "<script>window.open('BuyerProfile.php','_self')</script>";
     }
 ?>

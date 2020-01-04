@@ -1,29 +1,38 @@
+<<<<<<< HEAD
 /*  .header{
 height: 50px;
+=======
+  .header{
+height: 69px;
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
 width: 100%;
 background-color:   #00b300;
   }
+
 #logo {
-    height: 50px;
-    width: 100px;
+    height: 66px;
+    width: 110px;
     text-align: left;
     float: left;
 }
-.search_input{
+.search_input input{
   float:left;
+  width:500px;
   margin-left: 50px;
-  margin-top: 10px;
+  margin-top: 20px;
+  border-color: green;
 }
 .proicon{
   float: right;
   margin-right: 10px;
-  margin-top: 10px;
+  /* margin-top: 5px; */
 }
 .icon2{
   float: right;
    margin-right: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 
+<<<<<<< HEAD
 }*/
 /*.loginz{
     float: right;
@@ -38,7 +47,20 @@ background-color:   #00b300;
     margin: 0;
     
 
+=======
 }
+.loginz{
+    float:right;
+  margin-right:200px;
+  color: azure;
+  l
+}
+.loginz a {
+    text-decoration: none;
+    color: white;
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
+}
+
 
 .slideshow{
     margin-top: 20px;
@@ -46,10 +68,7 @@ background-color:   #00b300;
     margin-bottom: 20px;
     /*background-color: black;*/
 }
-/*.images{
-    border-color:  black;
-    border-style: solid;
-}*/
+
 
 #input1 {
     
@@ -126,6 +145,7 @@ justify-content: center;*/
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
+<<<<<<< HEAD
 
 
     grid-column-gap: 20px;
@@ -148,17 +168,21 @@ margin-bottom:20px;
 clear:auto;
 }
 .inputwrapper:last-child{
+=======
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
     grid-column-gap: 20px;
     grid-row-gap: 10px;
+    /* float: left; */
     margin-left: 30px;
 }
+
 
 .inputwrapper{
     float: left;
     border-style: double;
     text-align: center;
     margin-left: 80px;
-    width: 300px;
+    width: 280px;
     margin-bottom:20px;
     clear:auto;
     }
@@ -190,7 +214,8 @@ width:35px;
 	border-spacing: 20px;
 	padding: 20px;
 	border-style: solid;
-	margin: 10px;
+    margin: 10px;
+    margin-left: 7%;
 	/*background-color: red;*/
 	  border-width: 5px;
             border-radius: 16px;
@@ -222,7 +247,7 @@ min-width: 400px;
     justify-content: center;
 }
 
-.head1 {}
+
 
 .addtocart {
     background-color: #FFD700;

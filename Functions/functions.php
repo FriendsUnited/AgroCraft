@@ -1,9 +1,9 @@
-<?php 
+ <?php 
     session_start(); 
     $con = mysqli_connect("localhost","root" ,"","agrocraft");
 
     function getUsername(){
-        if(!isset($_GET['phonenumber'])){
+        if(isset($_SESSION['phonenumber'])){
             $phonenumber = $_SESSION['phonenumber'];
             global $con;
             $query = "select * from buyerregistration where buyer_phone = $phonenumber";
@@ -13,10 +13,11 @@
                 $buyer_name = $row_cat['buyer_name'];
             }
 
-            echo "<li id='newlabel'><label id='login'>Hello ,$buyer_name</label></li>";
+            echo "<label id='login'>Hello ,$buyer_name</label>";
+
         }
         else {
-            echo "<li id='newlabel'><label id='login'>Login/Sign up</label></li>";
+            echo "<label id='login'><a href = '../auth/BuyerLogin.php' >Login/Sign up</a></label>";
         }
        
     }
@@ -70,7 +71,7 @@
 
     function getProducts() {
         global $con;
-        $query = "select * from products  order by RAND() LIMIT 0,10";
+        $query = "select * from products  order by RAND() LIMIT 0,8";
         $run_query = mysqli_query($con,$query);
         echo "<br>";
         while($rows = mysqli_fetch_array($run_query)){
@@ -78,19 +79,15 @@
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
-
-
-            echo "
-                  <div class='wrapper'>
-                        <div class='inputwrapper'>
+            echo " <div class='inputwrapper'>
                             <br>
-                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='./Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
-                        </div></div> ";
+                        </div> ";
 
         }
     }
@@ -128,7 +125,7 @@
             $product_cat = $rows['product_cat'];
 
             echo "<div class='veg'>
-                    <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
+                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";
             
             
@@ -147,13 +144,13 @@
             $product_cat = $rows['product_cat'];
 
             echo "<div class='veg'>
-                    <a href='#'><img src='Admin/product_images/$product_image' height='250px' width='300px' ></a>
+                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";    
         }
     }
-
-    function getProductDetails(){
-        include("includes/db.php");
+    //function  which is link with FarmerProductDetails
+    function getFarmerProductDetails(){
+        include("../includes/db.php");
         global $con;
         if(isset($_GET['id'])){
             $prod_id = $_GET['id'];
@@ -164,18 +161,29 @@
                 while($rows = mysqli_fetch_array($run_query)){
                     $product_title = $rows['product_title'];
                     $product_image = $rows['product_image'];
+                    $product_type=$rows['product_type'];
+                    $product_stock=$rows['product_stock'];
+                    $product_description=$rows['product_desc'];
                     $product_price = $rows['product_price'];
                     $product_delivery = $rows['product_delivery'];
                     $product_cat = $rows['product_cat'];
                     echo "<div>
-                    <img src='Admin/product_images/$product_image' height='250px' width='300px' >
-                    "." product title  :  ".$product_title."
-                         </div>";
+                    <img src='../Admin/product_images/$product_image' height='250px' width='300px' ><br>"
+                    ." product title  :  ".$product_title."<br>"
+                    ." product type  :  ".$product_type."<br>"
+                    ." product stock  :  ".$product_stock."<br>"
+                    ." product Description  :  ".$product_description."<br>"
+                    ." product price  :  ".$product_price."<br>"
+                    ." product Delivery  :  ".$product_delivery."<br>"
+                    ." product category  :  ".$product_cat."<br>"
+                    //."<button href=''>ADD TO CART</button>"
+                        ."</div>"
+                        ;
                     }
             }
     }
     }
-
+    //function which is link with FarmerHomePage
     function getFarmerProducts() {
         include("../includes/db.php");
         global $con;
@@ -193,18 +201,52 @@
         
                 echo "
                     <div style = 'float:left;margin : 15px; margin-left:30px;padding :15px; border-style : outline; border:2px solid ;border-color:green; border-radius:10px;' >
-                        <a href='../Details.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
                         style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
                         <div>
                         <p style='text-align:center; text-decoration:underline;'><b>$product_title</b></p>
                         <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
                         </div>
                         </div> 
-                        
                         ";
                 }                     
            }       
 
-    }    
+        } 
+        //function which is linked with BuyerProductDetails
+        function getBuyerProductDetails(){
+            include("../includes/db.php");
+            global $con;
+            if(isset($_GET['id'])){
+                $prod_id = $_GET['id'];
+                $query="select * from products where product_id=". $prod_id;
+                $run_query = mysqli_query($con,$query);
+                $resultCheck=mysqli_num_rows($run_query);
+                if($resultCheck>0) {
+                    while($rows = mysqli_fetch_array($run_query)){
+                        $product_title = $rows['product_title'];
+                        $product_image = $rows['product_image'];
+                        $product_type=$rows['product_type'];
+                        $product_stock=$rows['product_stock'];
+                        $product_description=$rows['product_desc'];
+                        $product_price = $rows['product_price'];
+                        $product_delivery = $rows['product_delivery'];
+                        $product_cat = $rows['product_cat'];
+                        echo "<div>
+                        <img src='../Admin/product_images/$product_image' height='250px' width='300px' ><br>"
+                        ." product title  :  ".$product_title."<br>"
+                        ." product type  :  ".$product_type."<br>"
+                        ." product stock  :  ".$product_stock."<br>"
+                        ." product Description  :  ".$product_description."<br>"
+                        ." product price  :  ".$product_price."<br>"
+                        ." product Delivery  :  ".$product_delivery."<br>"
+                        ." product category  :  ".$product_cat."<br>"
+                        ."<button href=''>ADD TO CART</button>"
+                            ."</div>"
+                            ;
+                        }
+                }
+            }
+        }
 
 ?>

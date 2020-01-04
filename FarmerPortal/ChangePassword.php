@@ -49,7 +49,6 @@
             set farmer_password='$newpassword' ,farmer_conf_pswd='$confirmpassword'
             where farmer_phone=$sessphonenumber";
             $run = mysqli_query($con, $sql);
-
         }
     }
     ?> 

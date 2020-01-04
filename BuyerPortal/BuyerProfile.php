@@ -54,15 +54,15 @@
         .box {
             color: rgb(6, 36, 7);
             width: 450px;
-             line-height: 40px; 
+            line-height: 40px; 
             margin: auto;
             text-align: center;
             margin-top: 50px;
             padding: 5px;
             border-style: outset;
-            /* border-width: 5px;
-            border-radius: 16px; */
-            border-color: green;
+            border-width: 5px;
+            border-radius: 16px;
+            border-color:rgb(0, 172, 230);
             /* font-size:20px; */
         }
         
@@ -73,7 +73,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-color: white;
-            background-image: url(../Images/Website/forgotpassword.jpg);
+            background-image: url(../Images/Website/buyerLogin.jpeg);
             border: chartreuse;
         }
         
@@ -93,24 +93,22 @@
         
         input[type="submit"] {
             cursor: pointer;
-            font-size: 22px;
+            font-size: 12px;
             font-weight: bold;
             color: rgb(246, 248, 246);
-            background-color: green;
-            /* display: inline-block; */
+            background-color: rgb(0, 191, 255);
             border-radius: 16px;
-            border-color: rgb(3, 66, 34);
-            width: 64%;
+            border-color: rgb(0, 172, 230);
+            width: 44%;
         }
         
         input[type="submit"]:hover {
-            background-color: rgb(97, 16, 33);
+                background-color: rgb(0, 153, 255);
             outline: none;
-            border-color: blanchedalmond;
-            color: rgb(155, 248, 4);
+            color:  rgb(255,255,255);
             border-radius: 20%;
             border-style: outset;
-            border-color: rgb(155, 248, 4);
+            border-color: rgb(0, 57, 230);
             font-weight: bolder;
             width: 54%;
             font-size: 18px;
@@ -132,14 +130,15 @@
             
         }
         .just{
-          
             float:left;
-            margin:0px;
+            margin-left:1%;
+            margin:20px;
             position:absolute;
             left:0;
-             top:0px; 
-             
+            top:0px; 
+            text-shadow: 1px 1px 1px black;
         }
+
 
        
     </style>
@@ -149,42 +148,82 @@
 </head>
 
 <body>
-<div class="just"><a  href="../BuyerHomepage.php"> <i  class="fa fa-home fa-3x"></i></a></div>
-    <div class="box">
-        <form action="EditProfile.php" method="post">
-            <h1> BUYER'S  PROFILE</h1>
-            <textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br>  
-            <textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br>
-            <textarea rows="3" column="56" disabled> <?php echo $phone?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $address?> </textarea><br>
-            <textarea rows="2" column="10"disabled> <?php echo $comp?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br>
-            <textarea rows="3" column="56" disabled> <?php echo $pan?> </textarea><br>
-            <textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br>
-            <textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br>
-               <!-- <label class="three">$address</label> <br> -->
-               <!-- <label class="two">$pan</label> <br>
-               <label class="two">$bank</label> <br>
-                 -->
-            
-                <!-- <label class="two"><?php echo $name; ?></label><br>
-               <label class="two"><?php echo $phone; ?></label> <br>
-               <label class="three"><?php echo $address; ?></label> <br>
-               <label class="two"><?php echo $pan; ?></label> <br>
-               <label class="two"><?php echo $bank; ?></label> <br> -->
-                
-                
-                
-                <!-- <span style=" display:block;  margin-bottom: .75em; "></span> -->
-                <input type = "submit" name="editProf" value= "Edit Profile">
-
-        </form>
+    <div class="just">
+        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
 
-<form action="BuyerEditProfile.php" method = "post">
+    <div class="box">
+        <form action="BuyerEditProfile.php" method="post">
 
-    
-</form>
+            <table align = "center">
+                <tr colspan = 2>
+                    <h1> BUYER'S  PROFILE</h1>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>User Name :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $user?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Phone Number :</b></label></td>
+                    <td><textarea rows="1" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+                </tr>
+                <tr align = "center">
+                    <td><label><b>Address :</b></label></td>
+                    <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Pan Number :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Account Number :</b></label></td>
+                    <td><textarea rows="2" column="10"disabled> <?php echo $bank?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Company :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $comp?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>license :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $license?> </textarea><br></td>
+                </tr>
+
+                <tr align = "center">
+                    <td><label><b>Mail ID :</b></label></td>
+                    <td><textarea rows="2" column="10" disabled> <?php echo $mail?> </textarea><br></td>
+                </tr>
+                
+                <tr colspan =2 align = "center">
+                    <td colspan =2><input type = "submit" name="editProf" value= "Edit Profile"></td>
+                </tr>
+            </table>
+            
+        </form>
+ 
+    </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

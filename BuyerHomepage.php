@@ -1,6 +1,6 @@
-<!-- <?php 
+<?php 
 	include("Functions/functions.php");
-?> -->
+?>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>PORTAL</title>
-	<link rel="stylesheet" type="text/css" href="Styles/FarmerHomepage.css">
+	<link rel="stylesheet" type="text/css" href="Styles/BuyerHomepage.css">
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,17 +25,16 @@
 	<!-- <div class="navbar"> -->
 	<!-- <div class="flex-container"> -->
 <div class="div">
-	<div class ="parent_div">	
 	<img id="logo" src="portal_files/logo.jpg">
 
 <ul id="list">
 <!-- <li>	</li> -->
-
-	<li id="list3"><i class="far fa-user-circle" style="font-size:28px; color: red"></i>
+	
+	<li id="list3"><i class="far fa-user-circle" style="font-size:30px; color: red"></i>
 	</li>
 
 	<li id="list2"> 
-		<i class="fa" style="font-size:px; color: red">&#61562;</i>
+		<i class="fa" style="font-size:30px; color: red">&#61562;</i>
     <span id="icon"> 5 </span>
 
 </li>
@@ -48,8 +47,9 @@
 <input type="text" id="input1" name="search" placeholder="Search.."></div>
 	
 </li>
-<li id="newlabel"><label id="login">Login/Sign up</label></li>
-</div>
+<!-- <li id="newlabel"><label id="login">Login/Sign up</label></li> -->
+<?php getUsername(); ?>
+
 
 
 </ul>
@@ -108,35 +108,6 @@
     <span class="sr-only">Next</span>
   </a>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- <img src="portal_files/pic1.jpg"> -->
 <!-- <table>
 	<tr>
@@ -171,8 +142,8 @@
 </table><br>
 <div class=content_item><label>VEGETABLES</label></div>
 	<div id="vegs">
-<!-- 	<?php getVegetablesHomepage(); ?> -->
-	<div class="veg">
+	<?php getVegetablesHomepage(); ?>
+	<!-- <div class="veg">
 		<img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 	</div>
 	<div class="veg">
@@ -183,7 +154,7 @@
 	</div>
 	<div class="veg">
 		<img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div>
+	</div> -->
 </div>
 
 
@@ -192,8 +163,8 @@
 
 <div class=content_item><label>CROPS </label></div>
 <div id="crops">
-<!-- <?php getCropsHomepage(); ?> -->
-<div class="crop">
+<?php getCropsHomepage(); ?>
+<!-- <div class="crop">
 <img src="Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -204,7 +175,7 @@
 </div>
 <div class="crop">
 <img src="Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
+</div> -->
 </div>
 
 
@@ -212,7 +183,9 @@
 <!-- <div class = "ProductItems">
 	<div class="example"> -->
 		<div class="wrapper">
-		<div class="inputwrapper">
+			<div><?php getProducts(); ?></div>
+
+		<!-- <div class="inputwrapper">
         	<img src="portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>
@@ -259,17 +232,9 @@
             <input class="numberinput" type="number" name="number"  >
 
             <button class="addtocart">ADD TO CART <i class="fas fa-shopping-cart "style=" background-color:#FFD700"></i></button><br>
-       </div>            
+       </div>             -->
 	</div>
 <!-- </div>
 </div> -->
-<!-- <div>
-	<?php 
-		
-		getProducts(); ?>
-</div> -->
-
-
-
-
-</body></html>
+</body>
+</html>

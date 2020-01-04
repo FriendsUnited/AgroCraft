@@ -1,6 +1,5 @@
-<?php 
-
-    session_start();
+<?php
+    include("../Functions/functions.php");
 ?>
 
 <!DOCTYPE html>
@@ -165,12 +164,9 @@
         <div>
             <?php
                 include("../Includes/db.php");
-                include("../Functions/functions.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
                 getFarmerProducts();
-            ?>
-    
-            
+            ?>        
         </div>
     </div>
     

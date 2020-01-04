@@ -14,7 +14,8 @@
         <?php 
             include("includes/db.php");
             include("Functions/functions.php");
-            $query="select * from products where ";
+            getProductDetails();
+            
 
         ?>
     </div>

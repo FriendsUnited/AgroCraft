@@ -155,21 +155,11 @@
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
     <h3>Welcome to Agrocraft</h3>
 
-
-<div>
-<h3>ALL PRODUCTS</h3> </div>       
-
-
-    <div class="wrapper">
-<div>
     <div class="wrapper">
         <br>
        <br>
-
-
         <h2>ALL PRODUCTS</h2>
-        <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                     
-
+        <div class="add_button"><a href="../Admin/insert_product.php"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></a></div>                     
         <br>
         
         <div>
@@ -178,7 +168,6 @@
                 include("../Functions/functions.php");
                 $sess_phone_number=$_SESSION['phonenumber'];
                 getFarmerProducts();
-       
             ?>
     
             

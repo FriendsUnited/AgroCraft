@@ -9,8 +9,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
+	<title>PORTAL</title>
+	<link rel="stylesheet" type="text/css" href="../Styles/FarmerHomepage.css">
+=======
 	<title>Agrocraft Homepage</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css">
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

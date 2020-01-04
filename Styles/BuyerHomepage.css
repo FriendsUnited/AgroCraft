@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 .header{
     height: 69px;
     width: 100%;
     background-color:   #00b300;
 }
+=======
+<<<<<<< HEAD
+/*  .header{
+height: 50px;
+=======
+  .header{
+height: 69px;
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
+width: 100%;
+background-color:   #00b300;
+  }
+>>>>>>> c9427b42aab379cf1d29676175f76462f5e5e630
 
 #logo {
     height: 66px;
@@ -27,6 +40,22 @@
    margin-right: 10px;
   /* margin-top: 10px; */
 
+<<<<<<< HEAD
+}*/
+/*.loginz{
+    float: right;
+ margin-right: 80px;
+ 
+ margin-left: 570px;
+  margin-right: 10px;
+  margin-top: 10px;
+
+}
+*/*{
+    margin: 0;
+    
+
+=======
 }
 /* .loginz{
     float:right;
@@ -36,7 +65,12 @@
 .loginz a {
     text-decoration: none;
     color: white;
+<<<<<<< HEAD
 } */
+=======
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
+}
+>>>>>>> c9427b42aab379cf1d29676175f76462f5e5e630
 
 
 .slideshow{
@@ -122,6 +156,31 @@ justify-content: center;*/
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
+<<<<<<< HEAD
+
+
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+grid-column-gap: 20px;
+grid-row-gap: 10px;
+margin-left: 30px;
+
+}
+
+.inputwrapper{
+
+
+float: left;
+border-style: double;
+text-align: center;
+margin-left: 80px;
+width: 300px;
+margin-bottom:20px;
+clear:auto;
+}
+.inputwrapper:last-child{
+=======
+>>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
     grid-column-gap: 20px;
     grid-row-gap: 10px;
     /* float: left; */

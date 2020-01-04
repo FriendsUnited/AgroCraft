@@ -121,8 +121,8 @@
 </table><br>
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
-	<!-- <?php getVegetablesHomepage(); ?> -->
-	<div class="veg">
+	<?php getVegetablesHomepage(); ?>
+	<!-- <div class="veg">
 		<img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
 	</div>
 	<div class="veg">
@@ -133,7 +133,7 @@
 	</div>
 	<div class="veg">
 		<img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div>
+	</div> -->
 </div>
 
 
@@ -142,8 +142,8 @@
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
-<!-- <?php getCropsHomepage(); ?> -->
-<div class="crop">
+<?php getCropsHomepage(); ?>
+<!-- <div class="crop">
 <img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -154,13 +154,14 @@
 </div>
 <div class="crop">
 <img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div>
+</div> -->
 </div>
 
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
-	<!-- <?php getProducts(); ?> -->
-		<div class="inputwrapper">
+	<?php getProducts(); ?>
+	<?php getBuyerProductDetails(); ?>
+		<!-- <div class="inputwrapper">
         	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>

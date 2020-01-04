@@ -9,9 +9,9 @@
 <body>
     <div>
         <?php 
-            include("../includes/db.php");
+            // include("../includes/db.php");
             include("../Functions/functions.php");
-            $sess_phone_number=$_SESSION['phonenumber'];    
+            // $sess_phone_number=$_SESSION['phonenumber'];    
             getBuyerProductDetails();
 
 

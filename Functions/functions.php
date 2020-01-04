@@ -75,13 +75,14 @@
         $run_query = mysqli_query($con,$query);
         echo "<br>";
         while($rows = mysqli_fetch_array($run_query)){
+            $product_id = $rows['product_id'];
             $product_title = $rows['product_title'];
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
             echo " <div class='inputwrapper'>
                             <br>
-                            <a href='#'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+                            <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'>Delivery by Farmer</label><br>Qty:-
@@ -118,14 +119,15 @@
         $query = "select * from products where product_cat = 2 and not (product_image = '') order by RAND() LIMIT 0,4";
         $run_query = mysqli_query($con,$query);
         while($rows = mysqli_fetch_array($run_query)){
+            $product_id = $rows['product_id'];
             $product_title = $rows['product_title'];
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
 
-            echo "<div class='veg'>
-                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
+            echo "  <div class='veg'>
+                        <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
                     </div>";
             
             
@@ -137,15 +139,16 @@
         $query = "select * from products where product_cat = 1 and not (product_image = '') order by RAND() LIMIT 0,4";
         $run_query = mysqli_query($con,$query);
         while($rows = mysqli_fetch_array($run_query)){
+            $product_id = $rows['product_id'];
             $product_title = $rows['product_title'];
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
             $product_cat = $rows['product_cat'];
 
-            echo "<div class='veg'>
-                    <a href='#'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
-                    </div>";    
+            echo "  <div class='veg'>
+                        <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' height='250px' width='300px' ></a>
+                    </div>";  
         }
     }
     //function  which is link with FarmerProductDetails
@@ -188,7 +191,7 @@
         include("../includes/db.php");
         global $con;
         $sess_phone_number=$_SESSION['phonenumber'];
-        $query="select * from products where farmer_id in(select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
+        $query="select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
         $run_query=mysqli_query($con,$query);
         $resultCheck=mysqli_num_rows($run_query);
         if($resultCheck>0) {   
@@ -217,9 +220,10 @@
         function getBuyerProductDetails(){
             include("../includes/db.php");
             global $con;
+            $sess_phone_number = $_SESSION['phonenumber'];
             if(isset($_GET['id'])){
                 $prod_id = $_GET['id'];
-                $query="select * from products where product_id=". $prod_id;
+                $query="select * from products where product_id=" . $prod_id;
                 $run_query = mysqli_query($con,$query);
                 $resultCheck=mysqli_num_rows($run_query);
                 if($resultCheck>0) {
@@ -242,8 +246,27 @@
                         ." product Delivery  :  ".$product_delivery."<br>"
                         ." product category  :  ".$product_cat."<br>"
                         ."<button href=''>ADD TO CART</button>"
-                            ."</div>"
-                            ;
+                            ."</div>";
+
+                        if(isset($_SESSION['phonenumber'])) {
+                            $query = "select * from products where product_id=" . $prod_id;
+                            $run = mysqli_query($con,$query);
+                            while ($row = mysqli_fetch_array($run)) {
+                                $farmerid = $row['farmer_fk']; 
+                            }
+
+                            $query = "select * from farmerregistration where farmer_id = $farmerid";
+                            $run = mysqli_query($con,$query);
+                            while ($row = mysqli_fetch_array($run)) {
+                                $farmer_name = $row['farmer_name']; 
+                                $farmer_phone = $row['farmer_phone'];
+                                $farmer_address = $row['farmer_address'];
+                            }
+                            echo "farmer Name : " . $farmer_name . "<br>farmer Phone Number : " . $farmer_phone . "<br> Farmer Address" . $farmer_address;
+
+
+                        }
+
                         }
                 }
             }

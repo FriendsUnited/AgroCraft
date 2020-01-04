@@ -1,6 +1,6 @@
-<?php 
+<!-- <?php 
 	 include("../Functions/functions.php");
-?> 
+?>  -->
 
 <!DOCTYPE html>
 
@@ -9,13 +9,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<<<<<<< HEAD
-	<title>PORTAL</title>
-	<link rel="stylesheet" type="text/css" href="../Styles/FarmerHomepage.css">
-=======
 	<title>Agrocraft Homepage</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css">
->>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,55 +53,35 @@
 	
 	
 	<div class="loginz">
-	<?php getUsername(); ?>
-		<!-- <label id="login">Login/Sign up</label> -->
+	<!-- <?php getUsername(); ?> -->
+		<label id="login">Login/Sign up</label>
 	</div>
-
-
-
-
-
-<!-- <div id="opt">
-<select id="bas" name="crops">
-	<option class="items1" value="0" selected="" disabled="">crops</option>
-	<option class="items1">rice </option>
-	<option class="items1">bajra</option>
-	<option class="items1">bajra</option>
-</select>
-<select id="cde" name="crops">
-	<option class="items" value="0" selected="" disabled="">fruits</option>
-</select>
-<select id="abc" name="crops">
-	<option class="items" value="0" selected="" disabled="">vegetables</option>
-	
-</select>
-
-
 </div>
- -->
+
+
+
+ 
  <div class="slideshow">
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
 
-  <div class="carousel-inner">
-  
-    <div class="carousel-item">
-      <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="..." >
-    </div>
-
-   
-    <div class="carousel-item active">
-      <img class="images1" src="../portal_files/same6.jpg" height="500px" width="1350px" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
-    </div>
-  
-  </div>
+		<div class="carousel-inner">
+		
+			<div class="carousel-item">
+				<img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="..." >
+			</div>
+			<div class="carousel-item active">
+				<img class="images1" src="../portal_files/same6.jpg" height="500px" width="1350px" alt="...">
+			</div>
+			<div class="carousel-item">
+				<img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+			</div>
+		</div>	
+	</div>
 </div>
 
   <a class="carousel-control-prev" href="" role="button" data-slide="prev">
@@ -146,8 +121,8 @@
 </table><br>
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
-	<?php getVegetablesHomepage(); ?>
-	<!-- <div class="veg">
+	<!-- <?php getVegetablesHomepage(); ?> -->
+	<div class="veg">
 		<img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
 	</div>
 	<div class="veg">
@@ -158,7 +133,7 @@
 	</div>
 	<div class="veg">
 		<img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-	</div> -->
+	</div>
 </div>
 
 
@@ -167,8 +142,8 @@
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
 <div id="crops">
-<?php getCropsHomepage(); ?>
-<!-- <div class="crop">
+<!-- <?php getCropsHomepage(); ?> -->
+<div class="crop">
 <img src="../Images/Vegetables/patato.jpg" height="250px" width="300px" >
 </div>
 <div class="crop">
@@ -179,13 +154,13 @@
 </div>
 <div class="crop">
 <img src="../Images/Vegetables/Green Capsicum.jpg"height="250px" width="300px">
-</div> -->
+</div>
 </div>
 
 
 <div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div>
-	<?php getProducts(); ?>
-		<!-- <div class="inputwrapper">
+	<!-- <?php getProducts(); ?> -->
+		<div class="inputwrapper">
         	<img src="../portal_files/Coconut.jpg" style="height: 100px; width: 100px;"><br><br>
         	
         	<label>Ramlal patotoes</label><br>
@@ -235,7 +210,7 @@
        </div>             -->
 	<!-- </div> -->
  <!-- </div> -->
-<!-- </div>  -->
+<!-- </div> 
 
 
 

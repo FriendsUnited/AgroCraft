@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-/*  .header{
-height: 50px;
-=======
-  .header{
-height: 69px;
->>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
-width: 100%;
-background-color:   #00b300;
-  }
+.header{
+    height: 69px;
+    width: 100%;
+    background-color:   #00b300;
+}
 
 #logo {
     height: 66px;
@@ -32,7 +27,6 @@ background-color:   #00b300;
    margin-right: 10px;
   /* margin-top: 10px; */
 
-<<<<<<< HEAD
 }*/
 /*.loginz{
     float: right;
@@ -47,18 +41,6 @@ background-color:   #00b300;
     margin: 0;
     
 
-=======
-}
-.loginz{
-    float:right;
-  margin-right:200px;
-  color: azure;
-  l
-}
-.loginz a {
-    text-decoration: none;
-    color: white;
->>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
 }
 
 
@@ -145,37 +127,11 @@ justify-content: center;*/
 {
 	display: grid;
 	grid-template-columns: 20% 20% 20% 20%;
-<<<<<<< HEAD
-
-
     grid-column-gap: 20px;
     grid-row-gap: 10px;
-grid-column-gap: 20px;
-grid-row-gap: 10px;
-margin-left: 30px;
-
-}
-
-.inputwrapper{
-
-
-float: left;
-border-style: double;
-text-align: center;
-margin-left: 80px;
-width: 300px;
-margin-bottom:20px;
-clear:auto;
-}
-.inputwrapper:last-child{
-=======
->>>>>>> 3c20a490251f64f648d11e4de6f97ea5997bf779
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    /* float: left; */
     margin-left: 30px;
-}
 
+}
 
 .inputwrapper{
     float: left;
@@ -236,9 +192,6 @@ min-width: 400px;
 	box-shadow: 5px 5px 10px grey;
 }
 
-.images1{
-
-}
 #heading {
     font-size: 20px;
     color: white;

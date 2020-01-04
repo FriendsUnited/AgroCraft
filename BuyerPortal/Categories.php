@@ -314,7 +314,7 @@ include("../Functions/functions.php");
           </div>
      </div>
 
-     <div class="headerdown">
+	<div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
 				<span class="caret"></span></button>
@@ -340,13 +340,13 @@ include("../Functions/functions.php");
 
      <div>
           <?php
-          if (isset($_GET['search'])) {
+          if (isset($_GET['type'])) {
 
-               $search_query = $_GET['search'];
-               $get_pro = "select * from products where product_keywords like '%$search_query%'";
+               $search_query = $_GET['type'];
+               $get_pro = "select * from products where product_type = '$search_query'";
                $run_pro = mysqli_query($con, $get_pro);
-               $count = mysqli_num_rows($run_pro);
-               if ($count > 0) {
+               // $count = mysqli_num_rows($run_pro);
+               if ($run_pro) {
                     echo "<br>";
                     while ($rows = mysqli_fetch_array($run_pro)) {
                          $product_id = $rows['product_id'];
@@ -365,7 +365,7 @@ include("../Functions/functions.php");
                                              </div> ";
                     }
                } else {
-                    echo "<br><br><hr><h1 align = center>Product Not Available !</h1><br><br><hr>";
+                    echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
                }
           }
           ?>

@@ -279,7 +279,7 @@
 
      <div class="header">
 
-          <a href="BuyerProfile.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+          <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="search_input">
                <form action="SearchResults.php" method="get" enctype="multipart/form-data">
@@ -289,11 +289,15 @@
           </div>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-               <ul class="dropdown-menu etc">
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="BuyerProfile.php"><label class="makeitgreen">Profile</label></a></li>
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="../Includes/logout.php"><label class="makeitgreen">Logout</label></a></li>
-          </div>
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
+				<li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="<?php BuyerProfile(); ?>"><label class="makeitgreen">Profile</label></a></li>
+				<?php
+				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+				}
+				?>
+		</div>
 
 
           <div class="proicon">
@@ -311,31 +315,28 @@
      </div>
 
      <div class="headerdown">
-          <div class="sel1 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu  ">
-                    <li class="options crop_items" role="presentation"><a role="menuitem" tabindex="-1" href="#">
-                              <label class="crop_items">Rice</a></li></label>
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">Bajra</label></a></li>
-          </div>
-          <div class="sel2 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu ">
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">POTAT0</label></a></li>
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">BROCOLI</label></a></li>
-               </ul>
-          </div>
-          <div class="sel3 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu ">
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">CHICKOO</label></a></li>
-                    <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">ORNAGE</label></a></li>
-               </ul>
-          </div>
-     </div>
+		<div class="sel1 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu  ">
+				<?php getCrops(); ?>
+			</ul>
+		</div>
+		<div class="sel2 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+				<?php getVegetables(); ?>
+			</ul>
+		</div>
+		<div class="sel3 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+			<?php getFruits(); ?>
+			</ul>
+		</div>
+	</div>
 
 
      <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>

@@ -1,10 +1,11 @@
-<!-- <?php 
-	 include("../Functions/functions.php");
-?>  -->
+<!-- <?php
+	include("../Functions/functions.php");
+	?>  -->
 
 <!DOCTYPE html>
 
 <html>
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,117 +19,115 @@
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 	<link rel="stylesheet" href="../portal_files/bootstrap.min.css">
-  	<script src="../portal_files/jquery.min.js.download"></script>
-  	<script src="../portal_files/popper.min.js.download"></script>
+	<script src="../portal_files/jquery.min.js.download"></script>
+	<script src="../portal_files/popper.min.js.download"></script>
 	<script src="../portal_files/bootstrap.min.js.download"></script>
-	  
+
 	<style>
-			*{
+		* {
 			margin: 0;
-			box-sizing:border-box;
+			box-sizing: border-box;
 		}
-		
 
-		.header{
+
+		.header {
 			position: sticky;
-			z-index:100;
-			top :0rem;
-		height: 69px;
-		width: 100%;     
-		background-color:  #00b300  ;
-		}
-		.select_element{
-		width:20px;
-		background-color:transparent;
-		border:none;
-		text:none;
+			z-index: 100;
+			top: 0rem;
+			height: 69px;
+			width: 100%;
+			background-color: #00b300;
 		}
 
-	
+		.select_element {
+			width: 20px;
+			background-color: transparent;
+			border: none;
+			text: none;
+		}
+
+
 		#logo {
 			height: 66px;
 			width: 100px;
 			text-align: left;
 			float: left;
 		}
-		.search_input{
-		float:left;
-		margin-left: 50px;
-		margin-top: 20px;
-		
+
+		.search_input {
+			float: left;
+			margin-left: 50px;
+			margin-top: 20px;
+
 		}
-		.proicon{
-		float: right;
-		margin-right: 10px;
-		margin-top: 20px;
+
+		.proicon {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
 		}
-		.dropdown{	float: right;
-		margin-right: 10px;
-		margin-top: 20px;
+
+		.dropdown {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
 
 
 		}
-		.options{
+
+		.options {
 			/* font-weight:bold; */
-			color:yellow;
-			margin-left:20px;
-			width:25px;
-			margin-right:50px;
-			
-		 } 
-		.icon2{
-		float: right;
-		margin-right: 10px;
-		margin-top: 20px;
+			color: yellow;
+			margin-left: 20px;
+			width: 25px;
+			margin-right: 50px;
 
 		}
-		.loginz{
-			float:right ;
-		margin-right: 20px;
-		margin-top: 20px;
-		}
-		
-		 .headerdown{
-			height:50px;
-			width:100%;
-			/* background:red; */
-			
-		}
-		.makeitgreen{
-			color:  #00b300;
+
+		.icon2 {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
+
 		}
 
-.sel1{
-	/* border-style:groove; */
-    color:green;
-	float:left;
-	/* border-color: #00b300; */
-	/* border-radius:25%; */
-	margin-top:3px;
-}
-	.sel2{
-		border-color:green;
-		color:green;
-		float:left;
-		margin-left:600px;
-		/* border-style:groove; */
-		/* border-color: #00b300; */
-		/* border-radius:25%; */
-		margin-top:3px;
-	}
-	
-	.sel3{
-		font-size:20px;
-		margin-top:3px;
-		float:right;
-		margin-right:5px;
-		/* border-style:groove; */
-		/* border-color: #00b300; */
-		/* border-radius:25%; */
-		
-	}
+		.loginz {
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
+		}
 
-		.slideshow{
+		.headerdown {
+			height: 50px;
+			width: 100%;
+		}
+
+		.makeitgreen {
+			color: #00b300;
+		}
+
+		.sel1 {
+			color: green;
+			float: left;
+			margin-top: 3px;
+		}
+
+		.sel2 {
+			border-color: green;
+			color: green;
+			float: left;
+			margin-left: 600px;
+			margin-top: 3px;
+		}
+
+		.sel3 {
+			font-size: 20px;
+			margin-top: 3px;
+			float: right;
+			margin-right: 5px;
+		}
+
+		.slideshow {
 			margin-top: 10px;
 			margin-left: 100px;
 			margin-bottom: 20px;
@@ -137,10 +136,10 @@
 
 
 		#input1 {
-			width:220px;
-			border:none;
+			width: 220px;
+			border: none;
 
-			}
+		}
 
 
 		#input1:active {
@@ -171,6 +170,7 @@
 			background-color: #FFD700;
 			height: 50px;
 		}
+
 		#cde {
 			float: left;
 			margin-left: 680px;
@@ -185,17 +185,6 @@
 			background-color: transparent;
 		}
 
-		.carousel-item {
-			/* margin-left: 110px;
-		margin-top: 25px;
-			align-items: center;
-		justify-content: center;
-			padding-left: 110px;
-			padding-top: 100px;
-			overflow: hidden;
-			display: grid;
-			grid-template-columns: 80%; */
-		}
 
 		.carousel-control-prev {
 			margin-left: 60px;
@@ -203,40 +192,38 @@
 			margin-top: 10px;
 		}
 
-		.carousel-control-next{
+		.carousel-control-next {
 			margin-right: 60px;
 		}
 
-		.wrapper
-		{
+		.wrapper {
 			display: grid;
 			grid-template-columns: 20% 20% 20% 20%;
 
 
 			grid-column-gap: 20px;
 			grid-row-gap: 10px;
-		grid-column-gap: 20px;
-		grid-row-gap: 10px;
-		margin-left: 30px;
+			grid-column-gap: 20px;
+			grid-row-gap: 10px;
+			margin-left: 30px;
 
 		}
 
-		.inputwrapper{
+		.inputwrapper {
 
 
-		float: left;
-		border-style: double;
-		text-align: center;
-		margin-left: 80px;
-		width: 280px;
-		margin-bottom:20px;
-		clear:auto;
+			float: left;
+			border-style: double;
+			text-align: center;
+			margin-left: 80px;
+			width: 280px;
+			margin-bottom: 20px;
+			clear: auto;
 		}
-		
 
-		.inputwrapper:last-child
-		{
-		margin-right:30px; 
+
+		.inputwrapper:last-child {
+			margin-right: 30px;
 			/*background-color: red;*/
 		}
 
@@ -246,45 +233,47 @@
 
 
 
-		.addtocart{
+		.addtocart {
 			background-color: #FFD700;
 		}
 
-		.numberinput{
-		width:35px;
+		.numberinput {
+			width: 35px;
 
 		}
 
-		.tabless{
-			border-collapse: separate ;
+		.tabless {
+			border-collapse: separate;
 			border-spacing: 20px;
 			padding: 20px;
 			border-style: solid;
 			margin: 10px;
 			/*background-color: red;*/
 			border-width: 5px;
-					border-radius: 16px;
-					border-color:black;
-					text-align: center;
-					align-items: center;
-		min-width: 500px;
-		margin-left:100px;
+			border-radius: 16px;
+			border-color: black;
+			text-align: center;
+			align-items: center;
+			min-width: 500px;
+			margin-left: 100px;
 		}
 
 
-		.picha{
+		.picha {
 			height: 300px;
-		width: 500px;
-		background-color: red;
+			width: 500px;
+			background-color: red;
 		}
-		.images:hover{
-			width :625px;
-			height:425px;
+
+		.images:hover {
+			width: 625px;
+			height: 425px;
 			box-shadow: 5px 5px 10px grey;
 		}
-		.small_images:hover{
-			height :215px;
-			width:315px;
+
+		.small_images:hover {
+			height: 215px;
+			width: 315px;
 			box-shadow: 5px 5px 10px grey;
 		}
 
@@ -301,38 +290,44 @@
 		.addtocart {
 			background-color: #FFD700;
 		}
-		.bestselers{
+
+		.bestselers {
 			background-color: red;
 			border-style: solid;
 			float: left;
 			margin-top: 10px;
 			/*margin: 20px;*/
-		margin-bottom: 10px;
+			margin-bottom: 10px;
 			margin-right: 40px;
-			margin-left: 45px;}
-		.bestselers:last-child{
-		margin-right: 50px;
+			margin-left: 45px;
+		}
+
+		.bestselers:last-child {
+			margin-right: 50px;
 		}
 
 
-		#fruits{
+		#fruits {
 			text-align: center;
 		}
-		.veg{
-		
-			float:left;
+
+		.veg {
+
+			float: left;
 
 			margin-left: 30px;
 			border-style: solid;
 			margin-top: 10px;
 		}
-		.veg img:hover{
+
+		.veg img:hover {
 			height: 270px;
 			width: 350px;
 
 		}
-		#vegs{
-		height: 270px;
+
+		#vegs {
+			height: 270px;
 			width: 1498px;
 			/*margin: 20px;*/
 			margin-right: 10px;
@@ -341,14 +336,17 @@
 			margin-top: 20px;
 
 		}
-		.veg:first-child{
-			margin-left:80px;
+
+		.veg:first-child {
+			margin-left: 80px;
 		}
-		.veg:last-child{
+
+		.veg:last-child {
 			margin-right: 20px;
 		}
-		#crops{
-		height: 270px;
+
+		#crops {
+			height: 270px;
 			width: 1498px;
 			/*margin: 20px;*/
 			margin-right: 10px;
@@ -357,121 +355,146 @@
 			margin-top: 20px;
 
 		}
-		.crop:first-child{
-			margin-left:80px;
+
+		.crop:first-child {
+			margin-left: 80px;
 		}
-		.crop:last-child{
+
+		.crop:last-child {
 			margin-right: 20px;
 		}
-		.crop{
-		/*    height: 210px;
+
+		.crop {
+			/*    height: 210px;
 			width: 300px;
 		*/
-			float:left;
-		/*  height: 200px;
+			float: left;
+			/*  height: 200px;
 			width: 300px;*/
 			margin-left: 30px;
 			border-style: solid;
 			margin-top: 10px;
 		}
-		.crop img:hover{
+
+		.crop img:hover {
 			height: 270px;
 			width: 350px;
 
 		}
-		.content_item{
-		text-align: center;
-		justify-content: center;
+
+		.content_item {
+			text-align: center;
+			justify-content: center;
 
 		}
-		.etc{
-		margin-left:-40px;
-			min-width:90px;
-			font-size:20px;
-			
+
+		.etc {
+			margin-left: -40px;
+			min-width: 90px;
+			font-size: 20px;
+
 		}
-		.crop_items{
-			color:green;
+
+		.crop_items {
+			color: green;
 		}
-		.footer{
-			height:70px;
-			width:100%;
+
+		.footer {
+			height: 70px;
+			width: 100%;
 			/* background-color:red; */
-			clear:both;
+			clear: both;
 
 		}
-		.payment{
-			float:left;
-		/* size:20% 50%;
+
+		.payment {
+			float: left;
+			/* size:20% 50%;
 		 */
-		 margin-left:520px;
-		 font-size:20px;
-		margin-top:25px;
+			margin-left: 520px;
+			font-size: 20px;
+			margin-top: 25px;
 		}
-		
-		.cash{
-			float:left;
-			margin-top:0px;
-			margin-left:20px;
-			margin-right:20px;
+
+		.cash {
+			float: left;
+			margin-top: 0px;
+			margin-left: 20px;
+			margin-right: 20px;
 		}
-		.paytm{
-			float:left;
+
+		.paytm {
+			float: left;
 			/* margin-left:500px; */
 		}
-		h3 { width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; } 
-		h3 span { background:#fff; padding:0 10px; }
-		
-        .morefooter{
-			height:100px;
-			width:100%;
-			background-color:white;
+
+		h3 {
+			width: 100%;
+			text-align: center;
+			border-bottom: 1px solid #000;
+			line-height: 0.1em;
+			margin: 10px 0 20px;
+		}
+
+		h3 span {
+			background: #fff;
+			padding: 0 10px;
+		}
+
+		.morefooter {
+			height: 100px;
+			width: 100%;
+			background-color: white;
 
 		}
-		.call{
-			float:left;
-			font-size:20px;
-			margin-left:150px;
-			margin-top:25px;
+
+		.call {
+			float: left;
+			font-size: 20px;
+			margin-left: 150px;
+			margin-top: 25px;
 		}
-		.gmail{
-			margin-top:10px;
-			float:right;
-			margin-right:150px;
+
+		.gmail {
+			margin-top: 10px;
+			float: right;
+			margin-right: 150px;
 
 		}
-		.instagram{
-			margin-top:10px;
-			float:left;
-			margin-left:420px;
+
+		.instagram {
+			margin-top: 10px;
+			float: left;
+			margin-left: 420px;
 		}
-		.instaid{
-height:10px;
-width:100%;
+
+		.instaid {
+			height: 10px;
+			width: 100%;
 
 		}
-		.text{
-float:left;
-margin-left:735px;
-margin-top:-50px;
+
+		.text {
+			float: left;
+			margin-left: 735px;
+			margin-top: -50px;
 		}
-		.gmailid{
-			float:right;
-margin-right:80px;
-margin-top:-60px;
+
+		.gmailid {
+			float: right;
+			margin-right: 80px;
+			margin-top: -60px;
 		}
-		.copy{
-			float:left;
-			margin-top:-65px;
+
+		.copy {
+			float: left;
+			margin-top: -65px;
 			/* background-color:grey; */
 		}
+	</style>
 
-
-
-
-			</style>
-			
 </head>
+
 <body>
 
 
@@ -480,184 +503,175 @@ margin-top:-60px;
 
 
 
-<div class="header" >
-	
-	<a href="BuyerProfile.php"><img id="logo" src="../portal_files/logo.jpg"></a>
-	    
-	<div class="search_input">
-		<form action="SearchResults.php" method = "get" enctype = "multipart/form-data">
-			<i class="fas fa-search" style="font-size:20px;color:white; " ></i>
-			<input type="text" id="input1" name="search" placeholder="Search...">
-		</form>
-	</div>
-	<div class="dropdown">
-		<!-- <select class="select_element" name="drop">
-			 <option class="options option1" value="0"></option> -->
-			<!-- <option  class="options " value="profle"><label class="abcde">PROFILE</label></option>
-			<option class="options "value="logout">LOGOUT</option>
-			 -->
-		<!-- </select>  -->
+	<div class="header">
 
-		<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">	</span></button>
-    <ul class="dropdown-menu etc" >
-      <li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="BuyerProfile.php"><label class="makeitgreen" >Profile</label></a></li>
-      <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="../Includes/logout.php"><label class="makeitgreen">Logout</label></a></li>
-      
-	</div>	 
-	<div class="proicon">
-		
-    <i class="far fa-user-circle" style="font-size:30px; color: white"></i>
+		<a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
+		<div class="search_input">
+			<form action="SearchResults.php" method="get" enctype="multipart/form-data">
+				<i class="fas fa-search" style="font-size:20px;color:white; "></i>
+				<input type="text" id="input1" name="search" placeholder="Search...">
+			</form>
+		</div>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
+				<li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="<?php BuyerProfile(); ?>"><label class="makeitgreen">Profile</label></a></li>
+				<?php
+				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+				}
+				?>
+		</div>
+		<div class="proicon">
+			<i class="far fa-user-circle" style="font-size:30px; color: white"></i>
+		</div>
 
-		<!-- <a href="BuyerProfile.php"> <i class="far fa-user-circle" style="font-size:30px; color: white"></i></a> -->
-	</div>
-
-	<div class="icon2">
-		<a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-		<span id="icon"> 5 </span>
-	</div>
-	
-	
-	<div class="loginz">
-	<?php getUsername(); ?>
-		<!-- <label>Login/Sign up</label> -->
-	</div>
-</div>
-
-<div class="headerdown">
-<div class="sel1 sel">
-<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">	CROPS
-     <span class="caret"></span></button>
-   	 <ul class="dropdown-menu  " >
-      	<li  class="options crop_items" role="presentation"><a role="menuitem" tabindex="-1" href="#">
-			  <label class="crop_items">Rice</a></li></label>
-		 <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">Bajra</label></a></li>
-		 </div>
-<div class="sel2 sel">
-		 <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES	</i>
-	 <span class="caret"></span></button>
-   	 <ul class="dropdown-menu " >
-     	<li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">POTAT0</label></a></li>
-		  <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">BROCOLI</label></a></li></ul>
-</div>	
-<div class="sel3 sel"	>  
-         <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS	</i>
-   	   <span class="caret"></span></button>
-   	   <ul class="dropdown-menu " >
-         <li  class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">CHICKOO</label></a></li>
-         <li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="#"> <label class="crop_items">ORNAGE</label></a></li></ul>
-      	</div>
+		<div class="icon2">
+			<a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> 5 </span>
+		</div>
 
 
-
-
+		<div class="loginz">
+			<?php getUsername(); ?>
+		</div>
 	</div>
 
- 
- <div class="slideshow">
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		</ol>
+	<div class="headerdown">
+		<div class="sel1 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu  ">
+				<?php getCrops(); ?>
+			</ul>
+		</div>
+		<div class="sel2 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+				<?php getVegetables(); ?>
+			</ul>
+		</div>
+		<div class="sel3 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+			<?php getFruits(); ?>
+			</ul>
+		</div>
+	</div>
 
-		<div class="carousel-inner">
-		
-			<div class="carousel-item">
-				<img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="..." >
+
+	<div class="slideshow">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+
+			<div class="carousel-inner">
+
+				<div class="carousel-item">
+					<img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+				</div>
+				<div class="carousel-item active">
+					<img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+				</div>
+				<div class="carousel-item">
+					<img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+				</div>
 			</div>
-			<div class="carousel-item active">
-				<img class="images1" src="../portal_files/same6.jpg" height="500px" width="1350px" alt="...">
-			</div>
-			<div class="carousel-item">
-				<img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
-			</div>
-		</div>	
+		</div>
 	</div>
-</div>
 
-  <a class="carousel-control-prev" href="" role="button" data-slide="prev">
+	<a class="carousel-control-prev" href="" role="button" data-slide="prev">
 
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+	</div>
 
 
-<hr>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
-<table class="tabless" > 
-	<tr>
-		<th rowspan=2 colspan= 2><a href="../BuyerPortal/BuyerProductDetails.php?id=31"><img class="images " src="../Admin/product_images/strawberry.jpg" width = 600px height =400px ></a></th>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=17"><img class="small_images" src="../Admin/product_images/Bananas.jpg" height="200px" width="300px"></a></td>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=24"><img class="small_images " src="../Admin/product_images/Apple.jpg" height="200px" width="300px" ></a></td>
-	</tr>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=27"><img class="small_images "src="../Admin/product_images/Mango.jpg" height="200px" width="300px"></a></td>
-		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=32"><img class="small_images "src="../Admin/product_images/orange.jpg"height="200px" width="300px"></a></td>
-	<tr>
-		
-	</tr>
-</table>
+
+	<hr>
+	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
+	<table class="tabless">
+		<tr>
+			<th rowspan=2 colspan=2><a href="../BuyerPortal/BuyerProductDetails.php?id=31"><img class="images " src="../Admin/product_images/strawberry.jpg" width=600px height=400px></a></th>
+			<td><a href="../BuyerPortal/BuyerProductDetails.php?id=17"><img class="small_images" src="../Admin/product_images/Bananas.jpg" height="200px" width="300px"></a></td>
+			<td><a href="../BuyerPortal/BuyerProductDetails.php?id=24"><img class="small_images " src="../Admin/product_images/Apple.jpg" height="200px" width="300px"></a></td>
+		</tr>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=27"><img class="small_images " src="../Admin/product_images/Mango.jpg" height="200px" width="300px"></a></td>
+		<td><a href="../BuyerPortal/BuyerProductDetails.php?id=32"><img class="small_images " src="../Admin/product_images/orange.jpg" height="200px" width="300px"></a></td>
+		<tr>
+
+		</tr>
+	</table>
 
 
-</table><br>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
+	</table><br>
+	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Vegetable's</b></label></div>
 	<div id="vegs">
-	<?php getVegetablesHomepage(); ?>
+		<?php getVegetablesHomepage(); ?>
 
-</div>
+	</div>
 
 
-<br>
+	<br>
 
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
-<div id="crops">
-<?php getCropsHomepage(); ?>
-</div>
-<hr><br>
-<div class=content_item><label style = "font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br><hr>
+	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Crop's</b></label></div>
+	<div id="crops">
+		<?php getCropsHomepage(); ?>
+	</div>
+	<hr><br>
+	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
+	<hr>
 	<div>
-	<?php getProducts(); ?>
+		<?php getProducts(); ?>
 	</div>
 
 
-<div class="footer">
-<hr>
+	<div class="footer">
+		<hr>
 
-<label class="payment">Payment Options:-</label>
-<div class="cash"><img src="../Images/Website/cash.jpg"height="75px" width="125px" ></div>
-<div class="patym"><img src="../Images/Website/petm.jpg"height="75px" width="125px"></div>
+		<label class="payment">Payment Options:-</label>
+		<div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
+		<div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
 	</div><br><br>
- 	<h3><span> GET SOCIAL WITH US </span></h3></div>
-	
-	 <div class="morefooter">
-		 <div class="call">
-		 <i class="fas fa-phone-alt call_color"></i>
-		 <a href="#" style = "color:black;" >+91-8191046421</a>
+	<h3><span> GET SOCIAL WITH US </span></h3>
 	</div>
 
-<div class="instagram"><img src="../Images/Website/Insta.jpg"height="45px" width="60px" > 
-</div>
+	<div class="morefooter">
+		<div class="call">
+			<i class="fas fa-phone-alt call_color"></i>
+			<a href="#" style="color:black;">+91-8191046421</a>
+		</div>
 
-<div class="gmail">
-<img src="../Images/Website/gmail.jpg"height="30px" width="50px" >
-</div>
+		<div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
+		</div>
+
+		<div class="gmail">
+			<img src="../Images/Website/gmail.jpg" height="30px" width="50px">
+		</div>
 
 	</div>
 	<div class="instaid">
-	<div class="text"><a href="#" style = "color:black;" >@AgroCraft</a></div>
-	<div class="gmailid">
-	<a href="#" class="hypher" style = "color:black;" >agrocraft6@gmail.com</a></div>
-	
-</div>
+		<div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
+		<div class="gmailid">
+			<a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a></div>
+
+	</div>
 
 
-	<div class="copy"><h5 style = "test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5></div>
+	<div class="copy">
+		<h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
+	</div>
 </body>
+
 </html>

@@ -291,15 +291,11 @@
                         <input type="submit" name="confirm" value="Confirm">
                     </td>
                 </tr>
-                
-                <tr colspan =2 align = "center">
-                <div class="again">
-                    <td colspan =2><a href="BuyerChangePassword.php"><button class="say">Change Password</button></a></td>
-                </div>
-                </tr>
             </table>
-            </form>
-            </div>
+        </form>
+        <div class="again">
+            <td colspan =2><a href="BuyerChangePassword.php"><button class="say">Change Password</button></a></td>
+        </div>
  
     </div>
   

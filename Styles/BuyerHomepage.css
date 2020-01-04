@@ -3,6 +3,10 @@ height: 69px;
 width: 100%;
 background-color:   #00b300;
   }
+
+body{
+    background-color:   #00b300;
+}
 #logo {
     height: 66px;
     width: 110px;
@@ -11,7 +15,7 @@ background-color:   #00b300;
 }
 .search_input input{
   float:left;
-  width:700px;
+  width:500px;
   margin-left: 50px;
   margin-top: 20px;
 }
@@ -27,9 +31,13 @@ background-color:   #00b300;
 
 }
 .loginz{
-    
-  margin-left: 325px;
+    float:right;
+  /* margin-left: 325px; */
   color: azure;
+}
+.loginz a {
+    text-decoration: none;
+    color: black;
 }
 
 

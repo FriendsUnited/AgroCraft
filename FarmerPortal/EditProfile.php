@@ -187,7 +187,7 @@ while($row = mysqli_fetch_array($run_query))
 
     <div class="box">
         <form action="EditProfile.php" method="post">
-             <table align = "center" border=2>
+             <table align = "center" >
                 <tr colspan = 2>
                     <h1> EDIT PROFILE</h1>
                 </tr>

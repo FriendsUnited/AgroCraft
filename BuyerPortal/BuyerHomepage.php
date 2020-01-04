@@ -9,7 +9,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>PORTAL</title>
+	<title>Agrocraft Homepage</title>
 	<link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css">
 	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
 	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -31,26 +31,32 @@
 
 
 <div class="header" >
-    	<a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
-<div class="search_input">
-    <i class="fas fa-search" style="font-size:20px;color:white " ></i>
-<input type="text" id="input1" name="search" placeholder="Search.."></div>
+	
+	<a href="BuyerProfile.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+	    
+	<div class="search_input">
+		<i class="fas fa-search" style="font-size:20px;color:white; " ></i>
+		<input type="text" id="input1" name="search" placeholder="Search..">
+	</div>
 
 
-<div class="proicon">
-<a href="BuyerProfile.php"> <i class="far fa-user-circle" style="font-size:30px; color: white"></i></a>
+	<div class="proicon">
+		<a href="BuyerProfile.php"> <i class="far fa-user-circle" style="font-size:30px; color: white"></i></a>
+	</div>
+
+	<div class="icon2">
+		<a href="#"> <i class="fa" style="font-size:30px; color:white">&#61562;</i></a>
+		<span id="icon"> 5 </span>
+	</div>
+	
+	
+	<div class="loginz">
+	<!-- <?php getUsername(); ?> -->
+		<label id="login">Login/Sign up</label>
+	</div>
+
 </div>
 
-<div class="icon2">
-<a href="#"> <i class="fa" style="font-size:30px; color:white">&#61562;</i></a>
-    <span id="icon"> 5 </span></div>
-   
-    <?php getUsername(); ?>
-<div class="loginz">
-<!-- <label id="login">Login/Sign up</label> -->
-</div>
-</div>
-</div>
 
 <!-- <div id="opt">
 <select id="bas" name="crops">

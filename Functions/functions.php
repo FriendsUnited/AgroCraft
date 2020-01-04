@@ -17,7 +17,7 @@
 
         }
         else {
-            echo "<label style = 'margin-left: 325px;'><a href = '../auth/BuyerLogin.php' style = 'color: azure;'>Login/Sign up</a></label>";
+            echo "<label id='login'><a href = '../auth/BuyerLogin.php' >Login/Sign up</a></label>";
         }
        
     }

@@ -92,12 +92,18 @@
             $product_image = $rows['product_image'];
             $product_price = $rows['product_price'];
             $product_delivery = $rows['product_delivery'];
+            if ($product_delivery == "yes") {
+                $product_delivery = "Delivery by Farmer";
+            }
+            else {
+                $product_delivery = "Delivery by Farmer Not Available";
+            }
             echo " <div class='inputwrapper'>
                             <br>
                             <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
-                            <label id='shop2'>Delivery by Farmer</label><br>Qty:-
+                            <label id='shop2'></label>$product_delivery<br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
                             <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
                         </div> ";

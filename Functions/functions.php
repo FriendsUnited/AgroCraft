@@ -325,6 +325,15 @@
 
         echo "Rs" . $total;
     }
+
+    function emptyCart() {
+        global $con;
+        $sess_phone_number = $_SESSION['phonenumber'];
+    
+        $get_items = "Delete from cart where phonenumber = '$sess_phone_number'";
+        $run_items =  mysqli_query($con,$get_items);
+        $count_items =  mysqli_num_rows($run_items);
+    }
  
 
     ?>

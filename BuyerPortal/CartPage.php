@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
      include("../Functions/functions.php");
-     ?> 
+     ?>  -->
 
 <!DOCTYPE html>
 
@@ -271,6 +271,137 @@
                float: left;
                margin-top: -65px;
           }
+
+          * {
+               box-sizing: border-box;
+          }
+
+          .tabley {
+               width: 100%;
+
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+               /* margin:5px; */
+          }
+
+          .tabley th {
+               text-align: center;
+               border-style: solid;
+               border-width: 2px;
+               padding: 5px;
+               margin: 5px;
+          }
+
+          .tdy {
+               text-align: center;
+               border-style: solid;
+               border-width: 2px;
+               padding: 10px;
+
+          }
+
+          .thy {
+               background-color: #555;
+               color: white;
+          }
+
+          .des {
+               border-style: solid;
+               border-width: 2px;
+               /* border:ridge; */
+          }
+
+          .rs {
+               margin-left: 10px;
+               float: right;
+          }
+
+          .boxy {
+               height: 150px;
+               width: 20%;
+               float: right;
+               /* background-color:yellow;
+
+ */
+               border-style: ridge;
+               border-color: #00b300;
+               margin-top: 20px;
+               margin-right: 20px;
+               border-radius: 25%;
+          }
+
+          .totaly {
+               float: left;
+               text-align: left;
+               font-size: 25px;
+               padding: 20px;
+               /*margin-top:120px;
+     margin-left:20px; */
+          }
+
+          .checkout {
+               border-radius: 25%;
+               /* text-align:center; */
+               background-color: #FFD700;
+
+               margin-right: 75px;
+               border-color: black;
+               float: right;
+               margin-top: -20px;
+               /* margin-top:20px; */
+               /* padding-top:10px; */
+               width: 150px;
+               height: 50px;
+              transition:1s;
+          }
+          .checkout:hover{
+               transition:1s;
+               width: 170px;
+               height: 70px;
+               font-size:25px;
+          }
+
+          .empty {
+               border-radius: 25%;
+               border-style: solid;
+               background-color: #FFD700;
+               padding: 10px;
+               margin-top: 20px;
+               transition:1s;
+               margin-left: 20px;
+          }
+          .empty:hover{
+               transition:1s;
+               width:170px;
+               padding-top:7px;
+               font-size:20px;
+
+          
+          }
+          .cont {
+               border-radius: 25%;
+               border-style: solid;
+               background-color: #FFD700;
+               padding: 10px;
+               margin-top: 40px;
+               /* margin-left:46%; */
+               transition:1s;
+               
+               
+
+          }
+          .cont:hover{
+               padding-top:15px;
+               padding-bottom:20px;
+               transition:1s;
+               width: 270px;
+               height: 70px;
+
+               font-size:22px;
+
+
+          }
      </style>
 
 </head>
@@ -289,29 +420,27 @@
           </div>
 
           <div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-			<ul class="dropdown-menu etc">
-			<?php
-				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
-				
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-				}
-				else {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-				}
-			?>
-		</div>
-		<div class="proicon">
-			<?php
-		if (!isset($_SESSION['phonenumber'])) {
-		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		else {
-			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		?>
-		</div>
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+               <ul class="dropdown-menu etc">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+                    } else {
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+                    }
+                    ?>
+          </div>
+          <div class="proicon">
+               <!-- <?php
+                    if (!isset($_SESSION['phonenumber'])) {
+                         echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+                    } else {
+                         echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+                    }
+                    ?> -->
+          </div>
 
 
           <div class="icon2">
@@ -325,36 +454,115 @@
      </div>
 
      <div class="headerdown">
-		<div class="sel1 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu  ">
-				<?php getCrops(); ?>
-			</ul>
-		</div>
-		<div class="sel2 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-				<?php getVegetables(); ?>
-			</ul>
-		</div>
-		<div class="sel3 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-			<?php getFruits(); ?>
-			</ul>
-		</div>
-	</div>
+          <div class="sel1 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu  ">
+                    <?php getCrops(); ?>
+               </ul>
+          </div>
+          <div class="sel2 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu ">
+                    <?php getVegetables(); ?>
+               </ul>
+          </div>
+          <div class="sel3 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu ">
+                    <?php getFruits(); ?>
+               </ul>
+          </div>
+     </div>
 
 
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
+     <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
      <hr>
 
      <div>
-          <?php getProducts(); ?>
+           <?php getProducts(); ?> 
+     </div> -->
+     <h2 class="item_heading">YOUR ITEMS : 02</h2>
+
+     <hr>
+     <table class="tabley">
+          <thead>
+               <th class="thy">Sr no</th>
+               <th class="thy"> Item Description</th>
+               <th class="thy"> Unit Price</th>
+               <th class="thy"> Quantity</th>
+               <th class="thy">Subtotal</th>
+               <th class="thy">Delete</i></th>
+          </thead>
+          <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; ">  </td>
+               <td class="tdy" data-label="Subtotal">4</td>
+               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
+
+          </tr>
+          <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
+               <td class="tdy" data-label="Subtotal">4</td>
+               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
+
+          </tr>
+          <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world
+               </td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
+               <td class="tdy" data-label="Subtotal">4</td>
+               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle" > </i></td>
+
+          </tr>
+     </Table>
+     <div class="up">
+
+          <div class="boxy">
+               <label class="totaly"> GRAND TOTAL : <label class="rs">Rs 35</label></label>
+               <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
+               <button class="checkout"><span>CHECKOUT</span> <label class="arrow"><i class="fas fa-arrow-right"></i></label>
+
+          </div>
+
+          <label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label>
+          <br>
+          <label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label>
+
+
      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
      <div class="footer">

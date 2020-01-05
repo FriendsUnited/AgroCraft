@@ -5,14 +5,11 @@
     $sessphonenumber = $_SESSION['phonenumber'];
     $sql="select * from buyerregistration where buyer_phone = $sessphonenumber";
     $run_query = mysqli_query($con,$sql);
-    while ($row = mysqli_fetch_array($run_query))
+    while($row = mysqli_fetch_array($run_query))
     {
-        $password = $row['buyer_password'];    
-        // echo $password;
+        $password = $row['buyer_password'];
         $conf_password = $row['buyer_conf_pswd'];
-        
     }
-
 
 ?>
 
@@ -25,7 +22,11 @@
     <title>Change Password</title>
 </head>
 
+<<<<<<< HEAD
     <style>
+=======
+<style>
+>>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
         h1 {
             background-color: transparent;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -51,6 +52,7 @@
             margin-top: 50px;
             padding: 5px;
             border-style: outset;
+<<<<<<< HEAD
             /* border-width: 5px;
             border-radius: 16px; */
             border-color: green;
@@ -60,6 +62,13 @@
         body {
             /* background-image: url(Images/Website/FarmerLogin.jpg); */
             /* background: black; */
+=======
+            border-radius: 16px; */
+            border-color: green;
+        }
+        
+        body {
+>>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -134,6 +143,7 @@
         }
        
     </style>
+<<<<<<< HEAD
 
 
 <body>
@@ -147,22 +157,82 @@
     </form>    
     <?php
         if (isset($_POST['confirm']))
+=======
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <div class="just">
+        <a  href="BuyerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+    </div>
+
+    <div class="box">
+        <form action = "" method = "post">
+            <table align = "center">
+            <tr colspan = 2>
+                <h1>CHANGE PASSWORD   </h1>
+            </tr>
+                <tr align = "center">
+                    <td>
+                        <label><b>Current Password :</b></label>
+                    </td>
+                    <td>
+                        <input type = "password" name = "currentpassword" placeholder = "Current Password"/>  <br>
+                    </td>
+                </tr>
+                <tr align = "center">  
+                    <td>
+                        <label><b>New Password :</b></label>
+                    </td>  
+                    <td>
+                        <input type = "password" name = "newpassword" placeholder = "New Password"/>  <br>
+                    </td>
+                </tr>
+                <tr align = "center">
+                    <td>
+                        <label><b>Re-enter Password :</b></label>
+                    </td>   
+                    <td>
+                        <input type = "password" name = "confirmpassword" placeholder = "Confirm New Password"/> <br>
+                    </td>
+                </tr>
+                <tr >        
+                    <td colspan =2>
+                        <input type = "submit" name = "confirm" value = "Confirm"/> <br>
+                    </td>
+                    <span style=" display:block;  margin-bottom: .75em; "></span>
+                </tr>
+            </table>
+        </form> 
+    </div>  
+
+<?php
+    if (isset($_POST['confirm']))
+    {
+        $currentpassword = $_POST['currentpassword'];
+        $newpassword = $_POST['newpassword'];
+        $confirmpassword = $_POST['confirmpassword'];
+
+           echo $newpassword, "<br>";
+        echo $confirmpassword, "<br>";
+        echo $currentpassword, "<br>";
+    
+        if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
+>>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
         {
-            $currentpassword = $_POST['currentpassword'];
-            $newpassword = $_POST['newpassword'];
-            $confirmpassword = $_POST['confirmpassword'];
-            // echo $newpassword, "<br>";
-            // echo $confirmpassword, "<br>";
-            // echo $currentpassword, "<br>";
-        
-            if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
-            {
-                $sql = "update buyerregistration 
-                set buyer_password='$newpassword' ,buyer_conf_pswd='$confirmpassword'
-                where buyer_phone=$sessphonenumber";
-                $run = mysqli_query($con, $sql);
-            }
+            $query = "update buyerregistration 
+                    set buyer_password = '$newpassword', buyer_conf_pswd = '$confirmpassword'
+                    where buyer_phone = $sessphonenumber";
+            $run = mysqli_query($con, $query);
+            
+            echo "<script>alert('Password Updated Sucessfully!');</script>";
+            echo "<script>window.open('BuyerProfile.php','_self')</script>";
         }
-    ?> 
+        else {
+            echo "<script>alert('Please Enter Valid Details');</script>";
+            echo "<script>window.open('BuyerChangePassword.php','_self')</script>";
+        }
+    }
+?> 
+
 </body>
 </html>

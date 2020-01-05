@@ -16,7 +16,6 @@
         $license = $row['buyer_license'];
         $mail = $row['buyer_mail'];
         $user = $row['buyer_username'];
-       // echo $user;
     }
 ?>
 
@@ -191,8 +190,8 @@
 
 
     <div class="box">
-        <div id = "innerbox">
-        <form action="BuyerProfile.php" method = "post">
+       <!-- <div id = "innerbox"> -->
+        <form action="" method = "post">
              <table align = "center" >
 
                 <tr colspan = 2>
@@ -317,13 +316,16 @@
         
         $query = "update buyerregistration 
                   set buyer_phone = '$phone', buyer_username = '$user', 
-                  buyer_address = '$address', buyer_bank = '$account' 
+                  buyer_addr = '$address', buyer_bank = '$account' 
                   where buyer_id in 
                   (select buyer_id from buyerregistration 
                   where buyer_phone='$sessphonenumber')"; 
+        echo $query;
+       
+
         $run = mysqli_query($con, $query);
 
         $_SESSION['phonenumber'] = $phone;
-        echo "<script>window.open('BuyerProfile.php','_self')</script>";
+       echo "<script>window.open('BuyerProfile.php','_self')</script>";
     }
 ?>

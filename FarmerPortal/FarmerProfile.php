@@ -8,15 +8,11 @@
     while($row = mysqli_fetch_array($run_query))
     {
         $name = $row['farmer_name'];
-        // echo "Name :",$name,"<br>"; 
         $phone = $row['farmer_phone'];
-        // echo "Phone :",$phone,"<br>"; 
         $address = $row['farmer_address'];
-        // echo "Address :",$address,"<br>"; 
         $pan = $row['farmer_pan'];
-        // echo "Pan Number :",$pan,"<br>"; 
         $bank= $row['farmer_bank'];
-        // echo "Account Number :",$bank,"<br>";
+
     }   
     
 

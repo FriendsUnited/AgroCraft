@@ -8,21 +8,16 @@
     while($row = mysqli_fetch_array($run_query))
     {
         $name = $row['buyer_name'];
-        // echo "Name :",$name,"<br>"; 
         $phone = $row['buyer_phone'];
-        // echo "Phone :",$phone,"<br>"; 
         $address = $row['buyer_addr'];
-        // echo "Address :",$address,"<br>"; 
         $pan = $row['buyer_pan'];
-        // echo "Pan Number :",$pan,"<br>"; 
         $bank = $row['buyer_bank'];
-        // echo "Account Number :",$bank,"<br>";
+
         $comp = $row['buyer_comp'];
         $license = $row['buyer_license'];
         $mail = $row['buyer_mail'];
         $user = $row['buyer_username'];
     }   
-    
 
 ?>
 
@@ -215,15 +210,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

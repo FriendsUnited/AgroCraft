@@ -27,10 +27,10 @@
         .add_button{
              /* clear:left;
             margin-left:450px; */
-            /* float:right; */
-            /* margin-top:0; */
+            float:right; 
+            margin-top:0; 
             text-align:center;
-            background-color:red;
+            /* background-color:red; */
         }
          
         .dropdown {
@@ -74,11 +74,12 @@
            text-align:center;
             margin-top:5em;
             background-color:green;
+            height:5%;
         }
         
         .dropdown-content {
             display: none;
-             position: sticky; 
+             /* position: sticky;  */
             background-color: transparent;
             /* min-width: 250px; */
             z-index: 1;
@@ -100,11 +101,13 @@
         .dropdown-content a:hover {
             background-color: white;
             /* color: black; */
+            /* position:absolute; */
         }
         
         .dropdown:hover .dropdown-content {
             display: block;
             background-color: white;
+            /* position:relative; */
         }
         
         .dropdown:hover .dropbtn {
@@ -117,15 +120,15 @@
             text-align: center;
         }
         
-        /* .button {
-            position: absolute;
+        .button {
+            position: relative;
              margin-left: 130px; 
             float:right; 
-             margin-bottom:250px; 
-             margin-top:3em;
-            clear:left; 
+             /* margin-bottom:250px; 
+             margin-top:3em; */
+            /* clear:left;  */
          } 
-         */
+         
         h2 {
             color: white;
             margin-top:3em;
@@ -180,19 +183,19 @@
 
 
      <div class="over">  
-     <!-- <div class="dropdown">
+      <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
   <i class="fa fa-user fa-2x">
     </i>
-   <span class="caret"></span></button> -->
-  <!-- <ul class="dropdown-content">
+   <span class="caret"></span></button> 
+  <ul class="dropdown-content">
     <li><a href="#">HTML</a></li>
     <li><a href="#">CSS</a></li>
     <li><a href="#">JavaScript</a></li>
   </ul> 
-    </div>  -->
+    </div>   
 
-      <div class="dropdown">
+       <!-- <div class="dropdown">
        <i class="fa fa-user fa-2x">
     </i>
          <div class="dropdown-content">
@@ -200,7 +203,7 @@
             <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
         </div> 
-        </div> 
+        </div>   -->
     
      <!-- <div class="over"> -->
     
@@ -218,7 +221,6 @@
             <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
         </div>
-<<<<<<< HEAD
     </div> -->
        
            
@@ -229,21 +231,9 @@
        <br>
 
 
-       <div class="add_button"> <h3>ALL PRODUCTS<button class="button"><i  class="fa fa-plus fa-2x"></i></button>  </h3></div>
-        <!-- <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      -->
+        <h3>ALL PRODUCTS <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-2x"></i></button></div> </h3>
+       <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
 
-=======
-    </div>
-    <!-- </div> -->
-    <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
-    <h3>Welcome to Agrocraft</h3>
-
-    <div class="wrapper">
-        <br>
-       <br>
-        <h2>ALL PRODUCTS</h2>
-        <div class="add_button"><a href="../Admin/insert_product.php"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></a></div>                     
->>>>>>> 20bf5c04bffd9f7f04bc86bfd6f3c1539fb94b5b
         <br>
         
         <div>

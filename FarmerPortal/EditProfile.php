@@ -240,9 +240,11 @@ while($row = mysqli_fetch_array($run_query))
                 </tr>
             </table>
         </form>
+
         <div class="again">
             <a href="ChangePassword.php"><button class="say">Change Password</button></a>
         </div>
+        
     </div>
     
 

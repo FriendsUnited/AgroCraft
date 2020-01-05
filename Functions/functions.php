@@ -176,6 +176,9 @@
                 }
             }
         }
+        else{
+            echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
+        }
     }
     //function which is link with FarmerHomePage
     function getFarmerProducts()
@@ -185,8 +188,7 @@
         $sess_phone_number = $_SESSION['phonenumber'];
         $query = "select * from products where farmer_fk in (select farmer_id from farmerregistration where farmer_phone=$sess_phone_number)";
         $run_query = mysqli_query($con, $query);
-        $resultCheck = mysqli_num_rows($run_query);
-        if ($resultCheck > 0) {
+        if ($run_query) {
             while ($row = mysqli_fetch_assoc($run_query)) {
                 $product_title =  $row['product_title'];
                 $image =  $row['product_image'];
@@ -205,6 +207,9 @@
                         </div> 
                         ";
             }
+        }
+        else{
+            echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
     //function which is linked with BuyerProductDetails

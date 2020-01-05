@@ -142,8 +142,8 @@
     </div>
 
     <div class="box">
-        <form action = "FarmerProfile.php" method = "post"
-            <table align = "center" border = 2>
+        <form action = "FarmerProfile.php" method = "post">
+            <table align = "center">
             <tr colspan = 2>
                 <h1>CHANGE PASSWORD   </h1>
             </tr>
@@ -171,8 +171,8 @@
                         <input type = "password" name = "confirmpassword" placeholder = "Confirm New Password"/> <br>
                     </td>
                 </tr>
-                <tr colspan =2>        
-                    <td>
+                <tr >        
+                    <td colspan =2>
                         <input type = "submit" name = "confirm" value = "Confirm"/> <br>
                     </td>
                     <span style=" display:block;  margin-bottom: .75em; "></span>

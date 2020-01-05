@@ -520,7 +520,7 @@
      <div>
            <?php getProducts(); ?> 
      </div> -->
-     <h2 class="item_heading">YOUR ITEMS : 02</h2>
+     <h2 class="item_heading">YOUR ITEMS : <?php totalItems();?></h2>
 
      <hr>
      <table class="tabley">
@@ -562,31 +562,10 @@
                <td class="tdy qua" data-label="quantity">
                     <form action="CartPage.php" method = "post">
                    
-                         <input type="number" name = 'qty[]' value = '<?php echo $_SESSION['qtycart'][$i] ; ?>' style="width:60px;">
+                         <input type="number" name = 'qty' value = '<?php echo $_SESSION['qtycart'][$i] ; ?>' style="width:60px;">
                          <input type="submit" name = "refresh" style="  background-color: #FFD700; border-style:solid; border-color:#000;border-radius:25% " value = "Refresh">
                          <?php 
    
-                         if(isset($_POST['qty'][0])){
-                              $_SESSION['qtycart'][0] = $_POST['qty'][0];
-                              $temp = $_SESSION['qtycart'][$i];
-                              $update_qty = "update cart set qty = '$temp'";
-                              $run_qty = mysqli_query($con,$update_qty);
-                              $subtotal = $_SESSION['qtycart'][0]*$product_price;
-                         }
-                         if(isset($_POST['qty'][1])){
-                              $_SESSION['qtycart'][1] = $_POST['qty'][1];
-                              $temp = $_SESSION['qtycart'][1];
-                              $update_qty = "update cart set qty = '$temp'";
-                              $run_qty = mysqli_query($con,$update_qty);
-                              $subtotal = $_SESSION['qtycart'][1]*$product_price;
-                         }
-                         if(isset($_POST['qty'][2])){
-                              $_SESSION['qtycart'][2] = $_POST['qty'][2];
-                              $temp = $_SESSION['qtycart'][2];
-                              $update_qty = "update cart set qty = '$temp'";
-                              $run_qty = mysqli_query($con,$update_qty);
-                              $subtotal = $_SESSION['qtycart'][2]*$product_price;
-                         }
                          ?>
                     </form>
                    
@@ -623,13 +602,13 @@
           <div class="boxy">
                <label class="totaly"> GRAND TOTAL : <label class="rs">Rs 35</label></label>
                <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
-               <button class="checkout"><span>CHECKOUT</span> <label class="arrow"><i class="fas fa-arrow-right"></i></label>
+               <a href="Checkout.php" style = "color:black;"><button class="checkout"><span>CHECKOUT</span> <label class="arrow"><i class="fas fa-arrow-right"></i></label></a>
 
           </div>
 
-          <label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label>
+          <a href="emptyCart.php" style = "color:black;"><label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label></a>
           <br>
-          <label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label>
+          <a href="BuyerHomepage.php" style = "color:black;"><label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
      </div>

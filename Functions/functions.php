@@ -325,6 +325,7 @@
 
         echo "Rs" . $total;
     }
+<<<<<<< HEAD
 
     function emptyCart() {
         global $con;
@@ -335,5 +336,12 @@
         $count_items =  mysqli_num_rows($run_items);
     }
  
+=======
+    
+    function subtotal
+    {
+        
+    }
+>>>>>>> 38e45f1c9e4c7efacef8c0f6d4958be3bda4c0b7
 
     ?>

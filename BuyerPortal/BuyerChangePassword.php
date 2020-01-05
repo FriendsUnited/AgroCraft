@@ -135,7 +135,7 @@
     </div>
 
     <div class="box">
-        <form action = "BuyerProfile.php" method = "post">
+        <form action = "" method = "post">
             <table align = "center">
             <tr colspan = 2>
                 <h1>CHANGE PASSWORD   </h1>
@@ -191,6 +191,13 @@
                     set buyer_password = '$newpassword', buyer_conf_pswd = '$confirmpassword'
                     where buyer_phone = $sessphonenumber";
             $run = mysqli_query($con, $query);
+            
+            echo "<script>alert('Password Updated Sucessfully!');</script>";
+            echo "<script>window.open('BuyerProfile.php','_self')</script>";
+        }
+        else {
+            echo "<script>alert('Please Enter Valid Details');</script>";
+            echo "<script>window.open('BuyerChangePassword.php','_self')</script>";
         }
     }
 ?> 

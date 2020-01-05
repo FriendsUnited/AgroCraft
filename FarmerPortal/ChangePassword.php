@@ -142,7 +142,7 @@
     </div>
 
     <div class="box">
-        <form action = "FarmerProfile.php" method = "post">
+        <form action = "" method = "post">
             <table align = "center">
             <tr colspan = 2>
                 <h1>CHANGE PASSWORD   </h1>
@@ -197,6 +197,12 @@
                     set farmer_password='$newpassword' ,farmer_conf_pswd='$confirmpassword'
                     where farmer_phone=$sessphonenumber";
             $run = mysqli_query($con, $sql);
+            echo "<script>alert('Password Updated Sucessfully!');</script>";
+            echo "<script>window.open('FarmerProfile.php','_self')</script>";
+        }
+        else {
+            echo "<script>alert('Please Enter Valid Details');</script>";
+            echo "<script>window.open('ChangePassword.php','_self')</script>";
         }
     }
 ?> 

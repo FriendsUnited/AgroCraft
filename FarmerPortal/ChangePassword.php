@@ -142,7 +142,7 @@
     </div>
 
     <div class="box">
-        <form action = "FarmerProfile.php" method = "post">
+        <form action = "" method = "post">
             <table align = "center">
             <tr colspan = 2>
                 <h1>CHANGE PASSWORD   </h1>

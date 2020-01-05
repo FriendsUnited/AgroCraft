@@ -98,7 +98,7 @@
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'></label>$product_delivery<br>Qty:-
                             <input class='numberinput' type='number' name='number'  >
-                            <button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button><br><br>    
+                            <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                         </div> ";
         }
     }
@@ -272,19 +272,19 @@
         if (isset($_GET['add_cart'])) {
 
             global $con;
-            $ip = getIp();
-            $p_id = $_GET['add_cart'];
+            $sess_phone_number = $_SESSION['phonenumber'];
+            $product_id = $_GET['add_cart'];
 
-            $check_pro = "select * from cart where ip_addr = '$ip' and p_id='$p_id' ";
+            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
             $run_check = mysqli_query($con, $check_pro);
 
             if (mysqli_num_rows($run_check) > 0) {
                 echo "";
             } else {
-                $insert_pro = "insert into cart (p_id,ip_addr) values ('$p_id','$ip')";
+                $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
                 $run_insert_pro = mysqli_query($con, $insert_pro);
-                echo "<script>window.open('index.php','_self')</script>";
+                echo "<script>window.open('../BuyerPortal/BuyerHomepage.php','_self')</script>";
             }
         }
     }

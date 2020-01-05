@@ -353,7 +353,13 @@
                /* padding-top:10px; */
                width: 150px;
                height: 50px;
-
+              transition:1s;
+          }
+          .checkout:hover{
+               transition:1s;
+               width: 170px;
+               height: 70px;
+               font-size:25px;
           }
 
           .empty {
@@ -362,9 +368,17 @@
                background-color: #FFD700;
                padding: 10px;
                margin-top: 20px;
+               transition:1s;
                margin-left: 20px;
           }
+          .empty:hover{
+               transition:1s;
+               width:170px;
+               padding-top:7px;
+               font-size:20px;
 
+          
+          }
           .cont {
                border-radius: 25%;
                border-style: solid;
@@ -372,6 +386,19 @@
                padding: 10px;
                margin-top: 40px;
                /* margin-left:46%; */
+               transition:1s;
+               
+               
+
+          }
+          .cont:hover{
+               padding-top:15px;
+               padding-bottom:20px;
+               transition:1s;
+               width: 270px;
+               height: 70px;
+
+               font-size:22px;
 
 
           }
@@ -473,7 +500,7 @@
                <td class="tdy" data-label="Sr no">1</td>
                <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
                <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity">2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; ">  </td>
                <td class="tdy" data-label="Subtotal">4</td>
                <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
 
@@ -482,7 +509,7 @@
                <td class="tdy" data-label="Sr no">1</td>
                <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
                <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity">2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
                <td class="tdy" data-label="Subtotal">4</td>
                <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
 
@@ -492,7 +519,7 @@
                <td class="des tdy" data-label="Item Name">Best Patato of the world
                </td>
                <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity">2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
                <td class="tdy" data-label="Subtotal">4</td>
                <td class="tdy" data-label="Deletion"><i class="far fa-times-circle" > </i></td>
 

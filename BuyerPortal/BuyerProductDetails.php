@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<!-- <?php 
-            // include("../includes/db.php");
-            include("../Functions/functions.php");
-            // $sess_phone_number=$_SESSION['phonenumber'];    
-            getBuyerProductDetails();
-=======
 
 <?php
      include("../Functions/functions.php");
@@ -284,7 +277,6 @@
 </head>
 
 <body>
->>>>>>> 536abb34b6e86098f59850b120455b2a107e97ea
 
      <div class="header">
 

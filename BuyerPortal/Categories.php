@@ -291,18 +291,27 @@ include("../Functions/functions.php");
           <div class="dropdown">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
 			<ul class="dropdown-menu etc">
-				<li class="options" role="presentation"><a role="menuitem" tabindex="-1" href="<?php BuyerProfile(); ?>"><label class="makeitgreen">Profile</label></a></li>
-				<?php
+			<?php
 				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+				
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
 				}
-				?>
+				else {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+				}
+			?>
 		</div>
-
-
-          <div class="proicon">
-               <i class="far fa-user-circle" style="font-size:30px; color: white"></i>
-          </div>
+		<div class="proicon">
+			<?php
+		if (!isset($_SESSION['phonenumber'])) {
+		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+		}
+		else {
+			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+		}
+		?>
+		</div>
 
           <div class="icon2">
                <a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>

@@ -331,6 +331,10 @@
 
         echo "Rs" . $total;
     }
- 
+    
+    function subtotal
+    {
+        
+    }
 
     ?>

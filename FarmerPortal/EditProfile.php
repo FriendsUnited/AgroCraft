@@ -263,7 +263,8 @@ while($row = mysqli_fetch_array($run_query))
         
         $query = "update farmerregistration 
                   set farmer_phone = '$phone',
-                  farmer_address = '$address', farmer_bank = '$account' where farmer_id 
+                  farmer_address = '$address', farmer_bank = '$account'
+                  where farmer_id 
                   in (select farmer_id from farmerregistration 
                   where farmer_phone='$sessphonenumber')"; 
         $run = mysqli_query($con, $query);

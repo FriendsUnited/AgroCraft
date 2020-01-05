@@ -25,17 +25,22 @@
             background-image: 100px;
         }
         .add_button{
-            clear:left;
-            margin-left:450px;
-            float:right;
+             /* clear:left;
+            margin-left:450px; */
+            /* float:right; */
+            /* margin-top:0; */
+            text-align:center;
+            background-color:red;
         }
-        
+         
         .dropdown {
             float: right;
-            margin-right: 2em;
-            margin-bottom: 52em;
-            color: darkolivegreen;
-            background-color: transparent;
+            margin-right: 1em;
+            margin-top:0; 
+            /* margin-bottom: 52em; */
+            color: white;
+            /* background-color:green; */
+           
         }
         /* ul li {
             display: none;
@@ -54,8 +59,10 @@
               
         }
         h1 {
-            color: rgb(20, 83, 31);
+            /* color: rgb(20, 83, 31); */
             font-family: 'Times New Roman', Times, serif;
+            color:white;
+
         }
         .trans{
             clear:left;
@@ -63,14 +70,17 @@
         }
         h3 {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: rgb(8, 116, 53);
+           color:white;
+           text-align:center;
+            margin-top:5em;
+            background-color:green;
         }
         
         .dropdown-content {
             display: none;
-            position: sticky;
+             position: sticky; 
             background-color: transparent;
-            min-width: 250px;
+            /* min-width: 250px; */
             z-index: 1;
         }
         
@@ -82,19 +92,19 @@
             display: block;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             font-size: 20px;
-            background-color: transparent;
-            /* width: 100px; */
+            background-color: white;
+             /* width: 100px;  */
             font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
         }
         
         .dropdown-content a:hover {
-            background-color: transparent;
+            background-color: white;
             /* color: black; */
         }
         
         .dropdown:hover .dropdown-content {
             display: block;
-            background-color: transparent;
+            background-color: white;
         }
         
         .dropdown:hover .dropbtn {
@@ -107,48 +117,122 @@
             text-align: center;
         }
         
-        .button {
+        /* .button {
             position: absolute;
-            /* margin-left: 130px; */
-            float:left;
-            margin-bottom:250px;
-        }
-        
+             margin-left: 130px; 
+            float:right; 
+             margin-bottom:250px; 
+             margin-top:3em;
+            clear:left; 
+         } 
+         */
         h2 {
-            color: darkgreen;
-            /* background-color: darkcyan; */
-        
-        
+            color: white;
+            margin-top:3em;
+            /* background-color: green;
+         */
+        text-align:center;
 
             /* background-color: darkcyan; */
         
         }
+        .hii{
+            float:right;
+            margin-right:5em;
+             /* margin-top:254em;  */
+             /* background-color:red; */
+        }
+        .ribbon {
+            position: relative;
+            top: -16px;
+            right: -706px;
+            float: left;
+            top: 0px;
+            left: 0px;
+            height: 74px;
+            background-color:green;
+        }
+        .over{
+            background-color:green;
+             border:1px; 
+             width:100%; 
+              white-space:nowrap; 
+             
+             height:70px; 
+        
+            
+        }
+        .idk{
 
+        }
+      
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="portal_files/bootstrap.min.css">
+  	<script src="portal_files/jquery.min.js.download"></script>
+  	<script src="portal_files/popper.min.js.download"></script>
+  	<script src="portal_files/bootstrap.min.js.download"></script>
 
 
 </head>
 
 <body>
 
-    <!-- <div id="logo"> -->
-    <div class="dropdown">
 
-        <i class="fa fa-user fa-3x"></i>
-        <div class="dropdown-content">
+     <div class="over">  
+     <!-- <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+  <i class="fa fa-user fa-2x">
+    </i>
+   <span class="caret"></span></button> -->
+  <!-- <ul class="dropdown-content">
+    <li><a href="#">HTML</a></li>
+    <li><a href="#">CSS</a></li>
+    <li><a href="#">JavaScript</a></li>
+  </ul> 
+    </div>  -->
+
+      <div class="dropdown">
+       <i class="fa fa-user fa-2x">
+    </i>
+         <div class="dropdown-content">
 
             <a href="FarmerProfile.php">Profile <i class="fa fa-edit fa-2x"></i></a><br>
             <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
+        </div> 
+        </div> 
+    
+     <!-- <div class="over"> -->
+    
+   
+        
+            <img class="ribbon" src="logo.jpeg"> 
+            <div class="hii"> <h1>hello,user <i class="fa fa-user-circle fa-1x"></i></h1></div> 
+            
+            </div> 
+            <!-- <div class="dropdown">
+    <i class="fa fa-user fa-2x">
+    </i>
+        <div class="dropdown-content">
 
-
-            <!-- <ul>
-            <li>
-                <a>log out</a>
-            </li>
-            <li><a>edit</a></li>
-        </ul> -->
+            <a href="FarmerProfile.php">Edit <i class="fa fa-edit fa-2x"></i></a><br>
+            <a href="#">Logout <i class="fa-sign-out fa-2x"></i></a>
         </div>
+<<<<<<< HEAD
+    </div> -->
+       
+           
+            
+    <!-- <h3>Welcome to Agrocraft</h3>       -->
+   
+        <br>
+       <br>
+
+
+       <div class="add_button"> <h3>ALL PRODUCTS<button class="button"><i  class="fa fa-plus fa-2x"></i></button>  </h3></div>
+        <!-- <div class="add_button"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      -->
+
+=======
     </div>
     <!-- </div> -->
     <h1>HELLO,user <i class="fa fa-user-circle fa-1x"></i></h1>
@@ -159,6 +243,7 @@
        <br>
         <h2>ALL PRODUCTS</h2>
         <div class="add_button"><a href="../Admin/insert_product.php"><button class="button"><i  class="fa fa-plus fa-3x"></i></button></a></div>                     
+>>>>>>> 20bf5c04bffd9f7f04bc86bfd6f3c1539fb94b5b
         <br>
         
         <div>

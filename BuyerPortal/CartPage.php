@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
      include("../Functions/functions.php");
-     ?>  -->
+?> 
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Cart Page</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -391,15 +391,22 @@
                
 
           }
+  
           .cont:hover{
                padding-top:15px;
                padding-bottom:20px;
                transition:1s;
                width: 270px;
                height: 70px;
-
                font-size:22px;
+          }
 
+          #Deletionlink {
+               color:#000;
+          }
+          #Deletionlink:hover {
+               color: red;
+               font-size: 22px;
 
           }
      </style>
@@ -433,20 +440,20 @@
                     ?>
           </div>
           <div class="proicon">
-               <!-- <?php
+               <?php
                     if (!isset($_SESSION['phonenumber'])) {
                          echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
                     } else {
                          echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
                     }
-                    ?> -->
+                    ?>
           </div>
 
 
           <div class="icon2">
-               <a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> 5 </span>
-          </div>
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> 5 </span>
+		</div>
 
           <div class="loginz">
                <?php getUsername(); ?>
@@ -490,28 +497,85 @@
      <table class="tabley">
           <thead>
                <th class="thy">Sr no</th>
-               <th class="thy"> Item Description</th>
+               <th class="thy"> Item Name</th>
                <th class="thy"> Unit Price</th>
-               <th class="thy"> Quantity</th>
+               <th class="thy qua"> Quantity</th>
                <th class="thy">Subtotal</th>
                <th class="thy">Delete</i></th>
           </thead>
+
+          <?php
+               $total =0;
+               global $con;
+               $sess_phone_number = $_SESSION['phonenumber'];
+               $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+               $run_price = mysqli_query($con,$sel_price);
+    
+               $qtycart = array();
+               $i=0;
+               while ($p_price = mysqli_fetch_array($run_price)) {
+                   $product_id = $p_price['product_id'];
+                   $_SESSION['qtycart'][$i] = $p_price['qty'];
+               
+                   $pro_price = "select * from products where product_id='$product_id'";
+                   $run_pro_price = mysqli_query($con, $pro_price);
+                   while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+                       $product_title = $pp_price['product_title'];
+                       $product_price = $pp_price['product_price'];
+                       $subtotal = $_SESSION['qtycart'][$i]*$product_price;
+           ?>
+
+
           <tr>
-               <td class="tdy" data-label="Sr no">1</td>
-               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
-               <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; ">  </td>
-               <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
+               <td class="tdy" data-label="Sr no"><?php echo $i+1 ; ?></td>
+               <td class="des tdy" data-label="Item Name"><?php echo $product_title ; ?></td>
+               <td class="tdy" data-label="Unit Price"><?php echo $product_price ; ?></td>
+               <td class="tdy qua" data-label="quantity">
+                    <form action="CartPage.php" method = "post">
+                   
+                         <input type="number" name = 'qty[]' value = '<?php echo $_SESSION['qtycart'][$i] ; ?>' style="width:60px;">
+                         <input type="submit" name = "refresh" style="  background-color: #FFD700; border-style:solid; border-color:#000;border-radius:25% " value = "Refresh">
+                         <?php 
+   
+                         if(isset($_POST['qty'][0])){
+                              $_SESSION['qtycart'][0] = $_POST['qty'][0];
+                              $temp = $_SESSION['qtycart'][$i];
+                              $update_qty = "update cart set qty = '$temp'";
+                              $run_qty = mysqli_query($con,$update_qty);
+                              $subtotal = $_SESSION['qtycart'][0]*$product_price;
+                         }
+                         if(isset($_POST['qty'][1])){
+                              $_SESSION['qtycart'][1] = $_POST['qty'][1];
+                              $temp = $_SESSION['qtycart'][1];
+                              $update_qty = "update cart set qty = '$temp'";
+                              $run_qty = mysqli_query($con,$update_qty);
+                              $subtotal = $_SESSION['qtycart'][1]*$product_price;
+                         }
+                         if(isset($_POST['qty'][2])){
+                              $_SESSION['qtycart'][2] = $_POST['qty'][2];
+                              $temp = $_SESSION['qtycart'][2];
+                              $update_qty = "update cart set qty = '$temp'";
+                              $run_qty = mysqli_query($con,$update_qty);
+                              $subtotal = $_SESSION['qtycart'][2]*$product_price;
+                         }
+                         ?>
+                    </form>
+                   
+               </td>
+               
+               <td class="tdy" data-label="Subtotal"><?php echo $subtotal ; ?></td><?php $subtotal = 1;?>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
 
           </tr>
-          <tr>
+
+          <?php  }$i++;} ?>
+          <!-- <tr>
                <td class="tdy" data-label="Sr no">1</td>
                <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
                <td class="tdy" data-label="Unit Price">rs 2</td>
                <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
                <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
 
           </tr>
           <tr>
@@ -521,9 +585,9 @@
                <td class="tdy" data-label="Unit Price">rs 2</td>
                <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
                <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle" > </i></td>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
 
-          </tr>
+          </tr> -->
      </Table>
      <div class="up">
 

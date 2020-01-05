@@ -539,7 +539,7 @@
 		</div>
 
 		<div class="icon2">
-			<a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
 			<span id="icon"> 5 </span>
 		</div>
 

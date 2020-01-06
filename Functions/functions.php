@@ -97,7 +97,7 @@
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'></label>$product_delivery<br>Qty:-
-                            <input class='numberinput' type='number' name='number'  >
+                            <input class='numberinput' type='number' name='number' value = '1' >
                             <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                         </div> ";
         }
@@ -290,36 +290,30 @@
     }
 
 
-    function total_items()
+    function totalItems()
     {
         global $con;
-        $query = "select * from products where product_id in (select product_id from products where product_image=$product_image)";
-        $run_query = mysqli_query($con, $query);
-        while ($rows = mysqli_fetch_array($run_query)) {
-            $product_title = $rows['product_title'];
-            $product_image = $rows['product_image'];
-            $product_price = $rows['product_price'];
-            $product_delivery = $rows['product_delivery'];
-            $product_cat = $rows['product_cat'];
-            echo $product_image;
-            echo $product_title;
-            echo $product_price;
-        }
+        $sess_phone_number = $_SESSION['phonenumber'];
+    
+        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
+        $run_items =  mysqli_query($con,$get_items);
+        $count_items =  mysqli_num_rows($run_items);
+        echo $count_items;
     }
 
-    function total_price()
+    function grandTotal()
     {
         $total = 0;
         global $con;
-        $ip = getIp();
+        $sess_phone_number = $_SESSION['phonenumber'];
 
-        $sel_price = "select * from cart where ip_addr = '$ip'";
-        $run_price = mysqli_query($con, $sel_price);
+        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
+        $run_price = mysqli_query($con, $get_items);
 
         while ($p_price = mysqli_fetch_array($run_price)) {
-            $pro_id = $p_price['p_id'];
+            $product_id = $p_price['product_id'];
 
-            $pro_price = "select * from products where product_id='$pro_id'";
+            $pro_price = "select * from products where product_id='$product_id'";
             $run_pro_price = mysqli_query($con, $pro_price);
             while ($pp_price = mysqli_fetch_array($run_pro_price)) {
                 $product_price = array($pp_price['product_price']);
@@ -330,6 +324,15 @@
         }
 
         echo "Rs" . $total;
+    }
+
+    function emptyCart() {
+        global $con;
+        $sess_phone_number = $_SESSION['phonenumber'];
+    
+        $get_items = "Delete from cart where phonenumber = '$sess_phone_number'";
+        $run_items =  mysqli_query($con,$get_items);
+        $count_items =  mysqli_num_rows($run_items);
     }
  
 

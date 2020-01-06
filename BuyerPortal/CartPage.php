@@ -146,7 +146,35 @@
                grid-row-gap: 10px;
                margin-left: 30px;
           }
-
+            .icon{
+                background-color: #FFD700;
+                border-style:groove;
+                border-width: 1px;
+                font-size:15px;
+                border-color:#000;
+                /* border-start-end-radius: 25%; */
+                 }
+                
+          
+           button:focus {outline:0;}
+           .left{
+                margin-left:-7px;
+                
+           }
+           .right{
+                margin-left:-7px;
+           }
+           .add{
+               background-color: transparent; 
+                border:none;
+               width:5px;
+               margin-left:8px;
+               height:20px;
+          }
+          
+          .ladd{
+               margin-right:10px;
+          }
           .inputwrapper {
                float: left;
                border-style: double;
@@ -391,6 +419,7 @@
                
 
           }
+          
   
           .cont:hover{
                padding-top:15px;
@@ -548,11 +577,11 @@
           </tr>
 
           <?php  }$i++;} ?>
-          <!-- <tr>
+          <tr>
                <td class="tdy" data-label="Sr no">1</td>
                <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
                <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
+               <td class="tdy" data-label="quantity"><button class="add ladd"><i class=" icon left  fas fa-minus"></button ></i><input type="number" style="width:40px; "><button class="add radd"><i class="icon right  fas fa-plus"></button></i></td>
                <td class="tdy" data-label="Subtotal">4</td>
                <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
 
@@ -566,7 +595,7 @@
                <td class="tdy" data-label="Subtotal">4</td>
                <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
 
-          </tr> -->
+          </tr>
      </Table>
      <div class="up">
 

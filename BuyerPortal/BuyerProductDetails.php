@@ -313,11 +313,9 @@
 		}
 		?>
 		</div>
-
-
           <div class="icon2">
 			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
 		</div>
           <div class="loginz">
                <?php getUsername(); ?>

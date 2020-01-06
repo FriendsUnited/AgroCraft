@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 <!-- <?php
-=======
-
-<?php
->>>>>>> eb3aca55aa459ab085c91e7853ce19abf6285138
      include("../Functions/functions.php");
      ?>  -->
 
@@ -288,7 +283,7 @@
           .box{
             
             color: rgb(6, 36, 7);
-            width: 950px;
+            width: 350px;
              line-height: 40px; 
              float:center;
             margin: auto;
@@ -298,9 +293,9 @@
              border-style: outset; 
             /* border-width: 5px;
             border-radius: 16px; */
-             border-color: green; 
+             border-color:lightgrey; 
             /* font-size:20px; */
-            height: 700px;
+            height: 400px;
             
         }
          .idk{
@@ -313,9 +308,10 @@
             height:10%;
         }
         .one{
+             /* width:35px; */
             text-align:center;
             background-color: #FFD700;
-            float:left;
+            /* float:left; */
             /* margin-right: 50%; */
         }
         .hen{
@@ -336,11 +332,11 @@
                  text-align: center;
             } */
             .price{
-                 font-size:26px;
+                 font-size:20px;
                  font-weight: bold;
                   padding-top: 20px; 
-                 margin-left: 15%;
-                 color:darkorange;
+                 /* margin-left: 15%; */
+                 color:darkolivegreen;
 
             }
             .some{
@@ -351,12 +347,37 @@
                  float:right;
             }
             input{
-                 width:5%;
+                 width:9%;
                  text-align: center;
             }
             .th{
-                 background-color: #FFD700;
+                 background-color:#FFD700;
                  float:right;
+            }
+            .done{
+                 float:left;
+                 margin-left:10%;
+            }
+            .mid{
+                 text-align:center;
+            }
+            .bye{
+margin-left:10%;
+            }
+            .happy{
+                 float:right;
+            }
+            .doing{
+            /* width:15px;    */
+            text-align:center;
+            background-color: #FFD700;
+            float:right;
+            /* float:left; */
+            /* margin-right: 50%; */
+            margin-bottom: 0px;
+            bottom: 0px;
+            margin-top:100px;
+        
             }
      </style>
 
@@ -435,7 +456,7 @@
      </div>
      <div class="container">
           <div class="row">
-               <div class="col-md-5">
+               <div class="col-md-4">
                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -458,21 +479,35 @@
   </a>
 </div>
                </div>
-               <div class="col-md-7">
+               <div class="col-md-4">
 <label><p class="newarrival text-center">FRESH</p></label>
-<h2>Product title</h2><br>
-<p class="price">Price : 20 Rs</p>
+<div class="mid"><h2>Product title</h2></div><br>
+<!-- <label class="price"> Price  </label><textarea class="some" disabled  rows="1" cols="7"></textarea> 
+<div class="happy"><label class="price"> Stock  </label><textarea disabled  rows="1" cols="7"></textarea></div> <br>  -->
+
+ <p class="price">Price<i class="fa fa-rupee fa-1x"></i> : 20 Rs</p>
 <p class="price">Stock : 20 Kg</p>
-<label>Quantity</label>
-<button > <i  class="fa fa-plus-2x"></i></button><input type="number" value="1"><button><i  class="fa fa-minus-2x"></i></button><br>
+<br><div class="mid"><label>Quantity</label>
+<button class="one"> <i  class="fa fa-plus fa-1x"></i></button><input type="number" value="1"><button class="one"><i  class="fa fa-minus fa-1x"></i></button><br></div>
 
 
 
 
-<br><button class="one">Add to Cart <i  class="fa fa-cart-arrow-down fa-2x"></i></button> <div class="ri">  <button class="one">Add to Cart <i  class="fa fa-cart-arrow-down fa-2x"></i></button></div><br>
+
+<br><button class="one">Save for Later</button> <div class="ri">  <button class="one">Add to Cart<i  class="fa fa-cart-arrow-down fa-2x"></i> </button></div><br>
+<br><br><i class="fa fa-truck fa-1x"></i><label>Delivery by farmer</label></div>
+<div class="box"><br><h2> FARMER DETAILS </h2>
+
+<br><label>Farmer Name: </label><label>name</label><br>
+<label>Farmer Number: </label><label>name</label>
+<br><label><div class="mid">Farmer Address: </div></label><label>name</label >
+<button class="doing">Chat<i class="fa fa-comment fa-1x"></i></button></div>
+
+<div class="col-md-4">
 
 
-
+<br><div class="bye"><p class="some"><h2> Description</h2></p><br>
+<p>this is description</p><br></div>
 <!-- <label class="price"> Price  </label><textarea class="some" disabled  rows="1" cols="7"></textarea> <br>
 <label class="price"> Stock  </label><textarea disabled  rows="1" cols="7"></textarea> <br> -->
 
@@ -481,13 +516,13 @@
           </div>
           
      </div>
-     <br><p class="some"> Description</p><br>
-<p>this is description</p>
-<h3><span> FARMER DETAILS </span></h3>
+    <!-- <br><div class="bye"><p class="some"><h2> Description</h2></p><br>
+<p>this is description</p><br></div>
+<br><h3> FARMER DETAILS </h3>
 <div class="box">
 <br><label>Farmer Name: </label><label>name</label><br>
 <label>Farmer Number: </label><label>name</label><div class="th" > <button>Message</button></div>
-     </div>
+     </div> -->
 <!-- <div class="box"><table column="2"> 
     <tr>
    <td rowspan="3" colspan="8"> <img class="ribbon" src="../FarmerPortal/logo.jpeg"> </td>

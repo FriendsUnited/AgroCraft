@@ -602,6 +602,7 @@ include("../Functions/functions.php");
 
           <div class="boxy">
                <label class="totaly"> GRAND TOTAL : <label class="rs"><?php echo $total; ?></label></label>
+               <?php $_SESSION['grandtotal'] = $total; ?>
                <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
                <?php
                if (isset($_SESSION['phonenumber'])) {

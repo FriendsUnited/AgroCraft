@@ -66,7 +66,10 @@
 			margin-right: 10px;
 			margin-top: 20px;
 		}
-
+		#icon {
+			background-color:red;
+			color:white;
+		}
 		.dropdown {
 			float: right;
 			margin-right: 10px;
@@ -264,17 +267,21 @@
 			width: 500px;
 			background-color: red;
 		}
-
+		.images {
+			transition:0.5s;
+		}
 		.images:hover {
 			width: 625px;
 			height: 425px;
 			box-shadow: 5px 5px 10px grey;
+			transition:0.5s;
 		}
 
 		.small_images:hover {
 			height: 215px;
 			width: 315px;
 			box-shadow: 5px 5px 10px grey;
+			transition:0.5s;
 		}
 
 		#heading {
@@ -540,7 +547,7 @@
 
 		<div class="icon2">
 			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
 		</div>
 
 

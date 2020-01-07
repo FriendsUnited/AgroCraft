@@ -249,10 +249,7 @@ border-radius:25%;
  -->
           </div>
 
-        <!--   <a href="emptyCart.php" style = "color:black;"><label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label></a>
-          <br>
-          <a href="BuyerHomepage.php" style = "color:black;"><label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label></a> -->
-
+        
 
      </div>
 

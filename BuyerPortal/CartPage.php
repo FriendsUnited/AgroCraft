@@ -154,6 +154,40 @@ include("../Functions/functions.php");
                grid-row-gap: 10px;
                margin-left: 30px;
           }
+<<<<<<< HEAD
+            .icon{
+                /* background-color: #FFD700; */
+                border-style:groove;
+                border-width: 1px;
+                font-size:25px;
+                border-color:#000;
+                /* border-start-end-radius: 25%; */
+                 }
+                .input_no{
+
+                }
+          
+           button:focus {outline:0;}
+           .left{
+                margin-left:-7px;
+                
+           }
+           .right{
+                margin-left:-7px;
+           }
+           .add{
+               background-color: transparent; 
+                border:none;
+               width:5px;
+               /* margin-left:8px; */
+               height:30px;
+          }
+          
+          .ladd{
+               margin-right:10px;
+               /* margin-top:10px; */
+               
+=======
 
           .icon {
                background-color: #FFD700;
@@ -184,6 +218,7 @@ include("../Functions/functions.php");
                width: 5px;
                margin-left: 8px;
                height: 20px;
+>>>>>>> 2b5ebb8ff319edc36843d745ee985c604dbc8904
           }
 
           .ladd {
@@ -563,6 +598,61 @@ include("../Functions/functions.php");
                $qtycart = array();
                $i = 0;
                while ($p_price = mysqli_fetch_array($run_price)) {
+<<<<<<< HEAD
+                   $product_id = $p_price['product_id'];
+                   $_SESSION['qtycart'][$i] = $p_price['qty'];
+               
+                   $pro_price = "select * from products where product_id='$product_id'";
+                   $run_pro_price = mysqli_query($con, $pro_price);
+                   while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+                       $product_title = $pp_price['product_title'];
+                       $product_price = $pp_price['product_price'];
+                       $subtotal = $_SESSION['qtycart'][$i]*$product_price;
+           ?>
+
+
+          <tr>
+               <td class="tdy" data-label="Sr no"><?php echo $i+1 ; ?></td>
+               <td class="des tdy" data-label="Item Name"><?php echo $product_title ; ?></td>
+               <td class="tdy" data-label="Unit Price"><?php echo $product_price ; ?></td>
+               <td class="tdy qua" data-label="quantity">
+                    <form action="CartPage.php" method = "post">
+                   
+                         <input type="number" name = 'qty' value = '<?php echo $_SESSION['qtycart'][$i] ; ?>' style="width:60px;">
+                         <input type="submit" name = "refresh" style="  background-color: #FFD700; border-style:solid; border-color:#000;border-radius:25% " value = "Refresh">
+                         <?php 
+   
+                         ?>
+                    </form>
+                   
+               </td>
+               
+               <td class="tdy" data-label="Subtotal"><?php echo $subtotal ; ?></td><?php $subtotal = 1;?>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
+
+          </tr>
+
+          <?php  }$i++;} ?>
+          <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+               <td class="tdy" data-label="quantity"><label class="add ladd"><i class=" icon left  fas fa-minus"></label ></i><input class="input_no" type="number" min="0" style="width:40px; "><label class="add radd"><i class="icon right  fas fa-plus"></label></i></td>
+               <td class="tdy" data-label="Subtotal">4</td>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
+
+          </tr>
+          <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world
+               </td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
+               <td class="tdy" data-label="Subtotal">4</td>
+               <td class="tdy" data-label="Deletion"><a href="#" id = "Deletionlink" ><i class="far fa-times-circle"></i></a></td>
+
+          </tr>
+=======
                     $product_id = $p_price['product_id'];
                     $_SESSION['qtycart'][$i] = $p_price['qty'];
 
@@ -597,6 +687,7 @@ include("../Functions/functions.php");
           } else {
                echo "<h1 align = center>Please Login First!</h1><br><br><hr>";
           } ?>
+>>>>>>> 2b5ebb8ff319edc36843d745ee985c604dbc8904
      </Table>
      <div class="up">
 

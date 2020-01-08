@@ -22,11 +22,7 @@
     <title>Change Password</title>
 </head>
 
-<<<<<<< HEAD
     <style>
-=======
-<style>
->>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
         h1 {
             background-color: transparent;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -52,23 +48,11 @@
             margin-top: 50px;
             padding: 5px;
             border-style: outset;
-<<<<<<< HEAD
-            /* border-width: 5px;
-            border-radius: 16px; */
-            border-color: green;
-            /* font-size:20px; */
-        }
-        
-        body {
-            /* background-image: url(Images/Website/FarmerLogin.jpg); */
-            /* background: black; */
-=======
             border-radius: 16px; */
             border-color: green;
         }
         
         body {
->>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -143,21 +127,6 @@
         }
        
     </style>
-<<<<<<< HEAD
-
-
-<body>
-    <h1>CHANGE PASSWORD   </h1>
-    <form action = "BuyerProfile.php" method = "post">
-        <input type = "password" name = "currentpassword" placeholder = "Current Password"/>  <br>
-        <input type = "password" name = "newpassword" placeholder = "New Password"/>  <br>
-        <input type = "password" name = "confirmpassword" placeholder = "Confirm New Password"/> <br>
-        <input type = "submit" name = "confirm" value = "Confirm"/>
-
-    </form>    
-    <?php
-        if (isset($_POST['confirm']))
-=======
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
@@ -217,7 +186,6 @@
         echo $currentpassword, "<br>";
     
         if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
->>>>>>> 03683db874da1abd06c9008b9b03d71608f162a0
         {
             $query = "update buyerregistration 
                     set buyer_password = '$newpassword', buyer_conf_pswd = '$confirmpassword'

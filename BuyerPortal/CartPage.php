@@ -602,10 +602,19 @@ include("../Functions/functions.php");
 
           <div class="boxy">
                <label class="totaly"> GRAND TOTAL : <label class="rs"><?php echo $total; ?></label></label>
+               <?php $_SESSION['grandtotal'] = $total; ?>
                <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
                <?php
                if (isset($_SESSION['phonenumber'])) {
-                    echo "<a href='Checkout.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+                    $run_price = mysqli_query($con, $sel_price);
+                    $count = mysqli_num_rows($run_price);
+                    if ($count > 0) {
+                        echo "<a href='Checkout.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    }
+                    else {
+                        echo "<a href='Includes/alert.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    }
                } else {
                     echo "<a href='../auth/BuyerLogin.php' style = 'color:black;'><button class='checkout'><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
                }
@@ -615,26 +624,10 @@ include("../Functions/functions.php");
 
           <a href="emptyCart.php" style="color:black;"><label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label></a>
           <br>
-          <a href="BuyerHomepage.php" style="color:black;"><label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label></a>
+          <a href="BuyerHomepage.php" style="color:black;"><label class="cont">CONTINUE SHOPPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

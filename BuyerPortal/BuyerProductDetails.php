@@ -394,13 +394,14 @@
                /* margin-right: 50%; */
                /* margin-bottom: 0px;
                bottom: 0px; */
-               margin-top: 125px;
+               /* margin-top: 125px; */
                margin-right: 15px;
 
           }
 
           .mid {
                text-align: center;
+               font-size: 20px;
           }
 
           .midone {
@@ -505,81 +506,126 @@
 
 
      <?php
+     if (isset($_GET['id'])) {
+          global $con;
+          $product_id  = $_GET['id'];
+          $query = "select * from products where product_id = $product_id";
+          $run_query = mysqli_query($con, $query);
+          echo "<br>";
+          while ($rows = mysqli_fetch_array($run_query)) {
+               $farmer_fk = $rows['farmer_fk'];
+               $product_title = $rows['product_title'];
+               $product_image = $rows['product_image'];
+               $product_price = $rows['product_price'];
+               $product_stock = $rows['product_stock'];
+               $product_delivery = $rows['product_delivery'];
+               $product_desc = $rows['product_desc'];
+               if ($product_delivery == "yes") {
+                    $product_delivery = "Delivery by Farmer";
+               } else {
+                    $product_delivery = "Delivery by Farmer Not Available";
+               }
+               $querya = "select * from farmerregistration where farmer_id = $farmer_fk";
+               $runa_query = mysqli_query($con, $querya);
+               echo "<br>";
+               while ($rows = mysqli_fetch_array($runa_query)) {
+                    $name = $rows['farmer_name'];
+                    $phone = $rows['farmer_phone'];
+                    $address = $rows['farmer_address'];
 
-     global $con;
-     $query = "select * from products  order by RAND() LIMIT 0,8";
-     $run_query = mysqli_query($con, $query);
-     echo "<br>";
-     while ($rows = mysqli_fetch_array($run_query)) {
-          $product_id = $rows['product_id'];
-          $product_title = $rows['product_title'];
-          $product_image = $rows['product_image'];
-          $product_price = $rows['product_price'];
-          $product_delivery = $rows['product_delivery'];
-          $product_desc = $rows['product_desc'];
-          if ($product_delivery == "yes") {
-               $product_delivery = "Delivery by Farmer";
-          } else {
-               $product_delivery = "Delivery by Farmer Not Available";
-          }
+                    echo "<div class='container'>
+                              <div class='row'>
+                                   <div class='col-md-4'>
+                                        <div id='carouselExampleControls' class='carousel slide' data-ride='carousel'>
+                                             <div class='carousel-inner'>
+                                                  <div class='carousel-item active'>
+                                                       <div class='nice'> <img src='../Admin/product_images/$product_image' height=400px class='d-block w-100'></div>
+                                                  </div>
+
+                                             </div>
+
+                                        </div>
+                                   </div>
+                                   <div class='col-md-4'>
+                                        <label>
+                                             <p class='newarrival text-center'>FRESH</p>
+                                        </label>
+                                        <div class='mid'>
+                                             <h2> $product_title</h2>
+                                        </div><br>
+
+                                        <p class='price'>Price<i class='fa fa-rupee fa-1x'></i> : $product_price  Rs</p>
+                                        <p class='price'>Stock : $product_stock Kg</p>
+                                        <br>
+
+
+                                        <form action = '' method = 'post'>
+                                        <div class='mid'><label ><b>Quantity</b></label>
+                                             
+                                             <input type='number' style = 'width:60px;' name = 'quantity' value='1'>
+                                            
+                                        </div>
+
+                                        <br><button class='one'>Save for Later<i  style = 'padding:4px;padding-bottom:7px;' class='fa fa-shopping-basket fa-2x'></i></button>
+
+                                        <div class='ri'><button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fa fa-shopping-cart fa-2x' style=' background-color:#FFD700'></i></button></a><br><br>    
+                                        </div><br>
+                                        </form>
 
 
 
-          echo "<div class='container'>
-          <div class='row'>
-               <div class='col-md-4'>
-                    <div id='carouselExampleControls' class='carousel slide' data-ride='carousel'>
-                         <div class='carousel-inner'>
-                              <div class='carousel-item active'>
-                                   <div class='nice'> <img src='../Admin/product_images/$product_image' class='d-block w-100'></div>
+                                        <br><br><i class='fa fa-truck fa-1x'></i><label  style = 'padding-left:9px;' > $product_delivery</label>
+                                   </div>
+                                   <div class='box'><br>
+                                        <h2> FARMER DETAILS </h2>
+                                        <span id='linebreak'></span>
+                                        <label><b> Name: </b></label><label style = 'padding-left:10px;'>$name</label><br>
+                                        <label><b>  Phone Number :  </b> </label><label style = 'padding-left:10px;'>$phone</label>
+                                        <br><label>
+                                             <div class='midd'>
+                                                  <div class='midone'><b  style = 'padding-right:10px;' >Address:</b></div><textarea style = 'background-color:transparent' disabled cols='24'>$address</textarea>
+                                             </div>
+                                        </label><label></label>
+                                        <button class='doing' style = 'padding-left:7px;'>Chat <i class='fa fa-comment fa-1x'></i></button>
+                                   </div>
+
+                                   <div class='col-md-4'> <br>
+                                        <div class='bye'>
+                                             <p class='some'>
+                                                  <h2> Description</h2>
+                                             </p><br>
+                                             <p>$product_desc</p><br>
+                                        </div>
+
+                                   </div>
                               </div>
 
-                         </div>
+                         </div>";
 
-                    </div>
-               </div>
-               <div class='col-md-4'>
-                    <label>
-                         <p class='newarrival text-center'>FRESH</p>
-                    </label>
-                    <div class='mid'>
-                         <h2> $product_title</h2>
-                    </div><br>
+                    if (isset($_POST['cart'])) {
 
-                    <p class='price'>Price<i class='fa fa-rupee fa-1x'></i> : $product_price  Rs</p>
-                    <p class='price'>Stock : $product_stock Kg</p>
-                    <br>
-                    <div class='mid'><label>Quantity</label>
-                         <button class='one'> <i class='fa fa-plus fa-1x'></i></button><input type='number' value='1'><button class='one'><i class='fa fa-minus fa-1x'></i></button><br></div>
-                    <br><button class='one'>Save for Later<i class='fa fa-shopping-basket fa-2x'></i></button>
-                    <div class='ri'> <button class='one'>Add to Cart<i class='fa fa-cart-arrow-down fa-2x'></i> </button></div><br>
-                    <br><br><i class='fa fa-truck fa-1x'></i><label>$product_delivery</label>
-               </div>
-               <div class='box'><br>
-                    <h2> FARMER DETAILS </h2>
-                    <span id='linebreak'></span>
-                    <label> Name: </label><label>name</label><br>
-                    <label> Phone Number: </label><label>123456789</label>
-                    <br><label>
-                         <div class='midd'>
-                              <div class='midone'> Address:</div><textarea disabled cols='24'></textarea>
-                         </div>
-                    </label><label></label>
-                    <button class='doing'>Chat<i class='fa fa-comment fa-1x'></i></button>
-               </div>
+                         if (isset($_POST['quantity'])) {
+                              $qty = $_POST['quantity'];
+                         } else {
+                              $qty = 1;
+                         }
+                         global $con;
+                         $sess_phone_number = $_SESSION['phonenumber'];
 
-               <div class='col-md-4'> <br>
-                    <div class='bye'>
-                         <p class='some'>
-                              <h2> Description</h2>
-                         </p><br>
-                         <p>$product_desc</p><br>
-                    </div>
+                         $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
-               </div>
-          </div>
+                         $run_check = mysqli_query($con, $check_pro);
 
-     </div>";
+                         if (mysqli_num_rows($run_check) > 0) {
+                              echo "";
+                         } else {
+                              $insert_pro = "insert into cart (product_id,phonenumber,qty) values ('$product_id','$sess_phone_number','$qty')";
+                              $run_insert_pro = mysqli_query($con, $insert_pro);
+                              echo "<script>window.location.reload(true)</script>";
+                         }
+                    }
+               }
+          }
      }
      ?>
 

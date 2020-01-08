@@ -293,7 +293,7 @@
 			<ul class="dropdown-menu etc">
 			<?php
 				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 				
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
 				}
@@ -316,7 +316,7 @@
 
           <div class="icon2">
 			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
 		</div>
 
           <div class="loginz">

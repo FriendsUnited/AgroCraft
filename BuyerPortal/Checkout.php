@@ -5,9 +5,11 @@
  -->    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
     <title>checkout </title>
     <style>.tabley {
-               width: 50%;
+               width: 100%;
+               margin-right:20px;
 
                /*border-style: solid;*/
                /*border-width: 2px;*/
@@ -60,7 +62,7 @@ clear: both;
 
 }
 .edit{
-  margin-left:10px;
+  margin-left:550px;
    background-color: #f5ca0a;
 border-style: solid;
 border-width: 2px;
@@ -69,18 +71,21 @@ border-color: black;
 border-radius:25%;
 padding: 20px;
   text-align: center;
-margin-top: 10px;
-
+  margin-bottom: 18px;
+/*margin-top: -50px;
+*/
 }
 .place_odder{
   text-align: center;
+  margin-top: 20px;
 }
 .lang{
   width: 20%;
   text-align: center;
   height:100px;
   background-color: white;
-  margin-left: 155px;
+  margin-left: 195px;
+  margin-top: -120px;
 border-style: solid;
 border-width: 2px;
 padding:10px;
@@ -130,6 +135,7 @@ padding: 20px;
           }
           .del_options{
             margin-left: 130px;
+            margin-right: 25px;
 
           }
 
@@ -163,12 +169,9 @@ margin-right:20px;
                height: 150px;
                width: 20%;
                float: right;
-               /* background-color:yellow;
-
- */
-              
-               margin-top: -550px;
-               margin-right: -280px;
+                 
+               margin-top: -490px;
+               margin-right: 20px;
              
           }
  .totaly {background-color: #f5ca0a;
@@ -188,14 +191,120 @@ border-radius:25%;
                margin-left: 10px;
                float: right;
           }
+
+    h3 {
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #000;
+      line-height: 0.1em;
+      margin: 10px 0 20px;
+    }
+
+    h3 span {
+      background: #fff;
+      padding: 0 10px;
+    }
+
+    .morefooter {
+      height: 100px;
+      width: 100%;
+      background-color: white;
+
+    }
+
+    .call {
+      float: left;
+      font-size: 20px;
+      margin-left: 150px;
+      margin-top: 25px;
+    }
+
+    .gmail {
+      margin-top: 10px;
+      float: right;
+      margin-right: 150px;
+
+    }
+
+    .instagram {
+      margin-top: 10px;
+      float: left;
+      margin-left: 420px;
+    }
+
+    .instaid {
+      height: 10px;
+      width: 100%;
+
+    }
+
+    .text {
+      float: left;
+      margin-left: 720px;
+      margin-top: -50px;
+    }
+
+    .gmailid {
+      float: right;
+      margin-right: 80px;
+      margin-top: -60px;
+    }
+
+    .copy {
+      float: left;
+      margin-top: -65px;
+      /* background-color:grey; */
+    }
+    .bott{
+      /*background-color: red;*/
+      height:100px;
+
+      width:100%;
+    }
+    .scam{
+      margin-top:20px;
+      margin-left:30px;
+    }
+    .header{
+      font-family: 'Courgette', cursive;
+      font-size: 50px;
+      text-align: center;
+    }
+      .leaf{
+          color:#00b300;
+        }
+        .images{
+          height: 100px;
+          width:100px;
+          margin-top: 10px;
+/*margin-left: 100px;
+*/        }
+        .pay{
+          font-size: 20px;
+        }
+    .hypher{
+      margin-right: 20px;
+    }
+    input[type=radio] {
+    border: 0px;
+    width: 1.5%;
+    height: 35px;
+    margin-left: 100px;
+
+}
+.radios{
+  margin-top: -30px;
+}
+
 </style>
-   
+   <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="header">AGROCRAFT <i class="fas leaf fa-leaf"></i></div>
     <br>
 <div class="add">
-	<label>1.</label><label class="del_add">DELIVERY ADDRESS<label></div>
-		<button class="edit">CHANGE  ADDRESS</button>
+	<label>1.</label><label class="del_add">DELIVERY ADDRESS</label></div>
+	<div class="sam">	<button class="edit">CHANGE  ADDRESS</button></div>
 		<br>
 <div class="lang">
 
@@ -212,14 +321,19 @@ border-radius:25%;
      <table class="tabley">
           <thead>
                <th class="thy">Sr no</th>
-               <th class="thy">Name</th>
-               <th class="thy"> Total</th>
+               <th class="thy">Item Name</th>
+                   <th class="thy">Quantity</th>
+           
+               <th class="thy">SubTotal</th>
+
                <th class="thy">Delivary Options</th>
                         </thead>
  <tr>
                <td class="tdy" data-label="Sr no">1</td>
                <td class="des tdy" data-label="Item Name">Best Patato of the world
                </td>
+               <td class="tdy" data-label="Quantity">2</td>
+
                <td class="tdy" data-label="Unit Price">rs 2</td>
               
                <td class="tdy" data-label="Deletion">
@@ -229,30 +343,74 @@ border-radius:25%;
   <option value="Courier">Courier</option>
 </select>
                </td></tr>
+                <tr>
+               <td class="tdy" data-label="Sr no">1</td>
+               <td class="des tdy" data-label="Item Name">Best Patato of the world
+               </td>
+                 <td class="tdy" data-label="Quantity">2</td>
+               <td class="tdy" data-label="Unit Price">rs 2</td>
+              
+               <td class="tdy" data-label="Deletion">
+                <select class="selly">
+  <option  value="Buyer">Buyer</option>
+  <option value="Farmer">Farmer</option>
+  <option value="Courier">Courier</option>
+</select>
+               </td></tr>
                  </table></div>
-<div class="footer">
+<div class="bott">
           
-          <label class="payment">Payment Options:-</label>
-          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
-          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-     </div>
-                 
+          
+     
     <button class="place_odder">PLACE ORDER</button>
 
     <button class="place_odder">GO BACK</button>
+</div>
+                
 <div class="up">
 
           <div class="boxy">
                <label class="totaly"> GRAND TOTAL : <label class="rs">Rs 35</label></label>
-               <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
-              <!--  <a href="Checkout.php" style = "color:black;"><button class="checkout"><span>CHECKOUT</span> <label class="arrow"><i class="fas fa-arrow-right"></i></label></a>
- -->
+               
+                <label class="totaly scam">TOTAL ITEMS :<label class="rs">5</label></label>
           </div>
 
-        
+     
 
      </div>
+     <div class="delivary">
+       <label class="totaly pay">3.PAYMENT OPTIONS:</label>
+       <input type="radio" class="radios" name="gender" value="male"> <img class ="images" src="../Images/Website/cash.jpg">
+<input type="radio" class="radios" name="gender" value="female"> <img class ="images" src="../Images/Website/petm.jpg ">
+     </div>
+<h3><span> GET SOCIAL WITH US </span></h3>
+  </div>
 
+  <div class="morefooter">
+    <div class="call">
+      <i class="fas fa-phone-alt call_color"></i>
+      <a href="#" style="color:black;">+91-8191046421</a>
+    </div>
+
+    <div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
+    </div>
+
+    <div class="gmail">
+      <img src="../Images/Website/gmail.jpg" height="30px" width="50px">
+    </div>
+
+  </div>
+  <div class="instaid">
+    <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
+    <div class="gmailid">
+      <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a></div>
+
+  </div>
+
+
+  <div class="copy">
+    <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
+  </div>
 
  
 

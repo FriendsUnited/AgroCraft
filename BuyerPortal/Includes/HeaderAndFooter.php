@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?>  -->
 
 <!DOCTYPE html>
 
@@ -242,10 +242,6 @@ include("../Functions/functions.php");
                margin-right: 150px;
 
           }
-          #icon {
-			background-color:red;
-			color:white;
-		}
 
           .instagram {
                margin-top: 10px;
@@ -293,32 +289,35 @@ include("../Functions/functions.php");
           </div>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-               <ul class="dropdown-menu etc">
-                    <?php
-                    if (isset($_SESSION['phonenumber'])) {
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
+			<?php
+				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+				
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+				}
+				else {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+				}
+			?>
+		</div>
+		<div class="proicon">
+			<?php
+		if (!isset($_SESSION['phonenumber'])) {
+		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+		}
+		else {
+			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+		}
+		?>
+		</div>
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-                    } else {
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-                    }
-                    ?>
-          </div>
-          <div class="proicon">
-               <?php
-               if (!isset($_SESSION['phonenumber'])) {
-                    echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               } else {
-                    echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               }
-               ?>
-          </div>
 
           <div class="icon2">
-               <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> <?php echo totalItems(); ?> </span>
-          </div>
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
+		</div>
 
           <div class="loginz">
                <?php getUsername(); ?>
@@ -326,94 +325,34 @@ include("../Functions/functions.php");
      </div>
 
      <div class="headerdown">
-          <div class="sel1 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu  ">
-                    <?php getCrops(); ?>
-               </ul>
-          </div>
-          <div class="sel2 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu ">
-                    <?php getVegetables(); ?>
-               </ul>
-          </div>
-          <div class="sel3 sel">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-                    <span class="caret"></span></button>
-               <ul class="dropdown-menu ">
-                    <?php getFruits(); ?>
-               </ul>
-          </div>
-     </div>
+		<div class="sel1 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu  ">
+				<?php getCrops(); ?>
+			</ul>
+		</div>
+		<div class="sel2 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+				<?php getVegetables(); ?>
+			</ul>
+		</div>
+		<div class="sel3 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+			<?php getFruits(); ?>
+			</ul>
+		</div>
+	</div>
 
-     <div>
-          <?php
-          cart();
-          ?>
-          <?php
-          if (isset($_GET['type'])) {
 
-               $search_query = $_GET['type'];
-               $get_pro = "select * from products where product_type = '$search_query'";
-               $run_pro = mysqli_query($con, $get_pro);
-               // $count = mysqli_num_rows($run_pro);
-               if ($run_pro) {
-                    echo "<br>";
-                    while ($rows = mysqli_fetch_array($run_pro)) {
-                         $product_id = $rows['product_id'];
-                         $product_title = $rows['product_title'];
-                         $product_image = $rows['product_image'];
-                         $product_price = $rows['product_price'];
-                         $product_delivery = $rows['product_delivery'];
-                         if ($product_delivery == "yes") {
-                              $product_delivery = "Delivery by Farmer";
-                         } else {
-                              $product_delivery = "Delivery by Farmer Not Available";
-                         }
-                         echo " <div class='inputwrapper'>
-                                                  <br>
-                                                  <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
-                                                  <label>$product_title</label><br>
-                                                  <label>PRICE:- $product_price Rs/kg</label><br>	
-                                                  <label id='shop2'>$product_delivery</label><br>Qty:-
-                                                  <form action = '' method = 'post'>
-                                                  <input class='numberinput' type='number' name='quantity'  value = '1' >
-                                                  <button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
-                                                  </form>
-                                                  </div> ";
-                         if (isset($_POST['cart'])) {
+     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
+     <hr>
 
-                              if (isset($_POST['quantity'])) {
-                                   $qty = $_POST['quantity'];
-                              }
-                              else{
-                                   $qty = 1;
-                              }
-                              global $con;
-                              $sess_phone_number = $_SESSION['phonenumber'];
-     
-                              $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                              $run_check = mysqli_query($con, $check_pro);
-
-                              if (mysqli_num_rows($run_check) > 0) {
-                                   echo "";
-                              } else {
-                                   $insert_pro = "insert into cart (product_id,phonenumber,qty) values ('$product_id','$sess_phone_number','$qty')";
-                                   $run_insert_pro = mysqli_query($con, $insert_pro);
-                                   echo "<script>window.location.reload(true)</script>";
-                              }
-                         }
-                    }
-               } else {
-                    echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
-               }
-          }
-          ?>
-     </div>
+ 
 
 
      <div class="footer">

@@ -20,6 +20,16 @@
         }
     }
 
+    function CheckoutIdentify()
+    {
+        if (isset($_SESSION['phonenumber'])) {
+            echo "<script>window.open('CartPage.php','_self')</script>";
+        }
+        else {
+            echo "<script>window.open('../auth/BuyerLogin.php','_self')</script>";
+        }
+
+    }
 
 
     function getCrops()
@@ -97,9 +107,12 @@
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'></label>$product_delivery<br>Qty:-
-                            <input class='numberinput' type='number' name='number' value = '1' >
+                            <form action = ''  method = 'post'>
+                            <input class='numberinput' type='number' name='quantity' value = '1' >
+                            </form>
                             <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                         </div> ";
+            
         }
     }
 
@@ -272,6 +285,12 @@
         if (isset($_GET['add_cart'])) {
 
             global $con;
+            if (isset($_POST['quantity'])) {
+                $qty = $_POST['quantity'];
+           }
+           else{
+                $qty = 1;
+           }
             $sess_phone_number = $_SESSION['phonenumber'];
             $product_id = $_GET['add_cart'];
 
@@ -284,7 +303,8 @@
             } else {
                 $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
                 $run_insert_pro = mysqli_query($con, $insert_pro);
-                echo "<script>window.open('../BuyerPortal/BuyerHomepage.php','_self')</script>";
+              
+                echo "<script>window.location.reload(true)</script>";
             }
         }
     }
@@ -293,38 +313,19 @@
     function totalItems()
     {
         global $con;
-        $sess_phone_number = $_SESSION['phonenumber'];
+        if (isset($_SESSION['phonenumber'])) {
+            $sess_phone_number = $_SESSION['phonenumber'];
     
-        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
-        $run_items =  mysqli_query($con,$get_items);
-        $count_items =  mysqli_num_rows($run_items);
-        echo $count_items;
-    }
-
-    function grandTotal()
-    {
-        $total = 0;
-        global $con;
-        $sess_phone_number = $_SESSION['phonenumber'];
-
-        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
-        $run_price = mysqli_query($con, $get_items);
-
-        while ($p_price = mysqli_fetch_array($run_price)) {
-            $product_id = $p_price['product_id'];
-
-            $pro_price = "select * from products where product_id='$product_id'";
-            $run_pro_price = mysqli_query($con, $pro_price);
-            while ($pp_price = mysqli_fetch_array($run_pro_price)) {
-                $product_price = array($pp_price['product_price']);
-
-                $values = array_sum($product_price);
-                $total += $values;
-            }
+            $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
+            $run_items =  mysqli_query($con, $get_items);
+            $count_items =  mysqli_num_rows($run_items);
+            return $count_items;
         }
-
-        echo "Rs" . $total;
+        else {
+            echo 0;
+        }
     }
+
 
     function emptyCart() {
         global $con;

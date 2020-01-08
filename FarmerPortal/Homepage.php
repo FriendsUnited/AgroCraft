@@ -10,21 +10,18 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Buyer Product Detail</title>
+     <title>Agrocraft Homepage</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+
      <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
      <script src="../portal_files/jquery.min.js.download"></script>
      <script src="../portal_files/popper.min.js.download"></script>
      <script src="../portal_files/bootstrap.min.js.download"></script>
-     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>
 
      <style>
           * {
@@ -81,6 +78,7 @@
                margin-left: 20px;
                width: 25px;
                margin-right: 50px;
+
 
           }
 
@@ -274,133 +272,181 @@
                float: left;
                margin-top: -65px;
           }
-          .ribbon{
-              /* text-align: center; */
-              height:200px;
-              margin-left:10%;
-              margin-top: 8%; 
-          }
-          .box{
-            
-            color: rgb(6, 36, 7);
-            width: 350px;
-             line-height: 40px; 
-             float:center;
-            margin: auto;
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* background-image: url(images/Website/FarmerLogin.jpg); */
+            background-size: cover;
+            background-position: center;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            /* width: 300px; */
+            background-image: 100px;
+        }
+
+        .add_button {
+            /* clear:left;
+            margin-left:450px; */
+            float: right;
+            /* margin-top: 10px; */
             text-align: center;
-              margin-top: 50px;  
-             padding: 5px; 
-             border-style: outset; 
-            /* border-width: 5px;
-            border-radius: 16px; */
-             border-color:lightgrey; 
-            /* font-size:20px; */
-            height: 400px;
-            
+            /* margin-right:10%; */
+            /* background-color:red; */
         }
-         .idk{
-            /* text-align:center; */
-             margin-top:10%; 
-            
+
+        /* .dropdown {
+            float: right;
+            margin-right: 1em;
+            margin-top: 0;
+            margin-bottom: 52em;
+            color: white;
+            background-color:green;
+
+        } */
+
+        /* ul li {
+            display: none;
+        } */
+
+        /* ul li:hover ul li {
+            display: block;
+             width: 30px; 
         }
-        .textarea{
-            width:50%;
-            height:10%;
+
+        ul li a {
+            display: block;
+             width: 30px; 
+        } */
+
+        .products:last-child {}
+
+        h1 {
+            /* color: rgb(20, 83, 31); */
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+
         }
-        .one{
-             /* width:35px; */
-            text-align:center;
-            background-color: #FFD700;
-            /* float:left; */
-            /* margin-right: 50%; */
+
+        /* .trans {
+            clear: left;
+            background-color: red;
+        } */
+
+        .lost{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+            margin-top: 5em;
+            background-color: green;
+            height: 5%;
         }
-        .hen{
+
+        /* .dropdown-content {
+            display: none;
+            /* position: sticky;  */
+            background-color: transparent;
+            /* min-width: 250px; */
+            z-index: 1;
+        }
+
+        /* .dropdown-content a {
+            color: rgb(12, 11, 11);
+            padding: 30px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-size: 20px;
+            background-color: white;
+            width: 100px;  
+            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        } */
+
+        /* .dropdown-content a:hover {
+            background-color: white;
+             color: black; 
+             position:absolute; 
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: white;
+             position:relative; 
+        } */
+/* 
+        .dropdown:hover .dropbtn {
+            background-color: #ffffff;
+        }  */
+
+        .new {
+            /* display: table-cell;
+            vertical-align: middle; */
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            /* margin-left: 130px; */
+            float: right;
+            /* margin-bottom:250px; 
+             margin-top:3em; */
+            /* clear:left;  */
+        }
+
+        h2 {
+            color: white;
+            margin-top: 3em;
+            /* background-color: green;
+         */
+            text-align: center;
+
+            /* background-color: darkcyan; */
+
+        }
+
+        .hii {
+            float: right;
+            margin-right: 5em;
+            /* margin-top:254em;  */
+            /* background-color:red; */
+        }
+
+        .ribbon {
+            position: relative;
+            top: -16px;
+            right: -706px;
+            float: left;
+            top: 0px;
+            left: 0px;
+            height: 74px;
+            background-color: green;
+        }
+
+        .over {
+            background-color: green;
+            border: 1px;
+            width: 100%;
+            white-space: nowrap;
+
+            height: 70px;
+
+
+        }
+        .subtract{
              float:right;
-             margin-right: 
-        }
-        .newarrival{
-             background:green;
-             width:50px;
-             color:white;
-             font-size:12px;
-             font-weight:bold;
-        }
-            .col-md-7 h2{
-                 color:#555;
-            }
-            /* .col-md-7{
-                 text-align: center;
-            } */
-            .price{
-                 font-size:20px;
-                 font-weight: bold;
-                  padding-top: 20px; 
-                 /* margin-left: 15%; */
-                 color:darkolivegreen;
+             margin-right: 10%;
+             margin-top: 3%;
+             text-align: center;
+             font-weight: 10px;
+             font-family: Arial, Helvetica, sans-serif;
 
-            }
-            .some{
-                 
-                  font-weight: 10px; 
-            } 
-            .ri{
-                 float:right;
-            }
-            input{
-                 width:9%;
-                 text-align: center;
-            }
-            .th{
-                 background-color:#FFD700;
-                 float:right;
-            }
-            .done{
-                 float:left;
-                 margin-left:10%;
-            }
-            .mid{
-                 text-align:top;
-                 
-            }
-            .bye{
-margin-left:10%;
-            }
-            .happy{
-                 float:right;
-            }
-            .doing{
-            /* width:15px;    */
-            text-align:center;
-            background-color: #FFD700;
-            float:right;
-            /* float:left; */
-            /* margin-right: 50%; */
-            margin-bottom: 0px;
-            bottom: 0px;
-            margin-top:100px;
+            
+        } 
+
         
-            }
-            .mid{
-                 text-align: center;
-            }
-            .midone{
-
-            float:left;
-            }
-            .midd{
-                 text-align: center;
-                 /* margin-right:5%; */
-                 float:right;
-
-            }
-            .nice{
-                 border-color: gray;
-                 border-width:5px;
-                  border-style: outset; 
-                  height: 400px;
-                  margin-top: 50px;
-
-            }
      </style>
 
 </head>
@@ -419,9 +465,15 @@ margin-left:10%;
           </div>
 
           <div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-			<ul class="dropdown-menu etc">
-			<?php
+          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
+            </button></i>
+			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
+			<ul  class="dropdown-menu etc"1
+              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
+               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
+     </ul>
+
+			<!-- <?php
 				if (isset($_SESSION['phonenumber'])) {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 				
@@ -430,7 +482,7 @@ margin-left:10%;
 				else {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
 				}
-			?>
+			?> -->
 		</div>
 		<div class="proicon">
 			<?php
@@ -448,12 +500,13 @@ margin-left:10%;
 			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
 			<span id="icon"> 5 </span>
 		</div>
+
           <div class="loginz">
                <?php getUsername(); ?>
           </div>
      </div>
 
-     <div class="headerdown">
+     <!-- <div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
 				<span class="caret"></span></button>
@@ -475,92 +528,61 @@ margin-left:10%;
 			<?php getFruits(); ?>
 			</ul>
 		</div>
-     </div>
-     <div class="container">
-          <div class="row">
-               <div class="col-md-4">
-               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-     <div class="nice"> <img src="../FarmerPortal/logo.jpeg" class="d-block w-100" ></div>
+	</div>
+ -->
+
+    <div class="lost">ALL PRODUCTS </div>
+    <<div class="subtract"><b>Add Product </b> <div class="add_button"><button class="button" href="../Admin/insert_product.php"><i class="fa fa-plus fa-2x"></i></button>
+     </div></div>>
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+
+    <br>
+
+    <div>
+        <?php
+        include("../Includes/db.php");
+        $sess_phone_number = $_SESSION['phonenumber'];
+        getFarmerProducts();
+        ?>
+
+
     </div>
-    <!-- <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
     </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div> -->
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-               </div>
-               <div class="col-md-4">
-<label><p class="newarrival text-center">FRESH</p></label>
-<div class="mid"><h2>Product title</h2></div><br>
-<!-- <label class="price"> Price  </label><textarea class="some" disabled  rows="1" cols="7"></textarea> 
-<div class="happy"><label class="price"> Stock  </label><textarea disabled  rows="1" cols="7"></textarea></div> <br>  -->
 
- <p class="price">Price<i class="fa fa-rupee fa-1x"></i> : 20 Rs</p>
-<p class="price">Stock : 20 Kg</p>
-<br><div class="mid"><label>Quantity</label>
-<button class="one"> <i  class="fa fa-plus fa-1x"></i></button><input type="number" value="1"><button class="one"><i  class="fa fa-minus fa-1x"></i></button><br></div>
+    <div class="trans">
 
 
+        <div class="lost">TRANSACTION HISTORY</h3>
+    </div>
 
 
+    <div>
+        <br>
+        <br>
 
-<br><button class="one">Save for Later<i class="fa fa-shopping-basket fa-2x"></i></button> <div class="ri">  <button class="one">Add to Cart<i  class="fa fa-cart-arrow-down fa-2x"></i> </button></div><br>
-<br><br><i class="fa fa-truck fa-1x"></i><label>Delivery by farmer</label></div>
-<div class="box"><br><h2> FARMER DETAILS </h2>
+        <table border="2">
 
-<br><label> Name: </label><label>name</label><br>
-<label> Number: </label><label>name</label>
-<br><label><div class="midd"><div class="midone"> Address:</div><textarea disabled cols="24" ></textarea> </div></label><label></label >
-<button class="doing">Chat<i class="fa fa-comment fa-1x"></i></button></div>
+            <tr>
+                <th width=200px>Date</th>
+                <th width=200px>Name</th>
+                <th width=200px>Phone Number</th>
+                <th width=200px>Address</th>
+                <th width=200px>Quantity</th>
+                <th width=200px>Price</th>
 
-<div class="col-md-4">
-
-
-<br><div class="bye"><p class="some"><h2> Description</h2></p><br>
-<p>this is description</p><br></div>
-<!-- <label class="price"> Price  </label><textarea class="some" disabled  rows="1" cols="7"></textarea> <br>
-<label class="price"> Stock  </label><textarea disabled  rows="1" cols="7"></textarea> <br> -->
-
-
-               </div>
-          </div>
-          
-     </div>
-    <!-- <br><div class="bye"><p class="some"><h2> Description</h2></p><br>
-<p>this is description</p><br></div>
-<br><h3> FARMER DETAILS </h3>
-<div class="box">
-<br><label>Farmer Name: </label><label>name</label><br>
-<label>Farmer Number: </label><label>name</label><div class="th" > <button>Message</button></div>
-     </div> -->
-<!-- <div class="box"><table column="2"> 
-    <tr>
-   <td rowspan="3" colspan="8"> <img class="ribbon" src="../FarmerPortal/logo.jpeg"> </td>
-    <div class="idk"><td align="right"><label> title</label></td>
-   <div class="hen">
-   <tr ><td align="right">  <label> price:</label><textarea rows="1" cols="9">29</textarea ><label>Rs</label></td></tr>
-   <tr ><td align="right" colspan="24"> <label> stock:</label><textarea rows="1" cols="9"></textarea><label>kg</label></td></tr></div>
-   <tr><td  > <label> description</label></td></tr></div>
-  <tr> <td><label>this is description</label></td></tr></table>
-     <button class="one">add to cart</button><br><br>
-     <h3><span> FARMER DETAILS </span></h3>
-</div> 
-     -->
-    
-     <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
-     <hr> -->
+            </tr>
+            <tr>
+                <td>12-1-2000</td>
+                <td>melissa</td>
+                <td>1234567890</td>
+                <td>sajgdkagdd</td>
+                <td>500</td>
+                <td>200</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
 
  
 

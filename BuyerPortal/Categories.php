@@ -379,13 +379,19 @@ include("../Functions/functions.php");
                                                   <label>$product_title</label><br>
                                                   <label>PRICE:- $product_price Rs/kg</label><br>	
                                                   <label id='shop2'>$product_delivery</label><br>Qty:-
-                                                  <input class='numberinput' type='number' name='number'  value = '1' >
                                                   <form action = '' method = 'post'>
+                                                  <input class='numberinput' type='number' name='quantity'  value = '1' >
                                                   <button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                                                   </form>
                                                   </div> ";
                          if (isset($_POST['cart'])) {
 
+                              if (isset($_POST['quantity'])) {
+                                   $qty = $_POST['quantity'];
+                              }
+                              else{
+                                   $qty = 1;
+                              }
                               global $con;
                               $sess_phone_number = $_SESSION['phonenumber'];
      
@@ -396,7 +402,7 @@ include("../Functions/functions.php");
                               if (mysqli_num_rows($run_check) > 0) {
                                    echo "";
                               } else {
-                                   $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                                   $insert_pro = "insert into cart (product_id,phonenumber,qty) values ('$product_id','$sess_phone_number','$qty')";
                                    $run_insert_pro = mysqli_query($con, $insert_pro);
                                    echo "<script>window.location.reload(true)</script>";
                               }

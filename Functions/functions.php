@@ -301,8 +301,7 @@
                     // echo "<script>window.location.reload(true)</script>";
                 }
             }
-        }
-        else {
+        } else {
             echo "<script>alert('Please Login First! ');</script>";
         }
     }

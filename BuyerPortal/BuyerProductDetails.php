@@ -421,6 +421,7 @@
                border-width: 5px;
                border-style: outset;
                height: 400px;
+               width:400px;
                margin-top: 50px;
 
           }
@@ -562,13 +563,13 @@
                                         <form action = '' method = 'post'>
                                         <div class='mid'><label ><b>Quantity</b></label>
                                              
-                                             <input type='number' style = 'width:60px;' name = 'quantity' value='1'>
+                                             <input type='number' style = 'width:80px;' name = 'quantity' value='1'>
                                             
                                         </div>
 
-                                        <br><button class='one'>Save for Later<i  style = 'padding:4px;padding-bottom:7px;' class='fa fa-shopping-basket fa-2x'></i></button>
+                                        <br><button type = 'submit' name = 'save' class='one'>Save for Later<i  style = 'padding:4px;padding-bottom:7px;' class='fa fa-shopping-basket fa-2x'></i></button>
 
-                                        <div class='ri'><button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fa fa-shopping-cart fa-2x' style=' background-color:#FFD700'></i></button></a><br><br>    
+                                        <div class='ri'><button type = 'submit' name = 'cart'  style = 'padding:4px;padding-bottom:7px;' class='addtocart'>ADD TO CART <i class='fa fa-shopping-cart fa-2x' style=' background-color:#FFD700'></i></button></a><br><br>    
                                         </div><br>
                                         </form>
 
@@ -586,7 +587,7 @@
                                                   <div class='midone'><b  style = 'padding-right:10px;' >Address:</b></div><textarea style = 'background-color:transparent' disabled cols='24'>$address</textarea>
                                              </div>
                                         </label><label></label>
-                                        <button class='doing' style = 'padding-left:7px;'>Chat <i class='fa fa-comment fa-1x'></i></button>
+                                        <a href = '../ChatSystem/index.php'><button class='doing' style = 'padding-left:7px;'>Chat <i class='fa fa-comment fa-1x'></i></button></a>
                                    </div>
 
                                    <div class='col-md-4'> <br>

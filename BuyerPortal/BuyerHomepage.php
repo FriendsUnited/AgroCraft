@@ -28,7 +28,7 @@
 			margin: 0;
 			box-sizing: border-box;
 		}
-
+     
 
 		.header {
 			position: sticky;

@@ -13,7 +13,6 @@
             text-align: center;
             cursor: pointer
         }
-        
         .box {
             color: rgb(6, 36, 7);
             width: 350px;
@@ -24,6 +23,7 @@
             padding: 5px;
             border-style : outset;
             border-width: 5px;
+        
             border-radius: 16px;
             border-color:green;
         }

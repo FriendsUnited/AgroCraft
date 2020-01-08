@@ -1,17 +1,13 @@
 <?php
-session_start();
 include("../config.php");
-$phn1=$_SESSION['phonenumber'];
-echo $phn1;
 if( isset($_REQUEST['action']) ){
 	switch( $_REQUEST['action'] ){
 		case "SendMessage":
 			session_start();
-			$query = mysqli_query("INSERT INTO chat SET user=?, message=?");
-			$query->execute([$_SESSION['phonenumber'], $_REQUEST['message']]);
+			$query = $db->prepare("INSERT INTO chat SET user=?, message=?");
+			$query->execute([$_SESSION['user'], $_REQUEST['message']]);
 			echo 1;
-        break;
-        
+		break;
 		case "getChat":
 			$query = $db->prepare("SELECT * from chat");
 			$query->execute();
@@ -19,9 +15,8 @@ if( isset($_REQUEST['action']) ){
 			
 			$chat = '';
 			foreach( $rs as $r ){
-				$chat .=  '<div class="siglemessage"><strong>'.$r->phonenumber.' :  </strong>'.$r->message.'</div>';
-                //$chat .= $r->user . '  :   ' .$r->message.'<br/>';
-            }
+				$chat .=  '<div class="siglemessage"><strong>'.$r->user.' says:  </strong>'.$r->message.'</div>';
+			}
 			echo $chat;
 		break;
 	}

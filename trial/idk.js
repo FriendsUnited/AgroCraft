@@ -1,45 +1,117 @@
-var NodeGeocoder = require('node-geocoder');
+var __slice = [].slice;
 
-var options = {
-  provider: 'google',
+(function($, window) {
+  var Starrr;
 
-  // Optional depending on the providers
-  httpAdapter: 'https', // Default
-  apiKey: 'YOUR_API_KEY', // for Mapquest, OpenCage, Google Premier
-  formatter: null         // 'gpx', 'string', ...
-};
+  Starrr = (function() {
+    Starrr.prototype.defaults = {
+      rating: void 0,
+      numStars: 5,
+      change: function(e, value) {}
+    };
 
-var geocoder = NodeGeocoder(options);
+    function Starrr($el, options) {
+      var i, _, _ref,
+        _this = this;
 
-// Using callback
-geocoder.geocode('29 champs elysée paris', function(err, res) {
-  console.log(res);
+      this.options = $.extend({}, this.defaults, options);
+      this.$el = $el;
+      _ref = this.defaults;
+      for (i in _ref) {
+        _ = _ref[i];
+        if (this.$el.data(i) != null) {
+          this.options[i] = this.$el.data(i);
+        }
+      }
+      this.createStars();
+      this.syncRating();
+      this.$el.on('mouseover.starrr', 'span', function(e) {
+        return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('mouseout.starrr', function() {
+        return _this.syncRating();
+      });
+      this.$el.on('click.starrr', 'span', function(e) {
+        return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
+      });
+      this.$el.on('starrr:change', this.options.change);
+    }
+
+    Starrr.prototype.createStars = function() {
+      var _i, _ref, _results;
+
+      _results = [];
+      for (_i = 1, _ref = this.options.numStars; 1 <= _ref ? _i <= _ref : _i >= _ref; 1 <= _ref ? _i++ : _i--) {
+        _results.push(this.$el.append("<span class='glyphicon .glyphicon-star-empty'></span>"));
+      }
+      return _results;
+    };
+
+    Starrr.prototype.setRating = function(rating) {
+      if (this.options.rating === rating) {
+        rating = void 0;
+      }
+      this.options.rating = rating;
+      this.syncRating();
+      return this.$el.trigger('starrr:change', rating);
+    };
+
+    Starrr.prototype.syncRating = function(rating) {
+      var i, _i, _j, _ref;
+
+      rating || (rating = this.options.rating);
+      if (rating) {
+        for (i = _i = 0, _ref = rating - 1; 0 <= _ref ? _i <= _ref : _i >= _ref; i = 0 <= _ref ? ++_i : --_i) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star-empty').addClass('glyphicon-star');
+        }
+      }
+      if (rating && rating < 5) {
+        for (i = _j = rating; rating <= 4 ? _j <= 4 : _j >= 4; i = rating <= 4 ? ++_j : --_j) {
+          this.$el.find('span').eq(i).removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+        }
+      }
+      if (!rating) {
+        return this.$el.find('span').removeClass('glyphicon-star').addClass('glyphicon-star-empty');
+      }
+    };
+
+    return Starrr;
+
+  })();
+  return $.fn.extend({
+    starrr: function() {
+      var args, option;
+
+      option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+      return this.each(function() {
+        var data;
+
+        data = $(this).data('star-rating');
+        if (!data) {
+          $(this).data('star-rating', (data = new Starrr($(this), option)));
+        }
+        if (typeof option === 'string') {
+          return data[option].apply(data, args);
+        }
+      });
+    }
+  });
+})(window.jQuery, window);
+
+$(function() {
+  return $(".starrr").starrr();
 });
 
-// Or using Promise
-geocoder.geocode('29 champs elysée paris')
-  .then(function(res) {
-    console.log(res);
-  })
-  .catch(function(err) {
-    console.log(err);
+$( document ).ready(function() {
+  $('.stars-existing').on('starrr:change', function(e, value){
+    $(this).parent().find('.count-existing').html(value);
+    var id = $(this).parent().find('input.post_id').val();
+    $.get('http://localhost/php/rating/index.php?add_stars='+value+"&post_id="+id, function(data){
+      if(data){
+        window.location.assign('http://localhost/php/addrtest')
+      }else{
+        alert("Error Insertin Record!!!");
+      }
+    })
   });
-
-// output :
-[{
-  latitude: 48.8698679,
-  longitude: 2.3072976,
-  country: 'France',
-  countryCode: 'FR',
-  city: 'Paris',
-  zipcode: '75008',
-  streetName: 'Champs-Élysées',
-  streetNumber: '29',
-  administrativeLevels: {
-    level1long: 'Île-de-France',
-    level1short: 'IDF',
-    level2long: 'Paris',
-    level2short: '75'
-  },
-  provider: 'google'
-}]
+});

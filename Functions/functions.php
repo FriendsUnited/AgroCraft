@@ -24,11 +24,9 @@
     {
         if (isset($_SESSION['phonenumber'])) {
             echo "<script>window.open('CartPage.php','_self')</script>";
-        }
-        else {
+        } else {
             echo "<script>window.open('../auth/BuyerLogin.php','_self')</script>";
         }
-
     }
 
 
@@ -97,8 +95,7 @@
             $product_delivery = $rows['product_delivery'];
             if ($product_delivery == "yes") {
                 $product_delivery = "Delivery by Farmer";
-            }
-            else {
+            } else {
                 $product_delivery = "Delivery by Farmer Not Available";
             }
             echo " <div class='inputwrapper'>
@@ -112,7 +109,6 @@
                             </form>
                             <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                         </div> ";
-            
         }
     }
 
@@ -188,8 +184,7 @@
                         . "</div>";
                 }
             }
-        }
-        else{
+        } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
@@ -220,8 +215,7 @@
                         </div> 
                         ";
             }
-        }
-        else{
+        } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
@@ -282,30 +276,33 @@
     // Checkout System Functions
     function cart()
     {
-        if (isset($_GET['add_cart'])) {
+        if (isset($_SESSION['phonenumber'])) {
+            if (isset($_GET['add_cart'])) {
 
-            global $con;
-            if (isset($_POST['quantity'])) {
-                $qty = $_POST['quantity'];
-           }
-           else{
-                $qty = 1;
-           }
-            $sess_phone_number = $_SESSION['phonenumber'];
-            $product_id = $_GET['add_cart'];
+                global $con;
+                if (isset($_POST['quantity'])) {
+                    $qty = $_POST['quantity'];
+                } else {
+                    $qty = 1;
+                }
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $product_id = $_GET['add_cart'];
 
-            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
-            $run_check = mysqli_query($con, $check_pro);
+                $run_check = mysqli_query($con, $check_pro);
 
-            if (mysqli_num_rows($run_check) > 0) {
-                echo "";
-            } else {
-                $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                $run_insert_pro = mysqli_query($con, $insert_pro);
-              
-                echo "<script>window.location.reload(true)</script>";
+                if (mysqli_num_rows($run_check) > 0) {
+                    echo "";
+                } else {
+                    $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                    $run_insert_pro = mysqli_query($con, $insert_pro);
+
+                    // echo "<script>window.location.reload(true)</script>";
+                }
             }
+        } else {
+            echo "<script>alert('Please Login First! ');</script>";
         }
     }
 
@@ -315,27 +312,27 @@
         global $con;
         if (isset($_SESSION['phonenumber'])) {
             $sess_phone_number = $_SESSION['phonenumber'];
-    
+
             $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
             $run_items =  mysqli_query($con, $get_items);
             $count_items =  mysqli_num_rows($run_items);
             return $count_items;
-        }
-        else {
+        } else {
             echo 0;
         }
     }
 
 
-    function emptyCart() {
+    function emptyCart()
+    {
         global $con;
         $sess_phone_number = $_SESSION['phonenumber'];
-    
+
         $get_items = "Delete from cart where phonenumber = '$sess_phone_number'";
-        $run_items =  mysqli_query($con,$get_items);
+        $run_items =  mysqli_query($con, $get_items);
         $count_items =  mysqli_num_rows($run_items);
     }
- 
+
 
     ?>
 

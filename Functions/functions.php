@@ -302,7 +302,7 @@
                 }
             }
         } else {
-            echo "<script>alert('Please Login First! ');</script>";
+            // echo "<script>alert('Please Login First! ');</script>";
         }
     }
 

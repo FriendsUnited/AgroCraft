@@ -3,8 +3,8 @@ Portal for Farmers to sell the product at a better rate
 • Problem statement in Description 
 	o System that provides farmers an interface to sell their product , and connect with the buyers all over India 
 	o Simple interface that works on mobile,SMS to upload product details and respond via phone and SMS (taking care of digital divide) 
-	o Interface for anyone to buy the produce/vegetable – initially visit the place and buy or have courier service integrated to deliver the vegetables so Farmers can get a better price for their produce, no additional 
- cost spent in marketing and delivery of goods , however they can choose to charge more by delivering the items themselves 
+	o Interface for anyone to buy the produce/vegetable – initially visit the place and buy or have courier service integrated to deliver the vegetables so Farmers can get a 
+		better price for their produce, no additional cost spent in marketing and delivery of goods , however they can choose to charge more by delivering the items themselves 
 
 • Purpose of this analysis and who will benefit 
 	o Farmers, Restaurant owners, Buyers , Courier Companies, Delivery Agencies, Vegetable Vendors

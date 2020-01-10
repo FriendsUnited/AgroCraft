@@ -294,7 +294,7 @@
 
     <h3>ALL PRODUCTS <div class="add_button"> <button class="button"><i class="fa fa-plus fa-2x"></i></button></div>
     </h3>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
 
     <br>
 

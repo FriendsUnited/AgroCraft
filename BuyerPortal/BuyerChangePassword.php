@@ -177,9 +177,9 @@ while ($row = mysqli_fetch_array($run_query)) {
 
     <?php
     if (isset($_POST['confirm'])) {
-        $currentpassword = $_POST['currentpassword'];
-        $newpassword = $_POST['newpassword'];
-        $confirmpassword = $_POST['confirmpassword'];
+        $currentpassword = mysqli_real_escape_string( $con, $_POST['currentpassword']);
+        $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
+        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
 
         echo $newpassword, "<br>";
         echo $confirmpassword, "<br>";

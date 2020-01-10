@@ -262,15 +262,15 @@
 	include("../Includes/db.php");
 
 	if (isset($_POST['register'])) {
-		$name = $_POST['name'];
-		$phonenumber = $_POST['phonenumber'];
-		$address = $_POST['address'];
-		$account = $_POST['account'];
-		$pan = $_POST['pan'];
-		$password = $_POST['password'];
-        $confirmpassword = $_POST['confirmpassword'];
-        $district = $_POST['district'];
-        $state = $_POST['statevalue'];
+		$name = mysqli_real_escape_string( $con, $_POST['name']);
+		$phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+		$address = mysqli_real_escape_string( $con, $_POST['address']);
+		$account = mysqli_real_escape_string( $con, $_POST['account']);
+		$pan = mysqli_real_escape_string( $con, $_POST['pan']);
+		$password = mysqli_real_escape_string( $con, $_POST['password']);
+        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
+        $district = mysqli_real_escape_string( $con, $_POST['district']);
+        $state = mysqli_real_escape_string( $con, $_POST['statevalue']);
 
 		if (strcmp($password,$confirmpassword) == 0){
 			

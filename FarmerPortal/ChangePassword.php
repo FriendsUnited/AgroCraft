@@ -241,19 +241,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-<<<<<<< HEAD
-    <div class="box">
-    <h1>CHANGE PASSWORD   </h1>
-    <form action = "" method = "post">
-        <input type = "password" name = "currentpassword" placeholder = "Current Password"/>  <br>
-        <input type = "password" name = "newpassword" placeholder = "New Password"/>  <br>
-        <input type = "password" name = "confirmpassword" placeholder = "Confirm New Password"/> <br>
-        <input type = "submit" name = "confirm" value = "Confirm"/>
-
-    </form>  
-    </div>  
-    <?php
-=======
     <div class="just">
         <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
@@ -299,12 +286,11 @@
     </div>  
 
 <?php
->>>>>>> 20bf5c04bffd9f7f04bc86bfd6f3c1539fb94b5b
     if (isset($_POST['confirm']))
     {
-        $currentpassword = $_POST['currentpassword'];
-        $newpassword = $_POST['newpassword'];
-        $confirmpassword = $_POST['confirmpassword'];
+        $currentpassword = mysqli_real_escape_string( $con, $_POST['currentpassword']);
+        $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
+        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
         // echo $newpassword, "<br>";
         // echo $confirmpassword, "<br>";
         // echo $currentpassword, "<br>";
@@ -312,7 +298,8 @@
         if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
         {
             $sql = "update farmerregistration 
-                    set farmer_password='$newpassword' ,farmer_conf_pswd='$confirmpassword'
+                    set farmer_password='$newpassword' ,
+                    farmer_conf_pswd='$confirmpassword'
                     where farmer_phone=$sessphonenumber";
             $run = mysqli_query($con, $sql);
             echo "<script>alert('Password Updated Sucessfully!');</script>";

@@ -388,8 +388,14 @@ include("../Functions/functions.php");
                          if (isset($_POST['cart'])) {
 
                               if (isset($_POST['quantity'])) {
+<<<<<<< HEAD
                                    $qty = $_POST['quantity'];
                               } else {
+=======
+                                   $qty = mysqli_real_escape_string( $con, $_POST['quantity']);
+                              }
+                              else{
+>>>>>>> 86ea573ca71f8ca66df238205e2ca49e0980ddf9
                                    $qty = 1;
                               }
                               global $con;

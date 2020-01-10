@@ -349,10 +349,10 @@
         /* .dropdown-content {
             display: none;
             /* position: sticky;  */
-            background-color: transparent;
+            /* background-color: transparent; */
             /* min-width: 250px; */
-            z-index: 1;
-        }
+            /* z-index: 1;
+        } */
 
         /* .dropdown-content a {
             color: rgb(12, 11, 11);
@@ -554,7 +554,7 @@
 	</div>
  -->
 
-   <div class="box"> <div class="lost">ALL PRODUCTS </div>
+   <div class="box"> <div class="lost">ALL PRODUCTS
    <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
      </div></button></div>>
     <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
@@ -571,6 +571,7 @@
 
     </div>
     </div>
+     </div>
      </div>
     <div class="trans">
 

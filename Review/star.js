@@ -1,14 +1,14 @@
 
 var __slice = [].slice;
 
-(function($, window) {
+(function ($, window) {
   var Starrr;
 
-  Starrr = (function() {
+  Starrr = (function () {
     Starrr.prototype.defaults = {
       rating: void 0,
       numStars: 5,
-      change: function(e, value) {}
+      change: function (e, value) { }
     };
 
     function Starrr($el, options) {
@@ -26,19 +26,19 @@ var __slice = [].slice;
       }
       this.createStars();
       this.syncRating();
-      this.$el.on('mouseover.starrr', 'span', function(e) {
+      this.$el.on('mouseover.starrr', 'span', function (e) {
         return _this.syncRating(_this.$el.find('span').index(e.currentTarget) + 1);
       });
-      this.$el.on('mouseout.starrr', function() {
+      this.$el.on('mouseout.starrr', function () {
         return _this.syncRating();
       });
-      this.$el.on('click.starrr', 'span', function(e) {
+      this.$el.on('click.starrr', 'span', function (e) {
         return _this.setRating(_this.$el.find('span').index(e.currentTarget) + 1);
       });
       this.$el.on('starrr:change', this.options.change);
     }
 
-    Starrr.prototype.createStars = function() {
+    Starrr.prototype.createStars = function () {
       var _i, _ref, _results;
 
       _results = [];
@@ -48,7 +48,7 @@ var __slice = [].slice;
       return _results;
     };
 
-    Starrr.prototype.setRating = function(rating) {
+    Starrr.prototype.setRating = function (rating) {
       if (this.options.rating === rating) {
         rating = void 0;
       }
@@ -57,7 +57,7 @@ var __slice = [].slice;
       return this.$el.trigger('starrr:change', rating);
     };
 
-    Starrr.prototype.syncRating = function(rating) {
+    Starrr.prototype.syncRating = function (rating) {
       var i, _i, _j, _ref;
 
       rating || (rating = this.options.rating);
@@ -80,11 +80,11 @@ var __slice = [].slice;
 
   })();
   return $.fn.extend({
-    starrr: function() {
+    starrr: function () {
       var args, option;
 
       option = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
-      return this.each(function() {
+      return this.each(function () {
         var data;
 
         data = $(this).data('star-rating');
@@ -99,13 +99,23 @@ var __slice = [].slice;
   });
 })(window.jQuery, window);
 
-$(function() {
+$(function () {
   return $(".starrr").starrr();
 });
 
-$( document ).ready(function() {
-  
-  $('#stars-existing').on('starrr:change', function(e, value){
+$(document).ready(function () {
+
+  $('#stars-existing').on('starrr:change', function (e, value) {
     $('#count-existing').html(value);
+    var id = $(this).parent().find('input.post_id').val();
+    $.get('http://localhost/AgroCraft/Review/rating.php?add_stars=' + value + "&post_id=" + id, function (data) {
+      if (data) {
+        alert(data);
+      } else {
+        alert("Error Insertin Record!!!");
+      }
+    })
+  
+   
   });
 });

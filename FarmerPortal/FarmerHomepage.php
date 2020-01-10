@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
         include("../Functions/functions.php");
-        ?> -->
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">

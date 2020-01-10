@@ -339,9 +339,11 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: white;
             text-align: center;
-            margin-top: 5em;
-            background-color: green;
-            height: 5%;
+            /* margin-top: 5em; */
+            background-color: olive;
+            height: 8%;
+            margin-top: 0;
+            border-radius: 30px;
         }
 
         /* .dropdown-content {
@@ -437,15 +439,36 @@
         }
         .subtract{
              float:right;
-             margin-right: 10%;
-             margin-top: 3%;
+             border-color:olive;
+          
+             margin-top: 2%; 
              text-align: center;
-             font-weight: 10px;
-             font-family: Arial, Helvetica, sans-serif;
+             /* font-weight: 10px; */
+             /* font-family: Arial, Helvetica, sans-serif; */
+             /* background-color: green; */
+             border-radius: 25px;
 
             
         } 
-
+        .box{
+            
+            color: rgb(6, 36, 7);
+            width: 1050px;
+             line-height: 40px; 
+             float:center;
+            margin: auto;
+            text-align: center;
+              margin-top: 120px;  
+             /* padding: 5px;  */
+             border-style: outset; 
+            /* border-width: 5px;
+            border-radius: 16px; */
+             border-color:black; 
+            /* font-size:20px; */
+            height: 900px;
+            border-radius: 30px;
+            
+        }
         
      </style>
 
@@ -531,9 +554,9 @@
 	</div>
  -->
 
-    <div class="lost">ALL PRODUCTS </div>
-    <<div class="subtract"><b>Add Product </b> <div class="add_button"><button class="button" href="../Admin/insert_product.php"><i class="fa fa-plus fa-2x"></i></button>
-     </div></div>>
+   <div class="box"> <div class="lost">ALL PRODUCTS </div>
+   <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button></div>>
     <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
 
     <br>
@@ -548,7 +571,7 @@
 
     </div>
     </div>
-
+     </div>
     <div class="trans">
 
 

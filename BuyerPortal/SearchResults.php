@@ -260,10 +260,11 @@ include("../Functions/functions.php");
                margin-left: 735px;
                margin-top: -50px;
           }
+
           #icon {
-			background-color:red;
-			color:white;
-		}
+               background-color: red;
+               color: white;
+          }
 
           .gmailid {
                float: right;
@@ -384,8 +385,7 @@ include("../Functions/functions.php");
 
                               if (isset($_POST['quantity'])) {
                                    $qty = $_POST['quantity'];
-                              }
-                              else{
+                              } else {
                                    $qty = 1;
                               }
                               global $con;
@@ -398,7 +398,8 @@ include("../Functions/functions.php");
                               if (mysqli_num_rows($run_check) > 0) {
                                    echo "";
                               } else {
-                                   $insert_pro = "insert into cart (product_id,phonenumber,qty) values ('$product_id','$sess_phone_number','$qty')";
+                                   $subtotal = $product_price*$qty;
+                                   $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
                                    $run_insert_pro = mysqli_query($con, $insert_pro);
                                    echo "<script>window.location.reload(true)</script>";
                               }

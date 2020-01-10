@@ -20,6 +20,14 @@
         }
     }
 
+    function CheckoutIdentify()
+    {
+        if (isset($_SESSION['phonenumber'])) {
+            echo "<script>window.open('CartPage.php','_self')</script>";
+        } else {
+            echo "<script>window.open('../auth/BuyerLogin.php','_self')</script>";
+        }
+    }
 
 
     function getCrops()
@@ -87,8 +95,7 @@
             $product_delivery = $rows['product_delivery'];
             if ($product_delivery == "yes") {
                 $product_delivery = "Delivery by Farmer";
-            }
-            else {
+            } else {
                 $product_delivery = "Delivery by Farmer Not Available";
             }
             echo " <div class='inputwrapper'>
@@ -97,7 +104,9 @@
                             <label>$product_title</label><br>
                             <label>PRICE:- $product_price Rs/kg</label><br>	
                             <label id='shop2'></label>$product_delivery<br>Qty:-
-                            <input class='numberinput' type='number' name='number' value = '1' >
+                            <form action = ''  method = 'post'>
+                            <input class='numberinput' type='number' name='quantity' value = '1' >
+                            </form>
                             <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                         </div> ";
         }
@@ -175,8 +184,7 @@
                         . "</div>";
                 }
             }
-        }
-        else{
+        } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
@@ -207,8 +215,7 @@
                         </div> 
                         ";
             }
-        }
-        else{
+        } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
@@ -269,23 +276,33 @@
     // Checkout System Functions
     function cart()
     {
-        if (isset($_GET['add_cart'])) {
+        if (isset($_SESSION['phonenumber'])) {
+            if (isset($_GET['add_cart'])) {
 
-            global $con;
-            $sess_phone_number = $_SESSION['phonenumber'];
-            $product_id = $_GET['add_cart'];
+                global $con;
+                if (isset($_POST['quantity'])) {
+                    $qty = $_POST['quantity'];
+                } else {
+                    $qty = 1;
+                }
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $product_id = $_GET['add_cart'];
 
-            $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
-            $run_check = mysqli_query($con, $check_pro);
+                $run_check = mysqli_query($con, $check_pro);
 
-            if (mysqli_num_rows($run_check) > 0) {
-                echo "";
-            } else {
-                $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                $run_insert_pro = mysqli_query($con, $insert_pro);
-                echo "<script>window.open('../BuyerPortal/BuyerHomepage.php','_self')</script>";
+                if (mysqli_num_rows($run_check) > 0) {
+                    echo "";
+                } else {
+                    $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                    $run_insert_pro = mysqli_query($con, $insert_pro);
+
+                    // echo "<script>window.location.reload(true)</script>";
+                }
             }
+        } else {
+            // echo "<script>alert('Please Login First! ');</script>";
         }
     }
 
@@ -293,49 +310,57 @@
     function totalItems()
     {
         global $con;
-        $sess_phone_number = $_SESSION['phonenumber'];
-    
-        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
-        $run_items =  mysqli_query($con,$get_items);
-        $count_items =  mysqli_num_rows($run_items);
-        echo $count_items;
-    }
+        if (isset($_SESSION['phonenumber'])) {
+            $sess_phone_number = $_SESSION['phonenumber'];
 
-    function grandTotal()
-    {
-        $total = 0;
-        global $con;
-        $sess_phone_number = $_SESSION['phonenumber'];
-
-        $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
-        $run_price = mysqli_query($con, $get_items);
-
-        while ($p_price = mysqli_fetch_array($run_price)) {
-            $product_id = $p_price['product_id'];
-
-            $pro_price = "select * from products where product_id='$product_id'";
-            $run_pro_price = mysqli_query($con, $pro_price);
-            while ($pp_price = mysqli_fetch_array($run_pro_price)) {
-                $product_price = array($pp_price['product_price']);
-
-                $values = array_sum($product_price);
-                $total += $values;
-            }
+            $get_items = "select * from cart where phonenumber = '$sess_phone_number'";
+            $run_items =  mysqli_query($con, $get_items);
+            $count_items =  mysqli_num_rows($run_items);
+            return $count_items;
+        } else {
+            echo 0;
         }
-        echo "Rs" . $total;
     }
 
-    function emptyCart() {
+
+    function emptyCart()
+    {
         global $con;
         $sess_phone_number = $_SESSION['phonenumber'];
-    
+
         $get_items = "Delete from cart where phonenumber = '$sess_phone_number'";
-        $run_items =  mysqli_query($con,$get_items);
+        $run_items =  mysqli_query($con, $get_items);
         $count_items =  mysqli_num_rows($run_items);
     }
+
+
+    ?>
+
+<script>
+    //var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+<<<<<<< HEAD
+        echo "Rs" . $total;
+=======
+>>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+<<<<<<< HEAD
     // function clearChat(){
     //    $query = $db->prepare("Delete from chat");
     //    $query->execute();       
     // }
     ?>
 
+=======
+</script>
+>>>>>>> 9c155940777bf8a255346cdea059f4c08af76260

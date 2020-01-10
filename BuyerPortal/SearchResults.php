@@ -384,7 +384,7 @@ include("../Functions/functions.php");
                          if (isset($_POST['cart'])) {
 
                               if (isset($_POST['quantity'])) {
-                                   $qty = $_POST['quantity'];
+                                   $qty = mysqli_real_escape_string( $con, $_POST['quantity']);
                               } else {
                                    $qty = 1;
                               }

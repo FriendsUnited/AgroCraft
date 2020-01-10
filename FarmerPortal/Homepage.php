@@ -339,10 +339,19 @@
             /* <font-fam></font-fam>; */
             color: black;
             text-align: center;
+<<<<<<< HEAD
             height: 8%;
             margin-top: 150px;
             border-radius: 30px;
             font-size:30px;
+=======
+            /* margin-top: 5em; */
+            background-color: olive;
+            /* height: 8%; */
+            margin-top: 120px;
+            /* border-radius: 30px; */
+            margin:auto;
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
         }
 
         /* .dropdown-content {
@@ -449,7 +458,7 @@
 
             
         } 
-        .box{
+        /* .box{
             
             color: rgb(6, 36, 7);
             width: 1050px;
@@ -459,14 +468,15 @@
             text-align: center;
               margin-top: 120px;  
              /* padding: 5px;  */
-             border-style: outset; 
+             /* border-style: outset;  */
             /* border-width: 5px;
             border-radius: 16px; */
-             border-color:black; 
+             /* border-color:black;  */
             /* font-size:20px; */
-            height: 900px;
+            /* height: 900px;
             border-radius: 30px;
             
+<<<<<<< HEAD
         }
         .please{
              text-align:center;
@@ -474,6 +484,10 @@
              margin-right:500px;
         }
         
+=======
+        } */
+         */
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
      </style>
 
 </head>
@@ -558,9 +572,15 @@
 	</div>
  -->
 
+<<<<<<< HEAD
     <div class="lost">ALL PRODUCTS </div>
    <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
      </div></button>
+=======
+   <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button></div>>
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
     <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
 
     <br>

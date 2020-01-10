@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
         include("../Functions/functions.php");
-        ?> -->
+        ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -84,10 +84,10 @@
         /* .dropdown-content {
             display: none;
             /* position: sticky;  */
-            background-color: transparent;
+            /* background-color: transparent; */
             /* min-width: 250px; */
-            z-index: 1;
-        }
+            /* z-index: 1;
+        } */
 
         /* .dropdown-content a {
             color: rgb(12, 11, 11);

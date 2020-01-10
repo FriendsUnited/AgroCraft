@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
      include("../Functions/functions.php");
-     ?>  -->
+     ?> 
 
 <!DOCTYPE html>
 
@@ -336,23 +336,22 @@
         } */
 
         .lost{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
+            /* <font-fam></font-fam>; */
+            color: black;
             text-align: center;
-            /* margin-top: 5em; */
-            background-color: olive;
             height: 8%;
-            margin-top: 0;
+            margin-top: 150px;
             border-radius: 30px;
+            font-size:30px;
         }
 
         /* .dropdown-content {
             display: none;
             /* position: sticky;  */
-            background-color: transparent;
+            /* background-color: transparent; */
             /* min-width: 250px; */
-            z-index: 1;
-        }
+            /* z-index: 1;
+        } */
 
         /* .dropdown-content a {
             color: rgb(12, 11, 11);
@@ -469,6 +468,11 @@
             border-radius: 30px;
             
         }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
+        }
         
      </style>
 
@@ -480,12 +484,12 @@
 
           <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
-          <div class="search_input">
+          <!-- <div class="search_input">
                <form action="SearchResults.php" method="get" enctype="multipart/form-data">
                     <i class="fas fa-search" style="font-size:20px;color:white; "></i>
                     <input type="text" id="input1" name="search" placeholder="Search...">
                </form>
-          </div>
+          </div> -->
 
           <div class="dropdown">
           <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
@@ -496,7 +500,7 @@
                <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
      </ul>
 
-			<!-- <?php
+			<?php
 				if (isset($_SESSION['phonenumber'])) {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 				
@@ -505,7 +509,7 @@
 				else {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
 				}
-			?> -->
+			?>
 		</div>
 		<div class="proicon">
 			<?php
@@ -554,10 +558,10 @@
 	</div>
  -->
 
-   <div class="box"> <div class="lost">ALL PRODUCTS </div>
-   <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
-     </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+    <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button>
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
 
     <br>
 
@@ -575,10 +579,10 @@
     <div class="trans">
 
 
-        <div class="lost">TRANSACTION HISTORY</h3>
+      <br><br><br><br><br><br><br><br>  <div class="lost">TRANSACTION HISTORY</h3>
     </div>
 
-
+<div class="please">
     <div>
         <br>
         <br>
@@ -607,7 +611,7 @@
         </table>
     </div>
 
- 
+ </div>
 
 
      <div class="footer">

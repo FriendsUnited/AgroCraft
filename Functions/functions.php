@@ -9,12 +9,23 @@
             global $con;
             $query = "select * from buyerregistration where buyer_phone = $phonenumber";
             $run_query = mysqli_query($con, $query);
-
-            while ($row_cat = mysqli_fetch_array($run_query)) {
-                $buyer_name = $row_cat['buyer_name'];
+            if ($run_query) {
+                while ($row_cat = mysqli_fetch_array($run_query)) {
+                    $buyer_name = $row_cat['buyer_name'];
+                    $buyer_name = 'Hello ,' . $buyer_name;
+                }
+                
+                echo@ "<label>$buyer_name</label>";
             }
+            $query = "select * from farmerregistration where farmer_phone = $phonenumber";
+            $run_query = mysqli_query($con, $query);
+            if ($run_query) {
+                while ($row_cat = mysqli_fetch_array($run_query)) {
+                    $buyer_name = $row_cat['farmer_name'];
+                }
 
-            echo "<label>Hello ,$buyer_name</label>";
+                echo "<label>Hello ,$buyer_name</label>";
+            }
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
         }
@@ -336,31 +347,33 @@
 
     ?>
 
-<script>
-    //var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-<<<<<<< HEAD
-        echo "Rs" . $total;
-=======
->>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
-    }
+ <script>
+     //var x = document.getElementById("demo");
+     function getLocation() {
+         if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition);
+         } else {
+             x.innerHTML = "Geolocation is not supported by this browser.";
+         } <<
+         << << < HEAD
+         echo "Rs".$total; ===
+         === = >>>
+         >>> > 9 c155940777bf8a255346cdea059f4c08af76260
+     }
 
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-<<<<<<< HEAD
-    // function clearChat(){
-    //    $query = $db->prepare("Delete from chat");
-    //    $query->execute();       
-    // }
-    ?>
+     function showPosition(position) {
+         x.innerHTML = "Latitude: " + position.coords.latitude +
+             "<br>Longitude: " + position.coords.longitude;
+     } <<
+     << << < HEAD
+         // function clearChat(){
+         //    $query = $db->prepare("Delete from chat");
+         //    $query->execute();       
+         // }
+         ?
+         >
 
-=======
-</script>
->>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
+         ===
+         === =
+ </script>
+ >>>>>>> 9c155940777bf8a255346cdea059f4c08af76260

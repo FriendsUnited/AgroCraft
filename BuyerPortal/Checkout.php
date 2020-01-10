@@ -277,7 +277,7 @@ include('../Functions/functions.php');
       color: #00b300;
     }
 
-    .images {
+    .images {                                                                                                       
       height: 100px;
       width: 100px;
       margin-top: 10px;
@@ -315,7 +315,7 @@ include('../Functions/functions.php');
   <br>
   <div class="lang">
 
-    <label>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi <br>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi </label>
+    <textarea rows=5 cols=40>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi <br>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi </textarea>
   </div>
 
   <br><br><br><br><br>

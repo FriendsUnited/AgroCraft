@@ -11,7 +11,9 @@
         $phone = $row['farmer_phone'];
         $address = $row['farmer_address'];
         $pan = $row['farmer_pan'];
-        $bank= $row['farmer_bank'];
+        $bank = $row['farmer_bank'];
+        $state = $row['farmer_state'];
+        $district = $row['farmer_district'];
 
     }   
     
@@ -166,6 +168,16 @@
                 <td><label><b>Address :</b></label></td>
                 <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
             </tr>
+
+            <tr align = "center">
+                <td><label><b>State :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $state?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>District :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $district?> </textarea><br></td>
+            </tr>
+
             <tr align = "center">
                 <td><label><b>Pan Number :</b></label></td>
                 <td><textarea rows="2" column="10" disabled> <?php echo $pan?> </textarea><br></td>

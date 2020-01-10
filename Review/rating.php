@@ -1,7 +1,19 @@
 <?php
-        include("../Includes/db.php");
-        // session_start();
-        // $sessphonenumber = $_SESSION['phonenumber'];
+	include("../Includes/db.php");
+
+	if(isset($_GET['add_stars']) AND isset($_GET['post_id'])){
+		$id = (int)$_GET['post_id'];
+		$stars = (int)$_GET['add_stars'];
+		$query = $con->query("INSERT INTO review (stars) VALUES ({$stars})");
+		if($query){
+			echo 1;
+		}else{
+			echo 0;
+		}
+	}else{
+		//$result = $con->query("SELECT post.*, count(stars.id) AS total, sum(stars.stars) AS stars FROM post LEFT JOIN stars ON post.id = stars.post_id GROUP BY post.id");
+	}
+
 ?>
 
 
@@ -25,16 +37,17 @@
 	<div class="row">
 		<h2>Working Star Ratings for Bootstrap 3 <small>Hover and click on a star</small></h2>
 	</div>
-    
+
     <div class="row lead">
         <p>Also you can give a default rating by adding attribute data-rating</p>
         <div id="stars-existing" class="starrr" data-rating='4'></div>
         You gave a rating of <span id="count-existing">4</span> star(s)
-        <input type = "hidden" id = "post_id" value = "<?php ?>"/>
+        <input type = "hidden" id = "post_id" value = "<?php echo $post->id; ?>"/>
     </div>
 </div>
 <script src="star.js"></script>
 </body>
 </html>
+
 
 

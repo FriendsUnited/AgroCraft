@@ -68,7 +68,7 @@ include("../Functions/functions.php");
 
           .dropdown {
                float: right;
-               margin-right: 10px;
+               margin-right: 35px;
                margin-top: 20px;
           }
 
@@ -77,8 +77,7 @@ include("../Functions/functions.php");
                margin-left: 20px;
                width: 25px;
                margin-right: 50px;
-
-
+               display: inline;
           }
 
           .icon2 {
@@ -352,7 +351,7 @@ include("../Functions/functions.php");
           .subtract {
                float: right;
                border-color: olive;
-               margin-right: 15%;
+               margin-right: 12%;
                background-color: #00b300;
                text-align: center;
                /* border-radius: 25px; */
@@ -418,6 +417,7 @@ include("../Functions/functions.php");
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
                          echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
+                         echo "<li class='options'> <a href='CallCenter.php'><label class='makeitgreen'>Call Centers</label></a></li>";
                          echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
                          echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Login</label></a></li>";

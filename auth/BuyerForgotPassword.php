@@ -100,10 +100,10 @@
 <?php 
     include("../Includes/db.php");
     if(isset($_POST['register'])) {
-        $phonenumber = $_POST['phonenumber'];
-        $pan = $_POST['pan'];
-        $password = $_POST['password'];
-        $confirmpassword = $_POST['confirmpassword'];
+        $phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+        $pan = mysqli_real_escape_string( $con, $_POST['pan']);
+        $password = mysqli_real_escape_string( $con, $_POST['password']);
+        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
 
         $query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_pan = '$pan'";
         $run_query = mysqli_query($con,$query);

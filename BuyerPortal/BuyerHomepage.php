@@ -174,7 +174,7 @@ else{
 		}
 		.dropdown {
 			float: right;
-			margin-right: 10px;
+			margin-right: 20px;
 			margin-top: 20px;
 
 
@@ -183,9 +183,12 @@ else{
 		.options {
 			/* font-weight:bold; */
 			color: yellow;
-			margin-left: 20px;
-			width: 25px;
-			margin-right: 50px;
+			margin-left: 5px;
+		
+			
+			display: inline;
+			margin-right: 26px;
+			
 
 		}
 
@@ -522,7 +525,7 @@ else{
 		}
 
 		.etc {
-			margin-left: -40px;
+			margin-left: -90px;
 			min-width: 90px;
 			font-size: 20px;
 
@@ -623,6 +626,8 @@ else{
 			float: left;
 			margin-top: -65px;
 			/* background-color:grey; */
+		}.dric{
+			margin-left:-50px; 
 		}
 	</style>
 
@@ -647,11 +652,19 @@ else{
 			</form>
 		</div>
 		<div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" class="dric" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
 			<ul class="dropdown-menu etc">
 			<?php
 				if (isset($_SESSION['phonenumber'])) {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
 				
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
 				}
@@ -833,7 +846,8 @@ else{
 	<hr><br>
 	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
 	<hr>
-	<div>
+	<div>.
+
 		<?php 
 			cart();
 			getProducts();

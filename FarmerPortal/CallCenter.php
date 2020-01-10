@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
      include("../Functions/functions.php");
-     ?> 
+     ?>  -->
 
 <!DOCTYPE html>
 
@@ -78,7 +78,6 @@
                margin-left: 20px;
                width: 25px;
                margin-right: 50px;
-
 
           }
 
@@ -272,91 +271,45 @@
                float: left;
                margin-top: -65px;
           }
-          body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
-
-        .wrapper {
-            background-image: 100px;
-        }
-
-        .add_button {
-            float: right;
-            text-align: center;
-        }
-
-
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-
-        }
-
-        .lost{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            text-align: center;
-            background-color: olive;
-            margin-top: 120px;
-            margin:auto;
-        }
-
-
-        .new {
-            text-align: center;
-        }
-
-        .button {
-            position: relative;
-            float: right;
-        }
-
-        h2 {
-            color: white;
-            margin-top: 3em;
-            text-align: center;
-
-        }
-
-        .hii {
-            float: right;
-            margin-right: 5em;
-        }
-
-        .ribbon {
-            position: relative;
-            top: -16px;
-            right: -706px;
-            float: left;
-            top: 0px;
-            left: 0px;
-            height: 74px;
-            background-color: green;
-        }
-
-        .over {
-            background-color: green;
-            border: 1px;
+          .tab{
             width: 100%;
-            white-space: nowrap;
-            height: 70px;
-
+        
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+               
 
         }
-        .subtract{
-             float:right;
-             border-color:olive;  
-             margin-top: 2%; 
-             text-align: center;
-             border-radius: 25px;
+        td{
+            border-style: solid;
+            border-width: 2px;
+            font-size: 50px;
+        }
+        tr{
+            border-style: solid;
+        }
+        th{
+            border-color: grey;
+            border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+               font-size: 22px;
+              
+        }
+        .tableyhead{
             
-        } 
-       
+            color: red;
+        
+        }
+        .thy {
+               background-color: #555;
+               color: white;
+               border-style: solid;
+               
+          }
+          .trow{
+              align-content: center;
+          }
      </style>
 
 </head>
@@ -375,17 +328,11 @@
           </div>
 
           <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
-            </button></i>
-			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
-			<ul  class="dropdown-menu etc"1
-              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
-               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
-     </ul>
-
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
 			<?php
 				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 				
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
 				}
@@ -408,7 +355,7 @@
 
           <div class="icon2">
 			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
 		</div>
 
           <div class="loginz">
@@ -416,7 +363,7 @@
           </div>
      </div>
 
-     <!-- <div class="headerdown">
+     <div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
 				<span class="caret"></span></button>
@@ -439,100 +386,119 @@
 			</ul>
 		</div>
 	</div>
- -->
 
-   <div class="lost">ALL PRODUCTS </div>
-   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
-     </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
-
+    <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Call Center , Location's & Langauges</b></label></div>
     <br>
+    <h4 align="center">Phone Number : 9820835845</h4>
+    <br>
+    <table  class=tab>
+        <thead  align="center" class=tableyhead>
+        <th  class=thy>SR NO.</th>
+        <th  class=thy>LOCATION</th>
+        <th  class=thy>STATES</th>
+        <th  class=thy >LANGUAGES</th>
+        
+        
+    </thead>
+    <tr align="center" class=trow>
+    <th align="center" >1</th>
+    <th align="center">Hyderabad</th>
+    <th align="center">Andhra Pradesh</th>
+    <th align="center">Telugu</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >2</th>
+    <th align="center">Patna</th>
+    <th align="center">Bihar | Jharkhand</th>
+    <th align="center">Hindi</th>
+    
 
-    <div>
-        <?php
-        include("../Includes/db.php");
-        $sess_phone_number = $_SESSION['phonenumber'];
-        getFarmerProducts();
-        ?>
-
-
-    </div>
-    </div>
-     </div>
-     </div>
-    <div class="trans">
-
-
-        <div class="lost">TRANSACTION HISTORY</h3>
-    </div>
-
-
-    <div>
-        <br>
-        <br>
-
-        <table border="2">
-
-            <tr>
-                <th width=200px>Date</th>
-                <th width=200px>Name</th>
-                <th width=200px>Phone Number</th>
-                <th width=200px>Address</th>
-                <th width=200px>Quantity</th>
-                <th width=200px>Price</th>
-
-            </tr>
-            <tr>
-                <td>12-1-2000</td>
-                <td>melissa</td>
-                <td>1234567890</td>
-                <td>sajgdkagdd</td>
-                <td>500</td>
-                <td>200</td>
-            </tr>
-            <tr></tr>
-            <tr></tr>
-        </table>
-    </div>
-
- 
-
-
-     <div class="footer">
-          <hr>
-          <label class="payment">Payment Options:-</label>
-          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
-          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-     </div><br><br>
-     <h3><span> GET SOCIAL WITH US </span></h3>
-     </div>
-     <div class="morefooter">
-
-          <div class="call">
-               <i class="fas fa-phone-alt call_color"></i>
-               <a href="#" style="color:black;">+91-8191046421</a>
-          </div>
-
-          <div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
-          </div>
-
-          <div class="gmail">
-               <img src="../Images/Website/gmail.jpg" height="30px" width="50px">
-          </div>
-
-     </div>
-     <div class="instaid">
-          <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
-
-          <div class="gmailid">
-               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
-          </div>
-
-     </div>
-     <div class="copy">
-          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
-     </div>
-
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >3</th>
+    <th align="center">Jaipur</th>
+    <th align="center">Delhi | Rajasthan</th>
+    <th align="center">Hindi</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >4</th>
+    <th align="center">Ahmadabad/Anand</th>
+    <th align="center">Gujarat | Dadra & Nagar Haveli | Daman & Diu</th>
+    <th align="center">Gujarati | Goan</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >5</th>
+    <th align="center">Chandigarh</th>
+    <th align="center">Haryana | Punjab | Chandigarh | Himachal Pradesh</th>
+    <th align="center">Hindi/Haryanvi | Punjabi | Hindi</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >6</th>
+    <th align="center">Jammu</th>
+    <th align="center">Jammu and Kashmir</th>
+    <th align="center">Dogri, Kashmiri, Ladakh</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >7</th>
+    <th align="center">Bangalore</th>
+    <th align="center">Karnataka | Kerala | Lakshadweep</th>
+    <th align="center">Kannada | Malayalam</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >8</th>
+    <th align="center">Jabalpur</th>
+    <th align="center">Madhya Pradesh | Chhattisgarh</th>
+    <th align="center">Hindi</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >9</th>
+    <th align="center">Nagpur/Pune</th>
+    <th align="center">Maharashtra | Goa</th>
+    <th align="center">Marathi | Goan</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >10</th>
+    <th align="center">Coimbatore</th>
+    <th align="center">Tamil Nadu | Puducherry | Andaman & Nicobar</th>
+    <th align="center">Tamil</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >11</th>
+    <th align="center">Kanpur</th>
+    <th align="center">Uttar Pradesh | Uttarakhand</th>
+    <th align="center">Hindi</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >12</th>
+    <th align="center">Kolkata</th>
+    <th align="center">West Bengal | Sikkim</th>
+    <th align="center">Bengali | Sikkimese</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >13</th>
+    <th align="center">Bhubaneshwar</th>
+    <th align="center">Orissa</th>
+    <th align="center">Oriya</th>
+    
+    </tr>
+    <tr align="center" class=trow>
+    <th align="center" >14</th>
+    <th align="center">Guwahati</th>
+    <th align="center">Arunachal Pradesh | Assam | Manipur | Meghalaya | Mizoram | Nagaland | Tripura</th>
+    <th align="center">Adi | Assamese | Manipuri | Khasi | Mizo | Nagamese | Bengali</th>
+    
+    </tr>
 </body>
 
 </html>

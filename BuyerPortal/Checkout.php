@@ -396,9 +396,9 @@ include('../Functions/functions.php');
     <?php
       if (isset($_POST['order']))
       {
-          $payment = $_Post['payment'];
-          $delivery = $_POST['delivery'];
-          $total = $_SESSION['grandtotal'];
+          $payment = mysqli_real_escape_string( $con, $_Post['payment']);
+          $delivery = mysqli_real_escape_string( $con, $_POST['delivery']);
+          $total = mysqli_real_escape_string( $con, $_SESSION['grandtotal']);
           $query = "insert into order (address,delivery,phonenumber,grandtotal,payment) values 
           '$address','$delivery','$sess_phone_number','$total','$payment' ";
           $run_query = mysqli_query($con,$query);

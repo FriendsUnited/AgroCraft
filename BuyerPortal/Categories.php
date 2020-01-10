@@ -242,10 +242,11 @@ include("../Functions/functions.php");
                margin-right: 150px;
 
           }
+
           #icon {
-			background-color:red;
-			color:white;
-		}
+               background-color: red;
+               color: white;
+          }
 
           .instagram {
                margin-top: 10px;
@@ -388,24 +389,27 @@ include("../Functions/functions.php");
 
                               if (isset($_POST['quantity'])) {
                                    $qty = $_POST['quantity'];
-                              }
-                              else{
+                              } else {
                                    $qty = 1;
                               }
                               global $con;
-                              $sess_phone_number = $_SESSION['phonenumber'];
-     
-                              $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+                              if (isset($_SESSION['phonenumber'])) {
+                                   $sess_phone_number = $_SESSION['phonenumber'];
 
-                              $run_check = mysqli_query($con, $check_pro);
+                                   $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
-                              if (mysqli_num_rows($run_check) > 0) {
-                                   echo "";
+                                   $run_check = mysqli_query($con, $check_pro);
+
+                                   if (mysqli_num_rows($run_check) > 0) {
+                                        echo "";
+                                   } else {
+                                        $subtotal = $product_price * $qty;
+                                        $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
+                                        $run_insert_pro = mysqli_query($con, $insert_pro);
+                                        echo "<script>window.location.reload(true)</script>";
+                                   }
                               } else {
-                                   $subtotal = $product_price*$qty;
-                                   $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
-                                   $run_insert_pro = mysqli_query($con, $insert_pro);
-                                   echo "<script>window.location.reload(true)</script>";
+                                   echo "<script>window.alert('Please Login First!');</script>";
                               }
                          }
                     }

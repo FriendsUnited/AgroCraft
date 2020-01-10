@@ -1,6 +1,6 @@
 <?php
-     include("../Functions/functions.php");
-     ?> 
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,6 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
      <title>Agrocraft Homepage</title>
-     <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -272,91 +271,129 @@
                float: left;
                margin-top: -65px;
           }
+
           body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          }
 
-        .wrapper {
-            background-image: 100px;
-        }
+          .wrapper {
+               background-image: 100px;
+          }
 
-        .add_button {
-            float: right;
-            text-align: center;
-        }
-
-
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-
-        }
-
-        .lost{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            text-align: center;
-            background-color: olive;
-            margin-top: 120px;
-            margin:auto;
-        }
+          .add_button {
+               float: right;
+               text-align: center;
+          }
 
 
-        .new {
-            text-align: center;
-        }
+          h1 {
+               font-family: 'Times New Roman', Times, serif;
+               color: white;
 
-        .button {
-            position: relative;
-            float: right;
-        }
+          }
 
-        h2 {
-            color: white;
-            margin-top: 3em;
-            text-align: center;
-
-        }
-
-        .hii {
-            float: right;
-            margin-right: 5em;
-        }
-
-        .ribbon {
-            position: relative;
-            top: -16px;
-            right: -706px;
-            float: left;
-            top: 0px;
-            left: 0px;
-            height: 74px;
-            background-color: green;
-        }
-
-        .over {
-            background-color: green;
-            border: 1px;
-            width: 100%;
-            white-space: nowrap;
-            height: 70px;
+          .lost {
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               color: black;
+               text-align: center;
+               /* background-color: olive; */
+               margin-top: 220px;
+               margin: auto;
+          }
 
 
-        }
-        .subtract{
-             float:right;
-             border-color:olive;  
-             margin-top: 2%; 
-             text-align: center;
-             border-radius: 25px;
-            
-        } 
-       
+          .new {
+               text-align: center;
+          }
+
+          .button {
+               position: relative;
+               float: right;
+          }
+
+          h2 {
+               color: white;
+               margin-top: 3em;
+               text-align: center;
+
+          }
+
+          .hii {
+               float: right;
+               margin-right: 5em;
+          }
+
+          .ribbon {
+               position: relative;
+               top: -16px;
+               right: -706px;
+               float: left;
+               top: 0px;
+               left: 0px;
+               height: 74px;
+               background-color: green;
+          }
+
+          .over {
+               background-color: green;
+               border: 1px;
+               width: 100%;
+               white-space: nowrap;
+               height: 70px;
+
+
+          }
+
+          .subtract {
+               float: right;
+               border-color: olive;
+               margin-right: 15%;
+               background-color: #00b300;
+               text-align: center;
+               /* border-radius: 25px; */
+               width: 9%;
+               height: 8%;
+               margin-top: -5%;
+               padding: 5px;
+
+          }
+
+          .items {
+               width: 100%;
+               margin: auto;
+               height: auto;
+          }
+
+          .productbox {
+               float: left;
+               margin: 15px;
+               margin-left: 30px;
+               padding: 15px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 10px;
+          }
+
+          .productbox:hover {
+               float: left;
+               margin: 25px;
+               margin-left: 30px;
+               padding: 20px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 5px;
+               font-weight: bolder;
+               height:325px;
+               width:240px;
+               
+          }
      </style>
 
 </head>
@@ -365,7 +402,7 @@
 
      <div class="header">
 
-          <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+          <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="search_input">
                <form action="SearchResults.php" method="get" enctype="multipart/form-data">
@@ -375,127 +412,90 @@
           </div>
 
           <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
-            </button></i>
-			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
-			<ul  class="dropdown-menu etc"1
-              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
-               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
-     </ul>
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
+               </button></i>
+               <ul class="dropdown-menu etc">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
+                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+                    } else {
+                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Login</label></a></li>";
+                    }
+                    ?>
+               </ul>
+          </div>
 
-			<?php
-				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
-				
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-				}
-				else {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-				}
-			?>
-		</div>
-		<div class="proicon">
-			<?php
-		if (!isset($_SESSION['phonenumber'])) {
-		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		else {
-			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		?>
-		</div>
-
-
-          <div class="icon2">
-			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
-		</div>
+          <div class="proicon">
+               <?php
+               if (!isset($_SESSION['phonenumber'])) {
+                    echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               } else {
+                    echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               }
+               ?>
+          </div>
 
           <div class="loginz">
-               <?php getUsername(); ?>
+               <?php getFarmerUsername(); ?>
           </div>
      </div>
 
-     <!-- <div class="headerdown">
-		<div class="sel1 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu  ">
-				<?php getCrops(); ?>
-			</ul>
-		</div>
-		<div class="sel2 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-				<?php getVegetables(); ?>
-			</ul>
-		</div>
-		<div class="sel3 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-			<?php getFruits(); ?>
-			</ul>
-		</div>
-	</div>
- -->
-
-   <div class="lost">ALL PRODUCTS </div>
-   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
-     </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
-
-    <br>
-
-    <div>
-        <?php
-        include("../Includes/db.php");
-        $sess_phone_number = $_SESSION['phonenumber'];
-        getFarmerProducts();
-        ?>
+     <br>
 
 
-    </div>
-    </div>
+     <div class="items">
+
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;">
+                    <b>All Product's</b></label>
+          </div>
+          <div style="display:block;">
+               <button class="subtract"><label style="padding:10px;padding-bottom:15px;color:white;">
+                         <b>Add Product </b>
+                    </label></button>
+               <hr>
+          </div>
+          <?php
+          include("../Includes/db.php");
+          if (isset($_SESSION['phonenumber'])) {
+               $sess_phone_number = $_SESSION['phonenumber'];
+               getFarmerProducts();
+          } else {
+               echo "<br><br><h1 align = center>Please Login!</h1><br><br><hr>";
+          }
+          ?>
+
      </div>
+
+
+     <div style="display:block;">
+          <br> <br>
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
+
+          <table align="center" border="2">
+
+               <tr>
+                    <th width=200px>Date</th>
+                    <th width=200px>Name</th>
+                    <th width=200px>Phone Number</th>
+                    <th width=200px>Address</th>
+                    <th width=200px>Quantity</th>
+                    <th width=200px>Price</th>
+               </tr>
+
+               <tr>
+                    <td>12-1-2000</td>
+                    <td>melissa</td>
+                    <td>1234567890</td>
+                    <td>sajgdkagdd</td>
+                    <td>500</td>
+                    <td>200</td>
+               </tr>
+
+          </table>
      </div>
-    <div class="trans">
 
 
-        <div class="lost">TRANSACTION HISTORY</h3>
-    </div>
-
-
-    <div>
-        <br>
-        <br>
-
-        <table border="2">
-
-            <tr>
-                <th width=200px>Date</th>
-                <th width=200px>Name</th>
-                <th width=200px>Phone Number</th>
-                <th width=200px>Address</th>
-                <th width=200px>Quantity</th>
-                <th width=200px>Price</th>
-
-            </tr>
-            <tr>
-                <td>12-1-2000</td>
-                <td>melissa</td>
-                <td>1234567890</td>
-                <td>sajgdkagdd</td>
-                <td>500</td>
-                <td>200</td>
-            </tr>
-            <tr></tr>
-            <tr></tr>
-        </table>
-    </div>
-
- 
 
 
      <div class="footer">

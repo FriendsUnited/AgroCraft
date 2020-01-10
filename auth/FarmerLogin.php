@@ -153,8 +153,8 @@ include("../Includes/db.php");
 session_start();
 if (isset($_POST['login'])) {
 
-	$phonenumber = $_POST['phonenumber'];
-	$password = $_POST['password'];
+	$phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+	$password = mysqli_real_escape_string( $con, $_POST['password']);
 
 	$query = "select * from farmerregistration where farmer_phone = '$phonenumber' and farmer_password = '$password'";
 	$run_query = mysqli_query($con, $query);

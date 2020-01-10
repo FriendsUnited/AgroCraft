@@ -341,18 +341,19 @@
             text-align: center;
             /* margin-top: 5em; */
             background-color: olive;
-            height: 8%;
-            margin-top: 0;
-            border-radius: 30px;
+            /* height: 8%; */
+            margin-top: 120px;
+            /* border-radius: 30px; */
+            margin:auto;
         }
 
         /* .dropdown-content {
             display: none;
             /* position: sticky;  */
-            background-color: transparent;
+            /* background-color: transparent; */
             /* min-width: 250px; */
-            z-index: 1;
-        }
+            /* z-index: 1;
+        } */
 
         /* .dropdown-content a {
             color: rgb(12, 11, 11);
@@ -450,7 +451,7 @@
 
             
         } 
-        .box{
+        /* .box{
             
             color: rgb(6, 36, 7);
             width: 1050px;
@@ -460,16 +461,16 @@
             text-align: center;
               margin-top: 120px;  
              /* padding: 5px;  */
-             border-style: outset; 
+             /* border-style: outset;  */
             /* border-width: 5px;
             border-radius: 16px; */
-             border-color:black; 
+             /* border-color:black;  */
             /* font-size:20px; */
-            height: 900px;
+            /* height: 900px;
             border-radius: 30px;
             
-        }
-        
+        } */
+         */
      </style>
 
 </head>
@@ -554,10 +555,10 @@
 	</div>
  -->
 
-   <div class="box"> <div class="lost">ALL PRODUCTS </div>
-   <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+   <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
      </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
 
     <br>
 

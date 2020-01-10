@@ -390,7 +390,6 @@
           <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
      </div>
 
-<<<<<<< HEAD
 ?> -->
 
 <!-- <?php
@@ -779,8 +778,6 @@
           <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
      </div>
 
-=======
->>>>>>> 536abb34b6e86098f59850b120455b2a107e97ea
 </body>
 
 </html>

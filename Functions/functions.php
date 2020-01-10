@@ -322,7 +322,6 @@
                 $total += $values;
             }
         }
-
         echo "Rs" . $total;
     }
 
@@ -334,6 +333,9 @@
         $run_items =  mysqli_query($con,$get_items);
         $count_items =  mysqli_num_rows($run_items);
     }
- 
-
+    // function clearChat(){
+    //    $query = $db->prepare("Delete from chat");
+    //    $query->execute();       
+    // }
     ?>
+

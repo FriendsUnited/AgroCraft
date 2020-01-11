@@ -133,7 +133,7 @@
 
           </select>
 
-<br><br>
+<!-- <br><br> -->
           <select name="" id="district"><option>Select District</option></select>
 
 

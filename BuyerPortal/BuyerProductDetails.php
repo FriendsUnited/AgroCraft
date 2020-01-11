@@ -622,7 +622,7 @@
                          } else {
                               $insert_pro = "insert into cart (product_id,phonenumber,qty) values ('$product_id','$sess_phone_number','$qty')";
                               $run_insert_pro = mysqli_query($con, $insert_pro);
-                              echo "<script>window.location.reload(true)</script>";
+                              // echo "<script>window.location.reload(true)</script>";
                          }
                     }
                }

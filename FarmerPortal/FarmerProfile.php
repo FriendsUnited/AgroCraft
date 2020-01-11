@@ -147,7 +147,7 @@
 
 <body>
     <div class="just">
-        <a  href="FarmerHomepage.php"> <i  class="fa fa-home fa-4x"></i></a>
+        <a  href="Homepage.php"> <i  class="fa fa-home fa-4x"></i></a>
     </div>
     
     <div class="box">

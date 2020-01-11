@@ -276,69 +276,32 @@
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-            /* background-image: url(images/Website/FarmerLogin.jpg); */
             background-size: cover;
             background-position: center;
             box-sizing: border-box;
         }
 
         .wrapper {
-            /* width: 300px; */
             background-image: 100px;
         }
 
         .add_button {
-            /* clear:left;
-            margin-left:450px; */
             float: right;
-            /* margin-top: 10px; */
             text-align: center;
-            /* margin-right:10%; */
-            /* background-color:red; */
         }
 
-        /* .dropdown {
-            float: right;
-            margin-right: 1em;
-            margin-top: 0;
-            margin-bottom: 52em;
-            color: white;
-            background-color:green;
-
-        } */
-
-        /* ul li {
-            display: none;
-        } */
-
-        /* ul li:hover ul li {
-            display: block;
-             width: 30px; 
-        }
-
-        ul li a {
-            display: block;
-             width: 30px; 
-        } */
-
-        .products:last-child {}
 
         h1 {
-            /* color: rgb(20, 83, 31); */
             font-family: 'Times New Roman', Times, serif;
             color: white;
 
         }
 
-        /* .trans {
-            clear: left;
-            background-color: red;
-        } */
-
         .lost{
             /* <font-fam></font-fam>; */
             color: black;
             text-align: center;
+<<<<<<< HEAD
 <<<<<<< HEAD
             height: 8%;
             margin-top: 150px;
@@ -346,82 +309,34 @@
             font-size:30px;
 =======
             /* margin-top: 5em; */
+=======
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
             background-color: olive;
-            /* height: 8%; */
             margin-top: 120px;
-            /* border-radius: 30px; */
             margin:auto;
 >>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
         }
 
-        /* .dropdown-content {
-            display: none;
-            /* position: sticky;  */
-            /* background-color: transparent; */
-            /* min-width: 250px; */
-            /* z-index: 1;
-        } */
-
-        /* .dropdown-content a {
-            color: rgb(12, 11, 11);
-            padding: 30px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            font-size: 20px;
-            background-color: white;
-            width: 100px;  
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-        } */
-
-        /* .dropdown-content a:hover {
-            background-color: white;
-             color: black; 
-             position:absolute; 
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            background-color: white;
-             position:relative; 
-        } */
-/* 
-        .dropdown:hover .dropbtn {
-            background-color: #ffffff;
-        }  */
 
         .new {
-            /* display: table-cell;
-            vertical-align: middle; */
             text-align: center;
         }
 
         .button {
             position: relative;
-            /* margin-left: 130px; */
             float: right;
-            /* margin-bottom:250px; 
-             margin-top:3em; */
-            /* clear:left;  */
         }
 
         h2 {
             color: white;
             margin-top: 3em;
-            /* background-color: green;
-         */
             text-align: center;
-
-            /* background-color: darkcyan; */
 
         }
 
         .hii {
             float: right;
             margin-right: 5em;
-            /* margin-top:254em;  */
-            /* background-color:red; */
         }
 
         .ribbon {
@@ -440,24 +355,19 @@
             border: 1px;
             width: 100%;
             white-space: nowrap;
-
             height: 70px;
 
 
         }
         .subtract{
              float:right;
-             border-color:olive;
-          
+             border-color:olive;  
              margin-top: 2%; 
              text-align: center;
-             /* font-weight: 10px; */
-             /* font-family: Arial, Helvetica, sans-serif; */
-             /* background-color: green; */
              border-radius: 25px;
-
             
         } 
+<<<<<<< HEAD
         /* .box{
             
             color: rgb(6, 36, 7);
@@ -488,6 +398,9 @@
         } */
          */
 >>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+=======
+       
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
      </style>
 
 </head>
@@ -595,6 +508,7 @@
 
     </div>
     </div>
+     </div>
      </div>
     <div class="trans">
 

@@ -294,12 +294,22 @@
         // echo $newpassword, "<br>";
         // echo $confirmpassword, "<br>";
         // echo $currentpassword, "<br>";
-    
-        if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
+
+        $ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '2345678910111211'; 
+		$encryption_key = "DE";
+		
+		$encryption = openssl_encrypt($newpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        
+        
+        if(strcmp($password, $currentpassword) == 0 and strcmp($newpassword, $confirmpassword) == 0)
         {
             $sql = "update farmerregistration 
-                    set farmer_password='$newpassword' ,
-                    farmer_conf_pswd='$confirmpassword'
+                    set farmer_password='$encryption' ,
+                    farmer_conf_pswd='$encryption'
                     where farmer_phone=$sessphonenumber";
             $run = mysqli_query($con, $sql);
             echo "<script>alert('Password Updated Sucessfully!');</script>";

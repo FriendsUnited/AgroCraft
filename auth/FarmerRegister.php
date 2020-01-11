@@ -279,7 +279,7 @@
         $state = mysqli_real_escape_string( $con, $_POST['statevalue']);
 
         $encryption = openssl_encrypt($password, $ciphering, 
-        $encryption_key, $options, $encryption_iv);
+            $encryption_key, $options, $encryption_iv);
         // echo $encryption;
             
 		if (strcmp($password,$confirmpassword) == 0){

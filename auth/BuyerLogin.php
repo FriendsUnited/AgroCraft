@@ -41,6 +41,7 @@
 		$options = 0; 
 		$encryption_iv = '2345678910111211'; 
 		$encryption_key = "DE";
+		
 		$encryption = openssl_encrypt($password, $ciphering, 
 				$encryption_key, $options, $encryption_iv);
 

@@ -259,7 +259,13 @@
 
 <?php 
 
-	include("../Includes/db.php");
+    include("../Includes/db.php");
+    
+    $ciphering = "AES-128-CTR"; 
+    $iv_length = openssl_cipher_iv_length($ciphering); 
+    $options = 0; 
+    $encryption_iv = '2345678910111211'; 
+    $encryption_key = "DE";
 
 	if (isset($_POST['register'])) {
 		$name = mysqli_real_escape_string( $con, $_POST['name']);
@@ -272,6 +278,10 @@
         $district = mysqli_real_escape_string( $con, $_POST['district']);
         $state = mysqli_real_escape_string( $con, $_POST['statevalue']);
 
+        $encryption = openssl_encrypt($password, $ciphering, 
+        $encryption_key, $options, $encryption_iv);
+        // echo $encryption;
+            
 		if (strcmp($password,$confirmpassword) == 0){
 			
             $query = "insert into farmerregistration (farmer_name,farmer_phone,
@@ -279,7 +289,7 @@
             farmer_pan,farmer_bank,farmer_password,farmer_conf_pswd) 
             values ('$name','$phonenumber','$address',
             '$state','$district','$pan','$account',
-			'$password','$confirmpassword')";
+			'$encryption','$encryption')";
 			
 			$run_register_query = mysqli_query($con,$query);
 			echo "<script>alert('SucessFully Inserted');</script>";

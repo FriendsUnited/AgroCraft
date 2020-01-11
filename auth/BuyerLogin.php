@@ -36,8 +36,16 @@
 		$phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
 		$password = mysqli_real_escape_string( $con,$_POST['password']);
 
-		$query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_password = '$password'";
-		$run_query = mysqli_query($con,$query);
+		$ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '2345678910111211'; 
+		$encryption_key = "DE";
+		$encryption = openssl_encrypt($password, $ciphering, 
+				$encryption_key, $options, $encryption_iv);
+
+		$query = "select * from buyerregistration where buyer_phone = '$phonenumber' and buyer_password = '$encryption'";
+		$run_query = mysqli_query($con, $query);
 		$count_rows = mysqli_num_rows($run_query);
 		if ($count_rows == 0) {
 			echo "<script>alert('Please Enter Valid Details');</script>";

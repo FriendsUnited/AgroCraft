@@ -1,6 +1,6 @@
-<!-- <?php
-        include("../Functions/functions.php");
-        ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -11,13 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Agrocraft Homepage</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
-    <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
-    <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
     <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
     <script src="../portal_files/jquery.min.js.download"></script>
     <script src="../portal_files/popper.min.js.download"></script>
@@ -272,52 +267,58 @@
             margin-top: -65px;
         }
 
-        .tab{
+        .tab {
             width: 100%;
 
-               border-style: solid;
-               border-width: 2px;
-               padding: 2px;
+            border-style: solid;
+            border-width: 2px;
+            padding: 2px;
 
         }
-        th{
+
+        th {
             border-color: white;
             border-style: solid;
-               border-width: 2px;
-               padding: 2px;
-              
-        }
-        .tableyhead{
-            
-            color: red;
-        
-        }
-        .thy {
-               background-color: #555;
-               color: white;
-               
-          }
-          .trow{
-              align-content: center;
-          }
-          .cont {
-               border-radius: 25%;
-               border-style: solid;
-               background-color: #FFD700;
-               padding: 10px;
-               margin-top: 40px;
-               /* margin-left:46%; */
-               transition: 1s;
+            border-width: 2px;
+            padding: 2px;
 
-          }
-          .cont:hover {
-               padding-top: 15px;
-               padding-bottom: 20px;
-               transition: 1s;
-               width: 270px;
-               height: 70px;
-               font-size: 22px;
-          }
+        }
+
+        .tableyhead {
+
+            color: red;
+
+        }
+
+        .thy {
+            background-color: #555;
+            color: white;
+
+        }
+
+        .trow {
+            align-content: center;
+        }
+
+        .cont {
+            border-radius: 25%;
+            border-style: solid;
+            background-color: #FFD700;
+            padding: 10px;
+            margin-top: 40px;
+            /* margin-left:46%; */
+            transition: 1s;
+
+        }
+
+        .cont:hover {
+            padding-top: 15px;
+            padding-bottom: 20px;
+            transition: 1s;
+            width: 270px;
+            height: 70px;
+            font-size: 22px;
+        }
     </style>
 
 </head>
@@ -394,32 +395,45 @@
     </div>
 
 
-
-
+    <br><br>
+    <h1 align="center"> TRANSACTION HISTORY </h1>
     <br>
-    <br>
-    <h1 align="center"> TRANSACTION  HISTORY </h1>
-    <br>
-    <table  class=tab>
-        <thead  align="center" class=tableyhead>
-        <th  class=thy>Name</th>
-        <th  class=thy>Phone</th>
-        <th  class=thy >Address</th>
-        <th  class=thy >Product Title</th>
-        <th  class=thy>Quantity</th>
-        <th  class=thy>Delivery</th>
-        <th  class=thy>Amount</th>
+    <table class=tab>
+        <thead align="center" class=tableyhead>
+            <th class=thy>Farmer Name</th>
+            <th class=thy>Phone</th>
+            <th class=thy>Delivery Address</th>
+            <th class=thy>Product Title</th>
+            <th class=thy>Quantity</th>
+            <th class=thy>Delivery Mode</th>
+            <th class=thy>Amount</th>
         </thead>
+        <?php
+        $sess_phone_number = $_SESSION['phonenumber'];
+        $check_query = "select * from orders where phonenumber = $sess_phone_number ";
+        $run = mysqli_query($con, $check_query);
+        if ($run) {
+            while ($rows = mysqli_fetch_array($run)) {
+                $deliveryMode = $rows['delivery'];
+                $amount = $rows['total'];
+                $address = $rows['address'];
+
+                $check_query = "select * from cart where phonenumber = $sess_phone_number ";
+                $run = mysqli_query($con, $check_query);
+            }
+        }
+
+        ?>
         <tr align="center" class=trow>
-            <th align="center" >Abhishek</th>
+            <th align="center">Abhishek</th>
             <th align="center">9871234511</th>
             <th align="center">Sanpada</th>
             <th align="center">Abhishek-Apples</th>
             <th align="center">1</th>
             <th align="center">Yes</th>
-            <th >70</th>
+            <th>70</th>
         </tr>
-        <tr align="center" >
+        <!-- <tr align="center">
             <th>Ansh</th>
             <th>9876987211</th>
             <th>Thane</th>
@@ -427,28 +441,18 @@
             <th>2</th>
             <th>No</th>
             <th>120</th>
-        </tr>
+        </tr> -->
     </table>
 
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
     <a href="BuyerHomepage.php" style="color:black;"><label class="cont">CONTINUE SHOPPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
 
-
-
-
-
-
-
-
-
-
-    
     <div class="footer">
         <hr>
         <label class="payment">Payment Options:-</label>

@@ -114,7 +114,7 @@ return a=1;
 else{
 	document.getElementById("majic").style.visibility= "visible";
 	document.getElementById("show").style. visibility= "hidden";
-	document.getElementById("show").style. visibility= "hidden";
+	// document.getElementById("show").style. visibility= "hidden";
 
 	return a=0;
 }
@@ -122,9 +122,7 @@ else{
 	}
 	</script>
 	<style>
-		#majic{
-			visibility: hidden;
-		}
+	
 		* {
 			margin: 0;
 			box-sizing: border-box;
@@ -186,7 +184,7 @@ else{
 			margin-left: 5px;
 		
 			
-			display: inline;
+			/* display: inline; */
 			margin-right: 26px;
 			
 
@@ -222,14 +220,37 @@ else{
 		}
 
 		.headerdown {
-			background-color: #00b300;
+			background-color: transparent;
 			height: 50px;
 			width: 100%;
 		}
-		#majic{background-color: blue;
+		#majic{
 			height: 70px;
 			width: 100%;
+			visibility: hidden;
+
+
 		}
+		#states{
+	float: left;
+			width: 150px;
+margin-left:-400px;
+margin-top:20px;
+padding:10px;
+
+border-radius: 25%;
+border-color: #00b300;
+		}
+#district{			
+	/* height: 200px; */
+	border-radius: 25%;
+	border-color: #00b300;
+	margin-bottom:20px;
+	margin-top: 20px;
+	padding:10px;
+margin-left: 150px;
+margin-right: -400px;
+}
 
 		.makeitgreen {
 			color: #00b300;
@@ -257,12 +278,12 @@ else{
 		}
 
 		.slideshow {
-			margin-top: 10px;
+			margin-top: 20px;
 			margin-left: 100px;
 			margin-bottom: 20px;
 			float:left;
 			border-style: solid;
-			/* clear:both; */
+			clear:both;
 			/*background-color: black;*/
 		}
 
@@ -569,7 +590,7 @@ else{
 			text-align: center;
 			border-bottom: 1px solid #000;
 			line-height: 0.1em;
-			margin: 10px 0 20px;0
+			margin: 10px 0 20px;
 		}
 
 		h3 span {
@@ -668,6 +689,7 @@ else{
 				
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
 				}
+
 				else {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
 				}
@@ -698,8 +720,8 @@ else{
 <i class="fas fa-filter"></i></button>
 </div>
 	</div>
-	<div class="headerdown" id="show">
-
+	<div class="headerdown" >
+<div id="show">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
 				<span class="caret"></span></button>
@@ -721,10 +743,11 @@ else{
 			<?php getFruits(); ?>
 			</ul>
 		</div>
+</div>	
 		<div id="majic" class="headerdown ">
 		 <table>
-          <select id="states" onchange="state()" tabindex="1" style="width:170px;">
-               <option value="0">--Select State--</option>
+   <select id="states" onchange="state()" tabindex="1" >
+               <option value="0">Select State</option>
                <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
                <option value="01">ANDHRA PRADESH</option>
                <option value="32">ARUNACHAL PRADESH</option>
@@ -765,8 +788,8 @@ else{
 
           </select>
 
-<!-- <br><br> -->
-          <select name="" id="district"><option>Select District</option></select>
+      
+        <select name="" id="district"><option>Select District</option></select>
 
 
 
@@ -774,6 +797,7 @@ else{
 
 
      </table>
+	</div>
 	</div>
 
 
@@ -813,7 +837,7 @@ else{
 
 
 
-	<hr>
+	<!-- <hr> -->
 	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
 	<table class="tabless">
 		<tr>

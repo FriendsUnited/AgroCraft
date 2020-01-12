@@ -14,6 +14,7 @@ while ($row = mysqli_fetch_array($run_query)) {
     $state = $row['farmer_state'];
     $district = $row['farmer_district'];
 }
+
 ?>
 
 
@@ -270,7 +271,7 @@ while ($row = mysqli_fetch_array($run_query)) {
 
 
     <div class="just">
-        <a href="FarmerHomepage.php"> <i class="fa fa-home fa-4x"></i></a>
+        <a href="Homepage.php"> <i class="fa fa-home fa-4x"></i></a>
     </div>
 
     <div class="box">
@@ -404,20 +405,21 @@ while ($row = mysqli_fetch_array($run_query)) {
 
 
 if (isset($_POST['confirm'])) {
-    $phone = $_POST['phonenumber'];
-    $address = $_POST['address'];
-    $district = $_POST['district'];
-    $state = $_POST['statevalue'];
-    $account = $_POST['bank'];
+    $phone = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+    $address = mysqli_real_escape_string( $con, $_POST['address']);
+    $district = mysqli_real_escape_string( $con, $_POST['district']);
+    $state = mysqli_real_escape_string( $con, $_POST['statevalue']);
+    $account = mysqli_real_escape_string( $con, $_POST['bank']);
 
     $query = "update farmerregistration 
-                  set farmer_phone = '$phone', farmer_address = '$address',
-                  farmer_bank = '$account', farmer_state = '$state',
-                  farmer_district = '$district'
-                  where farmer_id 
-                  in (select farmer_id from farmerregistration 
-                  where farmer_phone='$sessphonenumber')";
+              set farmer_phone = '$phone', farmer_address = '$address',
+              farmer_bank = '$account', farmer_state = '$state',
+              farmer_district = '$district'
+              where farmer_id 
+              in (select farmer_id from farmerregistration 
+              where farmer_phone='$sessphonenumber')";
     $run = mysqli_query($con, $query);
+    
     $_SESSION['phonenumber'] = $phone;
     echo "<script>window.open('FarmerProfile.php','_self')</script>";
 }

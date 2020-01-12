@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 echo "<script>window.open('../BuyerPortal/BuyerHomepage.php','_self')</script>";
-// 
+
 
 ?>

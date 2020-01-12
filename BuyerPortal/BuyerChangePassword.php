@@ -28,7 +28,6 @@ while ($row = mysqli_fetch_array($run_query)) {
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         text-align: center;
         cursor: pointer;
-        /* font-size:20px; */
     }
 
     textarea {
@@ -50,7 +49,7 @@ while ($row = mysqli_fetch_array($run_query)) {
         padding: 5px;
         border-style: outset;
         border-radius: 16px;
-        */ border-color: green;
+        border-color: rgb(0, 57, 230);
     }
 
     body {
@@ -58,7 +57,7 @@ while ($row = mysqli_fetch_array($run_query)) {
         background-repeat: no-repeat;
         background-position: center;
         background-color: white;
-        background-image: url(../Images/Website/forgotpassword.jpg);
+        background-image: url(../Images/Website/buyerLogin.jpeg);
         border: chartreuse;
     }
 
@@ -71,7 +70,7 @@ while ($row = mysqli_fetch_array($run_query)) {
     input {
         padding: 7px;
         margin: 10px;
-        border-color: rgb(78, 180, 121);
+        border-color: rgb(0, 57, 230);
         display: inline-block;
         /* border-radius: 16px; */
     }
@@ -81,21 +80,20 @@ while ($row = mysqli_fetch_array($run_query)) {
         font-size: 22px;
         font-weight: bold;
         color: rgb(246, 248, 246);
-        background-color: green;
-        /* display: inline-block; */
+        background-color: rgb(0, 153, 255);
         border-radius: 16px;
         border-color: rgb(3, 66, 34);
         width: 64%;
     }
 
     input[type="submit"]:hover {
-        background-color: rgb(97, 16, 33);
+        background-color: rgb(0, 153, 255);
         outline: none;
         border-color: blanchedalmond;
         color: rgb(155, 248, 4);
         border-radius: 20%;
         border-style: outset;
-        border-color: rgb(155, 248, 4);
+        border-color: rgb(0, 57, 230);
         font-weight: bolder;
         width: 54%;
         font-size: 18px;
@@ -179,9 +177,9 @@ while ($row = mysqli_fetch_array($run_query)) {
 
     <?php
     if (isset($_POST['confirm'])) {
-        $currentpassword = $_POST['currentpassword'];
-        $newpassword = $_POST['newpassword'];
-        $confirmpassword = $_POST['confirmpassword'];
+        $currentpassword = mysqli_real_escape_string( $con, $_POST['currentpassword']);
+        $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
+        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
 
         echo $newpassword, "<br>";
         echo $confirmpassword, "<br>";

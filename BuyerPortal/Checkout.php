@@ -277,7 +277,7 @@ include('../Functions/functions.php');
       color: #00b300;
     }
 
-    .images {
+    .images {                                                                                                       
       height: 100px;
       width: 100px;
       margin-top: 10px;
@@ -315,7 +315,7 @@ include('../Functions/functions.php');
   <br>
   <div class="lang">
 
-    <label>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi <br>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi </label>
+    <textarea rows=5 cols=40>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi <br>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi </textarea>
   </div>
 
   <br><br><br><br><br>
@@ -396,9 +396,9 @@ include('../Functions/functions.php');
     <?php
       if (isset($_POST['order']))
       {
-          $payment = $_Post['payment'];
-          $delivery = $_POST['delivery'];
-          $total = $_SESSION['grandtotal'];
+          $payment = mysqli_real_escape_string( $con, $_Post['payment']);
+          $delivery = mysqli_real_escape_string( $con, $_POST['delivery']);
+          $total = mysqli_real_escape_string( $con, $_SESSION['grandtotal']);
           $query = "insert into order (address,delivery,phonenumber,grandtotal,payment) values 
           '$address','$delivery','$sess_phone_number','$total','$payment' ";
           $run_query = mysqli_query($con,$query);

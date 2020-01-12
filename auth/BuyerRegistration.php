@@ -39,17 +39,17 @@
 include("../Includes/db.php");
 
 if (isset($_POST['register'])) {
-	$name = $_POST['name'];
-	$phonenumber = $_POST['phonenumber'];
-	$address = $_POST['address'];
-	$company_name = $_POST['company_name'];
-	$license = $_POST['license'];
-	$account = $_POST['account'];
-	$pan = $_POST['pan'];
-	$mail = $_POST['mail'];
-	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$confirmpassword = $_POST['confirmpassword'];
+	$name = mysqli_real_escape_string( $con,$_POST['name']);
+	$phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+	$address = mysqli_real_escape_string( $con,$_POST['address']);
+	$company_name = mysqli_real_escape_string( $con,$_POST['company_name']);
+	$license = mysqli_real_escape_string( $con,$_POST['license']);
+	$account = mysqli_real_escape_string( $con,$_POST['account']);
+	$pan = mysqli_real_escape_string( $con,$_POST['pan']);
+	$mail = mysqli_real_escape_string( $con ,$_POST['mail']);
+	$username = mysqli_real_escape_string( $con ,$_POST['username']);
+	$password = mysqli_real_escape_string( $con ,$_POST['password']);
+	$confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
 
 	if (strcmp($password,$confirmpassword) == 0){
 		

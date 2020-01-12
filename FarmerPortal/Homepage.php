@@ -79,6 +79,7 @@
                width: 25px;
                margin-right: 50px;
 
+
           }
 
           .icon2 {
@@ -271,6 +272,204 @@
                float: left;
                margin-top: -65px;
           }
+          body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            /* background-image: url(images/Website/FarmerLogin.jpg); */
+            background-size: cover;
+            background-position: center;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            /* width: 300px; */
+            background-image: 100px;
+        }
+
+        .add_button {
+            /* clear:left;
+            margin-left:450px; */
+            float: right;
+            /* margin-top: 10px; */
+            text-align: center;
+            /* margin-right:10%; */
+            /* background-color:red; */
+        }
+
+        /* .dropdown {
+            float: right;
+            margin-right: 1em;
+            margin-top: 0;
+            margin-bottom: 52em;
+            color: white;
+            background-color:green;
+
+        } */
+
+        /* ul li {
+            display: none;
+        } */
+
+        /* ul li:hover ul li {
+            display: block;
+             width: 30px; 
+        }
+
+        ul li a {
+            display: block;
+             width: 30px; 
+        } */
+
+        .products:last-child {}
+
+        h1 {
+            /* color: rgb(20, 83, 31); */
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+
+        }
+
+        /* .trans {
+            clear: left;
+            background-color: red;
+        } */
+
+        .lost{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+            /* margin-top: 5em; */
+            background-color: olive;
+            height: 8%;
+            margin-top: 0;
+            border-radius: 30px;
+        }
+
+        /* .dropdown-content {
+            display: none;
+            /* position: sticky;  */
+            background-color: transparent;
+            /* min-width: 250px; */
+            z-index: 1;
+        }
+
+        /* .dropdown-content a {
+            color: rgb(12, 11, 11);
+            padding: 30px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-size: 20px;
+            background-color: white;
+            width: 100px;  
+            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        } */
+
+        /* .dropdown-content a:hover {
+            background-color: white;
+             color: black; 
+             position:absolute; 
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: white;
+             position:relative; 
+        } */
+/* 
+        .dropdown:hover .dropbtn {
+            background-color: #ffffff;
+        }  */
+
+        .new {
+            /* display: table-cell;
+            vertical-align: middle; */
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            /* margin-left: 130px; */
+            float: right;
+            /* margin-bottom:250px; 
+             margin-top:3em; */
+            /* clear:left;  */
+        }
+
+        h2 {
+            color: white;
+            margin-top: 3em;
+            /* background-color: green;
+         */
+            text-align: center;
+
+            /* background-color: darkcyan; */
+
+        }
+
+        .hii {
+            float: right;
+            margin-right: 5em;
+            /* margin-top:254em;  */
+            /* background-color:red; */
+        }
+
+        .ribbon {
+            position: relative;
+            top: -16px;
+            right: -706px;
+            float: left;
+            top: 0px;
+            left: 0px;
+            height: 74px;
+            background-color: green;
+        }
+
+        .over {
+            background-color: green;
+            border: 1px;
+            width: 100%;
+            white-space: nowrap;
+
+            height: 70px;
+
+
+        }
+        .subtract{
+             float:right;
+             border-color:olive;
+          
+             margin-top: 2%; 
+             text-align: center;
+             /* font-weight: 10px; */
+             /* font-family: Arial, Helvetica, sans-serif; */
+             /* background-color: green; */
+             border-radius: 25px;
+
+            
+        } 
+        .box{
+            
+            color: rgb(6, 36, 7);
+            width: 1050px;
+             line-height: 40px; 
+             float:center;
+            margin: auto;
+            text-align: center;
+              margin-top: 120px;  
+             /* padding: 5px;  */
+             border-style: outset; 
+            /* border-width: 5px;
+            border-radius: 16px; */
+             border-color:black; 
+            /* font-size:20px; */
+            height: 900px;
+            border-radius: 30px;
+            
+        }
+        
      </style>
 
 </head>
@@ -289,9 +488,15 @@
           </div>
 
           <div class="dropdown">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-			<ul class="dropdown-menu etc">
-			<?php
+          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
+            </button></i>
+			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
+			<ul  class="dropdown-menu etc"1
+              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
+               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
+     </ul>
+
+			<!-- <?php
 				if (isset($_SESSION['phonenumber'])) {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 				
@@ -300,7 +505,7 @@
 				else {
 					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
 				}
-			?>
+			?> -->
 		</div>
 		<div class="proicon">
 			<?php
@@ -315,16 +520,16 @@
 
 
           <div class="icon2">
-               <a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> 5 </span>
-          </div>
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> 5 </span>
+		</div>
 
           <div class="loginz">
                <?php getUsername(); ?>
           </div>
      </div>
 
-     <div class="headerdown">
+     <!-- <div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
 				<span class="caret"></span></button>
@@ -347,10 +552,60 @@
 			</ul>
 		</div>
 	</div>
+ -->
+
+   <div class="box"> <div class="lost">ALL PRODUCTS </div>
+   <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button></div>>
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+
+    <br>
+
+    <div>
+        <?php
+        include("../Includes/db.php");
+        $sess_phone_number = $_SESSION['phonenumber'];
+        getFarmerProducts();
+        ?>
 
 
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
-     <hr>
+    </div>
+    </div>
+     </div>
+    <div class="trans">
+
+
+        <div class="lost">TRANSACTION HISTORY</h3>
+    </div>
+
+
+    <div>
+        <br>
+        <br>
+
+        <table border="2">
+
+            <tr>
+                <th width=200px>Date</th>
+                <th width=200px>Name</th>
+                <th width=200px>Phone Number</th>
+                <th width=200px>Address</th>
+                <th width=200px>Quantity</th>
+                <th width=200px>Price</th>
+
+            </tr>
+            <tr>
+                <td>12-1-2000</td>
+                <td>melissa</td>
+                <td>1234567890</td>
+                <td>sajgdkagdd</td>
+                <td>500</td>
+                <td>200</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
 
  
 

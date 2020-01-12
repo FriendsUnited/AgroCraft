@@ -1,6 +1,6 @@
-<!-- <?php
-     include("../Functions/functions.php");
-     ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Cart Page</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -22,7 +22,15 @@
      <script src="../portal_files/jquery.min.js.download"></script>
      <script src="../portal_files/popper.min.js.download"></script>
      <script src="../portal_files/bootstrap.min.js.download"></script>
-
+     <script>
+          function check(input) {
+               if (input.value <= 1) {
+                    input.setCustomValidity('The number should  not be less than one.');
+               } else {
+                    input.setCustomValidity('');
+               }
+          }
+     </script>
      <style>
           * {
                margin: 0;
@@ -145,6 +153,41 @@
                grid-column-gap: 20px;
                grid-row-gap: 10px;
                margin-left: 30px;
+          }
+
+          .icon {
+               background-color: #FFD700;
+               border-style: groove;
+               border-width: 1px;
+               font-size: 15px;
+               border-color: #000;
+               /* border-start-end-radius: 25%; */
+          }
+
+
+          button:focus {
+               outline: 0;
+          }
+
+          .left {
+               margin-left: -7px;
+
+          }
+
+          .right {
+               margin-left: -7px;
+          }
+
+          .add {
+               background-color: transparent;
+               border: none;
+               width: 5px;
+               margin-left: 8px;
+               height: 20px;
+          }
+
+          .ladd {
+               margin-right: 10px;
           }
 
           .inputwrapper {
@@ -353,13 +396,14 @@
                /* padding-top:10px; */
                width: 150px;
                height: 50px;
-              transition:1s;
+               transition: 1s;
           }
-          .checkout:hover{
-               transition:1s;
+
+          .checkout:hover {
+               transition: 1s;
                width: 170px;
                height: 70px;
-               font-size:25px;
+               font-size: 25px;
           }
 
           .empty {
@@ -368,17 +412,19 @@
                background-color: #FFD700;
                padding: 10px;
                margin-top: 20px;
-               transition:1s;
+               transition: 1s;
                margin-left: 20px;
           }
-          .empty:hover{
-               transition:1s;
-               width:170px;
-               padding-top:7px;
-               font-size:20px;
 
-          
+          .empty:hover {
+               transition: 1s;
+               width: 170px;
+               padding-top: 7px;
+               font-size: 20px;
+
+
           }
+
           .cont {
                border-radius: 25%;
                border-style: solid;
@@ -386,20 +432,31 @@
                padding: 10px;
                margin-top: 40px;
                /* margin-left:46%; */
-               transition:1s;
-               
-               
+               transition: 1s;
 
           }
-          .cont:hover{
-               padding-top:15px;
-               padding-bottom:20px;
-               transition:1s;
+
+          #icon {
+			background-color:red;
+			color:white;
+		}
+
+          .cont:hover {
+               padding-top: 15px;
+               padding-bottom: 20px;
+               transition: 1s;
                width: 270px;
                height: 70px;
+               font-size: 22px;
+          }
 
-               font-size:22px;
+          #Deletionlink {
+               color: #000;
+          }
 
+          #Deletionlink:hover {
+               color: red;
+               font-size: 22px;
 
           }
      </style>
@@ -424,7 +481,7 @@
                <ul class="dropdown-menu etc">
                     <?php
                     if (isset($_SESSION['phonenumber'])) {
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
@@ -433,20 +490,21 @@
                     ?>
           </div>
           <div class="proicon">
-               <!-- <?php
-                    if (!isset($_SESSION['phonenumber'])) {
-                         echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-                    } else {
-                         echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-                    }
-                    ?> -->
+               <?php
+               if (!isset($_SESSION['phonenumber'])) {
+                    echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+               } else {
+                    echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+               }
+               ?>
           </div>
 
 
           <div class="icon2">
-               <a href="#"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> 5 </span>
-          </div>
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
+		</div>
+
 
           <div class="loginz">
                <?php getUsername(); ?>
@@ -476,86 +534,100 @@
                </ul>
           </div>
      </div>
-
-
-     <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
-     <hr>
-
-     <div>
-           <?php getProducts(); ?> 
-     </div> -->
-     <h2 class="item_heading">YOUR ITEMS : 02</h2>
+     <?php
+     if (isset($_SESSION['phonenumber'])) {
+          $temp = totalItems();
+          echo "<h2 class='item_heading'>YOUR ITEMS : $temp </h2>";
+     }
+     ?>
 
      <hr>
      <table class="tabley">
           <thead>
                <th class="thy">Sr no</th>
-               <th class="thy"> Item Description</th>
+               <th class="thy"> Item Name</th>
                <th class="thy"> Unit Price</th>
-               <th class="thy"> Quantity</th>
+               <th class="thy qua"> Quantity</th>
                <th class="thy">Subtotal</th>
                <th class="thy">Delete</i></th>
           </thead>
-          <tr>
-               <td class="tdy" data-label="Sr no">1</td>
-               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
-               <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; ">  </td>
-               <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
 
-          </tr>
-          <tr>
-               <td class="tdy" data-label="Sr no">1</td>
-               <td class="des tdy" data-label="Item Name">Best Patato of the world               </td>
-               <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
-               <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle"></i></td>
+          <?php
+          $total = 0;
+          global $con;
+          if (isset($_SESSION['phonenumber'])) {
+               $sess_phone_number = $_SESSION['phonenumber'];
+               $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+               $run_price = mysqli_query($con, $sel_price);
 
-          </tr>
-          <tr>
-               <td class="tdy" data-label="Sr no">1</td>
-               <td class="des tdy" data-label="Item Name">Best Patato of the world
-               </td>
-               <td class="tdy" data-label="Unit Price">rs 2</td>
-               <td class="tdy" data-label="quantity"><input type="number" style="width:40px; "></td>
-               <td class="tdy" data-label="Subtotal">4</td>
-               <td class="tdy" data-label="Deletion"><i class="far fa-times-circle" > </i></td>
+               $qtycart = array();
+               $i = 0;
+               while ($p_price = mysqli_fetch_array($run_price)) {
+                    $product_id = $p_price['product_id'];
+                    $_SESSION['qtycart'][$i] = $p_price['qty'];
 
-          </tr>
+                    $pro_price = "select * from products where product_id='$product_id'";
+                    $run_pro_price = mysqli_query($con, $pro_price);
+                    while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+                         $product_title = $pp_price['product_title'];
+                         $product_price = $pp_price['product_price'];
+                         $subtotal = $_SESSION['qtycart'][$i] * $product_price; ?>
+
+
+                         <tr>
+                              <td class="tdy" data-label="Sr no"><?php echo $i + 1; ?></td>
+                              <td class="des tdy" data-label="Item Name"><?php echo $product_title; ?></td>
+                              <td class="tdy" data-label="Unit Price"><?php echo $product_price; ?></td>
+                              <td class="tdy" data-label="quantity"><a style="color:black;" href="MinusQty.php?id=<?php echo $product_id; ?>"><label class="add ladd"><i class=" icon left  fas fa-minus">
+                                        </label></a></i>
+                                   <input type="number" oninput="this.value = Math.abs(this.value)" min="1" value='<?php echo $_SESSION['qtycart'][$i]; ?>' name="qty" style="width:40px; "><a style="color:black;" href="AddQty.php?id=<?php echo $product_id; ?>"><label class="add radd">
+                                             <i class="icon right  fas fa-plus"></label></a></i></td>
+                              </td>
+                              <?php $subtotal = $_SESSION['qtycart'][$i] * $product_price; ?>
+                              <td class="tdy" data-label="Subtotal"><?php echo $subtotal; ?></td>
+                              <?php $total = $total + $subtotal ?>
+                              <td class="tdy" data-label="Deletion"><a href="DeleteProductCart.php?id=<?php echo $product_id; ?>" id="Deletionlink"><i class="far fa-times-circle"></i></a></td>
+
+                         </tr>
+
+          <?php
+                    }
+                    $i++;
+               }
+          } else {
+               echo "<h1 align = center>Please Login First!</h1><br><br><hr>";
+          } ?>
      </Table>
      <div class="up">
 
           <div class="boxy">
-               <label class="totaly"> GRAND TOTAL : <label class="rs">Rs 35</label></label>
+               <label class="totaly"> GRAND TOTAL : <label class="rs"><?php echo $total; ?></label></label>
+               <?php $_SESSION['grandtotal'] = $total; ?>
                <!-- <button class='checkout'> <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button> -->
-               <button class="checkout"><span>CHECKOUT</span> <label class="arrow"><i class="fas fa-arrow-right"></i></label>
+               <?php
+               if (isset($_SESSION['phonenumber'])) {
+                    $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+                    $run_price = mysqli_query($con, $sel_price);
+                    $count = mysqli_num_rows($run_price);
+                    if ($count > 0) {
+                        echo "<a href='Checkout.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    }
+                    else {
+                        echo "<a href='Includes/alert.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    }
+               } else {
+                    echo "<a href='../auth/BuyerLogin.php' style = 'color:black;'><button class='checkout'><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+               }
 
+               ?>
           </div>
 
-          <label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label>
+          <a href="emptyCart.php" style="color:black;"><label class="empty">EMPTY CART <i class="fas fa-shopping-cart"></i></label></a>
           <br>
-          <label class="cont">CONTINUE SHOPING <i class="fas fa-shopping-bag"></i></label>
+          <a href="BuyerHomepage.php" style="color:black;"><label class="cont">CONTINUE SHOPPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

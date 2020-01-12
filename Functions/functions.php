@@ -304,40 +304,7 @@
             }
         }
     }
-
-    // Checkout System Functions
-    function cart()
-    {
-        if (isset($_SESSION['phonenumber'])) {
-            if (isset($_GET['add_cart'])) {
-
-                global $con;
-                if (isset($_POST['quantity'])) {
-                    $qty = $_POST['quantity'];
-                } else {
-                    $qty = 1;
-                }
-                $sess_phone_number = $_SESSION['phonenumber'];
-                $product_id = $_GET['add_cart'];
-
-                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                $run_check = mysqli_query($con, $check_pro);
-
-                if (mysqli_num_rows($run_check) > 0) {
-                    echo "";
-                } else {
-                    $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                    $run_insert_pro = mysqli_query($con, $insert_pro);
-
-                    echo "<script>window.location.reload(true)</script>";
-                }
-            }
-        } else {
-            // echo "<script>alert('Please Login First! ');</script>";
-        }
-    }
-
+    
 
     function totalItems()
     {
@@ -384,4 +351,43 @@
         "<br>Longitude: " + position.coords.longitude;
     }
 </script>
+
+
+    <?php
+    // Checkout System Functions
+    function cart()
+    {
+        
+        if (isset($_SESSION['phonenumber'])) {
+            if (isset($_GET['add_cart'])) {
+
+                global $con;
+                if (isset($_POST['quantity'])) {
+                    $qty = $_POST['quantity'];
+                } else {
+                    $qty = 1;
+                }
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $product_id = $_GET['add_cart'];
+
+                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+                $run_check = mysqli_query($con, $check_pro);
+                
+                echo "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>";
+                echo "<script type='text/javascript'>";           
+                    if (mysqli_num_rows($run_check) > 0) {
+                        echo "";
+                    } else {
+                        $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                        $run_insert_pro = mysqli_query($con, $insert_pro);    
+                    }
+                    echo "</script>"; 
+                    echo"<script>window.location.reload(true)</script>";               
+            }
+        } else {
+            // echo "<script>alert('Please Login First! ');</script>";
+        }
+    }
+    ?>
 

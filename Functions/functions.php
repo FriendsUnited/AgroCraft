@@ -18,6 +18,7 @@
                 
                 echo@ "<label>$buyer_name</label>";
             }
+<<<<<<< HEAD
             $query = "select * from farmerregistration where farmer_phone = $phonenumber";
             $run_query = mysqli_query($con, $query);
             if ($run_query) {
@@ -26,6 +27,8 @@
                     echo "<label>$buyer_name</label>";
                 }
             }
+=======
+>>>>>>> e90caee07c08aae6e968a83697de5aad98cbf6dc
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
         }

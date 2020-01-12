@@ -273,6 +273,136 @@ include("../Functions/functions.php");
           }
 
           body {
+<<<<<<< HEAD
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-size: cover;
+            background-position: center;
+            box-sizing: border-box;
+        }
+
+        .wrapper {
+            background-image: 100px;
+        }
+
+        .add_button {
+            float: right;
+            text-align: center;
+        }
+
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+
+        }
+
+        .lost{
+            /* <font-fam></font-fam>; */
+            color: black;
+            text-align: center;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            height: 8%;
+            margin-top: 150px;
+            border-radius: 30px;
+            font-size:30px;
+=======
+            /* margin-top: 5em; */
+=======
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
+            background-color: olive;
+            margin-top: 120px;
+            margin:auto;
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+        }
+
+
+        .new {
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            float: right;
+        }
+
+        h2 {
+            color: white;
+            margin-top: 3em;
+            text-align: center;
+
+        }
+
+        .hii {
+            float: right;
+            margin-right: 5em;
+        }
+
+        .ribbon {
+            position: relative;
+            top: -16px;
+            right: -706px;
+            float: left;
+            top: 0px;
+            left: 0px;
+            height: 74px;
+            background-color: green;
+        }
+
+        .over {
+            background-color: green;
+            border: 1px;
+            width: 100%;
+            white-space: nowrap;
+            height: 70px;
+
+
+        }
+        .subtract{
+             float:right;
+             border-color:olive;  
+             margin-top: 2%; 
+             text-align: center;
+             border-radius: 25px;
+            
+        } 
+<<<<<<< HEAD
+        /* .box{
+            
+            color: rgb(6, 36, 7);
+            width: 1050px;
+             line-height: 40px; 
+             float:center;
+            margin: auto;
+            text-align: center;
+              margin-top: 120px;  
+             /* padding: 5px;  */
+             /* border-style: outset;  */
+            /* border-width: 5px;
+            border-radius: 16px; */
+             /* border-color:black;  */
+            /* font-size:20px; */
+            /* height: 900px;
+            border-radius: 30px;
+            
+<<<<<<< HEAD
+        }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
+        }
+        
+=======
+        } */
+         */
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+=======
+       
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
+=======
                margin: 0;
                padding: 0;
                font-family: sans-serif;
@@ -411,6 +541,7 @@ include("../Functions/functions.php");
                font-size: 25px;
                padding-top:10px;
           }
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
      </style>
 
 </head>
@@ -421,7 +552,16 @@ include("../Functions/functions.php");
 
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
+<<<<<<< HEAD
+          <!-- <div class="search_input">
+               <form action="SearchResults.php" method="get" enctype="multipart/form-data">
+                    <i class="fas fa-search" style="font-size:20px;color:white; "></i>
+                    <input type="text" id="input1" name="search" placeholder="Search...">
+               </form>
+          </div> -->
+=======
 
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
 
           <div class="dropdown">
                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
@@ -454,7 +594,61 @@ include("../Functions/functions.php");
           </div>
      </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+     <!-- <div class="headerdown">
+		<div class="sel1 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu  ">
+				<?php getCrops(); ?>
+			</ul>
+		</div>
+		<div class="sel2 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+				<?php getVegetables(); ?>
+			</ul>
+		</div>
+		<div class="sel3 sel">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+				<span class="caret"></span></button>
+			<ul class="dropdown-menu ">
+			<?php getFruits(); ?>
+			</ul>
+		</div>
+	</div>
+ -->
+
+<<<<<<< HEAD
+    <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button>
+=======
+   <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button></div>>
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
+
+    <br>
+
+    <div>
+        <?php
+        include("../Includes/db.php");
+        $sess_phone_number = $_SESSION['phonenumber'];
+        getFarmerProducts();
+        ?>
+
+
+    </div>
+    </div>
+=======
+     <br>
+=======
      <div class="headerdown" >
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
 
           <a href="Homepage.php" id = "navbar"><label>Home</label></a>
           <a href="ProductPage.php" id = "navbar"><label>My Products</label></a>
@@ -509,7 +703,11 @@ include("../Functions/functions.php");
           }
           ?>
 
+<<<<<<< HEAD
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
+=======
 
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
      </div>
 
 
@@ -539,8 +737,47 @@ include("../Functions/functions.php");
 
           </table>
      </div>
+<<<<<<< HEAD
+    <div class="trans">
 
 
+      <br><br><br><br><br><br><br><br>  <div class="lost">TRANSACTION HISTORY</h3>
+    </div>
+
+<div class="please">
+    <div>
+        <br>
+        <br>
+
+        <table border="2">
+
+            <tr>
+                <th width=200px>Date</th>
+                <th width=200px>Name</th>
+                <th width=200px>Phone Number</th>
+                <th width=200px>Address</th>
+                <th width=200px>Quantity</th>
+                <th width=200px>Price</th>
+
+            </tr>
+            <tr>
+                <td>12-1-2000</td>
+                <td>melissa</td>
+                <td>1234567890</td>
+                <td>sajgdkagdd</td>
+                <td>500</td>
+                <td>200</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+    </div>
+
+ </div>
+=======
+
+
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
 
 
      <div class="footer">

@@ -291,16 +291,31 @@
         $currentpassword = mysqli_real_escape_string( $con, $_POST['currentpassword']);
         $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
         $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
-        // echo $newpassword, "<br>";
-        // echo $confirmpassword, "<br>";
-        // echo $currentpassword, "<br>";
-    
-        if(strcmp($password,$currentpassword) == 0 and strcmp($newpassword,$confirmpassword) == 0)
+        echo $newpassword, "<br>";
+        echo $confirmpassword, "<br>";
+        echo $currentpassword, "<br>";
+
+        $ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '2345678910111211'; 
+		$encryption_key = "DE";
+		
+		$encryption1 = openssl_encrypt($currentpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        $encryption2 = openssl_encrypt($newpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        $encryption3 = openssl_encrypt($confirmpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        
+        
+        if(strcmp($password,$encryption1) == 0 and strcmp($encryption2,$encryption3) == 0)
         {
             $sql = "update farmerregistration 
-                    set farmer_password='$newpassword' ,
-                    farmer_conf_pswd='$confirmpassword'
+                    set farmer_password='$encryption2' ,
+                    farmer_conf_pswd='$encryption3'
                     where farmer_phone=$sessphonenumber";
+            echo $sql;
             $run = mysqli_query($con, $sql);
             echo "<script>alert('Password Updated Sucessfully!');</script>";
             echo "<script>window.open('FarmerProfile.php','_self')</script>";

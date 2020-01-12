@@ -365,8 +365,9 @@
         $count_items =  mysqli_num_rows($run_items);
     }
 
+    
 
-    ?>
+?>
 
 <script>
     //var x = document.getElementById("demo");
@@ -383,3 +384,4 @@
         "<br>Longitude: " + position.coords.longitude;
     }
 </script>
+

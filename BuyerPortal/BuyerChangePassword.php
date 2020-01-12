@@ -181,13 +181,23 @@ while ($row = mysqli_fetch_array($run_query)) {
         $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
         $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
 
-        echo $newpassword, "<br>";
-        echo $confirmpassword, "<br>";
-        echo $currentpassword, "<br>";
+        $ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '2345678910111211'; 
+        $encryption_key = "DE";
+        
+        $encryption1 = openssl_encrypt($currentpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        $encryption2 = openssl_encrypt($newpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
+        $encryption3 = openssl_encrypt($confirmpassword, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
 
-        if (strcmp($password, $currentpassword) == 0 and strcmp($newpassword, $confirmpassword) == 0) {
+        if (strcmp($password, $encryption1) == 0 and strcmp($encryption2, $encryption3) == 0) {
             $query = "update buyerregistration 
-                    set buyer_password = '$newpassword', buyer_conf_pswd = '$confirmpassword'
+                    set buyer_password = '$encryption2',
+                    buyer_conf_pswd = '$encryption3'
                     where buyer_phone = $sessphonenumber";
             $run = mysqli_query($con, $query);
 

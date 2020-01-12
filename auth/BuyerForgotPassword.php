@@ -109,17 +109,32 @@
         $run_query = mysqli_query($con,$query);
         $count_rows = mysqli_num_rows($run_query);
         
-        if ($count_rows != 0) {
-            $update_query = "update buyerregistration set buyer_password = '$password' ,
-            buyer_conf_pswd = '$confirmpassword' where buyer_phone = '$phonenumber' and buyer_pan = '$pan' ";
+        $ciphering = "AES-128-CTR";
+		$iv_length = openssl_cipher_iv_length($ciphering); 
+		$options = 0; 
+		$encryption_iv = '2345678910111211'; 
+        $encryption_key = "DE";
+        
+        $encryption = openssl_encrypt($password, $ciphering, 
+                $encryption_key, $options, $encryption_iv);
 
-            $run_query = mysqli_query($con,$update_query);
+        if(strcmp($password, $confirmpassword)==0)        
+            {
+                if ($count_rows != 0) {
+                $update_query = "update buyerregistration set buyer_password = '$encryption' ,
+                buyer_conf_pswd = '$encryption' where buyer_phone = '$phonenumber' and buyer_pan = '$pan' ";
 
-            echo "<script>alert('Password Updated Successfully');</script>";
-            echo "<script>window.open('BuyerLogin.php','_self')</script>";
+                $run_query = mysqli_query($con,$update_query);
+
+                echo "<script>alert('Password Updated Successfully');</script>";
+                echo "<script>window.open('BuyerLogin.php','_self')</script>";
+            }
+            else if ($count_rows == 0) {
+                echo "<script>alert('Please Enter Valid Details');</script>";
+            }
         }
-        else if ($count_rows == 0) {
-            echo "<script>alert('Please Enter Valid Details');</script>";
+        else{
+            echo "<script>alert('Please Enter Valid Details');</script>";   
         }
     }
 

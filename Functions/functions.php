@@ -382,9 +382,11 @@
         $count_items =  mysqli_num_rows($run_items);
     }
 
+    
 
-    ?>
+?>
 
+<<<<<<< HEAD
  <script>
      //var x = document.getElementById("demo");
      function getLocation() {
@@ -415,3 +417,21 @@
          === =
  </script>
  >>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
+=======
+<script>
+    //var x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
+
+>>>>>>> 007595db8c7fa7027d44fc783f464748e667c614

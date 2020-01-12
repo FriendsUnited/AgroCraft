@@ -1,6 +1,6 @@
 <?php 
 
-$simple_string = "omkar"; 
+$simple_string = "abhishek"; 
 echo "Original String: " . $simple_string; echo "<br>";
 
 $ciphering = "AES-128-CTR"; 

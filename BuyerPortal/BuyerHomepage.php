@@ -371,9 +371,7 @@ include("../Functions/functions.php");
 		}
 
 		.inputwrapper {
-
-
-			float: left;
+ 	float: left;
 			border-style: double;
 			text-align: center;
 			margin-left: 80px;

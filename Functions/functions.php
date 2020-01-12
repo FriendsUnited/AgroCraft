@@ -13,36 +13,18 @@
             if ($run_query) {
                 while ($row_cat = mysqli_fetch_array($run_query)) {
                     $buyer_name = $row_cat['buyer_name'];
-<<<<<<< HEAD
                     $buyer_name = 'Hello ,' . $buyer_name;
                 }
                 
                 echo@ "<label>$buyer_name</label>";
-=======
-                    $buyer_name = "Hello ," . $buyer_name;
-                    echo "<label>$buyer_name</label>";
-                }
->>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
             }
             $query = "select * from farmerregistration where farmer_phone = $phonenumber";
             $run_query = mysqli_query($con, $query);
             if ($run_query) {
                 while ($row_cat = mysqli_fetch_array($run_query)) {
                     $buyer_name = $row_cat['farmer_name'];
-                }
-
-<<<<<<< HEAD
-                echo "<label>Hello ,$buyer_name</label>";
-=======
-            $query = "select * from farmerregistration where farmer_phone = $phonenumber";
-            $run_query = mysqli_query($con, $query);
-            if ($run_query) {
-                while ($row_cat = mysqli_fetch_array($run_query)) {
-                    $buyer_name = $row_cat['farmer_name'];
-                    $buyer_name = "Hello ," . $buyer_name;
                     echo "<label>$buyer_name</label>";
                 }
->>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
             }
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
@@ -386,52 +368,4 @@
 
 ?>
 
-<<<<<<< HEAD
- <script>
-     //var x = document.getElementById("demo");
-     function getLocation() {
-         if (navigator.geolocation) {
-             navigator.geolocation.getCurrentPosition(showPosition);
-         } else {
-             x.innerHTML = "Geolocation is not supported by this browser.";
-         } <<
-         << << < HEAD
-         echo "Rs".$total; ===
-         === = >>>
-         >>> > 9 c155940777bf8a255346cdea059f4c08af76260
-     }
 
-     function showPosition(position) {
-         x.innerHTML = "Latitude: " + position.coords.latitude +
-             "<br>Longitude: " + position.coords.longitude;
-     } <<
-     << << < HEAD
-         // function clearChat(){
-         //    $query = $db->prepare("Delete from chat");
-         //    $query->execute();       
-         // }
-         ?
-         >
-
-         ===
-         === =
- </script>
- >>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
-=======
-<script>
-    //var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
-
->>>>>>> 007595db8c7fa7027d44fc783f464748e667c614

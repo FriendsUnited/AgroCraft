@@ -10,7 +10,7 @@ include("../Functions/functions.php");
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Farmer Homepage</title>
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -94,8 +94,9 @@ include("../Functions/functions.php");
           }
 
           .headerdown {
+               margin-left:20%;
                height: 50px;
-               width: 100%;
+               width: 80%;
           }
 
           .makeitgreen {
@@ -519,9 +520,26 @@ include("../Functions/functions.php");
                border-color: green;
                border-radius: 5px;
                font-weight: bolder;
-               height:325px;
-               width:240px;
+               height: 325px;
+               width: 240px;
+
+          }
+
+          .slideshow {
+               margin-top: 10px;
+               margin-left: 100px;
+               margin-bottom: 20px;
+               float: left;
+               border-style: solid;
+          }
+          #navbar {
                
+               padding: 20px;
+               color:green;
+               text-decoration: none;
+               margin:20px;
+               font-size: 25px;
+               padding-top:10px;
           }
 >>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
      </style>
@@ -534,12 +552,16 @@ include("../Functions/functions.php");
 
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
+<<<<<<< HEAD
           <!-- <div class="search_input">
                <form action="SearchResults.php" method="get" enctype="multipart/form-data">
                     <i class="fas fa-search" style="font-size:20px;color:white; "></i>
                     <input type="text" id="input1" name="search" placeholder="Search...">
                </form>
           </div> -->
+=======
+
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
 
           <div class="dropdown">
                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
@@ -572,6 +594,7 @@ include("../Functions/functions.php");
           </div>
      </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
      <!-- <div class="headerdown">
 		<div class="sel1 sel">
@@ -623,7 +646,41 @@ include("../Functions/functions.php");
     </div>
 =======
      <br>
+=======
+     <div class="headerdown" >
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
 
+          <a href="Homepage.php" id = "navbar"><label>Home</label></a>
+          <a href="ProductPage.php" id = "navbar"><label>My Products</label></a>
+          <a href="Transactions.php" id = "navbar"><label>My Transactions</label></a>
+          <a href="CallCenter.php" id = "navbar"><label>Call Centers And Sms</label></a>
+               <hr>
+     </div>
+
+
+
+     <div class="slideshow" id="showing">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+
+               <div class="carousel-inner">
+
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                    </div>
+               </div>
+          </div>
+     </div>
 
      <div class="items">
 
@@ -646,7 +703,11 @@ include("../Functions/functions.php");
           }
           ?>
 
+<<<<<<< HEAD
 >>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
+=======
+
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
      </div>
 
 
@@ -656,16 +717,16 @@ include("../Functions/functions.php");
 
           <table align="center" border="2">
 
-               <tr>
+               <tr align="center">
                     <th width=200px>Date</th>
                     <th width=200px>Name</th>
                     <th width=200px>Phone Number</th>
-                    <th width=200px>Address</th>
+                    <th width=300px>Address</th>
                     <th width=200px>Quantity</th>
                     <th width=200px>Price</th>
                </tr>
 
-               <tr>
+               <tr align="center">
                     <td>12-1-2000</td>
                     <td>melissa</td>
                     <td>1234567890</td>

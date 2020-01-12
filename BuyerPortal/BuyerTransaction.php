@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
     <script src="../portal_files/jquery.min.js.download"></script>
     <script src="../portal_files/popper.min.js.download"></script>
@@ -301,7 +301,7 @@
               align-content: center;
           }
           .cont {
-               border-radius: 25%;
+               border-0radius: 25%;
                border-style: solid;
                background-color: #FFD700;
                padding: 10px;
@@ -318,6 +318,49 @@
                height: 70px;
                font-size: 22px;
           }
+          .order{
+              font-size:20px;
+              /* margin-left:20%; */
+              border-color:#00b300;
+              border-style: solid;
+              border-radius:100%;
+              padding:10px;
+              border-width: 2px;
+          }
+          .order1{
+              /* margin-right:100px; */
+              margin-left:400px;
+              margin-right: 100px;
+              font-size: 20px;
+              /* z-index:2; */
+
+
+          }
+         .order1::after{
+
+             /* content: "1"; */
+         }
+          
+          .order2{
+              margin-right:100px;
+              margin-left:100px;
+          }
+          .order3{
+              margin-right:100px;
+              margin-left:100px;
+          }
+          .order4{
+              margin-right:100px;
+              margin-left:100px;
+          }
+.a1{
+    /* width:100px; */
+    margin-left: 400px;
+    margin-top: -44px;
+    margin-bottom:10px;
+/* margin-bottom: 100px; */
+}
+
     </style>
 
 </head>
@@ -393,8 +436,35 @@
         </div>
     </div>
 
+    <script>
+        var a;
+function disp()
+{
+if(a==0){
+
+}
+else{
+
+}
 
 
+}
+
+
+</script>
+
+<div class="x">
+
+<i class='fas fa-people-carry order order1 '></i>
+<i class="fas fa-truck order order2"></i>
+<i class="fas fa-road order order3"></i>
+<i class="fas fa-map-marker-alt order order4" ></i>
+
+
+
+</div>
+
+<div class="a1">__________________________________</div>
 
     <br>
     <br>
@@ -416,7 +486,15 @@
             <th align="center">Sanpada</th>
             <th align="center">Abhishek-Apples</th>
             <th align="center">1</th>
-            <th align="center">Yes</th>
+            <th align="center"><select ><option onselect="disp()" >Farmer</option>
+            <option value="0">Courier</option>
+            <option >Buyer</option></select>
+
+
+
+
+
+            </th>
             <th >70</th>
         </tr>
         <tr align="center" >

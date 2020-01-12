@@ -11,12 +11,8 @@ include("../Functions/functions.php");
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Agrocraft Homepage</title>
-	<!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
-	<!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> show majic -->
-	<!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
 	<link rel="stylesheet" href="../portal_files/bootstrap.min.css">
 	<script src="../portal_files/jquery.min.js.download"></script>
@@ -180,15 +176,9 @@ include("../Functions/functions.php");
 		}
 
 		.options {
-			/* font-weight:bold; */
 			color: yellow;
 			margin-left: 5px;
-
-
-			/* display: inline; */
 			margin-right: 26px;
-
-
 		}
 
 		.icon2 {
@@ -371,7 +361,7 @@ include("../Functions/functions.php");
 		}
 
 		.inputwrapper {
- 	float: left;
+			float: left;
 			border-style: double;
 			text-align: center;
 			margin-left: 80px;
@@ -844,9 +834,6 @@ include("../Functions/functions.php");
 	</a>
 	</div>
 
-
-
-	<!-- <hr> -->
 	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Fresh Fruit's</b></label></div>
 	<table class="tabless">
 		<tr>

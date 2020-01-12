@@ -94,7 +94,7 @@ include("../Functions/functions.php");
           }
 
           .headerdown {
-               margin-left: 20%;
+               margin-left: 15%;
                height: 50px;
                width: 80%;
           }
@@ -479,16 +479,7 @@ include("../Functions/functions.php");
                height: auto;
           }
 
-          .productbox {
-               float: left;
-               margin: 15px;
-               margin-left: 30px;
-               padding: 15px;
-               border-style: outline;
-               border: 2px solid;
-               border-color: green;
-               border-radius: 10px;
-          }
+
 
           /* .productbox:hover {
                float: left;
@@ -523,6 +514,65 @@ include("../Functions/functions.php");
                font-size: 25px;
                padding-top: 10px;
           }
+
+          #navbar:hover {
+               padding: 20px;
+               color: green;
+               text-decoration: underline;
+               margin: 20px;
+               font-size: 30px;
+               font-weight: bolder;
+               padding-top: 10px;
+          }
+
+          .products {
+               margin-left: 5%;
+
+          }
+
+          .productbox {
+               float: left;
+               margin: 15px;
+               /* margin-left: 30px; */
+               padding: 15px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 10px;
+          }
+
+          .productbox img {
+               height: 200px;
+               width: 200px;
+               border-style: double;
+               border: 2px solid;
+               border-color: brown;
+               border-width: 2px;
+               border-radius: 10px;
+          }
+
+          .productbox p {
+               text-align: center;
+               text-decoration: underline;
+          }
+
+          /* .productbox img:hover {
+               height: 220px;
+               width: 220px;
+               border-style: double;
+               border: 2px solid;
+               border-color: brown;
+               border-width: 3px;
+               border-radius: 15px;
+          }
+
+          .productbox p:hover {
+               text-align: center;
+               text-decoration: underline;
+               /* font-weight: bold; */
+          }
+
+          */
      </style>
 
 </head>
@@ -569,13 +619,12 @@ include("../Functions/functions.php");
 
      </div>
 
-
      <div class="headerdown">
 
-          <a href="Homepage.php" id="navbar"><label>Home</label></a>
-          <a href="MyProducts.php" id="navbar"><label>My Products</label></a>
-          <a href="Transactions.php" id="navbar"><label>My Transactions</label></a>
-          <a href="CallCenter.php" id="navbar"><label>Call Centers And Sms</label></a>
+          <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+          <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
           <hr>
      </div>
 
@@ -588,15 +637,17 @@ include("../Functions/functions.php");
                     <b>All Product's</b></label>
           </div>
 
-          <?php
-          include("../Includes/db.php");
-          if (isset($_SESSION['phonenumber'])) {
-               $sess_phone_number = $_SESSION['phonenumber'];
-               getFarmerProducts();
-          } else {
-               echo "<br><br><h1 align = center>Please Login!</h1><br><br><hr>";
-          }
-          ?>
+          <div class="products">
+               <?php
+               include("../Includes/db.php");
+               if (isset($_SESSION['phonenumber'])) {
+                    $sess_phone_number = $_SESSION['phonenumber'];
+                    getFarmerProducts();
+               } else {
+                    echo "<br><br><h1 align = center>Please Login!</h1><br><br><hr>";
+               }
+               ?>
+          </div>
 
      </div>
 

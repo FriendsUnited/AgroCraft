@@ -94,7 +94,7 @@ include("../Functions/functions.php");
           }
 
           .headerdown {
-               margin-left: 20%;
+               margin-left: 15%;
                height: 50px;
                width: 80%;
           }
@@ -523,6 +523,16 @@ include("../Functions/functions.php");
                font-size: 25px;
                padding-top: 10px;
           }
+
+          #navbar:hover {
+               padding: 20px;
+               color: green;
+               text-decoration: underline;
+               margin: 20px;
+               font-size: 30px;
+               font-weight: bolder;
+               padding-top: 10px;
+          }
      </style>
 
 </head>
@@ -572,10 +582,10 @@ include("../Functions/functions.php");
 
      <div class="headerdown">
 
-          <a href="Homepage.php" id="navbar"><label>Home</label></a>
-          <a href="MyProducts.php" id="navbar"><label>My Products</label></a>
-          <a href="Transactions.php" id="navbar"><label>My Transactions</label></a>
-          <a href="CallCenter.php" id="navbar"><label>Call Centers And Sms</label></a>
+          <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+          <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
           <hr>
      </div>
 

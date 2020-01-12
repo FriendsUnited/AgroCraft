@@ -228,15 +228,15 @@
                 $path = "../Admin/product_images/" . $image;
 
                 echo "
-                    <div  class = 'productbox' style = '' >
-                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
-                        style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
+                    <div  class = 'productbox'  >
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'><br></a>
+                        
                         <div>
-                        <p style='text-align:center; text-decoration:underline;'><b>$product_title</b></p>
-                        <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
+                            <p><b>$product_title</b></p>
+                            <p><b>Price : Rs $price</b></p>
                         </div>
-                        </div> 
-                        ";
+
+                    </div>";
             }
         } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";

@@ -21,7 +21,8 @@ Portal for Farmers to sell the product at a better rate
 
 • Technology that can be used as a platform for connecting car buyer to Seller Domain Bucket 
 	o Agriculture 
-	o E-Commerce o Payment
+	o E-Commerce 
+	o Payment
 
 • Technology Bucket 
 	o Integration across systems – Integration platform across systems with security model for data extraction 

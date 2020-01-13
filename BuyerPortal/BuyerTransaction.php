@@ -13,9 +13,9 @@ include("../Functions/functions.php");
     <title>Agrocraft Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <<<<<<< HEAD=======<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        >>>>>>> 27a20937121a7469acf5cdd66f87f8e1dc71a371
+   
         <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
         <script src="../portal_files/jquery.min.js.download"></script>
         <script src="../portal_files/popper.min.js.download"></script>
@@ -304,7 +304,7 @@ include("../Functions/functions.php");
             }
 
             .cont {
-                border-0radius: 25%;
+                border-radius: 25%;
                 border-style: solid;
                 background-color: #FFD700;
                 padding: 10px;
@@ -324,44 +324,24 @@ include("../Functions/functions.php");
             }
 
             .order {
-                font-size: 20px;
+                font-size: 30px;
                 /* margin-left:20%; */
                 border-color: #00b300;
                 border-style: solid;
                 border-radius: 100%;
-                padding: 10px;
+                padding: 15px;
+
                 border-width: 2px;
+
             }
-
-            .order1 {
-                /* margin-right:100px; */
-                margin-left: 400px;
-                margin-right: 100px;
-                font-size: 20px;
-                /* z-index:2; */
-
+            .order1{
+                background-color: #FFD700;
 
             }
 
-            .order1::after {
+            
 
-                /* content: "1"; */
-            }
-
-            .order2 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
-
-            .order3 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
-
-            .order4 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
+            
 
             .a1 {
                 /* width:100px; */
@@ -369,6 +349,32 @@ include("../Functions/functions.php");
                 margin-top: -44px;
                 margin-bottom: 10px;
                 /* margin-bottom: 100px; */
+            }
+            ul{
+                list-style: none;
+                /* display: inline-block; */
+                text-align: center;
+                /* width:200px; */
+            }
+            
+            li{
+                width: 300px;
+                text-align: center;
+
+                /* background-color: greenyellow; */
+                display: inline-block;
+            }
+            .fa::after{
+                content:"";
+                display: block;
+                height: 2px;
+                width:200px;
+                color:red;
+                /* background-color: black; */
+            }
+
+            .aria{
+
             }
         </style>
 
@@ -446,19 +452,19 @@ include("../Functions/functions.php");
     </div>
 
     <script>
-        var a;
+    //     var a;
 
-        function disp() {
-            if (a == 0) {
+    //     function disp() {
+    //         if (a == 0) {
 
-            } else {
+    //         } else {
 
-            }
+    //         }
 
 
-        }
-    </script>
-
+    //     }
+    // </script>
+<!-- 
     <div class="x">
 
         <i class='fas fa-people-carry order order1 '></i>
@@ -470,7 +476,22 @@ include("../Functions/functions.php");
 
     </div>
 
-    <div class="a1">__________________________________</div>
+    <div class="a1">__________________________________</div> -->
+<ul class="ash">
+<li class="ash1">         <i class='fas fa-people-carry order order1 '></i> 
+<br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing
+</li>
+<li class="ash1">            <i class="fas fa-truck order order2"></i><br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
+</li>
+<li class="ash1">      <i class="fas fa-road order order3"></i>
+<br><i class="fa fa-refresh aria" aria-hidden="true"></i><br>Half way  </li>
+<li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i><<br>Reached/li>
+
+
+
+</ul>
+
+
 
     <br>
     <br>

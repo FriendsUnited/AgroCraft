@@ -15,8 +15,8 @@
                     $buyer_name = $row_cat['buyer_name'];
                     $buyer_name = 'Hello ,' . $buyer_name;
                 }
-                
-                echo@ "<label>$buyer_name</label>";
+
+                echo @"<label>$buyer_name</label>";
             }
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
@@ -211,6 +211,42 @@
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
+
+    // Checkout System Functions
+    function cart()
+    {
+        if (isset($_SESSION['phonenumber'])) {
+            if (isset($_GET['add_cart'])) {
+
+                global $con;
+                if (isset($_POST['quantity'])) {
+                    $qty = $_POST['quantity'];
+                } else {
+                    $qty = 1;
+                }
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $product_id = $_GET['add_cart'];
+
+                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+                $run_check = mysqli_query($con, $check_pro);
+                
+                echo "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>";
+                echo "<script type='text/javascript'>";           
+                    if (mysqli_num_rows($run_check) > 0) {
+                        echo "";
+                    } else {
+                        $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                        $run_insert_pro = mysqli_query($con, $insert_pro);    
+                    }
+                    echo "</script>"; 
+                    echo"<script>window.location.reload(true)</script>";               
+            }
+        } else {
+            // echo "<script>alert('Please Login First! ');</script>";
+        }
+    }
+
     //function which is link with FarmerHomePage
     function getFarmerProducts()
     {
@@ -228,15 +264,15 @@
                 $path = "../Admin/product_images/" . $image;
 
                 echo "
-                    <div  class = 'productbox' style = '' >
-                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
-                        style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
+                    <div  class = 'productbox'  >
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'><br></a>
+                        
                         <div>
-                        <p style='text-align:center; text-decoration:underline;'><b>$product_title</b></p>
-                        <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
+                            <p><b>$product_title</b></p>
+                            <p><b>Price : Rs $price</b></p>
                         </div>
-                        </div> 
-                        ";
+
+                    </div>";
             }
         } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
@@ -339,40 +375,6 @@
 
 
     <?php
-    // Checkout System Functions
-    function cart()
-    {
-        
-        if (isset($_SESSION['phonenumber'])) {
-            if (isset($_GET['add_cart'])) {
-
-                global $con;
-                if (isset($_POST['quantity'])) {
-                    $qty = $_POST['quantity'];
-                } else {
-                    $qty = 1;
-                }
-                $sess_phone_number = $_SESSION['phonenumber'];
-                $product_id = $_GET['add_cart'];
-
-                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                $run_check = mysqli_query($con, $check_pro);
-                
-                echo "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>";
-                echo "<script type='text/javascript'>";           
-                    if (mysqli_num_rows($run_check) > 0) {
-                        echo "";
-                    } else {
-                        $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                        $run_insert_pro = mysqli_query($con, $insert_pro);    
-                    }
-                    echo "</script>"; 
-                    echo"<script>window.location.reload(true)</script>";               
-            }
-        } else {
-            // echo "<script>alert('Please Login First! ');</script>";
-        }
-    }
+    
     ?>
 

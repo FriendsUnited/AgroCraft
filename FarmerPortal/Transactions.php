@@ -490,7 +490,7 @@ include("../Functions/functions.php");
                border-radius: 10px;
           }
 
-          .productbox:hover {
+          /* .productbox:hover {
                float: left;
                margin: 25px;
                margin-left: 30px;
@@ -500,10 +500,11 @@ include("../Functions/functions.php");
                border-color: green;
                border-radius: 5px;
                font-weight: bolder;
-               height: 325px;
-               width: 240px;
+               height: 305px;
+               width: 220px;
+               transition: 0.5s;
 
-          }
+          } */
 
           .slideshow {
                margin-top: 10px;
@@ -531,10 +532,6 @@ include("../Functions/functions.php");
                font-size: 30px;
                font-weight: bolder;
                padding-top: 10px;
-          }
-
-          #navbar i {
-               padding-right: 1%;
           }
      </style>
 
@@ -594,28 +591,41 @@ include("../Functions/functions.php");
 
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
+     <br>
 
-               <div class="carousel-inner">
+     <div style="display:block;">
+          <br> <br>
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
 
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
-          </div>
+          <table align="center" border="2" style="margin-left:8%;">
+
+               <tr align="center">
+                    <th width=200px>Date</th>
+                    <th width=200px>Name</th>
+                    <th width=200px>Phone Number</th>
+                    <th width=300px>Address</th>
+                    <th width=200px>Quantity</th>
+                    <th width=200px>Price</th>
+               </tr>
+
+               <tr align="center">
+                    <td>12-1-2000</td>
+                    <td>melissa</td>
+                    <td>1234567890</td>
+                    <td>sajgdkagdd</td>
+                    <td>500</td>
+                    <td>200</td>
+               </tr>
+
+          </table>
      </div>
+
+
+
+
+
+
+
 
 
 

@@ -13,19 +13,10 @@
             if ($run_query) {
                 while ($row_cat = mysqli_fetch_array($run_query)) {
                     $buyer_name = $row_cat['buyer_name'];
-                    $buyer_name = "Hello ," . $buyer_name;
-                    echo "<label>$buyer_name</label>";
+                    $buyer_name = 'Hello ,' . $buyer_name;
                 }
-            }
-
-            $query = "select * from farmerregistration where farmer_phone = $phonenumber";
-            $run_query = mysqli_query($con, $query);
-            if ($run_query) {
-                while ($row_cat = mysqli_fetch_array($run_query)) {
-                    $buyer_name = $row_cat['farmer_name'];
-                    $buyer_name = "Hello ," . $buyer_name;
-                    echo "<label>$buyer_name</label>";
-                }
+                
+                echo@ "<label>$buyer_name</label>";
             }
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
@@ -332,25 +323,19 @@
         $count_items =  mysqli_num_rows($run_items);
     }
 
-    
 
-?>
 
-<script>
-    //var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
+    ?>
 
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
+ <script>
+     //var x = document.getElementById("demo");
+     function getLocation() {
+         if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition);
+         } else {
+             x.innerHTML = "Geolocation is not supported by this browser.";
+         }
+     }
 
 
     <?php

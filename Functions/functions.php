@@ -18,17 +18,6 @@
                 
                 echo@ "<label>$buyer_name</label>";
             }
-<<<<<<< HEAD
-            $query = "select * from farmerregistration where farmer_phone = $phonenumber";
-            $run_query = mysqli_query($con, $query);
-            if ($run_query) {
-                while ($row_cat = mysqli_fetch_array($run_query)) {
-                    $buyer_name = $row_cat['farmer_name'];
-                    echo "<label>$buyer_name</label>";
-                }
-            }
-=======
->>>>>>> e90caee07c08aae6e968a83697de5aad98cbf6dc
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
         }
@@ -369,8 +358,6 @@
 
 
 
-<<<<<<< HEAD
-=======
     ?>
 
  <script>
@@ -382,7 +369,6 @@
              x.innerHTML = "Geolocation is not supported by this browser.";
          }
      }
->>>>>>> b5d1f860e464430d3f90d2ede673d0e724a6451f
 
      function showPosition(position) {
          x.innerHTML = "Latitude: " + position.coords.latitude +

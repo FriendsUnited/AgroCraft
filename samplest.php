@@ -13,7 +13,7 @@ include("../Functions/functions.php");
     <title>Agrocraft Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
    
         <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
@@ -432,20 +432,20 @@ include("../Functions/functions.php");
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
                 <span class="caret"></span></button>
             <ul class="dropdown-menu  ">
-                <?php getCrops(); ?>
+                <!-- <?php getCrops(); ?> -->
             </ul>
         </div>
         <div class="sel2 sel">
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
                 <span class="caret"></span></button>
             <ul class="dropdown-menu ">
-                <?php getVegetables(); ?>
+                <!-- <?php getVegetables(); ?> -->
             </ul>
         </div>
         <div class="sel3 sel">
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
                 <span class="caret"></span></button>
-            <ul class="dropdown-menu ">
+            <!-- <ul class="dropdown-menu "> -->
                 <?php getFruits(); ?>
             </ul>
         </div>
@@ -521,7 +521,7 @@ include("../Functions/functions.php");
                 }
 
                 ?> -->
-        <tr align="center" class=trow>
+            <tr align="center" class=trow>
             <th align="center">Abhishek</th>
             <th align="center">9871234511</th>
             <th align="center">Sanpada</th>

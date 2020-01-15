@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 include("../Functions/functions.php");
-?>
+?> -->
 
 <!DOCTYPE html>
 
@@ -13,7 +13,7 @@ include("../Functions/functions.php");
     <title>Agrocraft Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
    
         <link rel="stylesheet" href="../portal_files/bootstrap.min.css">

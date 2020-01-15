@@ -15,8 +15,8 @@
                     $buyer_name = $row_cat['buyer_name'];
                     $buyer_name = 'Hello ,' . $buyer_name;
                 }
-                
-                echo@ "<label>$buyer_name</label>";
+
+                echo @"<label>$buyer_name</label>";
             }
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
@@ -228,15 +228,15 @@
                 $path = "../Admin/product_images/" . $image;
 
                 echo "
-                    <div  class = 'productbox' style = '' >
-                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
-                        style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
+                    <div  class = 'productbox'  >
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'><br></a>
+                        
                         <div>
-                        <p style='text-align:center; text-decoration:underline;'><b>$product_title</b></p>
-                        <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
+                            <p><b>$product_title</b></p>
+                            <p><b>Price : Rs $price</b></p>
                         </div>
-                        </div> 
-                        ";
+
+                    </div>";
             }
         } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
@@ -355,23 +355,3 @@
         $run_items =  mysqli_query($con, $get_items);
         $count_items =  mysqli_num_rows($run_items);
     }
-
-
-
-    ?>
-
- <script>
-     //var x = document.getElementById("demo");
-     function getLocation() {
-         if (navigator.geolocation) {
-             navigator.geolocation.getCurrentPosition(showPosition);
-         } else {
-             x.innerHTML = "Geolocation is not supported by this browser.";
-         }
-     }
-
-     function showPosition(position) {
-         x.innerHTML = "Latitude: " + position.coords.latitude +
-             "<br>Longitude: " + position.coords.longitude;
-     }
- </script>

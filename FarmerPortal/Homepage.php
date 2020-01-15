@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -271,144 +271,6 @@ include("../Functions/functions.php");
                float: left;
                margin-top: -65px;
           }
-<<<<<<< HEAD
-
-          body {
-               margin: 0;
-               padding: 0;
-               font-family: sans-serif;
-               /* background-image: url(images/Website/FarmerLogin.jpg); */
-               background-size: cover;
-               background-position: center;
-               box-sizing: border-box;
-          }
-
-          .wrapper {
-               /* width: 300px; */
-               background-image: 100px;
-          }
-
-          .add_button {
-               /* clear:left;
-            margin-left:450px; */
-               float: right;
-               /* margin-top: 10px; */
-               text-align: center;
-               /* margin-right:10%; */
-               /* background-color:red; */
-          }
-
-          /* .dropdown {
-            float: right;
-            margin-right: 1em;
-            margin-top: 0;
-            margin-bottom: 52em;
-            color: white;
-            background-color:green;
-
-        } */
-
-          /* ul li {
-            display: none;
-        } */
-
-          /* ul li:hover ul li {
-            display: block;
-             width: 30px; 
-        }
-
-        ul li a {
-            display: block;
-             width: 30px; 
-        } */
-
-          .products:last-child {}
-
-          h1 {
-               /* color: rgb(20, 83, 31); */
-               font-family: 'Times New Roman', Times, serif;
-               color: white;
-
-          }
-
-          /* .trans {
-            clear: left;
-            background-color: red;
-        } */
-
-          .lost {
-               font-family: Verdana, Geneva, Tahoma, sans-serif;
-               color: white;
-               text-align: center;
-               /* margin-top: 5em; */
-               background-color: olive;
-               /* height: 8%; */
-               margin-top: 120px;
-               /* border-radius: 30px; */
-               margin: auto;
-          }
-
-          /* .dropdown-content {
-            display: none;
-            /* position: sticky;  */
-          /* background-color: transparent; */
-          /* min-width: 250px; */
-          /* z-index: 1;
-        } */
-
-          /* .dropdown-content a {
-            color: rgb(12, 11, 11);
-            padding: 30px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            font-size: 20px;
-            background-color: white;
-            width: 100px;  
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-        } */
-
-          /* .dropdown-content a:hover {
-            background-color: white;
-             color: black; 
-             position:absolute; 
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            background-color: white;
-             position:relative; 
-        } */
-          /* 
-        .dropdown:hover .dropbtn {
-            background-color: #ffffff;
-        }  */
-
-          .new {
-               /* display: table-cell;
-            vertical-align: middle; */
-               text-align: center;
-          }
-
-          .button {
-               position: relative;
-               /* margin-left: 130px; */
-               float: right;
-               /* margin-bottom:250px; 
-             margin-top:3em; */
-               /* clear:left;  */
-          }
-
-          h2 {
-               color: white;
-               margin-top: 3em;
-               /* background-color: green;
-         */
-               text-align: center;
-
-               /* background-color: darkcyan; */
-=======
 
           body {
                margin: 0;
@@ -462,18 +324,12 @@ include("../Functions/functions.php");
                color: white;
                margin-top: 3em;
                text-align: center;
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
           }
 
           .hii {
                float: right;
                margin-right: 5em;
-<<<<<<< HEAD
-               /* margin-top:254em;  */
-               /* background-color:red; */
-=======
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
           }
 
           .ribbon {
@@ -492,34 +348,11 @@ include("../Functions/functions.php");
                border: 1px;
                width: 100%;
                white-space: nowrap;
-<<<<<<< HEAD
-
-               height: 70px;
-=======
                height: 70px;
 
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
           }
 
-<<<<<<< HEAD
-          }
-
-          .subtract {
-               float: right;
-               border-color: olive;
-
-               margin-top: 2%;
-               text-align: center;
-               /* font-weight: 10px; */
-               /* font-family: Arial, Helvetica, sans-serif; */
-               /* background-color: green; */
-               border-radius: 25px;
-
-
-          }
-
-=======
           .subtract {
                float: right;
                border-color: olive;
@@ -528,7 +361,6 @@ include("../Functions/functions.php");
                border-radius: 25px;
           }
 
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
           /* .box{
             
             color: rgb(6, 36, 7);
@@ -547,10 +379,6 @@ include("../Functions/functions.php");
           /* height: 900px;
             border-radius: 30px;
             
-<<<<<<< HEAD
-        } */
-          */
-=======
         }
         .please{
              text-align:center;
@@ -708,7 +536,6 @@ include("../Functions/functions.php");
           #navbar i {
                padding-right: 1%;
           }
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
      </style>
 
 </head>
@@ -735,8 +562,7 @@ include("../Functions/functions.php");
                </ul>
           </div>
 
-<<<<<<< HEAD
-          <div class="dropdown">
+          <<<<<<< HEAD <div class="dropdown">
                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-user fa-2x">
                </button></i>
                <!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
@@ -753,210 +579,208 @@ include("../Functions/functions.php");
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
                     }
                     ?> -->
-          </div>
-          <div class="proicon">
-               <?php
-               if (!isset($_SESSION['phonenumber'])) {
-                    echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               } else {
-                    echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               }
-               ?>
-          </div>
-
-
-          <div class="icon2">
-               <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> 5 </span>
-          </div>
-=======
-          <div class="proicon">
-
-               <?php
-               if (!isset($_SESSION['phonenumber'])) {
-                    echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
-               } else {
-                    echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
-               }
-               ?>
-          </div>
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
-
-          <div class="loginz">
-               <?php getFarmerUsername(); ?>
-          </div>
      </div>
-
-<<<<<<< HEAD
-     <!-- <div class="headerdown">
-		<div class="sel1 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu  ">
-				<?php getCrops(); ?>
-			</ul>
-		</div>
-		<div class="sel2 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-				<?php getVegetables(); ?>
-			</ul>
-		</div>
-		<div class="sel3 sel">
-			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-				<span class="caret"></span></button>
-			<ul class="dropdown-menu ">
-			<?php getFruits(); ?>
-			</ul>
-		</div>
-	</div>
- -->
-
-     <div class="lost">ALL PRODUCTS </div>
-     <div class="subtract"><button class="subtract"><b>Add Product </b>
-               <div class="add_button">
-          </button>
-     </div></button></div>>
-     <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      -->
-
-     <br>
-
-     <div>
+     <div class="proicon">
           <?php
-          include("../Includes/db.php");
-          $sess_phone_number = $_SESSION['phonenumber'];
-          getFarmerProducts();
+          if (!isset($_SESSION['phonenumber'])) {
+               echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+          } else {
+               echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+          }
           ?>
+     </div>
 
 
+     <div class="icon2">
+          <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+          <span id="icon"> 5 </span>
+     </div>
+     =======
+     <div class="proicon">
+
+          <?php
+          if (!isset($_SESSION['phonenumber'])) {
+               echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+          } else {
+               echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+          }
+          ?>
+     </div>
+     >>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
+
+     <div class="loginz">
+          <?php getFarmerUsername(); ?>
      </div>
      </div>
-     </div>
-     <div class="trans">
 
-
-          <div class="lost">TRANSACTION HISTORY</h3>
+     <<<<<<< HEAD <!-- <div class="headerdown">
+          <div class="sel1 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu  ">
+                    <?php getCrops(); ?>
+               </ul>
           </div>
+          <div class="sel2 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu ">
+                    <?php getVegetables(); ?>
+               </ul>
+          </div>
+          <div class="sel3 sel">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+                    <span class="caret"></span></button>
+               <ul class="dropdown-menu ">
+                    <?php getFruits(); ?>
+               </ul>
+          </div>
+          </div>
+          -->
 
+          <div class="lost">ALL PRODUCTS </div>
+          <div class="subtract"><button class="subtract"><b>Add Product </b>
+                    <div class="add_button">
+               </button>
+          </div></button></div>>
+          <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      -->
+
+          <br>
 
           <div>
-               <br>
-               <br>
+               <?php
+               include("../Includes/db.php");
+               $sess_phone_number = $_SESSION['phonenumber'];
+               getFarmerProducts();
+               ?>
 
-               <table border="2">
 
-                    <tr>
-                         <th width=200px>Date</th>
-                         <th width=200px>Name</th>
-                         <th width=200px>Phone Number</th>
-                         <th width=200px>Address</th>
-                         <th width=200px>Quantity</th>
-                         <th width=200px>Price</th>
-
-                    </tr>
-                    <tr>
-                         <td>12-1-2000</td>
-                         <td>melissa</td>
-                         <td>1234567890</td>
-                         <td>sajgdkagdd</td>
-                         <td>500</td>
-                         <td>200</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
-               </table>
           </div>
-=======
-     <br>
-
-     </div>
-
-
-     <div class="headerdown">
-
-          <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
-          <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
-          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
-          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
-          <hr>
-     </div>
+          </div>
+          </div>
+          <div class="trans">
 
 
+               <div class="lost">TRANSACTION HISTORY</h3>
+               </div>
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
 
-               <div class="carousel-inner">
+               <div>
+                    <br>
+                    <br>
 
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                    <table border="2">
+
+                         <tr>
+                              <th width=200px>Date</th>
+                              <th width=200px>Name</th>
+                              <th width=200px>Phone Number</th>
+                              <th width=200px>Address</th>
+                              <th width=200px>Quantity</th>
+                              <th width=200px>Price</th>
+
+                         </tr>
+                         <tr>
+                              <td>12-1-2000</td>
+                              <td>melissa</td>
+                              <td>1234567890</td>
+                              <td>sajgdkagdd</td>
+                              <td>500</td>
+                              <td>200</td>
+                         </tr>
+                         <tr></tr>
+                         <tr></tr>
+                    </table>
+               </div>
+               =======
+               <br>
+
+          </div>
+
+
+          <div class="headerdown">
+
+               <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+               <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+               <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+               <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
+               <hr>
+          </div>
+
+
+
+          <div class="slideshow" id="showing">
+               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                         <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                         <div class="carousel-item">
+                              <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+                         </div>
+                         <div class="carousel-item active">
+                              <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+                         </div>
+                         <div class="carousel-item">
+                              <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                         </div>
                     </div>
                </div>
           </div>
-     </div>
 
 
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
+          >>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
 
 
 
-<<<<<<< HEAD
-          <div class="footer">
+          <<<<<<< HEAD <div class="footer">
                <hr>
                <label class="payment">Payment Options:-</label>
                <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
                <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-          </div><br><br>
-          <h3><span> GET SOCIAL WITH US </span></h3>
-=======
-     <div class="footer">
-          <hr>
-          <label class="payment">Payment Options:-</label>
-          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
-          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-     </div><br><br>
-     <h3><span> GET SOCIAL WITH US </span></h3>
->>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
-     </div>
-     <div class="morefooter">
+               </div><br><br>
+               <h3><span> GET SOCIAL WITH US </span></h3>
+               =======
+               <div class="footer">
+                    <hr>
+                    <label class="payment">Payment Options:-</label>
+                    <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
+                    <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
+               </div><br><br>
+               <h3><span> GET SOCIAL WITH US </span></h3>
+               >>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
+               </div>
+               <div class="morefooter">
 
-          <div class="call">
-               <i class="fas fa-phone-alt call_color"></i>
-               <a href="#" style="color:black;">+91-8191046421</a>
-          </div>
+                    <div class="call">
+                         <i class="fas fa-phone-alt call_color"></i>
+                         <a href="#" style="color:black;">+91-8191046421</a>
+                    </div>
 
-          <div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
-          </div>
+                    <div class="instagram"><img src="../Images/Website/Insta.jpg" height="45px" width="60px">
+                    </div>
 
-          <div class="gmail">
-               <img src="../Images/Website/gmail.jpg" height="30px" width="50px">
-          </div>
+                    <div class="gmail">
+                         <img src="../Images/Website/gmail.jpg" height="30px" width="50px">
+                    </div>
 
-     </div>
-     <div class="instaid">
-          <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
+               </div>
+               <div class="instaid">
+                    <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
 
-          <div class="gmailid">
-               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
-          </div>
+                    <div class="gmailid">
+                         <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
+                    </div>
 
-     </div>
-     <div class="copy">
-          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
-     </div>
+               </div>
+               <div class="copy">
+                    <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
+               </div>
 
 </body>
 

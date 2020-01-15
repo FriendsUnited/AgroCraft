@@ -1,11 +1,6 @@
 <!-- <?php
-<<<<<<< HEAD
-include("../Functions/functions.php");
-?> -->
-=======
         include("../Functions/functions.php");
         ?> -->
->>>>>>> af288d3ac5152a82d2fb336784f0b9ce15dd7d1b
 
 <!DOCTYPE html>
 
@@ -18,177 +13,6 @@ include("../Functions/functions.php");
     <title>Agrocraft Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-   
-        <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
-        <script src="../portal_files/jquery.min.js.download"></script>
-        <script src="../portal_files/popper.min.js.download"></script>
-        <script src="../portal_files/bootstrap.min.js.download"></script>
-
-        <style>
-            * {
-                margin: 0;
-                box-sizing: border-box;
-            }
-
-
-            .header {
-                position: sticky;
-                z-index: 100;
-                top: 0rem;
-                height: 69px;
-                width: 100%;
-                background-color: #00b300;
-            }
-
-            .select_element {
-                width: 20px;
-                background-color: transparent;
-                border: none;
-                text: none;
-            }
-
-
-            #logo {
-                height: 66px;
-                width: 100px;
-                text-align: left;
-                float: left;
-            }
-
-            .search_input {
-                float: left;
-                margin-left: 50px;
-                margin-top: 20px;
-
-            }
-
-            .proicon {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-            }
-
-            .dropdown {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-            }
-
-            .options {
-                color: yellow;
-                margin-left: 20px;
-                width: 25px;
-                margin-right: 50px;
-
-            }
-
-            .icon2 {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-
-            }
-
-            .loginz {
-                float: right;
-                margin-right: 20px;
-                margin-top: 20px;
-            }
-
-            .headerdown {
-                height: 50px;
-                width: 100%;
-            }
-
-            .makeitgreen {
-                color: #00b300;
-            }
-
-            .sel1 {
-                color: green;
-                float: left;
-                margin-top: 3px;
-            }
-
-            .sel2 {
-                border-color: green;
-                color: green;
-                float: left;
-                margin-left: 600px;
-                margin-top: 3px;
-            }
-
-            .sel3 {
-                font-size: 20px;
-                margin-top: 3px;
-                float: right;
-                margin-right: 5px;
-            }
-
-
-
-            #input1 {
-                width: 220px;
-                border: none;
-            }
-
-
-            #input1:active {
-                background-color: tomato;
-            }
-
-
-            .wrapper {
-                display: grid;
-                grid-template-columns: 20% 20% 20% 20%;
-                grid-column-gap: 20px;
-                grid-row-gap: 10px;
-                grid-column-gap: 20px;
-                grid-row-gap: 10px;
-                margin-left: 30px;
-            }
-
-            .inputwrapper {
-                float: left;
-                border-style: double;
-                text-align: center;
-                margin-left: 80px;
-                width: 280px;
-                margin-bottom: 20px;
-                clear: auto;
-            }
-
-
-            .inputwrapper:last-child {
-                margin-right: 30px;
-            }
-
-            .addtocart {
-                background-color: #FFD700;
-            }
-
-            .numberinput {
-                width: 35px;
-            }
-
-            .content_item {
-                text-align: center;
-                justify-content: center;
-            }
-
-            .etc {
-                margin-left: -40px;
-                min-width: 90px;
-                font-size: 20px;
-            }
-
-            .crop_items {
-                color: green;
-            }
-=======
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
@@ -198,76 +22,99 @@ include("../Functions/functions.php");
     <script src="../portal_files/bootstrap.min.js.download"></script>
 
     <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
+       	* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+ b
+
+		.header {
+			position: sticky;
+			z-index: 100;
+			top: 0rem;
+			height: 69px;
+			width: 100%;
+			background-color: #00b300;
+		}
+
+		.select_element {
+			width: 20px;
+			background-color: transparent;
+			border: none;
+			text: none;
+		}
 
 
-        .header {
-            position: sticky;
-            z-index: 100;
-            top: 0rem;
-            height: 69px;
-            width: 100%;
-            background-color: #00b300;
-        }
+		#logo {
+			height: 66px;
+			width: 100px;
+			text-align: left;
+			float: left;
+		}
 
-        .select_element {
-            width: 20px;
-            background-color: transparent;
-            border: none;
-            text: none;
-        }
+		.search_input {
+			clear: none;
+			float: left;
+			margin-left: 20px;
+			margin-top: 20px;
+
+		}
+
+		.proicon {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
+		}
+
+		#icon {
+			background-color: red;
+			color: white;
+		}
+
+		.dropdown {
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
 
 
-        #logo {
-            height: 66px;
-            width: 100px;
-            text-align: left;
-            float: left;
-        }
+		}
 
-        .search_input {
-            float: left;
-            margin-left: 50px;
-            margin-top: 20px;
+		.options {
+			color: yellow;
+			margin-left: 5px;
+			margin-right: 26px;
+		}
 
-        }
+		.icon2 {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
 
-        .proicon {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
-        }
 
-        .dropdown {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
-        }
+		}
 
-        .options {
-            color: yellow;
-            margin-left: 20px;
-            width: 25px;
-            margin-right: 50px;
+		.filter {
+			float: right;
+			margin-right: 800px;
+			margin-top: 15px;
+			background-color: transparent;
+			color: black;
 
-        }
 
-        .icon2 {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
+		}
 
-        }
+		.filterbutton {
+			background-color: transparent;
+			border: none;
+			margin-top: 5px;
+			color: white;
+		}
 
-        .loginz {
-            float: right;
-            margin-right: 20px;
-            margin-top: 20px;
-        }
-
+		.loginz {
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
+		}
         .headerdown {
             height: 50px;
             width: 100%;
@@ -478,7 +325,6 @@ include("../Functions/functions.php");
         .trow {
             align-content: center;
         }
->>>>>>> af288d3ac5152a82d2fb336784f0b9ce15dd7d1b
 
         .cont {
             border-radius: 25%;
@@ -560,51 +406,61 @@ include("../Functions/functions.php");
 
 <body>
 
-    <div class="header">
+   	<div class="header">
 
-        <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+		<a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
-        <div class="search_input">
-            <form action="SearchResults.php" method="get" enctype="multipart/form-data">
-                <i class="fas fa-search" style="font-size:20px;color:white; "></i>
-                <input type="text" id="input1" name="search" placeholder="Search...">
-            </form>
-        </div>
+		<div class="search_input">
+			<form action="SearchResults.php" method="get" enctype="multipart/form-data">
+				<i class="fas fa-search" style="font-size:20px;color:white; "></i>
+				<input type="text" id="input1" name="search" placeholder="Search...">
+			</form>
+		</div>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" class="dric" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
+				<?php
+				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
 
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
-            <ul class="dropdown-menu etc">
-                <?php
-                if (isset($_SESSION['phonenumber'])) {
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
 
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-                } else {
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-                }
-                ?>
-        </div>
-        <div class="proicon">
-            <?php
-            if (!isset($_SESSION['phonenumber'])) {
-                echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-            } else {
-                echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-            }
-            ?>
-        </div>
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
 
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
 
-        <div class="icon2">
-            <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-            <span id="icon"> <?php echo totalItems(); ?> </span>
-        </div>
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
 
-        <div class="loginz">
-            <?php getUsername(); ?>
-        </div>
-    </div>
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+				} else {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+				}
+				?>
+		</div>
+		<div class="proicon">
+			<?php
+			if (!isset($_SESSION['phonenumber'])) {
+				echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+			} else {
+				echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+			}
+			?>
+		</div>
 
+		<div class="icon2">
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
+		</div>
+
+		<div class="loginz">
+			<?php getUsername(); ?>
+		</div>
+
+		<div class="filter">
+			<button class="filterbutton " onclick="display()">Filter
+				<i class="fas fa-filter"></i></button>
+		</div>
+	</div>
     <div class="headerdown">
         <div class="sel1 sel">
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
@@ -617,14 +473,14 @@ include("../Functions/functions.php");
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
                 <span class="caret"></span></button>
             <ul class="dropdown-menu ">
-                <?php getVegetables(); ?>
+                <!-- <?php getVegetables(); ?> -->
             </ul>
         </div>
         <div class="sel3 sel">
             <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
                 <span class="caret"></span></button>
             <ul class="dropdown-menu ">
-                <?php getFruits(); ?>
+                <!-- <?php getFruits(); ?> -->
             </ul>
         </div>
     </div>
@@ -675,6 +531,7 @@ include("../Functions/functions.php");
 
 
     </ul>
+
 
 
 

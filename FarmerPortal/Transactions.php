@@ -361,6 +361,36 @@
                border-radius: 25px;
           }
 
+          /* .box{
+            
+            color: rgb(6, 36, 7);
+            width: 1050px;
+             line-height: 40px; 
+             float:center;
+            margin: auto;
+            text-align: center;
+              margin-top: 120px;  
+             /* padding: 5px;  */
+          /* border-style: outset;  */
+          /* border-width: 5px;
+            border-radius: 16px; */
+          /* border-color:black;  */
+          /* font-size:20px; */
+          /* height: 900px;
+            border-radius: 30px;
+            
+        }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          } */
 
           .wrapper {
                background-image: 100px;
@@ -460,7 +490,7 @@
                border-radius: 10px;
           }
 
-          .productbox:hover {
+          /* .productbox:hover {
                float: left;
                margin: 25px;
                margin-left: 30px;
@@ -470,10 +500,11 @@
                border-color: green;
                border-radius: 5px;
                font-weight: bolder;
-               height: 325px;
-               width: 240px;
+               height: 305px;
+               width: 220px;
+               transition: 0.5s;
 
-          }
+          } */
 
           .slideshow {
                margin-top: 10px;
@@ -502,10 +533,6 @@
                font-weight: bolder;
                padding-top: 10px;
           }
-
-          #navbar i {
-               padding-right: 1%;
-          }
      </style>
 
 </head>
@@ -517,8 +544,7 @@
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">
-                    <i class="fa fa-bars fa-2x" style="color: white;">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
                </button></i>
                <ul class="dropdown-menu etc">
                     <?php
@@ -565,28 +591,41 @@
 
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
+     <br>
 
-               <div class="carousel-inner">
+     <div style="display:block;">
+          <br> <br>
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
 
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
-          </div>
+          <table align="center" border="2" style="margin-left:8%;">
+
+               <tr align="center">
+                    <th width=200px>Date</th>
+                    <th width=200px>Name</th>
+                    <th width=200px>Phone Number</th>
+                    <th width=300px>Address</th>
+                    <th width=200px>Quantity</th>
+                    <th width=200px>Price</th>
+               </tr>
+
+               <tr align="center">
+                    <td>12-1-2000</td>
+                    <td>melissa</td>
+                    <td>1234567890</td>
+                    <td>sajgdkagdd</td>
+                    <td>500</td>
+                    <td>200</td>
+               </tr>
+
+          </table>
      </div>
+
+
+
+
+
+
+
 
 
 

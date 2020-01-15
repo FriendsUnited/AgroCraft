@@ -465,22 +465,18 @@ include("../Functions/functions.php");
     //     }
     // </script>
 <!-- 
-    
+    <div class="x">
+
+        <i class='fas fa-people-carry order order1 '></i>
+        <i class="fas fa-truck order order2"></i>
+        <i class="fas fa-road order order3"></i>
+        <i class="fas fa-map-marker-alt order order4"></i>
+
+
+
+    </div>
 
     <div class="a1">__________________________________</div> -->
-<!-- <ul class="ash">
-<li class="ash1">         <i class='fas fa-people-carry order order1 '></i> 
-<br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing
-</li>
-<li class="ash1">            <i class="fas fa-truck order order2"></i><br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
-</li>
-<li class="ash1">      <i class="fas fa-road order order3"></i>
-<br><i class="fa fa-refresh aria" aria-hidden="true"></i><br>Half way  </li>
-<li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i><<br>Reached</li>
-
-
-
-</ul> -->
 <ul class="ash">
 <li class="ash1">         <i class='fas fa-people-carry order order1 '></i> 
 <br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing

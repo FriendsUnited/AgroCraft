@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2020 at 02:31 PM
+-- Generation Time: Jan 15, 2020 at 07:46 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -94,6 +94,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 CREATE TABLE `farmerregistration` (
   `farmer_id` int(255) NOT NULL,
   `farmer_name` varchar(255) NOT NULL,
+  `farmer_phone` bigint(10) NOT NULL,
   `farmer_address` text NOT NULL,
   `farmer_state` varchar(50) NOT NULL,
   `farmer_district` varchar(50) NOT NULL,
@@ -106,101 +107,94 @@ CREATE TABLE `farmerregistration` (
 -- Dumping data for table `farmerregistration`
 --
 
-INSERT INTO `farmerregistration` (`farmer_id`, `farmer_name`, `farmer_address`, `farmer_state`, `farmer_district`, `farmer_pan`, `farmer_bank`, `farmer_password`) VALUES
-(1, 'Abhishek', 'Mars', 'MAHARASHTRA', 'Thane', '1234567890', 2147483647, 'm8bf5+Y='),
-(3, 'omkar', 'SEC -13 , PALM BEACH ROAD', 'KERALA', 'Alappuzha', '123ABC', 45745425, 'nMPb4g=='),
-(4, 'Ram', 'Moon', 'MahaRASHTRA', 'Nagpur', '123ABC', 211324654, 'm8bf5+Y='),
-(5, 'Lokesh', 'SEC -13 , PALM BEACH ROAD', 'MAHARASHTRA', 'Nagpur', '1325355', 45745425, 'yw=='),
-(6, 'Ramlal', 'Address 1', 'WEST BENGAL', 'Darjiling', '1234567899', 2147483647, 'yw=='),
-(7, 'Chirag', 'Address 2', 'WEST BENGAL', 'Darjiling', '5341874510', 2147483647, 'yw=='),
-(8, 'Gladina', 'Address 3', 'WEST BENGAL', 'Jalpaiguri', '6846516843', 2147483647, 'yw=='),
-(9, 'neeta', 'add1', 'HIMACHAL PRADESH', 'Chamba', '3263062', 56878613, 'yw=='),
-(10, 'meeta', 'add2', 'HIMACHAL PRADESH', 'Kullu', '2983473057', 2147483647, 'yw=='),
-(11, 'melissa', 'add3', 'HIMACHAL PRADESH', 'Kullu', '65416541', 454586125, 'yw=='),
-(12, 'jon', 'add5', 'HIMACHAL PRADESH', 'Chamba', '24685435', 248654352, 'yw=='),
-(13, 'daenarys', 'add5', 'HIMACHAL PRADESH', 'Solan', '45674852', 3216415, 'yw=='),
-(14, 'drogon', 'add7', 'HIMACHAL PRADESH', 'Solan', '246856873', 2147483647, 'yw=='),
-(16, 'Bran', 'add10\r\n', 'LAKSHADWEEP', 'Lakshadweep', '3549685416', 65464851, 'yw=='),
-(17, 'lyanna', 'add10', 'LAKSHADWEEP', 'Lakshadweep', '2456435', 21544232, 'yw=='),
-(18, 'catelyn', 'add115', 'MADHYA PRADESH', 'Rewa', '574542', 3846835, 'yw=='),
-(19, 'Sansa', 'add 17', 'GOA', 'North Goa', '2456843', 3468651, 'yw=='),
-(20, 'Rachel', 'add20', 'GOA', 'North Goa', '274635213', 27486513, 'yw=='),
-(21, 'Joanna', 'add16', 'GOA', 'South Goa', '24756215', 24568536, 'yw=='),
-(22, 'Arya', 'add17', 'GOA', 'South Goa', '2458742884', 249685547, 'yw=='),
-(23, 'Andy', 'add19', 'HARYANA', 'Rohtak', '255451025', 54564684, 'yw=='),
-(25, 'stark', 'add29', 'DAMAN AND DIU', 'Diu', '54584646.', 541564564, 'yw=='),
-(26, 'hound', 'add23', 'DAMAN AND DIU', 'Daman', '2545498', 524845638, 'yw=='),
-(27, 'Ryte Richard', 'add45', 'TAMIL NADU', 'Nagapattinam *', '54584636', 254685746, 'yw=='),
-(29, 'John', 'Address 7', 'JHARKAND', 'Garhwa *', '656', 168, 'yw=='),
-(30, 'Rogan', 'Address56', 'JHARKAND', 'Garhwa *', '54664851', 6455415, 'yw=='),
-(31, 'Swaarop', 'Address 23', 'JHARKAND', 'Garhwa *', '6416545', 4646544, 'yw=='),
-(32, 'Jesudas', 'Address 56', 'JHARKAND', 'Palamu', '4515214', 544613515, 'yw=='),
-(33, 'same',  'addeees', 'JAMMU AND KASHMIR', 'Kupwara', '1232122121', 121321, 'yw=='),
-(34, 'Mitesh Chhadva', '19/502,Fam chs ltd\r\nSector 11  koparkhairne', 'MAHARASHTRA', 'Nandurbar *', '656861651', 5465415, 'yw=='),
-(35, 'Manali', '19/502,Fam chs ltd\r\n', 'JAMMU AND KASHMIR', 'Kupwara', '656861651', 5465415, 'yw=='),
-(36, 'Manya', '19/502,Fam chs \r\nameri', 'JAMMU AND KASHMIR', 'Baramula', '6568616510', 54654101, 'yw=='),
-(37, 'surli', '19/502,Fam chs \r\nameri', 'JAMMU AND KASHMIR', 'Baramula', '6568616510', 54654101, 'yw=='),
-(38, 'asha', 'superman', 'JAMMU AND KASHMIR', 'Srinagar', '123123123', 3213213, 'yw=='),
-(39, 'asjij','ameica', 'JAMMU AND KASHMIR', 'Srinagar', '121212121', 1212, 'yw=='),
-(40, 'arama',  'australia', 'JAMMU AND KASHMIR', 'Badgam', '121212', 121211, 'yw=='),
-(41, 'andami', 'askkkey', 'JAMMU AND KASHMIR', 'Badgam', '121218', 12127, 'yw=='),
-(42, 'human',  'ansh', 'JAMMU AND KASHMIR', 'Badgam', '121218', 12127, 'yw=='),
-(43, 'varma', 'jupiter', 'JAMMU AND KASHMIR', 'Badgam', '12131311', 22, 'yw=='),
-(44, 'ashhhish', 'asmaan', 'HIMACHAL PRADESH', 'Chamba', '1212222222', 2147483647, 'yw=='),
-(45, 'ashhhish', 'asmaan', 'HIMACHAL PRADESH', 'Chamba', '1212222222', 2147483647, 'yw=='),
-(46, 'ruchi', 'juhinagar', 'HIMACHAL PRADESH', 'Kangra', '22', 1, 'yw=='),
-(47, 'name', 'toonpur', 'HIMACHAL PRADESH', 'Kangra', '11', 11, 'yw=='),
-(48, 'kargil', 'toonpur super', 'HIMACHAL PRADESH', 'Lahul & Spiti', '1212dw11', 223, 'yw=='),
-(49, 'admi', 'asam\r\n', 'HIMACHAL PRADESH', 'Kangra', '121211', 222, 'yw=='),
-(50, 'robot', 'asa1', 'HIMACHAL PRADESH', 'Lahul & Spiti', '12121', 2221, 'yw=='),
-(51, 'robot shah', 'arya', 'HIMACHAL PRADESH', 'Lahul & Spiti', '12121', 2221, 'yw=='),
-(52, 'robot farmer', 'doremon', 'HIMACHAL PRADESH', 'Kullu', '12121', 2221189, 'yw=='),
-(53, 'robot schema', 'doremon nobita', 'HIMACHAL PRADESH', 'Kullu', '12129+', 222118, 'yw=='),
-(54, 'ashhhish chanchali', 'asmeta', 'HIMACHAL PRADESH', 'Mandi', '1212222222', 2147483647, 'yw=='),
-(55, 'ashhhish chanchali', 'asmeta', 'HIMACHAL PRADESH', 'Mandi', '1212222222', 2147483647, 'yw=='),
-(56, 'arpita', 'asmeta upra', 'HIMACHAL PRADESH', 'Hamirpur', '1212222222', 2147483647, 'yw=='),
-(57, 'robot aunty', 'iten', 'HIMACHAL PRADESH', 'Una', '121129', 22219, 'yw=='),
-(58, 'Kira', 'add', 'ARUNACHAL PRADESH', 'Upper Siang *', '12', 1, 'yZE='),
-(59, 'Arpit', 'Lenyadri Tower', 'MAHARASHTRA', 'Thane', '111', 999, 'yw=='),
-(60, 'Raghu', 'West City', 'ANDHRA PRADESH', 'Adilabad', '1234', 4321, 'yw=='),
-(61, 'Raghav', '9 Palk Street', 'CHANDIGARH', 'Chandigarh', '109', 991, 'yw=='),
-(62, 'Keshav', 'Sarojnagar', 'GOA', 'North Goa', '342', 332, 'yw=='),
-(63, 'Suraj', 'Moraj', 'CHHATTISGARH', 'Kawardha *', '789', 987, 'yw=='),
-(64, 'Midoriya', 'Hosu', 'DAMAN AND DIU', 'Diu', '191', 818, 'yw=='),
-(65, 'Dhole', 'North Silvasa', 'DADRA AND NAGAR HAVELI', 'Dadra & Nagar Haveli', '777', 666, 'yw=='),
-(66, 'Yash', 'Ambika Heights', 'GOA', 'South Goa', '537', 361, 'yw=='),
-(67, 'Karan', 'Nilgiri Gardens', 'PUDUCHERRY', 'Yanam', '2014', 1014, 'yw=='),
-(68, 'Arun', 'Harbour View', 'JAMMU AND KASHMIR', 'Punch', '1024', 3014, 'yw=='),
-(69, 'Khan', 'SBI colony', 'ARUNACHAL PRADESH', 'Tawang', '2048', 1048, 'yw=='),
-(70, 'Kahn', 'Baba Niwas', 'MADHYA PRADESH', 'Sheopur *', '4096', 5096, 'yw=='),
-(71, 'Iqbal', 'Hiranandani', 'HARYANA', 'Panchkula *', '2047', 1047, 'yw=='),
-(72, 'Archit', 'Army Colony', 'DELHI', 'Central *', '8192', 7192, 'yw=='),
-(73, 'Kumar', 'Masjid Rd', 'DELHI', 'West *', '1192', 2192, 'yw=='),
-(74, 'Eeshan', 'BARC Colony', 'GOA', 'South Goa', '2192', 3192, 'yw=='),
-(75, 'Gavin', 'Oxfordshire', 'DELHI', 'South *', '3192', 4192, 'yw=='),
-(76, 'Meg', 'Chelsea', 'TAMIL NADU', 'Madurai', '343', 433, 'yw=='),
-(77, 'Hodaka', 'Touto', 'JAMMU AND KASHMIR', 'Rajauri', '1729', 2729, 'yw=='),
-(78, 'Rohan', 'Spurs', 'BIHAR', 'Purnia', '1777', 7171, 'yw=='),
-(79, 'Navin', 'Hoenn', 'GOA', 'North Goa', '3412', 5020, 'yw=='),
-(80, 'Ansh', 'Liverpool', 'CHANDIGARH', 'Chandigarh', '7129', 8100, 'yw=='),
-(81, 'Umesh', 'Everton', 'DELHI', 'North West *', '6654', 7896, 'yw=='),
-(82, 'Bhuvan', 'Leicester', 'HIMACHAL PRADESH', 'Shimla', '1010', 2020, 'yw=='),
-(83, 'Pavan', 'Munich', 'JHARKAND', 'ORISSA', '9291', 7374, 'yw=='),
-(84, 'Suman', 'Watford', 'GOA', 'South Goa', '9293', 8453, 'yw=='),
-(85, 'Ashish', 'Crystal Palace', 'KERALA', 'Kasaragod', '4545', 5454, 'yw=='),
-(86, 'Lal', 'West Ham', 'KARNATAKA', 'Belgaum', '9999', 9998, 'yw=='),
-(87, 'Ranvir', 'Newcastle', 'MAHARASHTRA', 'Jalna', '8818', 2818, 'yw=='),
-(88, 'Suresh', 'Real Madrid', 'MEGHALAYA', 'West Garo Hills', '9001', 8017, 'yw=='),
-(89, 'Anish', 'Bournmouth', 'PUDUCHERRY', 'Yanam', '5543', 2999, 'yw=='),
-(90, 'Lahiru', 'Barcelona', 'GUJARAT', 'Kachchh', '3139', 8199, 'yw=='),
-(91, 'Jasmeet', 'Manchester city', '0', 'Select District', '7777', 6666, 'yw==');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `order`
---
-
+INSERT INTO `farmerregistration` (`farmer_id`, `farmer_name`, `farmer_phone`, `farmer_address`, `farmer_state`, `farmer_district`, `farmer_pan`, `farmer_bank`, `farmer_password`) VALUES
+(1, 'Abhishek', 8169193101, 'Mars', 'MAHARASHTRA', 'Thane', '1234567890', 2147483647, 'm8bf5+Y='),
+(3, 'omkar', 8169193102, 'SEC -13 , PALM BEACH ROAD', 'KERALA', 'Alappuzha', '123ABC', 45745425, 'nMPb4g=='),
+(4, 'Ram', 8169193103, 'Moon', 'MahaRASHTRA', 'Nagpur', '123ABC', 211324654, 'm8bf5+Y='),
+(5, 'Lokesh', 8169193104, 'SEC -13 , PALM BEACH ROAD', 'MAHARASHTRA', 'Nagpur', '1325355', 45745425, 'yw=='),
+(6, 'Ramlal', 8169193105, 'Address 1', 'WEST BENGAL', 'Darjiling', '1234567899', 2147483647, 'yw=='),
+(7, 'Chirag', 8169193106, 'Address 2', 'WEST BENGAL', 'Darjiling', '5341874510', 2147483647, 'yw=='),
+(8, 'Gladina', 8169193107, 'Address 3', 'WEST BENGAL', 'Jalpaiguri', '6846516843', 2147483647, 'yw=='),
+(9, 'neeta', 8169193108, 'add1', 'HIMACHAL PRADESH', 'Chamba', '3263062', 56878613, 'yw=='),
+(10, 'meeta', 8169193109, 'add2', 'HIMACHAL PRADESH', 'Kullu', '2983473057', 2147483647, 'yw=='),
+(11, 'melissa', 8169193110, 'add3', 'HIMACHAL PRADESH', 'Kullu', '65416541', 454586125, 'yw=='),
+(12, 'jon', 8169193111, 'add5', 'HIMACHAL PRADESH', 'Chamba', '24685435', 248654352, 'yw=='),
+(13, 'daenarys', 8169193112, 'add5', 'HIMACHAL PRADESH', 'Solan', '45674852', 3216415, 'yw=='),
+(14, 'drogon', 8169193113, 'add7', 'HIMACHAL PRADESH', 'Solan', '246856873', 2147483647, 'yw=='),
+(16, 'Bran', 8169193114, 'add10\r\n', 'LAKSHADWEEP', 'Lakshadweep', '3549685416', 65464851, 'yw=='),
+(17, 'lyanna', 8169193115, 'add10', 'LAKSHADWEEP', 'Lakshadweep', '2456435', 21544232, 'yw=='),
+(18, 'catelyn', 8169193116, 'add115', 'MADHYA PRADESH', 'Rewa', '574542', 3846835, 'yw=='),
+(19, 'Sansa', 8169193117, 'add 17', 'GOA', 'North Goa', '2456843', 3468651, 'yw=='),
+(20, 'Rachel', 8169193118, 'add20', 'GOA', 'North Goa', '274635213', 27486513, 'yw=='),
+(21, 'Joanna', 8169193119, 'add16', 'GOA', 'South Goa', '24756215', 24568536, 'yw=='),
+(22, 'Arya', 8169193120, 'add17', 'GOA', 'South Goa', '2458742884', 249685547, 'yw=='),
+(23, 'Andy', 8169193121, 'add19', 'HARYANA', 'Rohtak', '255451025', 54564684, 'yw=='),
+(25, 'stark', 8169193122, 'add29', 'DAMAN AND DIU', 'Diu', '54584646.', 541564564, 'yw=='),
+(26, 'hound', 8169193123, 'add23', 'DAMAN AND DIU', 'Daman', '2545498', 524845638, 'yw=='),
+(27, 'Ryte Richard', 8169193124, 'add45', 'TAMIL NADU', 'Nagapattinam *', '54584636', 254685746, 'yw=='),
+(29, 'John', 8169193125, 'Address 7', 'JHARKAND', 'Garhwa *', '656', 168, 'yw=='),
+(30, 'Rogan', 8169193126, 'Address56', 'JHARKAND', 'Garhwa *', '54664851', 6455415, 'yw=='),
+(31, 'Swaarop', 8169193127, 'Address 23', 'JHARKAND', 'Garhwa *', '6416545', 4646544, 'yw=='),
+(32, 'Jesudas', 8169193128, 'Address 56', 'JHARKAND', 'Palamu', '4515214', 544613515, 'yw=='),
+(33, 'same', 8169193129, 'addeees', 'JAMMU AND KASHMIR', 'Kupwara', '1232122121', 121321, 'yw=='),
+(34, 'Mitesh Chhadva', 8169193130, '19/502,Fam chs ltd\r\nSector 11  koparkhairne', 'MAHARASHTRA', 'Nandurbar *', '656861651', 5465415, 'yw=='),
+(35, 'Manali', 8169193131, '19/502,Fam chs ltd\r\n', 'JAMMU AND KASHMIR', 'Kupwara', '656861651', 5465415, 'yw=='),
+(36, 'Manya', 8169193132, '19/502,Fam chs \r\nameri', 'JAMMU AND KASHMIR', 'Baramula', '6568616510', 54654101, 'yw=='),
+(37, 'surli', 8169193133, '19/502,Fam chs \r\nameri', 'JAMMU AND KASHMIR', 'Baramula', '6568616510', 54654101, 'yw=='),
+(38, 'asha', 8169193134, 'superman', 'JAMMU AND KASHMIR', 'Srinagar', '123123123', 3213213, 'yw=='),
+(39, 'asjij', 8169193135, 'ameica', 'JAMMU AND KASHMIR', 'Srinagar', '121212121', 1212, 'yw=='),
+(40, 'arama', 8169193136, 'australia', 'JAMMU AND KASHMIR', 'Badgam', '121212', 121211, 'yw=='),
+(41, 'andami', 8169193137, 'askkkey', 'JAMMU AND KASHMIR', 'Badgam', '121218', 12127, 'yw=='),
+(42, 'human', 8169193138, 'ansh', 'JAMMU AND KASHMIR', 'Badgam', '121218', 12127, 'yw=='),
+(43, 'varma', 8169193139, 'jupiter', 'JAMMU AND KASHMIR', 'Badgam', '12131311', 22, 'yw=='),
+(44, 'ashhhish', 8169193140, 'asmaan', 'HIMACHAL PRADESH', 'Chamba', '1212222222', 2147483647, 'yw=='),
+(45, 'ashhhish', 8169193141, 'asmaan', 'HIMACHAL PRADESH', 'Chamba', '1212222222', 2147483647, 'yw=='),
+(46, 'ruchi', 8169193142, 'juhinagar', 'HIMACHAL PRADESH', 'Kangra', '22', 1, 'yw=='),
+(47, 'name', 8169193143, 'toonpur', 'HIMACHAL PRADESH', 'Kangra', '11', 11, 'yw=='),
+(48, 'kargil', 8169193144, 'toonpur super', 'HIMACHAL PRADESH', 'Lahul & Spiti', '1212dw11', 223, 'yw=='),
+(49, 'admi', 8169193145, 'asam\r\n', 'HIMACHAL PRADESH', 'Kangra', '121211', 222, 'yw=='),
+(50, 'robot', 8169193146, 'asa1', 'HIMACHAL PRADESH', 'Lahul & Spiti', '12121', 2221, 'yw=='),
+(51, 'robot shah', 8169193147, 'arya', 'HIMACHAL PRADESH', 'Lahul & Spiti', '12121', 2221, 'yw=='),
+(52, 'robot farmer', 8169193148, 'doremon', 'HIMACHAL PRADESH', 'Kullu', '12121', 2221189, 'yw=='),
+(53, 'robot schema', 8169193149, 'doremon nobita', 'HIMACHAL PRADESH', 'Kullu', '12129+', 222118, 'yw=='),
+(54, 'ashhhish chanchali', 8169193150, 'asmeta', 'HIMACHAL PRADESH', 'Mandi', '1212222222', 2147483647, 'yw=='),
+(55, 'ashhhish chanchali', 8169193151, 'asmeta', 'HIMACHAL PRADESH', 'Mandi', '1212222222', 2147483647, 'yw=='),
+(56, 'arpita', 8169193152, 'asmeta upra', 'HIMACHAL PRADESH', 'Hamirpur', '1212222222', 2147483647, 'yw=='),
+(57, 'robot aunty', 8169193153, 'iten', 'HIMACHAL PRADESH', 'Una', '121129', 22219, 'yw=='),
+(58, 'Kira', 8169193154, 'add', 'ARUNACHAL PRADESH', 'Upper Siang *', '12', 1, 'yZE='),
+(59, 'Arpit', 8169193155, 'Lenyadri Tower', 'MAHARASHTRA', 'Thane', '111', 999, 'yw=='),
+(60, 'Raghu', 8169193156, 'West City', 'ANDHRA PRADESH', 'Adilabad', '1234', 4321, 'yw=='),
+(61, 'Raghav', 8169193157, '9 Palk Street', 'CHANDIGARH', 'Chandigarh', '109', 991, 'yw=='),
+(62, 'Keshav', 8169193158, 'Sarojnagar', 'GOA', 'North Goa', '342', 332, 'yw=='),
+(63, 'Suraj', 8169193159, 'Moraj', 'CHHATTISGARH', 'Kawardha *', '789', 987, 'yw=='),
+(64, 'Midoriya', 8169193160, 'Hosu', 'DAMAN AND DIU', 'Diu', '191', 818, 'yw=='),
+(65, 'Dhole', 8169193161, 'North Silvasa', 'DADRA AND NAGAR HAVELI', 'Dadra & Nagar Haveli', '777', 666, 'yw=='),
+(66, 'Yash', 8169193162, 'Ambika Heights', 'GOA', 'South Goa', '537', 361, 'yw=='),
+(67, 'Karan', 8169193163, 'Nilgiri Gardens', 'PUDUCHERRY', 'Yanam', '2014', 1014, 'yw=='),
+(68, 'Arun', 8169193164, 'Harbour View', 'JAMMU AND KASHMIR', 'Punch', '1024', 3014, 'yw=='),
+(69, 'Khan', 8169193165, 'SBI colony', 'ARUNACHAL PRADESH', 'Tawang', '2048', 1048, 'yw=='),
+(70, 'Kahn', 8169193166, 'Baba Niwas', 'MADHYA PRADESH', 'Sheopur *', '4096', 5096, 'yw=='),
+(71, 'Iqbal', 8169193167, 'Hiranandani', 'HARYANA', 'Panchkula *', '2047', 1047, 'yw=='),
+(72, 'Archit', 8169193168, 'Army Colony', 'DELHI', 'Central *', '8192', 7192, 'yw=='),
+(73, 'Kumar', 8169193169, 'Masjid Rd', 'DELHI', 'West *', '1192', 2192, 'yw=='),
+(74, 'Eeshan', 8169193170, 'BARC Colony', 'GOA', 'South Goa', '2192', 3192, 'yw=='),
+(75, 'Gavin', 8169193171, 'Oxfordshire', 'DELHI', 'South *', '3192', 4192, 'yw=='),
+(76, 'Meg', 8169193172, 'Chelsea', 'TAMIL NADU', 'Madurai', '343', 433, 'yw=='),
+(77, 'Hodaka', 8169193173, 'Touto', 'JAMMU AND KASHMIR', 'Rajauri', '1729', 2729, 'yw=='),
+(78, 'Rohan', 8169193174, 'Spurs', 'BIHAR', 'Purnia', '1777', 7171, 'yw=='),
+(79, 'Navin', 8169193175, 'Hoenn', 'GOA', 'North Goa', '3412', 5020, 'yw=='),
+(80, 'Ansh', 8169193176, 'Liverpool', 'CHANDIGARH', 'Chandigarh', '7129', 8100, 'yw=='),
+(81, 'Umesh', 8169193177, 'Everton', 'DELHI', 'North West *', '6654', 7896, 'yw=='),
+(82, 'Bhuvan', 8169193178, 'Leicester', 'HIMACHAL PRADESH', 'Shimla', '1010', 2020, 'yw=='),
+(83, 'Pavan', 8169193179, 'Munich', 'JHARKAND', 'ORISSA', '9291', 7374, 'yw=='),
+(84, 'Suman', 8169193180, 'Watford', 'GOA', 'South Goa', '9293', 8453, 'yw=='),
+(85, 'Ashish', 8169193181, 'Crystal Palace', 'KERALA', 'Kasaragod', '4545', 5454, 'yw=='),
+(86, 'Lal', 8169193182, 'West Ham', 'KARNATAKA', 'Belgaum', '9999', 9998, 'yw=='),
+(87, 'Ranvir', 8169193183, 'Newcastle', 'MAHARASHTRA', 'Jalna', '8818', 2818, 'yw=='),
+(88, 'Suresh', 8169193184, 'Real Madrid', 'MEGHALAYA', 'West Garo Hills', '9001', 8017, 'yw=='),
+(89, 'Anish', 8169193185, 'Bournmouth', 'PUDUCHERRY', 'Yanam', '5543', 2999, 'yw=='),
+(90, 'Lahiru', 8169193186, 'Barcelona', 'GUJARAT', 'Kachchh', '3139', 8199, 'yw=='),
+(91, 'Jasmeet', 8169193187, 'Manchester city', '0', 'Select District', '7777', 6666, 'yw==');
 
 -- --------------------------------------------------------
 
@@ -228,14 +222,6 @@ INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `p
 (32, 29, 2, ' Raj Uday 234', 'Courier', 1234567890, 100, 'paytm'),
 (33, 27, 1, ' Raj Uday 234', 'Farmer', 1234567890, 200, 'paytm'),
 (34, 17, 1, ' Raj Uday 234', 'Courier', 1234567890, 30, 'paytm');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `otpverification`
---
-
-
 
 -- --------------------------------------------------------
 
@@ -306,10 +292,6 @@ ALTER TABLE `farmerregistration`
   ADD UNIQUE KEY `farmer_id` (`farmer_id`);
 
 --
--- Indexes for table `order`
---
-
---
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -344,43 +326,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `farmerregistration`
 --
 ALTER TABLE `farmerregistration`
-  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `order`
---
-ALTER TABLE `order`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `products`
---
-ALTER TABLE `products`
-  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `phone` FOREIGN KEY (`phonenumber`) REFERENCES `buyerregistration` (`buyer_phone`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `productid` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`) ON UPDATE CASCADE;
-
---
--- Constraints for table `products`
---
-ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`farmer_fk`) REFERENCES `farmerregistration` (`farmer_id`),
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`farmer_fk`) REFERENCES `farmerregistration` (`farmer_id`) ON UPDATE CASCADE;
+  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

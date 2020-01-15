@@ -866,7 +866,7 @@
 	<hr><br>
 	<div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
 	<hr>
-	<div>.
+	<div>
 
 		<?php
 		cart();

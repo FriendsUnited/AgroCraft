@@ -361,36 +361,6 @@
                border-radius: 25px;
           }
 
-          /* .box{
-            
-            color: rgb(6, 36, 7);
-            width: 1050px;
-             line-height: 40px; 
-             float:center;
-            margin: auto;
-            text-align: center;
-              margin-top: 120px;  
-             /* padding: 5px;  */
-          /* border-style: outset;  */
-          /* border-width: 5px;
-            border-radius: 16px; */
-          /* border-color:black;  */
-          /* font-size:20px; */
-          /* height: 900px;
-            border-radius: 30px;
-            
-        }
-        .please{
-             text-align:center;
-             float:right;
-             margin-right:500px;
-               margin: 0;
-               padding: 0;
-               font-family: sans-serif;
-               background-size: cover;
-               background-position: center;
-               box-sizing: border-box;
-          } */
 
           .wrapper {
                background-image: 100px;
@@ -547,7 +517,8 @@
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">
+                    <i class="fa fa-bars fa-2x" style="color: white;">
                </button></i>
                <ul class="dropdown-menu etc">
                     <?php
@@ -560,34 +531,6 @@
                     }
                     ?>
                </ul>
-          </div>
-
-          <div class="dropdown">
-
-               <?php
-               if (isset($_SESSION['phonenumber'])) {
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
-
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-               } else {
-                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-               }
-               ?>
-          </div>
-          <div class="proicon">
-               <?php
-               if (!isset($_SESSION['phonenumber'])) {
-                    echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               } else {
-                    echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-               }
-               ?>
-          </div>
-
-
-          <div class="icon2">
-               <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-               <span id="icon"> 5 </span>
           </div>
 
           <div class="proicon">
@@ -606,20 +549,8 @@
           </div>
      </div>
 
+     <br>
 
-
-     <div>
-          <?php
-          include("../Includes/db.php");
-          if (isset($_SESSION['phonenumber'])) {
-               $sess_phone_number = $_SESSION['phonenumber'];
-          }
-
-          ?>
-
-
-     </div>
-     </div>
      </div>
 
 
@@ -658,6 +589,10 @@
      </div>
 
 
+
+
+
+
      <div class="footer">
           <hr>
           <label class="payment">Payment Options:-</label>
@@ -665,7 +600,6 @@
           <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
      </div><br><br>
      <h3><span> GET SOCIAL WITH US </span></h3>
-
      </div>
      <div class="morefooter">
 

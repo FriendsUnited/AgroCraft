@@ -272,32 +272,33 @@
                float: left;
                margin-top: -65px;
           }
+
           body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            /* background-image: url(images/Website/FarmerLogin.jpg); */
-            background-size: cover;
-            background-position: center;
-            box-sizing: border-box;
-        }
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               /* background-image: url(images/Website/FarmerLogin.jpg); */
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          }
 
-        .wrapper {
-            /* width: 300px; */
-            background-image: 100px;
-        }
+          .wrapper {
+               /* width: 300px; */
+               background-image: 100px;
+          }
 
-        .add_button {
-            /* clear:left;
+          .add_button {
+               /* clear:left;
             margin-left:450px; */
-            float: right;
-            /* margin-top: 10px; */
-            text-align: center;
-            /* margin-right:10%; */
-            /* background-color:red; */
-        }
+               float: right;
+               /* margin-top: 10px; */
+               text-align: center;
+               /* margin-right:10%; */
+               /* background-color:red; */
+          }
 
-        /* .dropdown {
+          /* .dropdown {
             float: right;
             margin-right: 1em;
             margin-top: 0;
@@ -307,11 +308,11 @@
 
         } */
 
-        /* ul li {
+          /* ul li {
             display: none;
         } */
 
-        /* ul li:hover ul li {
+          /* ul li:hover ul li {
             display: block;
              width: 30px; 
         }
@@ -321,41 +322,41 @@
              width: 30px; 
         } */
 
-        .products:last-child {}
+          .products:last-child {}
 
-        h1 {
-            /* color: rgb(20, 83, 31); */
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
+          h1 {
+               /* color: rgb(20, 83, 31); */
+               font-family: 'Times New Roman', Times, serif;
+               color: white;
 
-        }
+          }
 
-        /* .trans {
+          /* .trans {
             clear: left;
             background-color: red;
         } */
 
-        .lost{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
-            text-align: center;
-            /* margin-top: 5em; */
-            background-color: olive;
-            /* height: 8%; */
-            margin-top: 120px;
-            /* border-radius: 30px; */
-            margin:auto;
-        }
+          .lost {
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               color: white;
+               text-align: center;
+               /* margin-top: 5em; */
+               background-color: olive;
+               /* height: 8%; */
+               margin-top: 120px;
+               /* border-radius: 30px; */
+               margin: auto;
+          }
 
-        /* .dropdown-content {
+          /* .dropdown-content {
             display: none;
             /* position: sticky;  */
-            /* background-color: transparent; */
-            /* min-width: 250px; */
-            /* z-index: 1;
+          /* background-color: transparent; */
+          /* min-width: 250px; */
+          /* z-index: 1;
         } */
 
-        /* .dropdown-content a {
+          /* .dropdown-content a {
             color: rgb(12, 11, 11);
             padding: 30px 16px;
             text-align: center;
@@ -368,7 +369,7 @@
             font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
         } */
 
-        /* .dropdown-content a:hover {
+          /* .dropdown-content a:hover {
             background-color: white;
              color: black; 
              position:absolute; 
@@ -379,79 +380,81 @@
             background-color: white;
              position:relative; 
         } */
-/* 
+          /* 
         .dropdown:hover .dropbtn {
             background-color: #ffffff;
         }  */
 
-        .new {
-            /* display: table-cell;
+          .new {
+               /* display: table-cell;
             vertical-align: middle; */
-            text-align: center;
-        }
+               text-align: center;
+          }
 
-        .button {
-            position: relative;
-            /* margin-left: 130px; */
-            float: right;
-            /* margin-bottom:250px; 
+          .button {
+               position: relative;
+               /* margin-left: 130px; */
+               float: right;
+               /* margin-bottom:250px; 
              margin-top:3em; */
-            /* clear:left;  */
-        }
+               /* clear:left;  */
+          }
 
-        h2 {
-            color: white;
-            margin-top: 3em;
-            /* background-color: green;
+          h2 {
+               color: white;
+               margin-top: 3em;
+               /* background-color: green;
          */
-            text-align: center;
+               text-align: center;
 
-            /* background-color: darkcyan; */
+               /* background-color: darkcyan; */
 
-        }
+          }
 
-        .hii {
-            float: right;
-            margin-right: 5em;
-            /* margin-top:254em;  */
-            /* background-color:red; */
-        }
+          .hii {
+               float: right;
+               margin-right: 5em;
+               /* margin-top:254em;  */
+               /* background-color:red; */
+          }
 
-        .ribbon {
-            position: relative;
-            top: -16px;
-            right: -706px;
-            float: left;
-            top: 0px;
-            left: 0px;
-            height: 74px;
-            background-color: green;
-        }
+          .ribbon {
+               position: relative;
+               top: -16px;
+               right: -706px;
+               float: left;
+               top: 0px;
+               left: 0px;
+               height: 74px;
+               background-color: green;
+          }
 
-        .over {
-            background-color: green;
-            border: 1px;
-            width: 100%;
-            white-space: nowrap;
+          .over {
+               background-color: green;
+               border: 1px;
+               width: 100%;
+               white-space: nowrap;
 
-            height: 70px;
+               height: 70px;
 
 
-        }
-        .subtract{
-             float:right;
-             border-color:olive;
-          
-             margin-top: 2%; 
-             text-align: center;
-             /* font-weight: 10px; */
-             /* font-family: Arial, Helvetica, sans-serif; */
-             /* background-color: green; */
-             border-radius: 25px;
+          }
 
-            
-        } 
-        /* .box{
+          .subtract {
+               float: right;
+               border-color: olive;
+
+               margin-top: 2%;
+               text-align: center;
+               /* font-weight: 10px; */
+               /* font-family: Arial, Helvetica, sans-serif; */
+               /* background-color: green; */
+               border-radius: 25px;
+
+
+          }
+
+          /* .box{
             
             color: rgb(6, 36, 7);
             width: 1050px;
@@ -461,16 +464,16 @@
             text-align: center;
               margin-top: 120px;  
              /* padding: 5px;  */
-             /* border-style: outset;  */
-            /* border-width: 5px;
+          /* border-style: outset;  */
+          /* border-width: 5px;
             border-radius: 16px; */
-             /* border-color:black;  */
-            /* font-size:20px; */
-            /* height: 900px;
+          /* border-color:black;  */
+          /* font-size:20px; */
+          /* height: 900px;
             border-radius: 30px;
             
         } */
-         */
+          */
      </style>
 
 </head>
@@ -489,41 +492,38 @@
           </div>
 
           <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
-            </button></i>
-			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
-			<ul  class="dropdown-menu etc"1
-              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
-               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
-     </ul>
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-user fa-2x">
+               </button></i>
+               <!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
+               <ul class="dropdown-menu etc" 1 <li class="options"> <a href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
+                    <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
+               </ul>
 
-			<!-- <?php
-				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
-				
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-				}
-				else {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-				}
-			?> -->
-		</div>
-		<div class="proicon">
-			<?php
-		if (!isset($_SESSION['phonenumber'])) {
-		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		else {
-			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		?>
-		</div>
+               <!-- <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+                    } else {
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+                    }
+                    ?> -->
+          </div>
+          <div class="proicon">
+               <?php
+               if (!isset($_SESSION['phonenumber'])) {
+                    echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+               } else {
+                    echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+               }
+               ?>
+          </div>
 
 
           <div class="icon2">
-			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
-		</div>
+               <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+               <span id="icon"> 5 </span>
+          </div>
 
           <div class="loginz">
                <?php getUsername(); ?>
@@ -555,69 +555,71 @@
 	</div>
  -->
 
-   <div class="lost">ALL PRODUCTS </div>
-   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     <div class="lost">ALL PRODUCTS </div>
+     <div class="subtract"><button class="subtract"><b>Add Product </b>
+               <div class="add_button">
+          </button>
      </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
+     <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      -->
 
-    <br>
+     <br>
 
-    <div>
-        <?php
-        include("../Includes/db.php");
-        $sess_phone_number = $_SESSION['phonenumber'];
-        getFarmerProducts();
-        ?>
+     <div>
+          <?php
+          include("../Includes/db.php");
+          $sess_phone_number = $_SESSION['phonenumber'];
+          getFarmerProducts();
+          ?>
 
 
-    </div>
-    </div>
      </div>
-    <div class="trans">
+     </div>
+     </div>
+     <div class="trans">
 
 
-        <div class="lost">TRANSACTION HISTORY</h3>
-    </div>
+          <div class="lost">TRANSACTION HISTORY</h3>
+          </div>
 
 
-    <div>
-        <br>
-        <br>
+          <div>
+               <br>
+               <br>
 
-        <table border="2">
+               <table border="2">
 
-            <tr>
-                <th width=200px>Date</th>
-                <th width=200px>Name</th>
-                <th width=200px>Phone Number</th>
-                <th width=200px>Address</th>
-                <th width=200px>Quantity</th>
-                <th width=200px>Price</th>
+                    <tr>
+                         <th width=200px>Date</th>
+                         <th width=200px>Name</th>
+                         <th width=200px>Phone Number</th>
+                         <th width=200px>Address</th>
+                         <th width=200px>Quantity</th>
+                         <th width=200px>Price</th>
 
-            </tr>
-            <tr>
-                <td>12-1-2000</td>
-                <td>melissa</td>
-                <td>1234567890</td>
-                <td>sajgdkagdd</td>
-                <td>500</td>
-                <td>200</td>
-            </tr>
-            <tr></tr>
-            <tr></tr>
-        </table>
-    </div>
-
- 
+                    </tr>
+                    <tr>
+                         <td>12-1-2000</td>
+                         <td>melissa</td>
+                         <td>1234567890</td>
+                         <td>sajgdkagdd</td>
+                         <td>500</td>
+                         <td>200</td>
+                    </tr>
+                    <tr></tr>
+                    <tr></tr>
+               </table>
+          </div>
 
 
-     <div class="footer">
-          <hr>
-          <label class="payment">Payment Options:-</label>
-          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
-          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
-     </div><br><br>
-     <h3><span> GET SOCIAL WITH US </span></h3>
+
+
+          <div class="footer">
+               <hr>
+               <label class="payment">Payment Options:-</label>
+               <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
+               <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
+          </div><br><br>
+          <h3><span> GET SOCIAL WITH US </span></h3>
      </div>
      <div class="morefooter">
 

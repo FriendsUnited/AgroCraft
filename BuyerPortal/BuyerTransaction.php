@@ -53,8 +53,9 @@
         }
 
         .search_input {
+            clear: none;
             float: left;
-            margin-left: 50px;
+            margin-left: 20px;
             margin-top: 20px;
 
         }
@@ -65,18 +66,23 @@
             margin-top: 20px;
         }
 
+        #icon {
+            background-color: red;
+            color: white;
+        }
+
         .dropdown {
             float: right;
-            margin-right: 10px;
+            margin-right: 20px;
             margin-top: 20px;
+
+
         }
 
         .options {
             color: yellow;
-            margin-left: 20px;
-            width: 25px;
-            margin-right: 50px;
-
+            margin-left: 5px;
+            margin-right: 26px;
         }
 
         .icon2 {
@@ -84,6 +90,24 @@
             margin-right: 10px;
             margin-top: 20px;
 
+
+        }
+
+        .filter {
+            float: right;
+            margin-right: 800px;
+            margin-top: 15px;
+            background-color: transparent;
+            color: black;
+
+
+        }
+
+        .filterbutton {
+            background-color: transparent;
+            border: none;
+            margin-top: 5px;
+            color: white;
         }
 
         .loginz {
@@ -93,12 +117,45 @@
         }
 
         .headerdown {
+            background-color: transparent;
             height: 50px;
             width: 100%;
         }
 
+        #majic {
+            height: 70px;
+            width: 100%;
+            visibility: hidden;
+
+
+        }
+
+        #states {
+            float: left;
+            width: 150px;
+            margin-left: -400px;
+            margin-top: 20px;
+            padding: 10px;
+
+            border-radius: 25%;
+            border-color: #00b300;
+        }
+
+        #district {
+            /* height: 200px; */
+            border-radius: 25%;
+            border-color: #00b300;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding: 10px;
+            margin-left: 150px;
+            margin-right: -400px;
+        }
+
         .makeitgreen {
             color: #00b300;
+            width: 156px;
+
         }
 
         .sel1 {
@@ -121,7 +178,6 @@
             float: right;
             margin-right: 5px;
         }
-
 
 
         #input1 {
@@ -383,6 +439,7 @@
 
 <body>
 
+
     <div class="header">
 
         <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
@@ -393,13 +450,20 @@
                 <input type="text" id="input1" name="search" placeholder="Search...">
             </form>
         </div>
-
         <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" class="dric" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
             <ul class="dropdown-menu etc">
                 <?php
                 if (isset($_SESSION['phonenumber'])) {
                     echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+
+                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
+
+                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+
+                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
+
+                    echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
 
                     echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                 } else {
@@ -417,7 +481,6 @@
             ?>
         </div>
 
-
         <div class="icon2">
             <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
             <span id="icon"> <?php echo totalItems(); ?> </span>
@@ -426,29 +489,91 @@
         <div class="loginz">
             <?php getUsername(); ?>
         </div>
-    </div>
 
+        <div class="filter">
+            <button class="filterbutton " onclick="display()">Filter
+                <i class="fas fa-filter"></i></button>
+        </div>
+    </div>
     <div class="headerdown">
-        <div class="sel1 sel">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu  ">
-                <?php getCrops(); ?>
-            </ul>
+        <div id="show">
+            <div class="sel1 sel">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu  ">
+                    <?php getCrops(); ?>
+                </ul>
+            </div>
+            <div class="sel2 sel">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu ">
+                    <?php getVegetables(); ?>
+                </ul>
+            </div>
+            <div class="sel3 sel">
+                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu ">
+                    <?php getFruits(); ?>
+                </ul>
+            </div>
         </div>
-        <div class="sel2 sel">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu ">
-                <?php getVegetables(); ?>
-            </ul>
-        </div>
-        <div class="sel3 sel">
-            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu ">
-                <?php getFruits(); ?>
-            </ul>
+        <div id="majic" class="headerdown ">
+            <table>
+                <select id="states" onchange="state()" tabindex="1">
+                    <option value="0">Select State</option>
+                    <option value="31">ANDAMAN & NICOBAR ISLANDS</option>
+                    <option value="01">ANDHRA PRADESH</option>
+                    <option value="32">ARUNACHAL PRADESH</option>
+                    <option value="02">ASSAM</option>
+                    <option value="03">BIHAR</option>
+                    <option value="33">CHANDIGARH</option>
+                    <option value="23">CHHATTISGARH</option>
+                    <option value="34">DADRA AND NAGAR HAVELI</option>
+                    <option value="36">DAMAN AND DIU</option>
+                    <option value="35">DELHI</option>
+                    <option value="42">GOA</option>
+                    <option value="04">GUJARAT</option>
+                    <option value="05">HARYANA</option>
+                    <option value="06">HIMACHAL PRADESH</option>
+                    <option value="07">JAMMU AND KASHMIR</option>
+                    <option value="24">JHARKAND</option>
+                    <option value="08">KARNATAKA</option>
+                    <option value="09">KERALA</option>
+                    <option value="37">LAKSHADWEEP</option>
+                    <option value="10">MADHYA PRADESH</option>
+                    <option value="11">MAHARASHTRA</option>
+                    <option value="12">MANIPUR</option>
+                    <option value="13">MEGHALAYA</option>
+                    <option value="38">MIZORAM</option>
+                    <option value="14">NAGALAND</option>
+                    <option value="15">ODISHA</option>
+                    <option value="39">PUDUCHERRY</option>
+                    <option value="16">PUNJAB</option>
+                    <option value="17">RAJASTHAN</option>
+                    <option value="22">SIKKIM</option>
+                    <option value="18">TAMIL NADU</option>
+                    <option value="26">TELANGANA</option>
+                    <option value="19">TRIPURA</option>
+                    <option value="20">UTTAR PRADESH</option>
+                    <option value="25">UTTARAKHAND</option>
+                    <option value="40">UTTARANCHAL</option>
+                    <option value="21">WEST BENGAL</option>
+
+                </select>
+
+
+                <select name="" id="district">
+                    <option>Select District</option>
+                </select>
+
+
+
+
+
+
+            </table>
         </div>
     </div>
 

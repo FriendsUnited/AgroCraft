@@ -28,7 +28,8 @@ Portal for Farmers to sell the product at a better rate
 	o Integration across systems – Integration platform across systems with security model for data extraction 
 	o SMS and Mobile Computing 
 	o Analytics & Data Science (if possible) - Bigdata/Hadoop, AI / ML 
-	o Data Aggregation o Visualization
+	o Data Aggregation 
+	o Visualization
 
 
 

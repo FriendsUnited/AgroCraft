@@ -1,6 +1,6 @@
-<!-- <?php
-     include("../Functions/functions.php");
-     ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -275,58 +275,11 @@
                margin-top: -65px;
           }
 
-<<<<<<< HEAD
-     </div>
-     <div class="instaid">
-          <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
-
-          <div class="gmailid">
-               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
-          </div>
-
-     </div>
-     <div class="copy">
-          <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
-     </div>
-
-?> -->
-
-<!-- <?php
-     include("../Functions/functions.php");
-     ?>  -->
-
-<!DOCTYPE html>
-
-<html>
-
-<head>
-     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <title>Agrocraft Homepage</title>
-     <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
-     <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
-     <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
-     <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
-     <script src="../portal_files/jquery.min.js.download"></script>
-     <script src="../portal_files/popper.min.js.download"></script>
-     <script src="../portal_files/bootstrap.min.js.download"></script>
-
-     <style>
-          * {
-               margin: 0;
-               box-sizing: border-box;
-=======
           .ribbon {
                /* text-align: center; */
                height: 200px;
                margin-left: 10%;
                margin-top: 8%;
->>>>>>> 9c155940777bf8a255346cdea059f4c08af76260
           }
 
           .box {
@@ -468,7 +421,7 @@
                border-width: 5px;
                border-style: outset;
                height: 400px;
-               width:400px;
+               width: 400px;
                margin-top: 50px;
 
           }

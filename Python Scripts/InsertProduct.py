@@ -9,10 +9,22 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
+
+products = {
+    "Ramlal Potato": 
+}
+
+
+
+
+
+
 farmer_id = "select farmer_id from farmerregistration"
 rows = mycursor.execute(farmer_id)
 myresult = mycursor.fetchall()
-print(myresult)
+for x in myresult:
+    for a in x:
+
 
 # Security_check = 'select farmer_id from farmerregistration where farmer_password = "{}" and farmer_phone = {}'.format(
 #     password, phone)

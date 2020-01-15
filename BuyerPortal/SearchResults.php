@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -664,6 +664,7 @@ include("../Functions/functions.php");
 
      <div class="header">
 
+
           <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="search_input">
@@ -681,7 +682,7 @@ include("../Functions/functions.php");
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransactions.php'><label class='makeitgreen'>Transactions</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
 
@@ -789,10 +790,6 @@ include("../Functions/functions.php");
                     <select name="" id="district">
                          <option>Select District</option>
                     </select>
-
-
-
-
 
 
                </table>

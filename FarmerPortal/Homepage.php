@@ -1,6 +1,6 @@
-<!-- <?php
-     include("../Functions/functions.php");
-     ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
-     <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
+     <title>Farmer Homepage</title>
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,7 +68,7 @@
 
           .dropdown {
                float: right;
-               margin-right: 10px;
+               margin-right: 35px;
                margin-top: 20px;
           }
 
@@ -78,8 +77,7 @@
                margin-left: 20px;
                width: 25px;
                margin-right: 50px;
-
-
+               display: inline;
           }
 
           .icon2 {
@@ -96,8 +94,9 @@
           }
 
           .headerdown {
+               margin-left:20%;
                height: 50px;
-               width: 100%;
+               width: 80%;
           }
 
           .makeitgreen {
@@ -272,148 +271,73 @@
                float: left;
                margin-top: -65px;
           }
+
           body {
+<<<<<<< HEAD
             margin: 0;
             padding: 0;
             font-family: sans-serif;
-            /* background-image: url(images/Website/FarmerLogin.jpg); */
             background-size: cover;
             background-position: center;
             box-sizing: border-box;
         }
 
         .wrapper {
-            /* width: 300px; */
             background-image: 100px;
         }
 
         .add_button {
-            /* clear:left;
-            margin-left:450px; */
             float: right;
-            /* margin-top: 10px; */
             text-align: center;
-            /* margin-right:10%; */
-            /* background-color:red; */
         }
 
-        /* .dropdown {
-            float: right;
-            margin-right: 1em;
-            margin-top: 0;
-            margin-bottom: 52em;
-            color: white;
-            background-color:green;
-
-        } */
-
-        /* ul li {
-            display: none;
-        } */
-
-        /* ul li:hover ul li {
-            display: block;
-             width: 30px; 
-        }
-
-        ul li a {
-            display: block;
-             width: 30px; 
-        } */
-
-        .products:last-child {}
 
         h1 {
-            /* color: rgb(20, 83, 31); */
             font-family: 'Times New Roman', Times, serif;
             color: white;
 
         }
 
-        /* .trans {
-            clear: left;
-            background-color: red;
-        } */
-
         .lost{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color: white;
+            /* <font-fam></font-fam>; */
+            color: black;
             text-align: center;
-            /* margin-top: 5em; */
-            background-color: olive;
+<<<<<<< HEAD
+<<<<<<< HEAD
             height: 8%;
-            margin-top: 0;
+            margin-top: 150px;
             border-radius: 30px;
+            font-size:30px;
+=======
+            /* margin-top: 5em; */
+=======
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
+            background-color: olive;
+            margin-top: 120px;
+            margin:auto;
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
         }
 
-        /* .dropdown-content {
-            display: none;
-            /* position: sticky;  */
-            background-color: transparent;
-            /* min-width: 250px; */
-            z-index: 1;
-        }
-
-        /* .dropdown-content a {
-            color: rgb(12, 11, 11);
-            padding: 30px 16px;
-            text-align: center;
-            text-decoration: none;
-            display: block;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            font-size: 20px;
-            background-color: white;
-            width: 100px;  
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
-        } */
-
-        /* .dropdown-content a:hover {
-            background-color: white;
-             color: black; 
-             position:absolute; 
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            background-color: white;
-             position:relative; 
-        } */
-/* 
-        .dropdown:hover .dropbtn {
-            background-color: #ffffff;
-        }  */
 
         .new {
-            /* display: table-cell;
-            vertical-align: middle; */
             text-align: center;
         }
 
         .button {
             position: relative;
-            /* margin-left: 130px; */
             float: right;
-            /* margin-bottom:250px; 
-             margin-top:3em; */
-            /* clear:left;  */
         }
 
         h2 {
             color: white;
             margin-top: 3em;
-            /* background-color: green;
-         */
             text-align: center;
-
-            /* background-color: darkcyan; */
 
         }
 
         .hii {
             float: right;
             margin-right: 5em;
-            /* margin-top:254em;  */
-            /* background-color:red; */
         }
 
         .ribbon {
@@ -432,25 +356,20 @@
             border: 1px;
             width: 100%;
             white-space: nowrap;
-
             height: 70px;
 
 
         }
         .subtract{
              float:right;
-             border-color:olive;
-          
+             border-color:olive;  
              margin-top: 2%; 
              text-align: center;
-             /* font-weight: 10px; */
-             /* font-family: Arial, Helvetica, sans-serif; */
-             /* background-color: green; */
              border-radius: 25px;
-
             
         } 
-        .box{
+<<<<<<< HEAD
+        /* .box{
             
             color: rgb(6, 36, 7);
             width: 1050px;
@@ -460,16 +379,169 @@
             text-align: center;
               margin-top: 120px;  
              /* padding: 5px;  */
-             border-style: outset; 
+             /* border-style: outset;  */
             /* border-width: 5px;
             border-radius: 16px; */
-             border-color:black; 
+             /* border-color:black;  */
             /* font-size:20px; */
-            height: 900px;
+            /* height: 900px;
             border-radius: 30px;
             
+<<<<<<< HEAD
+        }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
         }
         
+=======
+        } */
+         */
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+=======
+       
+>>>>>>> 6f4094f73571b78a92f61348c09dd72ffae3a0b8
+=======
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          }
+
+          .wrapper {
+               background-image: 100px;
+          }
+
+          .add_button {
+               float: right;
+               text-align: center;
+          }
+
+
+          h1 {
+               font-family: 'Times New Roman', Times, serif;
+               color: white;
+
+          }
+
+          .lost {
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               color: black;
+               text-align: center;
+               /* background-color: olive; */
+               margin-top: 220px;
+               margin: auto;
+          }
+
+
+          .new {
+               text-align: center;
+          }
+
+          .button {
+               position: relative;
+               float: right;
+          }
+
+          h2 {
+               color: white;
+               margin-top: 3em;
+               text-align: center;
+
+          }
+
+          .hii {
+               float: right;
+               margin-right: 5em;
+          }
+
+          .ribbon {
+               position: relative;
+               top: -16px;
+               right: -706px;
+               float: left;
+               top: 0px;
+               left: 0px;
+               height: 74px;
+               background-color: green;
+          }
+
+          .over {
+               background-color: green;
+               border: 1px;
+               width: 100%;
+               white-space: nowrap;
+               height: 70px;
+
+
+          }
+
+          .subtract {
+               float: right;
+               border-color: olive;
+               margin-right: 12%;
+               background-color: #00b300;
+               text-align: center;
+               /* border-radius: 25px; */
+               width: 9%;
+               height: 8%;
+               margin-top: -5%;
+               padding: 5px;
+
+          }
+
+          .items {
+               width: 100%;
+               margin: auto;
+               height: auto;
+          }
+
+          .productbox {
+               float: left;
+               margin: 15px;
+               margin-left: 30px;
+               padding: 15px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 10px;
+          }
+
+          .productbox:hover {
+               float: left;
+               margin: 25px;
+               margin-left: 30px;
+               padding: 20px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 5px;
+               font-weight: bolder;
+               height: 325px;
+               width: 240px;
+
+          }
+
+          .slideshow {
+               margin-top: 10px;
+               margin-left: 100px;
+               margin-bottom: 20px;
+               float: left;
+               border-style: solid;
+          }
+          #navbar {
+               
+               padding: 20px;
+               color:green;
+               text-decoration: none;
+               margin:20px;
+               font-size: 25px;
+               padding-top:10px;
+          }
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
      </style>
 
 </head>
@@ -478,57 +550,52 @@
 
      <div class="header">
 
-          <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+          <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
-          <div class="search_input">
+<<<<<<< HEAD
+          <!-- <div class="search_input">
                <form action="SearchResults.php" method="get" enctype="multipart/form-data">
                     <i class="fas fa-search" style="font-size:20px;color:white; "></i>
                     <input type="text" id="input1" name="search" placeholder="Search...">
                </form>
-          </div>
+          </div> -->
+=======
+
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
 
           <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button"id="menu1" data-toggle="dropdown" style="margin-top:-5px;">  <i class="fa fa-user fa-2x">
-            </button></i>
-			<!-- <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> </span></button> -->
-			<ul  class="dropdown-menu etc"1
-              <li class="options"> <a   href="FarmerProfile.php"><label class='makeitgreen'>Profile</label> <i class="fa fa-edit fa-1x"></i></a><br></li>
-               <li class="options"> <a href="#">Logout <i class="fa-sign-out fa-1x"></i></a></li>
-     </ul>
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
+               </button></i>
+               <ul class="dropdown-menu etc">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
+                         echo "<li class='options'> <a href='CallCenter.php'><label class='makeitgreen'>Call Centers</label></a></li>";
+                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+                    } else {
+                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Login</label></a></li>";
+                    }
+                    ?>
+               </ul>
+          </div>
 
-			<!-- <?php
-				if (isset($_SESSION['phonenumber'])) {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../Includes/BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
-				
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
-				}
-				else {
-					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
-				}
-			?> -->
-		</div>
-		<div class="proicon">
-			<?php
-		if (!isset($_SESSION['phonenumber'])) {
-		 echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		else {
-			echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
-		}
-		?>
-		</div>
-
-
-          <div class="icon2">
-			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> 5 </span>
-		</div>
+          <div class="proicon">
+               <?php
+               if (!isset($_SESSION['phonenumber'])) {
+                    echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               } else {
+                    echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               }
+               ?>
+          </div>
 
           <div class="loginz">
-               <?php getUsername(); ?>
+               <?php getFarmerUsername(); ?>
           </div>
      </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
      <!-- <div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
@@ -554,10 +621,16 @@
 	</div>
  -->
 
-   <div class="box"> <div class="lost">ALL PRODUCTS </div>
-   <<div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+<<<<<<< HEAD
+    <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
+     </div></button>
+=======
+   <div class="lost">ALL PRODUCTS </div>
+   <div class="subtract"><button class="subtract"><b>Add Product </b> <div class="add_button"></button>
      </div></button></div>>
-    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> -->
+>>>>>>> 91e3f702ebb8fc3bf42ce80fdfe3e271677861de
+    <!-- <div class="add_button">  <button class="button"><i  class="fa fa-plus fa-3x"></i></button></div>                      --> 
 
     <br>
 
@@ -571,14 +644,107 @@
 
     </div>
     </div>
+=======
+     <br>
+=======
+     <div class="headerdown" >
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
+
+          <a href="Homepage.php" id = "navbar"><label>Home</label></a>
+          <a href="ProductPage.php" id = "navbar"><label>My Products</label></a>
+          <a href="Transactions.php" id = "navbar"><label>My Transactions</label></a>
+          <a href="CallCenter.php" id = "navbar"><label>Call Centers And Sms</label></a>
+               <hr>
      </div>
+
+
+
+     <div class="slideshow" id="showing">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+
+               <div class="carousel-inner">
+
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="items">
+
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;">
+                    <b>All Product's</b></label>
+          </div>
+          <div style="display:block;">
+               <button class="subtract"><label style="padding:10px;padding-bottom:15px;color:white;">
+                         <b>Add Product </b>
+                    </label></button>
+               <hr>
+          </div>
+          <?php
+          include("../Includes/db.php");
+          if (isset($_SESSION['phonenumber'])) {
+               $sess_phone_number = $_SESSION['phonenumber'];
+               getFarmerProducts();
+          } else {
+               echo "<br><br><h1 align = center>Please Login!</h1><br><br><hr>";
+          }
+          ?>
+
+<<<<<<< HEAD
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
+=======
+
+>>>>>>> 3c40345f953522ba48e860aa57b2c949be6ad20e
+     </div>
+
+
+     <div style="display:block;">
+          <br> <br>
+          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
+
+          <table align="center" border="2">
+
+               <tr align="center">
+                    <th width=200px>Date</th>
+                    <th width=200px>Name</th>
+                    <th width=200px>Phone Number</th>
+                    <th width=300px>Address</th>
+                    <th width=200px>Quantity</th>
+                    <th width=200px>Price</th>
+               </tr>
+
+               <tr align="center">
+                    <td>12-1-2000</td>
+                    <td>melissa</td>
+                    <td>1234567890</td>
+                    <td>sajgdkagdd</td>
+                    <td>500</td>
+                    <td>200</td>
+               </tr>
+
+          </table>
+     </div>
+<<<<<<< HEAD
     <div class="trans">
 
 
-        <div class="lost">TRANSACTION HISTORY</h3>
+      <br><br><br><br><br><br><br><br>  <div class="lost">TRANSACTION HISTORY</h3>
     </div>
 
-
+<div class="please">
     <div>
         <br>
         <br>
@@ -607,7 +773,11 @@
         </table>
     </div>
 
- 
+ </div>
+=======
+
+
+>>>>>>> c16c10d465c95afd1a7a1e5a2863fb345b8b1185
 
 
      <div class="footer">

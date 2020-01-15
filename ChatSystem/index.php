@@ -13,10 +13,16 @@
 	width:1000px;
 	text-align:center;
 }
+.clearchat{
+    width:30%;
+    height:55px;
+    background:#33ff33;
+}
+
 
 .chathistory{
 	min-height:600px;
-	width:600px;
+	width:100%;
 	margin:10px auto;
 	padding:10px;
 	background:#f1f1f1;
@@ -26,7 +32,7 @@
 
 .txtarea{
 	min-height:100px;
-	width:600px;
+	width:100%;
 	margin:10px auto;
     padding:10px;
     text-align:center;
@@ -35,7 +41,6 @@
 .siglemessage{
 	font-size:32px;
     padding:5px;
-
 	border-bottom:1px solid #b3b3b3;
 }
     </style>
@@ -54,11 +59,14 @@
                 <textarea name="message" id="message" class="txtarea">
                 
                 </textarea>
+                
             </form>
+            <button onclick="clearchat();" class="clearchat">Clear Chat</button>
         </div>
     </div>
 
     <script>
+
         $(document).ready(function(){
             loadChat();
         });
@@ -75,12 +83,23 @@
         function loadChat(){
             $.post('handlers/ajax.php?action=getChat',function(response){
                 $('.chathistory').html(response);
+                check();
             });
         }
 
         setInterval(function(){
             loadChat();     
         },2000);
+        function clearchat(){
+            $.post('handlers/ajax.php?action=clearChat',function(response){
+                $('.clearchat').html(response);
+            });
+        }
+        function check(){
+            $.post('handlers/ajax.php?action=check',function(response){
+                $('#message').html(response);
+            });
+        }
     </script>
 
 </body>

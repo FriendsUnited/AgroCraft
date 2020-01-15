@@ -7,16 +7,40 @@
         if (isset($_SESSION['phonenumber'])) {
             $phonenumber = $_SESSION['phonenumber'];
             global $con;
+
             $query = "select * from buyerregistration where buyer_phone = $phonenumber";
             $run_query = mysqli_query($con, $query);
+            if ($run_query) {
+                while ($row_cat = mysqli_fetch_array($run_query)) {
+                    $buyer_name = $row_cat['buyer_name'];
+                    $buyer_name = 'Hello ,' . $buyer_name;
+                }
 
-            while ($row_cat = mysqli_fetch_array($run_query)) {
-                $buyer_name = $row_cat['buyer_name'];
+                echo @"<label>$buyer_name</label>";
             }
-
-            echo "<label>Hello ,$buyer_name</label>";
         } else {
             echo "<label><a href = '../auth/BuyerLogin.php' style = 'color:white' >Login/Sign up</a></label>";
+        }
+    }
+
+
+    function getFarmerUsername()
+    {
+        if (isset($_SESSION['phonenumber'])) {
+            $phonenumber = $_SESSION['phonenumber'];
+            global $con;
+
+            $query = "select * from farmerregistration where farmer_phone = $phonenumber";
+            $run_query = mysqli_query($con, $query);
+            if ($run_query) {
+                while ($row_cat = mysqli_fetch_array($run_query)) {
+                    $buyer_name = $row_cat['farmer_name'];
+                    $buyer_name = "Hello ," . $buyer_name;
+                    echo "<label style = 'color:white; padding-top:7px;'>$buyer_name</label>";
+                }
+            }
+        } else {
+            echo "<label><a href = '../auth/FarmerLogin.php' style = 'color:white; padding-top:20px;' >Login/Sign up</a></label>";
         }
     }
 
@@ -180,7 +204,6 @@
                         . " product price  :  " . $product_price . "<br>"
                         . " product Delivery  :  " . $product_delivery . "<br>"
                         . " product category  :  " . $product_cat . "<br>"
-                        //."<button href=''>ADD TO CART</button>"
                         . "</div>";
                 }
             }
@@ -188,6 +211,42 @@
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
         }
     }
+
+    // Checkout System Functions
+    function cart()
+    {
+        if (isset($_SESSION['phonenumber'])) {
+            if (isset($_GET['add_cart'])) {
+
+                global $con;
+                if (isset($_POST['quantity'])) {
+                    $qty = $_POST['quantity'];
+                } else {
+                    $qty = 1;
+                }
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $product_id = $_GET['add_cart'];
+
+                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+                $run_check = mysqli_query($con, $check_pro);
+                
+                echo "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>";
+                echo "<script type='text/javascript'>";           
+                    if (mysqli_num_rows($run_check) > 0) {
+                        echo "";
+                    } else {
+                        $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                        $run_insert_pro = mysqli_query($con, $insert_pro);    
+                    }
+                    echo "</script>"; 
+                    echo"<script>window.location.reload(true)</script>";               
+            }
+        } else {
+            // echo "<script>alert('Please Login First! ');</script>";
+        }
+    }
+
     //function which is link with FarmerHomePage
     function getFarmerProducts()
     {
@@ -205,15 +264,15 @@
                 $path = "../Admin/product_images/" . $image;
 
                 echo "
-                    <div style = 'float:left;margin : 15px; margin-left:30px;padding :15px; border-style : outline; border:2px solid ;border-color:green; border-radius:10px;' >
-                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' 
-                        style='height: 200px; width: 200px; border-style : double; border:2px solid ;border-color:brown;border-width:2px; border-radius:10px;'><br></a>
+                    <div  class = 'productbox'  >
+                        <a href='../FarmerPortal/FarmerProductDetails.php?id=$id'><img src='../Admin/product_images/$image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg'><br></a>
+                        
                         <div>
-                        <p style='text-align:center; text-decoration:underline;'><b>$product_title</b></p>
-                        <p style='text-align:center ;text-decoration:underline;'><b>Price : Rs $price</b></p>
+                            <p><b>$product_title</b></p>
+                            <p><b>Price : Rs $price</b></p>
                         </div>
-                        </div> 
-                        ";
+
+                    </div>";
             }
         } else {
             echo "<br><br><hr><h1 align = center>Product Not Uploaded !</h1><br><br><hr>";
@@ -272,40 +331,7 @@
             }
         }
     }
-
-    // Checkout System Functions
-    function cart()
-    {
-        if (isset($_SESSION['phonenumber'])) {
-            if (isset($_GET['add_cart'])) {
-
-                global $con;
-                if (isset($_POST['quantity'])) {
-                    $qty = $_POST['quantity'];
-                } else {
-                    $qty = 1;
-                }
-                $sess_phone_number = $_SESSION['phonenumber'];
-                $product_id = $_GET['add_cart'];
-
-                $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                $run_check = mysqli_query($con, $check_pro);
-
-                if (mysqli_num_rows($run_check) > 0) {
-                    echo "";
-                } else {
-                    $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                    $run_insert_pro = mysqli_query($con, $insert_pro);
-
-                    // echo "<script>window.location.reload(true)</script>";
-                }
-            }
-        } else {
-            // echo "<script>alert('Please Login First! ');</script>";
-        }
-    }
-
+    
 
     function totalItems()
     {
@@ -334,20 +360,21 @@
     }
 
 
+
     ?>
 
-<script>
-    //var x = document.getElementById("demo");
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
+ <script>
+     //var x = document.getElementById("demo");
+     function getLocation() {
+         if (navigator.geolocation) {
+             navigator.geolocation.getCurrentPosition(showPosition);
+         } else {
+             x.innerHTML = "Geolocation is not supported by this browser.";
+         }
+     }
 
-    function showPosition(position) {
-        x.innerHTML = "Latitude: " + position.coords.latitude +
-        "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
+
+    <?php
+    
+    ?>
+

@@ -1,6 +1,6 @@
-<!-- <?php
-     include("../Functions/functions.php");
-     ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -10,8 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
-     <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
+     <title>Farmer Homepage</title>
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,7 +68,7 @@
 
           .dropdown {
                float: right;
-               margin-right: 10px;
+               margin-right: 35px;
                margin-top: 20px;
           }
 
@@ -78,8 +77,7 @@
                margin-left: 20px;
                width: 25px;
                margin-right: 50px;
-
-
+               display: inline;
           }
 
           .icon2 {
@@ -96,8 +94,9 @@
           }
 
           .headerdown {
+               margin-left: 15%;
                height: 50px;
-               width: 100%;
+               width: 80%;
           }
 
           .makeitgreen {
@@ -272,6 +271,7 @@
                float: left;
                margin-top: -65px;
           }
+<<<<<<< HEAD
 
           body {
                margin: 0;
@@ -408,14 +408,72 @@
                text-align: center;
 
                /* background-color: darkcyan; */
+=======
+
+          body {
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          }
+
+          .wrapper {
+               background-image: 100px;
+          }
+
+          .add_button {
+               float: right;
+               text-align: center;
+          }
+
+
+          h1 {
+               font-family: 'Times New Roman', Times, serif;
+               color: white;
+
+          }
+
+          .lost {
+               /* <font-fam></font-fam>; */
+               color: black;
+               text-align: center;
+               height: 8%;
+               margin-top: 150px;
+               border-radius: 30px;
+               font-size: 30px;
+               /* margin-top: 5em; */
+               background-color: olive;
+               margin-top: 120px;
+               margin: auto;
+          }
+
+          .new {
+               text-align: center;
+          }
+
+          .button {
+               position: relative;
+               float: right;
+          }
+
+          h2 {
+               color: white;
+               margin-top: 3em;
+               text-align: center;
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
           }
 
           .hii {
                float: right;
                margin-right: 5em;
+<<<<<<< HEAD
                /* margin-top:254em;  */
                /* background-color:red; */
+=======
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
           }
 
           .ribbon {
@@ -434,10 +492,17 @@
                border: 1px;
                width: 100%;
                white-space: nowrap;
+<<<<<<< HEAD
 
                height: 70px;
+=======
+               height: 70px;
 
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
+          }
+
+<<<<<<< HEAD
           }
 
           .subtract {
@@ -454,6 +519,16 @@
 
           }
 
+=======
+          .subtract {
+               float: right;
+               border-color: olive;
+               margin-top: 2%;
+               text-align: center;
+               border-radius: 25px;
+          }
+
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
           /* .box{
             
             color: rgb(6, 36, 7);
@@ -472,8 +547,168 @@
           /* height: 900px;
             border-radius: 30px;
             
+<<<<<<< HEAD
         } */
           */
+=======
+        }
+        .please{
+             text-align:center;
+             float:right;
+             margin-right:500px;
+               margin: 0;
+               padding: 0;
+               font-family: sans-serif;
+               background-size: cover;
+               background-position: center;
+               box-sizing: border-box;
+          } */
+
+          .wrapper {
+               background-image: 100px;
+          }
+
+          .add_button {
+               float: right;
+               text-align: center;
+          }
+
+
+          h1 {
+               font-family: 'Times New Roman', Times, serif;
+               color: white;
+
+          }
+
+          .lost {
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+               color: black;
+               text-align: center;
+               margin-top: 220px;
+               margin: auto;
+          }
+
+
+          .new {
+               text-align: center;
+          }
+
+          .button {
+               position: relative;
+               float: right;
+          }
+
+          h2 {
+               color: white;
+               margin-top: 3em;
+               text-align: center;
+
+          }
+
+          .hii {
+               float: right;
+               margin-right: 5em;
+          }
+
+          .ribbon {
+               position: relative;
+               top: -16px;
+               right: -706px;
+               float: left;
+               top: 0px;
+               left: 0px;
+               height: 74px;
+               background-color: green;
+          }
+
+          .over {
+               background-color: green;
+               border: 1px;
+               width: 100%;
+               white-space: nowrap;
+               height: 70px;
+
+
+          }
+
+          .subtract {
+               float: right;
+               border-color: olive;
+               margin-right: 12%;
+               background-color: #00b300;
+               text-align: center;
+               /* border-radius: 25px; */
+               width: 9%;
+               height: 8%;
+               margin-top: -5%;
+               padding: 5px;
+
+          }
+
+          .items {
+               width: 100%;
+               margin: auto;
+               height: auto;
+          }
+
+          .productbox {
+               float: left;
+               margin: 15px;
+               margin-left: 30px;
+               padding: 15px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 10px;
+          }
+
+          .productbox:hover {
+               float: left;
+               margin: 25px;
+               margin-left: 30px;
+               padding: 20px;
+               border-style: outline;
+               border: 2px solid;
+               border-color: green;
+               border-radius: 5px;
+               font-weight: bolder;
+               height: 325px;
+               width: 240px;
+
+          }
+
+          .slideshow {
+               margin-top: 10px;
+               margin-left: 100px;
+               margin-bottom: 20px;
+               float: left;
+               border-style: solid;
+          }
+
+          #navbar {
+
+               padding: 20px;
+               color: green;
+               text-decoration: none;
+               margin: 20px;
+               font-size: 25px;
+               padding-top: 10px;
+          }
+
+          #navbar:hover {
+               padding: 20px;
+               color: green;
+               text-decoration: underline;
+               margin: 20px;
+               font-size: 30px;
+               font-weight: bolder;
+               padding-top: 10px;
+          }
+
+          #navbar i {
+               padding-right: 1%;
+          }
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
      </style>
 
 </head>
@@ -482,15 +717,25 @@
 
      <div class="header">
 
-          <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+          <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
-          <div class="search_input">
-               <form action="SearchResults.php" method="get" enctype="multipart/form-data">
-                    <i class="fas fa-search" style="font-size:20px;color:white; "></i>
-                    <input type="text" id="input1" name="search" placeholder="Search...">
-               </form>
+          <div class="dropdown">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
+               </button></i>
+               <ul class="dropdown-menu etc">
+                    <?php
+                    if (isset($_SESSION['phonenumber'])) {
+                         echo "<li class='options'> <a href='FarmerProfile.php'><label class='makeitgreen'>Profile</label></a><br></li>";
+                         echo "<li class='options'> <a href='CallCenter.php'><label class='makeitgreen'>Call Centers</label></a></li>";
+                         echo "<li class='options'> <a href='logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+                    } else {
+                         echo "<li class='options'> <a href='../auth/FarmerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+                    }
+                    ?>
+               </ul>
           </div>
 
+<<<<<<< HEAD
           <div class="dropdown">
                <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-user fa-2x">
                </button></i>
@@ -524,12 +769,25 @@
                <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
                <span id="icon"> 5 </span>
           </div>
+=======
+          <div class="proicon">
+
+               <?php
+               if (!isset($_SESSION['phonenumber'])) {
+                    echo "<a href='../auth/FarmerLogin.php'> <i class='far fa-user-circle ' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               } else {
+                    echo "<a href='FarmerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white; padding-top:5px;'></i></a>";
+               }
+               ?>
+          </div>
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
           <div class="loginz">
-               <?php getUsername(); ?>
+               <?php getFarmerUsername(); ?>
           </div>
      </div>
 
+<<<<<<< HEAD
      <!-- <div class="headerdown">
 		<div class="sel1 sel">
 			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
@@ -609,10 +867,53 @@
                     <tr></tr>
                </table>
           </div>
+=======
+     <br>
+
+     </div>
+
+
+     <div class="headerdown">
+
+          <a href="Homepage.php" id="navbar"><i class="fa fa-home" aria-hidden="true"></i><label>Home</label></a>
+          <a href="MyProducts.php" id="navbar"><i class="fa fa-leaf" aria-hidden="true"></i><label>My Products</label></a>
+          <a href="Transactions.php" id="navbar"><i class="fa fa-exchange" aria-hidden="true"></i><label>My Transactions</label></a>
+          <a href="CallCenter.php" id="navbar"><i class="fa fa-phone fa-rotate-vertical" aria-hidden="true"></i><label>Call Centers And Sms</label></a>
+          <hr>
+     </div>
+
+
+
+     <div class="slideshow" id="showing">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+
+               <div class="carousel-inner">
+
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+                    </div>
+                    <div class="carousel-item active">
+                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
 
 
 
 
+<<<<<<< HEAD
           <div class="footer">
                <hr>
                <label class="payment">Payment Options:-</label>
@@ -620,6 +921,15 @@
                <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
           </div><br><br>
           <h3><span> GET SOCIAL WITH US </span></h3>
+=======
+     <div class="footer">
+          <hr>
+          <label class="payment">Payment Options:-</label>
+          <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
+          <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
+     </div><br><br>
+     <h3><span> GET SOCIAL WITH US </span></h3>
+>>>>>>> dce045da8f7b2a366b7367d5306e2fcb1d7000b3
      </div>
      <div class="morefooter">
 

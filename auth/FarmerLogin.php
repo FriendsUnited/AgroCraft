@@ -1,3 +1,10 @@
+<?php
+include("../Includes/db.php");
+//session_start();
+include("../Functions/functions.php");
+	 ?> 
+	 
+
 <!DOCTYPE html>
 <html>
 
@@ -149,14 +156,22 @@ float: left;
 </html>
 
 <?php
-include("../Includes/db.php");
-session_start();
 if (isset($_POST['login'])) {
 
-	$phonenumber = $_POST['phonenumber'];
-	$password = $_POST['password'];
+	$phonenumber = mysqli_real_escape_string( $con, $_POST['phonenumber']);
+	$password = mysqli_real_escape_string( $con, $_POST['password']);
 
-	$query = "select * from farmerregistration where farmer_phone = '$phonenumber' and farmer_password = '$password'";
+	$ciphering = "AES-128-CTR";
+	$iv_length = openssl_cipher_iv_length($ciphering); 
+    $options = 0; 
+    $encryption_iv = '2345678910111211'; 
+    $encryption_key = "DE";
+	$encryption = openssl_encrypt($password, $ciphering, 
+				  $encryption_key, $options, $encryption_iv);
+	// echo $encryption;
+		
+	$query = "select * from farmerregistration where farmer_phone = '$phonenumber' and farmer_password = '$encryption'";
+	echo $query;
 	$run_query = mysqli_query($con, $query);
 	$count_rows = mysqli_num_rows($run_query);
 	if ($count_rows == 0) {
@@ -167,9 +182,8 @@ if (isset($_POST['login'])) {
 		$id = $row['farmer_id'];
 	}
 
-
 	$_SESSION['phonenumber'] = $phonenumber;
-	echo "<script>window.open('../FarmerPortal/FarmerHomepage.php','_self')</script>";
+	echo "<script>window.open('../FarmerPortal/Homepage.php','_self')</script>";
 }
 
 ?>

@@ -437,9 +437,9 @@ include("../Functions/functions.php");
           }
 
           #icon {
-			background-color:red;
-			color:white;
-		}
+               background-color: red;
+               color: white;
+          }
 
           .cont:hover {
                padding-top: 15px;
@@ -501,9 +501,9 @@ include("../Functions/functions.php");
 
 
           <div class="icon2">
-			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
-			<span id="icon"> <?php echo totalItems(); ?> </span>
-		</div>
+               <a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+               <span id="icon"> <?php echo totalItems(); ?> </span>
+          </div>
 
 
           <div class="loginz">
@@ -584,6 +584,10 @@ include("../Functions/functions.php");
                                              <i class="icon right  fas fa-plus"></label></a></i></td>
                               </td>
                               <?php $subtotal = $_SESSION['qtycart'][$i] * $product_price; ?>
+                              <?php
+                              $subquery = "update cart set subtotal = $subtotal where product_id = $product_id";
+                              $run = mysqli_query($con, $subquery);
+                              ?>
                               <td class="tdy" data-label="Subtotal"><?php echo $subtotal; ?></td>
                               <?php $total = $total + $subtotal ?>
                               <td class="tdy" data-label="Deletion"><a href="DeleteProductCart.php?id=<?php echo $product_id; ?>" id="Deletionlink"><i class="far fa-times-circle"></i></a></td>
@@ -610,10 +614,9 @@ include("../Functions/functions.php");
                     $run_price = mysqli_query($con, $sel_price);
                     $count = mysqli_num_rows($run_price);
                     if ($count > 0) {
-                        echo "<a href='Checkout.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
-                    }
-                    else {
-                        echo "<a href='Includes/alert.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                         echo "<a href='Checkout.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
+                    } else {
+                         echo "<a href='Includes/alert.php' style = 'color:black;'><button class='checkout' ><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";
                     }
                } else {
                     echo "<a href='../auth/BuyerLogin.php' style = 'color:black;'><button class='checkout'><span>CHECKOUT</span> <label class='arrow'><i class='fas fa-arrow-right'></i></label></a>";

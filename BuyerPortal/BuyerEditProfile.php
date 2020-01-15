@@ -309,10 +309,10 @@
 
     if (isset($_POST['confirm']))
     {
-        $phone = $_POST['phonenumber'];
-        $address = $_POST['address'];
-        $account = $_POST['bank'];   
-        $user = $_POST['username'];   
+        $phone = mysqli_real_escape_string( $con,$_POST['phonenumber']);
+        $address = mysqli_real_escape_string( $con,$_POST['address']);
+        $account = mysqli_real_escape_string( $con,$_POST['bank']);   
+        $user = mysqli_real_escape_string( $con,$_POST['username']);   
         
         $query = "update buyerregistration 
                   set buyer_phone = '$phone', buyer_username = '$user', 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 08, 2020 at 04:23 PM
+-- Generation Time: Jan 12, 2020 at 07:58 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -39,18 +39,18 @@ CREATE TABLE `buyerregistration` (
   `buyer_pan` varchar(10) NOT NULL,
   `buyer_mail` varchar(20) NOT NULL,
   `buyer_username` varchar(20) NOT NULL,
-  `buyer_password` varchar(20) NOT NULL,
-  `buyer_conf_pswd` varchar(20) NOT NULL
+  `buyer_password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `buyerregistration`
 --
 
-INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer_addr`, `buyer_comp`, `buyer_license`, `buyer_bank`, `buyer_pan`, `buyer_mail`, `buyer_username`, `buyer_password`, `buyer_conf_pswd`) VALUES
-(15, 'Abhishek', 1234567890, ' Raj Uday', 'Elysian.org', '02082000', 2147483647, '1234567890', 'abhi@hmil.com', 'admin', '456', '456'),
-(16, 'Arpit', 7666610976, '69 India Earth', 'Mafia Pvt Ltd', '99', 12345, '987', 'abcd@gmail.com', 'redhawk', 'asdfgh', 'asdfgh'),
-(17, 'calista', 2589631472, '4/2,rose building .wadala', 'apple', 'w3566908', 8947, '2436467897', 'rose21@gmail.com', 'melissa', 'flower20', 'flower20');
+INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer_addr`, `buyer_comp`, `buyer_license`, `buyer_bank`, `buyer_pan`, `buyer_mail`, `buyer_username`, `buyer_password`) VALUES
+(15, 'Abhishek', 1234567890, ' Raj Uday 234', 'Elysian.org', '02082000', 2147483647, '1234567890', 'abhi@hmil.com', 'admin', 'm8bf5+Y='),
+(16, 'Arpit', 7666610976, '69 India Earth', 'Mafia Pvt Ltd', '99', 12345, '987', 'abcd@gmail.com', 'redhawk', 'm9HW6O8B'),
+(17, 'calista', 2589631472, '4/2,rose building .wadala', 'apple', 'w3566908', 8947, '2436467897', 'rose21@gmail.com', 'melissa', 'nM7d+e0b41E='),
+(18, 'Lokesh', 9029788504, 'SEC -13 , PALM BEACH ROAD', '', 'MAHARASHTRA', 0, '1234567890', 'abhi@hmil.com', 'lokesh', 'yw==');
 
 -- --------------------------------------------------------
 
@@ -61,247 +61,16 @@ INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer
 CREATE TABLE `cart` (
   `product_id` int(255) NOT NULL,
   `phonenumber` bigint(10) NOT NULL,
-  `qty` int(10) NOT NULL DEFAULT 1
+  `qty` int(10) NOT NULL DEFAULT 1,
+  `subtotal` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`) VALUES
-(17, 0, 1),
-(25, 0, 1),
-(1, 0, 1),
-(28, 0, 1),
-(17, 0, 1),
-(32, 0, 1),
-(21, 0, 1),
-(31, 0, 1),
-(27, 0, 1),
-(19, 0, 1),
-(25, 0, 1),
-(32, 0, 1),
-(19, 0, 1),
-(3, 0, 1),
-(3, 0, 1),
-(1, 0, 1),
-(32, 0, 1),
-(28, 0, 1),
-(27, 0, 1),
-(25, 0, 1),
-(32, 0, 1),
-(27, 0, 1),
-(21, 0, 1),
-(18, 0, 1),
-(25, 0, 1),
-(21, 0, 1),
-(21, 0, 1),
-(29, 0, 1),
-(19, 0, 1),
-(18, 0, 1),
-(28, 0, 1),
-(30, 0, 1),
-(1, 0, 1),
-(26, 0, 1),
-(28, 0, 1),
-(3, 0, 1),
-(31, 0, 1),
-(28, 0, 1),
-(18, 0, 1),
-(32, 0, 1),
-(21, 0, 1),
-(31, 0, 1),
-(17, 0, 1),
-(32, 0, 1),
-(31, 0, 1),
-(26, 0, 1),
-(21, 0, 1),
-(30, 0, 1),
-(1, 0, 1),
-(3, 0, 1),
-(22, 0, 1),
-(25, 0, 1),
-(28, 0, 1),
-(32, 0, 1),
-(29, 0, 1),
-(19, 0, 1),
-(1, 0, 1),
-(29, 0, 1),
-(18, 0, 1),
-(22, 0, 1),
-(17, 0, 1),
-(18, 0, 1),
-(28, 0, 1),
-(19, 0, 1),
-(21, 0, 1),
-(3, 0, 1),
-(31, 0, 1),
-(18, 0, 1),
-(22, 0, 1),
-(32, 0, 1),
-(1, 0, 1),
-(19, 0, 1),
-(27, 0, 1),
-(3, 0, 1),
-(26, 0, 1),
-(32, 0, 1),
-(30, 0, 1),
-(28, 0, 1),
-(30, 0, 1),
-(1, 0, 1),
-(3, 0, 1),
-(25, 0, 1),
-(30, 0, 1),
-(26, 0, 1),
-(25, 0, 1),
-(22, 0, 1),
-(30, 0, 1),
-(23, 0, 1),
-(21, 0, 1),
-(31, 0, 1),
-(21, 0, 1),
-(31, 0, 1),
-(32, 0, 1),
-(19, 0, 1),
-(27, 0, 1),
-(28, 0, 1),
-(26, 0, 1),
-(30, 0, 1),
-(29, 0, 1),
-(3, 0, 1),
-(19, 0, 1),
-(18, 0, 1),
-(30, 0, 1),
-(22, 0, 1),
-(25, 0, 1),
-(19, 0, 1),
-(3, 0, 1),
-(18, 0, 1),
-(28, 0, 1),
-(17, 0, 1),
-(28, 0, 1),
-(21, 0, 1),
-(21, 0, 1),
-(18, 0, 1),
-(31, 0, 1),
-(22, 0, 1),
-(19, 0, 1),
-(29, 0, 1),
-(31, 0, 1),
-(30, 0, 1),
-(23, 0, 1),
-(27, 0, 1),
-(32, 0, 1),
-(22, 0, 1),
-(19, 0, 1),
-(30, 0, 1),
-(31, 0, 1),
-(32, 0, 1),
-(18, 0, 1),
-(3, 0, 1),
-(31, 0, 1),
-(25, 0, 1),
-(29, 0, 1),
-(18, 0, 1),
-(3, 0, 1),
-(31, 0, 1),
-(21, 0, 1),
-(17, 0, 1),
-(3, 0, 1),
-(1, 0, 1),
-(3, 0, 1),
-(24, 0, 1),
-(17, 0, 1),
-(24, 0, 1),
-(22, 0, 1),
-(1, 0, 1),
-(19, 0, 1),
-(23, 0, 1),
-(22, 0, 1),
-(19, 0, 1),
-(26, 0, 1),
-(25, 0, 1),
-(24, 0, 1),
-(18, 0, 1),
-(19, 0, 1),
-(32, 0, 1),
-(29, 0, 1),
-(31, 0, 1),
-(25, 0, 1),
-(21, 0, 1),
-(28, 0, 1),
-(32, 0, 1),
-(28, 0, 1),
-(19, 0, 1),
-(3, 0, 1),
-(19, 0, 1),
-(22, 0, 1),
-(21, 0, 1),
-(30, 0, 1),
-(29, 0, 1),
-(23, 0, 1),
-(32, 0, 1),
-(22, 0, 1),
-(27, 0, 1),
-(32, 0, 1),
-(26, 0, 1),
-(30, 0, 1),
-(1, 0, 1),
-(17, 0, 1),
-(32, 0, 1),
-(27, 0, 1),
-(29, 0, 1),
-(32, 0, 1),
-(23, 0, 1),
-(27, 0, 1),
-(22, 0, 1),
-(3, 0, 1),
-(17, 0, 1),
-(31, 0, 1),
-(27, 0, 1),
-(18, 0, 1),
-(17, 0, 1),
-(3, 0, 1),
-(25, 0, 1),
-(25, 0, 1),
-(31, 0, 1),
-(30, 0, 1),
-(22, 0, 1),
-(24, 0, 1),
-(25, 0, 1),
-(19, 0, 1),
-(1, 0, 1),
-(26, 0, 1),
-(3, 0, 1),
-(27, 0, 1),
-(27, 0, 1),
-(24, 0, 1),
-(3, 0, 1),
-(32, 0, 1),
-(18, 0, 1),
-(30, 0, 1),
-(26, 0, 1),
-(24, 0, 1),
-(26, 0, 1),
-(3, 0, 1),
-(25, 0, 1),
-(1, 0, 1),
-(22, 0, 1),
-(26, 0, 1),
-(3, 0, 1),
-(18, 0, 1),
-(24, 0, 1),
-(30, 0, 1),
-(19, 0, 1),
-(27, 0, 1),
-(3, 0, 1),
-(22, 0, 1),
-(28, 0, 1),
-(22, 0, 1),
-(31, 1234567890, 1),
-(21, 1234567890, 1),
-(3, 1234567890, 1),
-(29, 1234567890, 1);
+INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`, `subtotal`) VALUES
+(17, 1234567890, 1, 30);
 
 -- --------------------------------------------------------
 
@@ -334,19 +103,21 @@ CREATE TABLE `farmerregistration` (
   `farmer_name` varchar(255) NOT NULL,
   `farmer_phone` bigint(10) NOT NULL,
   `farmer_address` text NOT NULL,
+  `farmer_state` varchar(50) NOT NULL,
+  `farmer_district` varchar(50) NOT NULL,
   `farmer_pan` varchar(10) NOT NULL,
   `farmer_bank` int(16) NOT NULL,
-  `farmer_password` varchar(100) NOT NULL,
-  `farmer_conf_pswd` varchar(100) NOT NULL
+  `farmer_password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `farmerregistration`
 --
 
-INSERT INTO `farmerregistration` (`farmer_id`, `farmer_name`, `farmer_phone`, `farmer_address`, `farmer_pan`, `farmer_bank`, `farmer_password`, `farmer_conf_pswd`) VALUES
-(1, 'Abhishek', 8169193145, 'Mars', '1234567890', 2147483647, 'admin', 'admin'),
-(3, 'omkar', 7666610976, 'SEC -13 , PALM BEACH ROAD', '123ABC', 45745425, 'fail', 'fail');
+INSERT INTO `farmerregistration` (`farmer_id`, `farmer_name`, `farmer_phone`, `farmer_address`, `farmer_state`, `farmer_district`, `farmer_pan`, `farmer_bank`, `farmer_password`) VALUES
+(1, 'Abhishek', 8169193145, 'Mars', 'MAHARASHTRA', 'Thane', '1234567890', 2147483647, 'm8bf5+Y='),
+(3, 'omkar', 7666610976, 'SEC -13 , PALM BEACH ROAD', 'KERALA', 'Alappuzha', '123ABC', 45745425, 'nMPb4g=='),
+(5, 'Lokesh', 9029788504, 'SEC -13 , PALM BEACH ROAD', 'MAHARASHTRA', 'Nagpur', '1325355', 45745425, 'yw==');
 
 -- --------------------------------------------------------
 
@@ -362,6 +133,32 @@ CREATE TABLE `order` (
   `grandtotal` int(10) NOT NULL,
   `payment` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `order_id` int(255) NOT NULL,
+  `product_id` int(255) NOT NULL,
+  `qty` int(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `delivery` varchar(10) NOT NULL,
+  `phonenumber` bigint(10) NOT NULL,
+  `total` int(10) NOT NULL,
+  `payment` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`) VALUES
+(31, 25, 1, ' Raj Uday 234', 'Courier', 1234567890, 80, 'paytm'),
+(32, 29, 2, ' Raj Uday 234', 'Courier', 1234567890, 100, 'paytm'),
+(33, 27, 1, ' Raj Uday 234', 'Farmer', 1234567890, 200, 'paytm');
 
 -- --------------------------------------------------------
 
@@ -385,6 +182,7 @@ CREATE TABLE `products` (
   `product_title` varchar(100) NOT NULL,
   `product_cat` varchar(100) NOT NULL,
   `product_type` varchar(100) NOT NULL,
+  `product_expiry` varchar(25) NOT NULL,
   `product_image` text NOT NULL,
   `product_stock` int(100) NOT NULL,
   `product_price` int(100) NOT NULL,
@@ -397,24 +195,24 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat`, `product_type`, `product_image`, `product_stock`, `product_price`, `product_desc`, `product_keywords`, `product_delivery`) VALUES
-(1, 1, 'Ramlal Potato', '2', 'Potato', 'Potato.webp', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
-(3, 1, 'Ramlal Tomato', '2', 'Tomato', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
-(17, 3, 'Shivneri Bananas', '3', 'Bananas', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
-(18, 3, 'Ram Rice', '1', 'Rice', 'Rice.jpg', 1500, 2, 'waqd', 'best rice', 'yes'),
-(19, 1, 'Ansh Carrot', '2', 'Carrot', 'Carrot.jpg', 1250, 56, 'Big fat juicy best quality carrots assured', 'carrot,best carrot', 'yes'),
-(21, 1, 'Abhi Maize', '1', 'Maize', 'Maize.jpg', 750, 99, 'Seeds Import from australia , grown with love', 'Maize,best Maize', 'yes'),
-(22, 3, 'Calista Coconut', '1', 'Coconut', 'Coconut.jpg', 450, 12, 'Better than others', 'Coconut,best Coconut', 'no'),
-(23, 1, 'Arpit Grapes', '3', 'Grapes', 'Green Grapes.jpg', 4560, 56, 'Best Grapes you will ever find', 'grapes,green grapes,best grapes', 'yes'),
-(24, 1, 'Arpit Apples', '3', 'Apple', 'Apple.jpg', 1500, 101, 'Best Apples grown in Kashmir and handled with love and care', 'apples,apple,best apple', 'no'),
-(25, 1, 'Ramlal Wheat', '1', 'Wheat', 'Wheat.jpg', 2000, 80, 'Thin , Fragrant wheat grains grown with love', 'wheat,best quality wheat,best wheat', 'no'),
-(26, 3, 'Ansh Coffee', '1', 'Coffee', '', 1500, 500, 'Best  Quality Coffee grown in Assam', 'coffee,best coffee', 'no'),
-(27, 3, 'Arpit Alphonso Mango', '3', 'Mango', 'Mango.jpg', 2000, 200, 'Grown with love in Ratnagiri', 'mango,alponso mango,best mango', 'yes'),
-(28, 1, 'Ansh Custard Apple', '3', 'Custard Apple', 'custartapple.cms', 500, 45, 'Custard Apple so tasty ,to die for', 'Custard Apple,custart apple, apple, best custard apple', 'yes'),
-(29, 3, 'Omkar Cabbage', '2', 'Cabbage', 'Cabbage.jpg', 1500, 50, 'Best Quality Cabbage', 'cabbage, best Cabbage', 'yes'),
-(30, 1, 'Ansh Onion', '2', 'Onion', 'Onion.jpg', 1500, 65, 'Grown with love', 'Onion,best onion', 'no'),
-(31, 1, 'Abhi Strawberry', '3', 'Strawberry', 'strawberry.jpg', 100, 25, 'Best Strawberrys all over India ', 'Strawberry,best strawberry', 'yes'),
-(32, 1, 'Abhi Orange', '3', 'Orange', 'orange.jpg', 1500, 10, 'Best Oranges grown with love in Nagpur', 'Orange,best Orange', 'yes');
+INSERT INTO `products` (`product_id`, `farmer_fk`, `product_title`, `product_cat`, `product_type`, `product_expiry`, `product_image`, `product_stock`, `product_price`, `product_desc`, `product_keywords`, `product_delivery`) VALUES
+(1, 1, 'Ramlal Potato', '2', 'Potato', '', 'Potato.webp', 1000, 12, 'Best Quality product guarented 100 percent', 'potato', 'yes'),
+(3, 1, 'Ramlal Tomato', '2', 'Tomato', '', 'Tomato.jpg', 500, 5, 'Best Quality toamato assured', 'tomato , best quality tomato , Ramlal Tomato', 'no'),
+(17, 3, 'Shivneri Bananas', '3', 'Bananas', '', 'Bananas.jpg', 250, 30, 'Best Quality Bananas', 'banana, shivneri ,', 'yes'),
+(18, 3, 'Ram Rice', '1', 'Rice', '', 'Rice.jpg', 1500, 2, 'waqd', 'best rice', 'yes'),
+(19, 1, 'Ansh Carrot', '2', 'Carrot', '', 'Carrot.jpg', 1250, 56, 'Big fat juicy best quality carrots assured', 'carrot,best carrot', 'yes'),
+(21, 1, 'Abhi Maize', '1', 'Maize', '', 'Maize.jpg', 750, 99, 'Seeds Import from australia , grown with love', 'Maize,best Maize', 'yes'),
+(22, 3, 'Calista Coconut', '1', 'Coconut', '', 'Coconut.jpg', 450, 12, 'Better than others', 'Coconut,best Coconut', 'no'),
+(23, 1, 'Arpit Grapes', '3', 'Grapes', '', 'Green Grapes.jpg', 4560, 56, 'Best Grapes you will ever find', 'grapes,green grapes,best grapes', 'yes'),
+(24, 1, 'Arpit Apples', '3', 'Apple', '', 'Apple.jpg', 1500, 101, 'Best Apples grown in Kashmir and handled with love and care', 'apples,apple,best apple', 'no'),
+(25, 1, 'Ramlal Wheat', '1', 'Wheat', '', 'Wheat.jpg', 2000, 80, 'Thin , Fragrant wheat grains grown with love', 'wheat,best quality wheat,best wheat', 'no'),
+(26, 3, 'Ansh Coffee', '1', 'Coffee', '', '', 1500, 500, 'Best  Quality Coffee grown in Assam', 'coffee,best coffee', 'no'),
+(27, 3, 'Arpit Alphonso Mango', '3', 'Mango', '', 'Mango.jpg', 2000, 200, 'Grown with love in Ratnagiri', 'mango,alponso mango,best mango', 'yes'),
+(28, 1, 'Ansh Custard Apple', '3', 'Custard Apple', '', 'custartapple.cms', 500, 45, 'Custard Apple so tasty ,to die for', 'Custard Apple,custart apple, apple, best custard apple', 'yes'),
+(29, 3, 'Omkar Cabbage', '2', 'Cabbage', '', 'Cabbage.jpg', 1500, 50, 'Best Quality Cabbage', 'cabbage, best Cabbage', 'yes'),
+(30, 1, 'Ansh Onion', '2', 'Onion', '', 'Onion.jpg', 1500, 65, 'Grown with love', 'Onion,best onion', 'no'),
+(31, 1, 'Abhi Strawberry', '3', 'Strawberry', '', 'strawberry.jpg', 100, 25, 'Best Strawberrys all over India ', 'Strawberry,best strawberry', 'yes'),
+(32, 1, 'Abhi Orange', '3', 'Orange', '', 'orange.jpg', 1500, 10, 'Best Oranges grown with love in Nagpur', 'Orange,best Orange', 'yes');
 
 --
 -- Indexes for dumped tables
@@ -449,6 +247,12 @@ ALTER TABLE `order`
   ADD PRIMARY KEY (`order_id`);
 
 --
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -463,7 +267,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `buyerregistration`
 --
 ALTER TABLE `buyerregistration`
-  MODIFY `buyer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `buyer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -475,13 +279,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `farmerregistration`
 --
 ALTER TABLE `farmerregistration`
-  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
   MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `products`

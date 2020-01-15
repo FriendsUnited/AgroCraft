@@ -1,6 +1,6 @@
-<!-- <?php
-        include("../Functions/functions.php");
-        ?>  -->
+<?php
+include("../Functions/functions.php");
+?>
 
 <!DOCTYPE html>
 
@@ -11,314 +11,372 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Agrocraft Homepage</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
-    <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
-    <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+   
+        <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
+        <script src="../portal_files/jquery.min.js.download"></script>
+        <script src="../portal_files/popper.min.js.download"></script>
+        <script src="../portal_files/bootstrap.min.js.download"></script>
 
-    <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
-    <script src="../portal_files/jquery.min.js.download"></script>
-    <script src="../portal_files/popper.min.js.download"></script>
-    <script src="../portal_files/bootstrap.min.js.download"></script>
-
-    <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-
-        .header {
-            position: sticky;
-            z-index: 100;
-            top: 0rem;
-            height: 69px;
-            width: 100%;
-            background-color: #00b300;
-        }
-
-        .select_element {
-            width: 20px;
-            background-color: transparent;
-            border: none;
-            text: none;
-        }
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
 
 
-        #logo {
-            height: 66px;
-            width: 100px;
-            text-align: left;
-            float: left;
-        }
+            .header {
+                position: sticky;
+                z-index: 100;
+                top: 0rem;
+                height: 69px;
+                width: 100%;
+                background-color: #00b300;
+            }
 
-        .search_input {
-            float: left;
-            margin-left: 50px;
-            margin-top: 20px;
-
-        }
-
-        .proicon {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
-        }
-
-        .dropdown {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
-        }
-
-        .options {
-            color: yellow;
-            margin-left: 20px;
-            width: 25px;
-            margin-right: 50px;
-
-        }
-
-        .icon2 {
-            float: right;
-            margin-right: 10px;
-            margin-top: 20px;
-
-        }
-
-        .loginz {
-            float: right;
-            margin-right: 20px;
-            margin-top: 20px;
-        }
-
-        .headerdown {
-            height: 50px;
-            width: 100%;
-        }
-
-        .makeitgreen {
-            color: #00b300;
-        }
-
-        .sel1 {
-            color: green;
-            float: left;
-            margin-top: 3px;
-        }
-
-        .sel2 {
-            border-color: green;
-            color: green;
-            float: left;
-            margin-left: 600px;
-            margin-top: 3px;
-        }
-
-        .sel3 {
-            font-size: 20px;
-            margin-top: 3px;
-            float: right;
-            margin-right: 5px;
-        }
+            .select_element {
+                width: 20px;
+                background-color: transparent;
+                border: none;
+                text: none;
+            }
 
 
+            #logo {
+                height: 66px;
+                width: 100px;
+                text-align: left;
+                float: left;
+            }
 
-        #input1 {
-            width: 220px;
-            border: none;
-        }
+            .search_input {
+                float: left;
+                margin-left: 50px;
+                margin-top: 20px;
+
+            }
+
+            .proicon {
+                float: right;
+                margin-right: 10px;
+                margin-top: 20px;
+            }
+
+            .dropdown {
+                float: right;
+                margin-right: 10px;
+                margin-top: 20px;
+            }
+
+            .options {
+                color: yellow;
+                margin-left: 20px;
+                width: 25px;
+                margin-right: 50px;
+
+            }
+
+            .icon2 {
+                float: right;
+                margin-right: 10px;
+                margin-top: 20px;
+
+            }
+
+            .loginz {
+                float: right;
+                margin-right: 20px;
+                margin-top: 20px;
+            }
+
+            .headerdown {
+                height: 50px;
+                width: 100%;
+            }
+
+            .makeitgreen {
+                color: #00b300;
+            }
+
+            .sel1 {
+                color: green;
+                float: left;
+                margin-top: 3px;
+            }
+
+            .sel2 {
+                border-color: green;
+                color: green;
+                float: left;
+                margin-left: 600px;
+                margin-top: 3px;
+            }
+
+            .sel3 {
+                font-size: 20px;
+                margin-top: 3px;
+                float: right;
+                margin-right: 5px;
+            }
 
 
-        #input1:active {
-            background-color: tomato;
-        }
+
+            #input1 {
+                width: 220px;
+                border: none;
+            }
 
 
-        .wrapper {
-            display: grid;
-            grid-template-columns: 20% 20% 20% 20%;
-            grid-column-gap: 20px;
-            grid-row-gap: 10px;
-            grid-column-gap: 20px;
-            grid-row-gap: 10px;
-            margin-left: 30px;
-        }
-
-        .inputwrapper {
-            float: left;
-            border-style: double;
-            text-align: center;
-            margin-left: 80px;
-            width: 280px;
-            margin-bottom: 20px;
-            clear: auto;
-        }
+            #input1:active {
+                background-color: tomato;
+            }
 
 
-        .inputwrapper:last-child {
-            margin-right: 30px;
-        }
+            .wrapper {
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20%;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                margin-left: 30px;
+            }
 
-        .addtocart {
-            background-color: #FFD700;
-        }
+            .inputwrapper {
+                float: left;
+                border-style: double;
+                text-align: center;
+                margin-left: 80px;
+                width: 280px;
+                margin-bottom: 20px;
+                clear: auto;
+            }
 
-        .numberinput {
-            width: 35px;
-        }
 
-        .content_item {
-            text-align: center;
-            justify-content: center;
-        }
+            .inputwrapper:last-child {
+                margin-right: 30px;
+            }
 
-        .etc {
-            margin-left: -40px;
-            min-width: 90px;
-            font-size: 20px;
-        }
+            .addtocart {
+                background-color: #FFD700;
+            }
 
-        .crop_items {
-            color: green;
-        }
+            .numberinput {
+                width: 35px;
+            }
 
-        .footer {
-            height: 70px;
-            width: 100%;
-            clear: both;
-        }
+            .content_item {
+                text-align: center;
+                justify-content: center;
+            }
 
-        .payment {
-            float: left;
-            margin-left: 520px;
-            font-size: 20px;
-            margin-top: 25px;
-        }
+            .etc {
+                margin-left: -40px;
+                min-width: 90px;
+                font-size: 20px;
+            }
 
-        .cash {
-            float: left;
-            margin-top: 0px;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+            .crop_items {
+                color: green;
+            }
 
-        .paytm {
-            float: left;
-        }
+            .footer {
+                height: 70px;
+                width: 100%;
+                clear: both;
+            }
 
-        h3 {
-            width: 100%;
-            text-align: center;
-            border-bottom: 1px solid #000;
-            line-height: 0.1em;
-            margin: 10px 0 20px;
-        }
+            .payment {
+                float: left;
+                margin-left: 520px;
+                font-size: 20px;
+                margin-top: 25px;
+            }
 
-        h3 span {
-            background: #fff;
-            padding: 0 10px;
-        }
+            .cash {
+                float: left;
+                margin-top: 0px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
 
-        .morefooter {
-            height: 100px;
-            width: 100%;
-            background-color: white;
+            .paytm {
+                float: left;
+            }
 
-        }
+            h3 {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid #000;
+                line-height: 0.1em;
+                margin: 10px 0 20px;
+            }
 
-        .call {
-            float: left;
-            font-size: 20px;
-            margin-left: 150px;
-            margin-top: 25px;
-        }
+            h3 span {
+                background: #fff;
+                padding: 0 10px;
+            }
 
-        .gmail {
-            margin-top: 10px;
-            float: right;
-            margin-right: 150px;
+            .morefooter {
+                height: 100px;
+                width: 100%;
+                background-color: white;
 
-        }
+            }
 
-        .instagram {
-            margin-top: 10px;
-            float: left;
-            margin-left: 420px;
-        }
+            .call {
+                float: left;
+                font-size: 20px;
+                margin-left: 150px;
+                margin-top: 25px;
+            }
 
-        .instaid {
-            height: 10px;
-            width: 100%;
+            .gmail {
+                margin-top: 10px;
+                float: right;
+                margin-right: 150px;
 
-        }
+            }
 
-        .text {
-            float: left;
-            margin-left: 735px;
-            margin-top: -50px;
-        }
+            .instagram {
+                margin-top: 10px;
+                float: left;
+                margin-left: 420px;
+            }
 
-        .gmailid {
-            float: right;
-            margin-right: 80px;
-            margin-top: -60px;
-        }
+            .instaid {
+                height: 10px;
+                width: 100%;
 
-        .copy {
-            float: left;
-            margin-top: -65px;
-        }
+            }
 
-        .tab{
-            width: 100%;
+            .text {
+                float: left;
+                margin-left: 735px;
+                margin-top: -50px;
+            }
 
-               border-style: solid;
-               border-width: 2px;
-               padding: 2px;
+            .gmailid {
+                float: right;
+                margin-right: 80px;
+                margin-top: -60px;
+            }
 
-        }
-        th{
-            border-color: white;
-            border-style: solid;
-               border-width: 2px;
-               padding: 2px;
-              
-        }
-        .tableyhead{
+            .copy {
+                float: left;
+                margin-top: -65px;
+            }
+
+            .tab {
+                width: 100%;
+
+                border-style: solid;
+                border-width: 2px;
+                padding: 2px;
+
+            }
+
+            th {
+                border-color: white;
+                border-style: solid;
+                border-width: 2px;
+                padding: 2px;
+
+            }
+
+            .tableyhead {
+
+                color: red;
+
+            }
+
+            .thy {
+                background-color: #555;
+                color: white;
+
+            }
+
+            .trow {
+                align-content: center;
+            }
+
+            .cont {
+                border-radius: 25%;
+                border-style: solid;
+                background-color: #FFD700;
+                padding: 10px;
+                margin-top: 40px;
+                /* margin-left:46%; */
+                transition: 1s;
+
+            }
+
+            .cont:hover {
+                padding-top: 15px;
+                padding-bottom: 20px;
+                transition: 1s;
+                width: 270px;
+                height: 70px;
+                font-size: 22px;
+            }
+
+            .order {
+                font-size: 30px;
+                /* margin-left:20%; */
+                border-color: #00b300;
+                border-style: solid;
+                border-radius: 100%;
+                padding: 15px;
+
+                border-width: 2px;
+
+            }
+            .order1{
+                background-color: #FFD700;
+
+            }
+
             
-            color: red;
-        
-        }
-        .thy {
-               background-color: #555;
-               color: white;
-               
-          }
-          .trow{
-              align-content: center;
-          }
-          .cont {
-               border-radius: 25%;
-               border-style: solid;
-               background-color: #FFD700;
-               padding: 10px;
-               margin-top: 40px;
-               /* margin-left:46%; */
-               transition: 1s;
 
-          }
-          .cont:hover {
-               padding-top: 15px;
-               padding-bottom: 20px;
-               transition: 1s;
-               width: 270px;
-               height: 70px;
-               font-size: 22px;
-          }
-    </style>
+            
+
+            .a1 {
+                /* width:100px; */
+                margin-left: 400px;
+                margin-top: -44px;
+                margin-bottom: 10px;
+                /* margin-bottom: 100px; */
+            }
+            ul{
+                list-style: none;
+                /* display: inline-block; */
+                text-align: center;
+                /* width:200px; */
+            }
+            
+            li{
+                width: 300px;
+                text-align: center;
+
+                /* background-color: greenyellow; */
+                display: inline-block;
+            }
+            .fa::after{
+                content:"";
+                display: block;
+                height: 2px;
+                width:200px;
+                color:red;
+                /* background-color: black; */
+            }
+
+            .aria{
+
+            }
+        </style>
 
 </head>
 
@@ -393,33 +451,96 @@
         </div>
     </div>
 
+    <script>
+    //     var a;
+
+    //     function disp() {
+    //         if (a == 0) {
+
+    //         } else {
+
+    //         }
+
+
+    //     }
+    // </script>
+<!-- 
+    <div class="x">
+
+        <i class='fas fa-people-carry order order1 '></i>
+        <i class="fas fa-truck order order2"></i>
+        <i class="fas fa-road order order3"></i>
+        <i class="fas fa-map-marker-alt order order4"></i>
+
+
+
+    </div>
+
+    <div class="a1">__________________________________</div> -->
+<ul class="ash">
+<li class="ash1">         <i class='fas fa-people-carry order order1 '></i> 
+<br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing
+</li>
+<li class="ash1">            <i class="fas fa-truck order order2"></i><br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
+</li>
+<li class="ash1">      <i class="fas fa-road order order3"></i>
+<br><i class="fa fa-refresh aria" aria-hidden="true"></i><br>Half way  </li>
+<li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i><<br>Reached/li>
+
+
+
+</ul>
 
 
 
     <br>
     <br>
-    <h1 align="center"> TRANSACTION  HISTORY </h1>
-    <br>
-    <table  class=tab>
-        <thead  align="center" class=tableyhead>
-        <th  class=thy>Name</th>
-        <th  class=thy>Phone</th>
-        <th  class=thy >Address</th>
-        <th  class=thy >Product Title</th>
-        <th  class=thy>Quantity</th>
-        <th  class=thy>Delivery</th>
-        <th  class=thy>Amount</th>
+    <table class=tab>
+        <thead align="center" class=tableyhead>
+            <th class=thy>Farmer Name</th>
+            <th class=thy>Phone</th>
+            <th class=thy>Delivery Address</th>
+            <th class=thy>Product Title</th>
+            <th class=thy>Quantity</th>
+            <th class=thy>Delivery Mode</th>
+            <th class=thy>Amount</th>
         </thead>
+        <!-- <?php
+                $sess_phone_number = $_SESSION['phonenumber'];
+                $check_query = "select * from orders where phonenumber = $sess_phone_number ";
+                $run = mysqli_query($con, $check_query);
+                if ($run) {
+                    while ($rows = mysqli_fetch_array($run)) {
+                        $deliveryMode = $rows['delivery'];
+                        $amount = $rows['total'];
+                        $address = $rows['address'];
+
+                        $check_query = "select * from cart where phonenumber = $sess_phone_number ";
+                        $run = mysqli_query($con, $check_query);
+                    }
+                }
+
+                ?> -->
         <tr align="center" class=trow>
-            <th align="center" >Abhishek</th>
+            <th align="center">Abhishek</th>
             <th align="center">9871234511</th>
             <th align="center">Sanpada</th>
             <th align="center">Abhishek-Apples</th>
             <th align="center">1</th>
-            <th align="center">Yes</th>
-            <th >70</th>
+            <th align="center"><select>
+                    <option onselect="disp()">Farmer</option>
+                    <option value="0">Courier</option>
+                    <option>Buyer</option>
+                </select>
+
+
+
+
+
+            </th>
+            <th>70</th>
         </tr>
-        <tr align="center" >
+        <!-- <tr align="center">
             <th>Ansh</th>
             <th>9876987211</th>
             <th>Thane</th>
@@ -427,28 +548,18 @@
             <th>2</th>
             <th>No</th>
             <th>120</th>
-        </tr>
+        </tr> -->
     </table>
 
 
-<br>
-<br>
-<br>
+    <br>
+    <br>
+    <br>
 
     <a href="BuyerHomepage.php" style="color:black;"><label class="cont">CONTINUE SHOPPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
 
-
-
-
-
-
-
-
-
-
-    
     <div class="footer">
         <hr>
         <label class="payment">Payment Options:-</label>

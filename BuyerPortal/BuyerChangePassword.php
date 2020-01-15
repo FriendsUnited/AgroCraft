@@ -7,7 +7,6 @@ $sql = "select * from buyerregistration where buyer_phone = $sessphonenumber";
 $run_query = mysqli_query($con, $sql);
 while ($row = mysqli_fetch_array($run_query)) {
     $password = $row['buyer_password'];
-    $conf_password = $row['buyer_conf_pswd'];
 }
 
 ?>
@@ -177,27 +176,41 @@ while ($row = mysqli_fetch_array($run_query)) {
 
     <?php
     if (isset($_POST['confirm'])) {
-        $currentpassword = mysqli_real_escape_string( $con, $_POST['currentpassword']);
-        $newpassword = mysqli_real_escape_string( $con, $_POST['newpassword']);
-        $confirmpassword = mysqli_real_escape_string( $con, $_POST['confirmpassword']);
+        $currentpassword = mysqli_real_escape_string($con, $_POST['currentpassword']);
+        $newpassword = mysqli_real_escape_string($con, $_POST['newpassword']);
+        $confirmpassword = mysqli_real_escape_string($con, $_POST['confirmpassword']);
 
         $ciphering = "AES-128-CTR";
-		$iv_length = openssl_cipher_iv_length($ciphering); 
-		$options = 0; 
-		$encryption_iv = '2345678910111211'; 
+        $iv_length = openssl_cipher_iv_length($ciphering);
+        $options = 0;
+        $encryption_iv = '2345678910111211';
         $encryption_key = "DE";
-        
-        $encryption1 = openssl_encrypt($currentpassword, $ciphering, 
-                $encryption_key, $options, $encryption_iv);
-        $encryption2 = openssl_encrypt($newpassword, $ciphering, 
-                $encryption_key, $options, $encryption_iv);
-        $encryption3 = openssl_encrypt($confirmpassword, $ciphering, 
-                $encryption_key, $options, $encryption_iv);
+
+        $encryption1 = openssl_encrypt(
+            $currentpassword,
+            $ciphering,
+            $encryption_key,
+            $options,
+            $encryption_iv
+        );
+        $encryption2 = openssl_encrypt(
+            $newpassword,
+            $ciphering,
+            $encryption_key,
+            $options,
+            $encryption_iv
+        );
+        $encryption3 = openssl_encrypt(
+            $confirmpassword,
+            $ciphering,
+            $encryption_key,
+            $options,
+            $encryption_iv
+        );
 
         if (strcmp($password, $encryption1) == 0 and strcmp($encryption2, $encryption3) == 0) {
             $query = "update buyerregistration 
-                    set buyer_password = '$encryption2',
-                    buyer_conf_pswd = '$encryption3'
+                    set buyer_password = '$encryption2'
                     where buyer_phone = $sessphonenumber";
             $run = mysqli_query($con, $query);
 

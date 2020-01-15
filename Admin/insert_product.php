@@ -67,6 +67,10 @@ include("includes/db.php");  // db connections
                 <td colspan=2><input type="text" name="product_type" required></td>
             </tr>
 
+            <tr id="procalender">
+                <td align="center"><b>Product Expiry : <br></b></td>
+                <td colspan=2> <input type="date" name="bday"></td>
+            </tr>
             <tr id="proimg">
                 <td align="center"><b>Product Image :</b></td>
                 <td colspan=2><input type="file" name="product_image"></td>

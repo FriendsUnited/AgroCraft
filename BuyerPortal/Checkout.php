@@ -277,7 +277,7 @@ include('../Functions/functions.php');
       color: #00b300;
     }
 
-    .images {                                                                                                       
+    .images {
       height: 100px;
       width: 100px;
       margin-top: 10px;
@@ -311,101 +311,165 @@ include('../Functions/functions.php');
   <br>
   <div class="add">
     <label>1.</label><label class="del_add">DELIVERY ADDRESS</label></div>
-  <div class="sam"> <button class="edit">CHANGE ADDRESS</button></div>
-  <br>
-  <div class="lang">
-
-    <textarea rows=5 cols=40>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi <br>lorem ipsum knwo dnqwo dnkqwdhqwh dqoh9oh dnqohi </textarea>
-  </div>
-
-  <br><br><br><br><br>
-
-
-
-
-
-
-
-
-  <label class=" item">2.ITEMS</label>
-
-  <div class="del_options">
-    <table class="tabley">
-      <thead>
-        <th class="thy">Sr no</th>
-        <th class="thy">Item Name</th>
-        <th class="thy">Quantity</th>
-        <th class="thy">SubTotal</th>
-        <th class="thy">Delivary Options</th>
-      </thead>
-      <?php
-      global $con;
-      if (isset($_SESSION['phonenumber'])) {
-        $sess_phone_number = $_SESSION['phonenumber'];
-        $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
-        $run_price = mysqli_query($con, $sel_price);
-        $i = 0;
-        while ($p_price = mysqli_fetch_array($run_price)) {
-          $product_id = $p_price['product_id'];
-          $qty = $p_price['qty'];
-          $subtotal = $p_price['subtotal'];
-          $pro_price = "select * from products where product_id='$product_id'";
-          $run_pro_price = mysqli_query($con, $pro_price);
-          while ($pp_price = mysqli_fetch_array($run_pro_price)) {
-            $product_title = $pp_price['product_title'];
-            $product_price = $pp_price['product_price']; ?>
-            <tr>
-              <td class="tdy" data-label="Sr no"><?php echo $i; ?></td>
-              <td class="des tdy" data-label="Item Name"><?php echo $product_title; ?> </td>
-              <td class="tdy" data-label="Quantity"><?php echo $qty; ?></td>
-              <td class="tdy" data-label="Unit Price">Rs <?php echo $product_price; ?></td>
-              <td class="tdy" data-label="Deletion">
-              <form action="" method = 'post'>
-                <select class="selly">
-                  <option name = 'delivery' value="Buyer">Buyer</option>
-                  <option name = 'delivery' value="Farmer">Farmer</option>
-                  <option name = 'delivery' value="Courier">Courier</option>
-                </select>
-              </td>
-            </tr>
-
-
-      <?php
-          }
-          $i++;
-        }
-      } ?>
-    </table>
-  </div>
-
-
-  <br><br><br>
-
-
-  <div class="delivary">
-    <label class="totaly pay">3.PAYMENT OPTIONS:</label>
-    <input type="radio" class="radios" name="payment" value="cod"> <img class="images" src="../Images/Website/cash.jpg">
-    <input type="radio" class="radios" name="payment" value="paytm"> <img class="images" src="../Images/Website/petm.jpg ">
-  </div>
-
-
-  <div class="bott">
-
-    <button name = 'order' class="place_odder">PLACE ORDER</button>
-    </form>
+  <form action="" method="post">
+    <div class="sam"> <button name="change" class="edit">CHANGE ADDRESS</button></div>
     <?php
-      if (isset($_POST['order']))
-      {
-          $payment = mysqli_real_escape_string( $con, $_Post['payment']);
-          $delivery = mysqli_real_escape_string( $con, $_POST['delivery']);
-          $total = mysqli_real_escape_string( $con, $_SESSION['grandtotal']);
-          $query = "insert into order (address,delivery,phonenumber,grandtotal,payment) values 
-          '$address','$delivery','$sess_phone_number','$total','$payment' ";
-          $run_query = mysqli_query($con,$query);
-      }
+    if (!isset($_POST['change'])) {
+      $sess_phone_number = $_SESSION['phonenumber'];
+      $query = "select * from buyerregistration where buyer_phone = $sess_phone_number";
+      $run_register_query = mysqli_query($con, $query);
+      $row = mysqli_fetch_array($run_register_query);
+      $addr  = $row['buyer_addr'];
+      $_SESSION['deliveryaddress'] = $addr;
+    }
     ?>
-    <a href="CartPage.php"><button class="place_odder">GO BACK</button></a>
+    <div class="lang">
+      <textarea rows=5 cols=40 name="addr"><?php echo $addr ?></textarea>
+    </div>
+
+    <br>
+
+    <?php
+    if (isset($_POST['change']) && isset($_POST['addr'])) {
+      $addr = $_POST['addr'];
+      $sess_phone_number = $_SESSION['phonenumber'];
+      $query1 = "update buyerregistration set buyer_addr = '$addr' where buyer_phone = $sess_phone_number";
+      $run_register_query1 = mysqli_query($con, $query1);
+      $_SESSION['deliveryaddress'] = $addr;
+      if ($run_register_query1) {
+        echo "<script>alert('address successfully updated');</script>";
+        echo "<script>window.open('Checkout.php','_self')</script>";
+      }
+    }
+    ?>
+
+
+    <br><br><br><br><br>
+
+
+
+    <label class=" item">2.ITEMS</label>
+
+    <div class="del_options">
+
+      <table class="tabley">
+        <thead>
+          <th class="thy">Sr no</th>
+          <th class="thy">Item Name</th>
+          <th class="thy">Quantity</th>
+          <th class="thy">SubTotal</th>
+          <!-- <th class="thy">Delivary Options</th> -->
+        </thead>
+        <?php
+        global $con;
+        $del = 0;
+        if (isset($_SESSION['phonenumber'])) {
+
+          $sess_phone_number = $_SESSION['phonenumber'];
+          $sel_price = "select * from cart where phonenumber = '$sess_phone_number'";
+          $run_price = mysqli_query($con, $sel_price);
+          $i = 1;
+          while ($p_price = mysqli_fetch_array($run_price)) {
+            $product_id = $p_price['product_id'];
+            $qty = $p_price['qty'];
+            $subtotal = $p_price['subtotal'];
+            $pro_price = "select * from products where product_id='$product_id'";
+            $run_pro_price = mysqli_query($con, $pro_price);
+            while ($pp_price = mysqli_fetch_array($run_pro_price)) {
+              $product_title = $pp_price['product_title'];
+              $product_price = $pp_price['product_price'];
+              $product_delivery = $pp_price['product_delivery'];
+              if ($product_delivery == "no") {
+                $del = 1;
+              }
+        ?>
+              <tr>
+                <td class="tdy" data-label="Sr no"><?php echo $i; ?></td>
+                <td class="des tdy" data-label="Item Name"><?php echo $product_title; ?> </td>
+                <td class="tdy" data-label="Quantity"><?php echo $qty; ?></td>
+                <td class="tdy" data-label="Unit Price">Rs <?php echo $product_price * $qty; ?></td>
+
+              </tr>
+
+
+        <?php
+            }
+            $i++;
+          }
+        } ?>
+      </table>
+
+    </div>
+
+
+    <br><br><br>
+
+
+    <div class="delivary">
+      <label class="totaly pay">3.Delivery Options :</label>
+      <?php
+      if ($del == 0) {
+        echo "<input type='radio' class='radios' name='delivery' value='Self'><i style=' padding-left:15px;' class='fa fa-male fa-4x' aria-hidden='true'></i><label style='font-size:30px;padding-left:15px;'>Self</label>";
+        echo "<input type='radio' class='radios' name='delivery' value='Farmer'><i style=' padding-left:15px;' class='fa fa-leaf fa-3x' aria-hidden='true'></i><label style='font-size:30px;padding-left:15px;'>Farmer</label>";
+        echo "<input type='radio' class='radios' name='delivery' value='Courier'><i style=' padding-left:15px;' class='fa fa-truck fa-3x' aria-hidden='true'></i><label style='font-size:30px;padding-left:15px;'>Courier</label>";
+      } else {
+        echo "<input type='radio' class='radios' name='delivery' value='Self'><i style=' padding-left:15px;' class='fa fa-male fa-4x' aria-hidden='true'></i><label style='font-size:30px;padding-left:15px;'>Self</label>";
+        echo "<input type='radio' class='radios' name='delivery' value='Courier'><i style=' padding-left:15px;' class='fa fa-truck fa-3x' aria-hidden='true'></i><label style='font-size:30px;padding-left:15px;'>Courier</label>";
+      }
+      ?>
+    </div>
+
+    <br><br><br>
+    <div class="delivary">
+      <label class="totaly pay">4.Payment Options :</label>
+      <input type="radio" class="radios" name="payment" value="cod"> <img class="images" src="../Images/Website/cash.jpg">
+      <input type="radio" class="radios" name="payment" value="paytm"> <img class="images" src="../Images/Website/petm.jpg ">
+    </div>
+
+
+    <div class="bott">
+      <button name='order' class="place_odder">PLACE ORDER</button>
+  </form>
+  <?php
+  if (isset($_POST['order'])) {
+    $cart = "select * from cart where phonenumber = $sess_phone_number";
+    $run_cart = mysqli_query($con, $cart);
+    if ($run_cart) {
+      while ($row = mysqli_fetch_array($run_cart)) {
+
+        $id = $row['product_id'];
+        $qty = $row['qty'];
+        $product_total = $row['subtotal'];
+
+        $payment = $_POST['payment'];
+
+        $delivery = $_POST['delivery'];
+        // $total = $_SESSION['grandtotal'];
+        $address = $addr;
+
+        $query = "insert into orders (product_id,qty,address,delivery,phonenumber,total,payment) values (
+          '$id','$qty','$address','$delivery','$sess_phone_number','$product_total','$payment') ";
+        $run_query = mysqli_query($con, $query);
+
+        $del_query = "Delete from cart where phonenumber = $sess_phone_number";
+        $run_del = mysqli_query($con, $del_query);
+      }
+      if ($run_del) {
+        if ($_POST['payment']) {
+          echo "<script>window.open('../Paytm/PaytmKit/TxnTest.php','_self')</script>";
+        } else {
+          echo "<script>alert('Product Ordered successfully !')</script>";
+          echo "<script>window.open('BuyerHomepage.php','_self')</script>";
+        }
+      }
+    }
+  }
+  ?>
+
+
   </div>
+
+
 
   <div class="up">
 

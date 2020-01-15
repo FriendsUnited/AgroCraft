@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+        include("../Functions/functions.php");
+        ?> -->
 
 <!DOCTYPE html>
 
@@ -13,364 +13,371 @@ include("../Functions/functions.php");
     <title>Agrocraft Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-    <<<<<<< HEAD=======<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
-        >>>>>>> 27a20937121a7469acf5cdd66f87f8e1dc71a371
-        <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
-        <script src="../portal_files/jquery.min.js.download"></script>
-        <script src="../portal_files/popper.min.js.download"></script>
-        <script src="../portal_files/bootstrap.min.js.download"></script>
-
-        <style>
-            * {
-                margin: 0;
-                box-sizing: border-box;
-            }
-
-
-            .header {
-                position: sticky;
-                z-index: 100;
-                top: 0rem;
-                height: 69px;
-                width: 100%;
-                background-color: #00b300;
-            }
-
-            .select_element {
-                width: 20px;
-                background-color: transparent;
-                border: none;
-                text: none;
-            }
-
-
-            #logo {
-                height: 66px;
-                width: 100px;
-                text-align: left;
-                float: left;
-            }
-
-            .search_input {
-                float: left;
-                margin-left: 50px;
-                margin-top: 20px;
-
-            }
-
-            .proicon {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-            }
-
-            .dropdown {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-            }
-
-            .options {
-                color: yellow;
-                margin-left: 20px;
-                width: 25px;
-                margin-right: 50px;
-
-            }
-
-            .icon2 {
-                float: right;
-                margin-right: 10px;
-                margin-top: 20px;
-
-            }
-
-            .loginz {
-                float: right;
-                margin-right: 20px;
-                margin-top: 20px;
-            }
-
-            .headerdown {
-                height: 50px;
-                width: 100%;
-            }
-
-            .makeitgreen {
-                color: #00b300;
-            }
-
-            .sel1 {
-                color: green;
-                float: left;
-                margin-top: 3px;
-            }
-
-            .sel2 {
-                border-color: green;
-                color: green;
-                float: left;
-                margin-left: 600px;
-                margin-top: 3px;
-            }
-
-            .sel3 {
-                font-size: 20px;
-                margin-top: 3px;
-                float: right;
-                margin-right: 5px;
-            }
-
-
-
-            #input1 {
-                width: 220px;
-                border: none;
-            }
-
-
-            #input1:active {
-                background-color: tomato;
-            }
-
-
-            .wrapper {
-                display: grid;
-                grid-template-columns: 20% 20% 20% 20%;
-                grid-column-gap: 20px;
-                grid-row-gap: 10px;
-                grid-column-gap: 20px;
-                grid-row-gap: 10px;
-                margin-left: 30px;
-            }
-
-            .inputwrapper {
-                float: left;
-                border-style: double;
-                text-align: center;
-                margin-left: 80px;
-                width: 280px;
-                margin-bottom: 20px;
-                clear: auto;
-            }
-
-
-            .inputwrapper:last-child {
-                margin-right: 30px;
-            }
-
-            .addtocart {
-                background-color: #FFD700;
-            }
-
-            .numberinput {
-                width: 35px;
-            }
-
-            .content_item {
-                text-align: center;
-                justify-content: center;
-            }
-
-            .etc {
-                margin-left: -40px;
-                min-width: 90px;
-                font-size: 20px;
-            }
-
-            .crop_items {
-                color: green;
-            }
-
-            .footer {
-                height: 70px;
-                width: 100%;
-                clear: both;
-            }
-
-            .payment {
-                float: left;
-                margin-left: 520px;
-                font-size: 20px;
-                margin-top: 25px;
-            }
-
-            .cash {
-                float: left;
-                margin-top: 0px;
-                margin-left: 20px;
-                margin-right: 20px;
-            }
-
-            .paytm {
-                float: left;
-            }
-
-            h3 {
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid #000;
-                line-height: 0.1em;
-                margin: 10px 0 20px;
-            }
-
-            h3 span {
-                background: #fff;
-                padding: 0 10px;
-            }
-
-            .morefooter {
-                height: 100px;
-                width: 100%;
-                background-color: white;
-
-            }
-
-            .call {
-                float: left;
-                font-size: 20px;
-                margin-left: 150px;
-                margin-top: 25px;
-            }
-
-            .gmail {
-                margin-top: 10px;
-                float: right;
-                margin-right: 150px;
-
-            }
-
-            .instagram {
-                margin-top: 10px;
-                float: left;
-                margin-left: 420px;
-            }
-
-            .instaid {
-                height: 10px;
-                width: 100%;
-
-            }
-
-            .text {
-                float: left;
-                margin-left: 735px;
-                margin-top: -50px;
-            }
-
-            .gmailid {
-                float: right;
-                margin-right: 80px;
-                margin-top: -60px;
-            }
-
-            .copy {
-                float: left;
-                margin-top: -65px;
-            }
-
-            .tab {
-                width: 100%;
-
-                border-style: solid;
-                border-width: 2px;
-                padding: 2px;
-
-            }
-
-            th {
-                border-color: white;
-                border-style: solid;
-                border-width: 2px;
-                padding: 2px;
-
-            }
-
-            .tableyhead {
-
-                color: red;
-
-            }
-
-            .thy {
-                background-color: #555;
-                color: white;
-
-            }
-
-            .trow {
-                align-content: center;
-            }
-
-            .cont {
-                border-0radius: 25%;
-                border-style: solid;
-                background-color: #FFD700;
-                padding: 10px;
-                margin-top: 40px;
-                /* margin-left:46%; */
-                transition: 1s;
-
-            }
-
-            .cont:hover {
-                padding-top: 15px;
-                padding-bottom: 20px;
-                transition: 1s;
-                width: 270px;
-                height: 70px;
-                font-size: 22px;
-            }
-
-            .order {
-                font-size: 20px;
-                /* margin-left:20%; */
-                border-color: #00b300;
-                border-style: solid;
-                border-radius: 100%;
-                padding: 10px;
-                border-width: 2px;
-            }
-
-            .order1 {
-                /* margin-right:100px; */
-                margin-left: 400px;
-                margin-right: 100px;
-                font-size: 20px;
-                /* z-index:2; */
-
-
-            }
-
-            .order1::after {
-
-                /* content: "1"; */
-            }
-
-            .order2 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
-
-            .order3 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
-
-            .order4 {
-                margin-right: 100px;
-                margin-left: 100px;
-            }
-
-            .a1 {
-                /* width:100px; */
-                margin-left: 400px;
-                margin-top: -44px;
-                margin-bottom: 10px;
-                /* margin-bottom: 100px; */
-            }
-        </style>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
+    <script src="../portal_files/jquery.min.js.download"></script>
+    <script src="../portal_files/popper.min.js.download"></script>
+    <script src="../portal_files/bootstrap.min.js.download"></script>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .header {
+            position: sticky;
+            z-index: 100;
+            top: 0rem;
+            height: 69px;
+            width: 100%;
+            background-color: #00b300;
+        }
+
+        .select_element {
+            width: 20px;
+            background-color: transparent;
+            border: none;
+            text: none;
+        }
+
+
+        #logo {
+            height: 66px;
+            width: 100px;
+            text-align: left;
+            float: left;
+        }
+
+        .search_input {
+            float: left;
+            margin-left: 50px;
+            margin-top: 20px;
+
+        }
+
+        .proicon {
+            float: right;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+
+        .dropdown {
+            float: right;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+
+        .options {
+            color: yellow;
+            margin-left: 20px;
+            width: 25px;
+            margin-right: 50px;
+
+        }
+
+        .icon2 {
+            float: right;
+            margin-right: 10px;
+            margin-top: 20px;
+
+        }
+
+        .loginz {
+            float: right;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        .headerdown {
+            height: 50px;
+            width: 100%;
+        }
+
+        .makeitgreen {
+            color: #00b300;
+        }
+
+        .sel1 {
+            color: green;
+            float: left;
+            margin-top: 3px;
+        }
+
+        .sel2 {
+            border-color: green;
+            color: green;
+            float: left;
+            margin-left: 600px;
+            margin-top: 3px;
+        }
+
+        .sel3 {
+            font-size: 20px;
+            margin-top: 3px;
+            float: right;
+            margin-right: 5px;
+        }
+
+
+
+        #input1 {
+            width: 220px;
+            border: none;
+        }
+
+
+        #input1:active {
+            background-color: tomato;
+        }
+
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            margin-left: 30px;
+        }
+
+        .inputwrapper {
+            float: left;
+            border-style: double;
+            text-align: center;
+            margin-left: 80px;
+            width: 280px;
+            margin-bottom: 20px;
+            clear: auto;
+        }
+
+
+        .inputwrapper:last-child {
+            margin-right: 30px;
+        }
+
+        .addtocart {
+            background-color: #FFD700;
+        }
+
+        .numberinput {
+            width: 35px;
+        }
+
+        .content_item {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .etc {
+            margin-left: -40px;
+            min-width: 90px;
+            font-size: 20px;
+        }
+
+        .crop_items {
+            color: green;
+        }
+
+        .footer {
+            height: 70px;
+            width: 100%;
+            clear: both;
+        }
+
+        .payment {
+            float: left;
+            margin-left: 520px;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        .cash {
+            float: left;
+            margin-top: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .paytm {
+            float: left;
+        }
+
+        h3 {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #000;
+            line-height: 0.1em;
+            margin: 10px 0 20px;
+        }
+
+        h3 span {
+            background: #fff;
+            padding: 0 10px;
+        }
+
+        .morefooter {
+            height: 100px;
+            width: 100%;
+            background-color: white;
+
+        }
+
+        .call {
+            float: left;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: 25px;
+        }
+
+        .gmail {
+            margin-top: 10px;
+            float: right;
+            margin-right: 150px;
+
+        }
+
+        .instagram {
+            margin-top: 10px;
+            float: left;
+            margin-left: 420px;
+        }
+
+        .instaid {
+            height: 10px;
+            width: 100%;
+
+        }
+
+        .text {
+            float: left;
+            margin-left: 735px;
+            margin-top: -50px;
+        }
+
+        .gmailid {
+            float: right;
+            margin-right: 80px;
+            margin-top: -60px;
+        }
+
+        .copy {
+            float: left;
+            margin-top: -65px;
+        }
+
+        .tab {
+            width: 100%;
+
+            border-style: solid;
+            border-width: 2px;
+            padding: 2px;
+
+        }
+
+        th {
+            border-color: white;
+            border-style: solid;
+            border-width: 2px;
+            padding: 2px;
+
+        }
+
+        .tableyhead {
+
+            color: red;
+
+        }
+
+        .thy {
+            background-color: #555;
+            color: white;
+
+        }
+
+        .trow {
+            align-content: center;
+        }
+
+        .cont {
+            border-radius: 25%;
+            border-style: solid;
+            background-color: #FFD700;
+            padding: 10px;
+            margin-top: 40px;
+            /* margin-left:46%; */
+            transition: 1s;
+
+        }
+
+        .cont:hover {
+            padding-top: 15px;
+            padding-bottom: 20px;
+            transition: 1s;
+            width: 270px;
+            height: 70px;
+            font-size: 22px;
+        }
+
+        .order {
+            font-size: 30px;
+            /* margin-left:20%; */
+            border-color: #00b300;
+            border-style: solid;
+            border-radius: 100%;
+            padding: 15px;
+
+            border-width: 2px;
+
+        }
+
+        .order1 {
+            background-color: #FFD700;
+
+        }
+
+
+
+
+
+        .a1 {
+            /* width:100px; */
+            margin-left: 400px;
+            margin-top: -44px;
+            margin-bottom: 10px;
+            /* margin-bottom: 100px; */
+        }
+
+        ul {
+            list-style: none;
+            /* display: inline-block; */
+            text-align: center;
+            /* width:200px; */
+        }
+
+        li {
+            width: 300px;
+            text-align: center;
+
+            /* background-color: greenyellow; */
+            display: inline-block;
+        }
+
+        .fa::after {
+            content: "";
+            display: block;
+            height: 2px;
+            width: 200px;
+            color: red;
+            /* background-color: black; */
+        }
+
+        .aria {}
+    </style>
 
 </head>
 
@@ -446,31 +453,53 @@ include("../Functions/functions.php");
     </div>
 
     <script>
-        var a;
+        //     var a;
 
-        function disp() {
-            if (a == 0) {
+        //     function disp() {
+        //         if (a == 0) {
 
-            } else {
+        //         } else {
 
-            }
+        //         }
 
 
-        }
+        //     }
+        // 
     </script>
+    <!-- 
+    
 
-    <div class="x">
+    <div class="a1">__________________________________</div> -->
+    <!-- <ul class="ash">
+<li class="ash1">         <i class='fas fa-people-carry order order1 '></i> 
+<br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing
+</li>
+<li class="ash1">            <i class="fas fa-truck order order2"></i><br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
+</li>
+<li class="ash1">      <i class="fas fa-road order order3"></i>
+<br><i class="fa fa-refresh aria" aria-hidden="true"></i><br>Half way  </li>
+<li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i><<br>Reached</li>
 
-        <i class='fas fa-people-carry order order1 '></i>
-        <i class="fas fa-truck order order2"></i>
-        <i class="fas fa-road order order3"></i>
-        <i class="fas fa-map-marker-alt order order4"></i>
+
+
+</ul> -->
+    <ul class="ash">
+        <li class="ash1"> <i class='fas fa-people-carry order order1 '></i>
+            <br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packing
+        </li>
+        <li class="ash1"> <i class="fas fa-truck order order2"></i><br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
+        </li>
+        <li class="ash1"> <i class="fas fa-road order order3"></i>
+            <br><i class="fa fa-refresh aria" aria-hidden="true"></i><br>Half way </li>
+        <li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i>
+            <<br>Reached
+        </li>
 
 
 
-    </div>
+    </ul>
 
-    <div class="a1">__________________________________</div>
+
 
     <br>
     <br>

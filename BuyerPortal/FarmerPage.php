@@ -10,7 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Farmer Page</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -359,6 +359,8 @@
           .wrapper {
                display: grid;
                grid-template-columns: 20% 20% 20% 20%;
+
+
                grid-column-gap: 20px;
                grid-row-gap: 10px;
                grid-column-gap: 20px;
@@ -414,6 +416,15 @@
                margin-left: 100px;
           }
 
+          .inputwrapper {
+               float: left;
+               border-style: double;
+               text-align: center;
+               margin-left: 80px;
+               width: 280px;
+               margin-bottom: 20px;
+               clear: auto;
+          }
 
           .picha {
                height: 300px;
@@ -663,9 +674,7 @@
 
 <body>
 
-
      <div class="header">
-
 
           <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
@@ -684,11 +693,11 @@
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransactions.php'><label class='makeitgreen'>Transactions</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'Farmers.php'><label class='makeitgreen'>Farmer</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
@@ -794,77 +803,47 @@
                     </select>
 
 
+
+
+
+
                </table>
           </div>
      </div>
-     <?php
-     cart();
-     ?>
-     <?php
-     if (isset($_GET['type'])) {
 
-          $search_query = $_GET['type'];
-          $get_pro = "select * from products where product_type = '$search_query'";
-          $run_pro = mysqli_query($con, $get_pro);
-          // $count = mysqli_num_rows($run_pro);
-          if ($run_pro) {
-               echo "<br>";
-               while ($rows = mysqli_fetch_array($run_pro)) {
-                    $product_id = $rows['product_id'];
-                    $product_title = $rows['product_title'];
-                    $product_image = $rows['product_image'];
-                    $product_price = $rows['product_price'];
-                    $product_delivery = $rows['product_delivery'];
-                    if ($product_delivery == "yes") {
-                         $product_delivery = "Delivery by Farmer";
-                    } else {
-                         $product_delivery = "Delivery by Farmer Not Available";
-                    }
-                    echo " <div class='inputwrapper'>
-                                                  <br>
-                                                  <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
-                                                  <label>$product_title</label><br>
-                                                  <label>PRICE:- $product_price Rs/kg</label><br>	
-                                                  <label id='shop2'>$product_delivery</label><br>Qty:-
-                                                  <form action = '' method = 'post'>
-                                                  <input class='numberinput' type='number' name='quantity'  value = '1' >
-                                                  <button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
-                                                  </form>
-                                                  </div> ";
-                    if (isset($_POST['cart'])) {
+     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
+     <hr>
 
-                         if (isset($_POST['quantity'])) {
-                              $qty = $_POST['quantity'];
-                         } else {
-                              $qty = 1;
-                         }
-                         global $con;
-                         if (isset($_SESSION['phonenumber'])) {
-                              $sess_phone_number = $_SESSION['phonenumber'];
 
-                              $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                              $run_check = mysqli_query($con, $check_pro);
-
-                              if (mysqli_num_rows($run_check) > 0) {
-                                   echo "";
-                              } else {
-                                   $subtotal = $product_price * $qty;
-                                   $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
-                                   $run_insert_pro = mysqli_query($con, $insert_pro);
-                                   echo "<script>window.location.reload(true)</script>";
-                              }
-                         } else {
-                              echo "<script>window.alert('Please Login First!');</script>";
-                         }
-                    }
-               }
-          } else {
-               echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
-          }
-     }
-     ?>
+     <div class='inputwrapper'>
+          <br>
+          <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt='Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+          <label>$product_title</label><br>
+          <label>PRICE:- $product_price Rs/kg</label><br>
+          <label id='shop2'></label>$product_delivery<br>Qty:-
+          <form action='' method='post'>
+               <input class='numberinput' type='number' name='quantity' value='1'>
+          </form>
+          <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>
      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
      <div class="footer">

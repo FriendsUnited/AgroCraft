@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -361,36 +361,6 @@ include("../Functions/functions.php");
                border-radius: 25px;
           }
 
-          /* .box{
-            
-            color: rgb(6, 36, 7);
-            width: 1050px;
-             line-height: 40px; 
-             float:center;
-            margin: auto;
-            text-align: center;
-              margin-top: 120px;  
-             /* padding: 5px;  */
-          /* border-style: outset;  */
-          /* border-width: 5px;
-            border-radius: 16px; */
-          /* border-color:black;  */
-          /* font-size:20px; */
-          /* height: 900px;
-            border-radius: 30px;
-            
-        }
-        .please{
-             text-align:center;
-             float:right;
-             margin-right:500px;
-               margin: 0;
-               padding: 0;
-               font-family: sans-serif;
-               background-size: cover;
-               background-position: center;
-               box-sizing: border-box;
-          } */
 
           .wrapper {
                background-image: 100px;
@@ -547,7 +517,8 @@ include("../Functions/functions.php");
           <a href="Homepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="dropdown">
-               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;"> <i class="fa fa-bars fa-2x" style="color: white;">
+               <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown" style="margin-top:-5px;">
+                    <i class="fa fa-bars fa-2x" style="color: white;">
                </button></i>
                <ul class="dropdown-menu etc">
                     <?php

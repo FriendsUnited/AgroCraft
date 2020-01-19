@@ -358,6 +358,10 @@
     }
 
 
-
+    function bestSeller()
+    {
+        global $con;
+        
+    }
     ?>
 

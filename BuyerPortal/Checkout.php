@@ -456,7 +456,7 @@ d        </thead>
         $run_del = mysqli_query($con, $del_query);
       }
       if ($run_del) {
-        if ($_POST['payment']) {
+        if ($_POST['payment'] == "paytm") {
           echo "<script>window.open('../Paytm/PaytmKit/TxnTest.php','_self')</script>";
         } else {
           echo "<script>alert('Product Ordered successfully !')</script>";

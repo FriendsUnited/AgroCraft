@@ -230,17 +230,15 @@
                 $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
 
                 $run_check = mysqli_query($con, $check_pro);
-                
-                echo "<script src='https://code.jquery.com/jquery-3.4.1.js'></script>";
-                echo "<script type='text/javascript'>";           
-                    if (mysqli_num_rows($run_check) > 0) {
-                        echo "";
-                    } else {
-                        $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
-                        $run_insert_pro = mysqli_query($con, $insert_pro);    
-                    }
-                    echo "</script>"; 
-                    echo"<script>window.location.reload(true)</script>";               
+
+                if (mysqli_num_rows($run_check) > 0) {
+                    echo "";
+                } else {
+                    $insert_pro = "insert into cart (product_id,phonenumber) values ('$product_id','$sess_phone_number')";
+                    $run_insert_pro = mysqli_query($con, $insert_pro);
+                }
+
+                echo "<script>window.open('BuyerHomepage.php','_self')</script>";
             }
         } else {
             // echo "<script>alert('Please Login First! ');</script>";
@@ -331,7 +329,7 @@
             }
         }
     }
-    
+
 
     function totalItems()
     {
@@ -361,20 +359,5 @@
 
 
 
-    ?>
-
- <script>
-     //var x = document.getElementById("demo");
-     function getLocation() {
-         if (navigator.geolocation) {
-             navigator.geolocation.getCurrentPosition(showPosition);
-         } else {
-             x.innerHTML = "Geolocation is not supported by this browser.";
-         }
-     }
-
-
-    <?php
-    
     ?>
 

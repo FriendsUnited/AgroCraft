@@ -298,6 +298,7 @@ include('../Functions/functions.php');
       margin-left: 100px;
 
     }
+    
 
     .radios {
       margin-top: -30px;
@@ -359,7 +360,7 @@ include('../Functions/functions.php');
           <th class="thy">Quantity</th>
           <th class="thy">SubTotal</th>
           <!-- <th class="thy">Delivary Options</th> -->
-        </thead>
+d        </thead>
         <?php
         global $con;
         $del = 0;

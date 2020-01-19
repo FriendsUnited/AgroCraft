@@ -506,6 +506,60 @@
           #navbar i {
                padding-right: 1%;
           }
+          .time{background-color:red; 
+               /* margin-left: 20px; */
+          }
+       .whats{
+text-align: center;
+margin-left: 30%;       }
+
+.f1{
+     float: left;
+     background-color:#fff;
+    border:1px solid red;    
+    height:200px;
+    border-radius:50%;
+  width: 200px;
+     padding-top: 20px;
+     border-style: solid;
+     background-image: url("../Images/Website/f2.jpg");
+background-size: 200px 200px;
+background-repeat:no-repeat;
+     border-color: #000;
+/* opacity: 5%; */
+}
+.t1{
+     padding-top: 70px;
+     text-align: center;
+     justify-items: center;
+     color: black;
+     font-weight: bold;
+}
+.t5{
+margin-top:-13px; 
+}
+.t4{
+     margin-top:-13px; 
+
+}
+.whatsnew{
+     /* background-image: url("../Images/Website/back.jpeg"); */
+
+     background-color: red;
+     
+}
+.f2{
+     margin-left: 130px;
+     margin-right: 150px;
+}
+.f3{
+     margin-right: 150px;
+
+}
+      .f4{
+          margin-right: 150px;
+      }
+      .f1:hover
      </style>
 
 </head>
@@ -576,19 +630,66 @@
                <div class="carousel-inner">
 
                     <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same1.jpg" height="500px" width="1300px" alt="...">
+                         <img class="images1" src="../Images/Website/Farmer1.jpeg" height="500px" width="1350px" alt=".x.">
+                         <div class="time"></div>
                     </div>
                     <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/organic.png" height="500px" width="1350px" alt="...">
+                         <img class="images1" src="../Images/Website/Farmer2.jpeg" height="500px" width="1350px" alt="...">
                     </div>
                     <div class="carousel-item">
-                         <img class="images1" src="../portal_files/same3.jpg" height="500px" width="1350px" alt="...">
+                         <img class="images1" src="../Images/Website/Farmer4.jpg"height="500px" width="1350px" alt="...">
                     </div>
                </div>
           </div>
      </div>
+     <img class="whats" src="../Images/Website/whats.jpeg">
 
+<div class="whatsnew">
+<!-- <img class="whats" src="../Images/Website/whats.jpeg"> -->
+                    
+     <div class="f1 f2">
+       <div class="t1">   SMS SYSTEM </div>
+          <!-- <img class="images1" src="../Images/Website/back.jpg"> -->
 
+     </div>
+     <div class="f1 f3">
+      <div class="t1">    CALL CENTER </div>
+
+     </div>
+ <div class="f1 f4">
+      <div class="t1 t4"> PAYTM & OTHER OPTIONS</div>
+      
+     </div>
+     <div class="f1 f5">
+      <div class="t1 t5">WIDE RANGE OF BUYERS
+          </div>
+      
+     </div>
+
+</div>
+<div class="slideshow" id="showing">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+               <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+               </ol>
+
+               <div class="carousel-inner">
+
+                    <div class="carousel-item">
+                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt=".x.">
+                         <div class="time"></div>
+                    </div>
+                    <div class="carousel-item active">
+                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                         <img class="images1" src="../Images/Website/quote1.jpeg"height="500px" width="1350px" alt="...">
+                    </div>
+               </div>
+          </div>
+     </div>
 
 
 

@@ -10,6 +10,8 @@ include("includes/db.php");  // db connections
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
 
     <!-- Script for Advance TextArea  -->
     <!-- 
@@ -19,94 +21,333 @@ include("includes/db.php");  // db connections
     </script> -->
 
     <title>Inserting Product</title>
-    <link rel="stylesheet" type="text/css" href="../Styles/insert_product.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../Styles/insert_product.css"> -->
+
+
+
+
+
+    <style>
+        table {
+            border: none;
+        }
+
+
+        tr td {
+            border: none;
+        }
+
+        #protitle {
+            font-size: 10px;
+
+        }
+
+        table {
+            background-color: white;
+            height: 650px;
+            width: 100%;
+            /* width: 98.5%;
+            margin-left: 10px;
+            margin-right: 10px; */
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .header {
+            /* background-color:   #66ffff;
+     */
+            font-size: 30px;
+            background-color: white;
+            color: black;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .col1 {
+            font-size: 20px;
+            background-color: #f5ca0a;
+
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            float: left;
+            width: 250px;
+            margin-left: 100px;
+
+        }
+
+        select {
+            font-size: 20px;
+            border-style: solid;
+            width: 250px;
+            /* margin-left: 40px; */
+            border-radius: 10px;
+            padding: 10px;
+            border-width: 2px;
+            border-color: black;
+
+        }
+
+        .col2 {
+            float: left;
+            margin-left: 20px;
+
+        }
+
+        .text1 {
+            font-size: 20px;
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .grp2 {
+            /* float: left; */
+        }
+
+        .col3 {
+            background-color: #f5ca0a;
+
+            font-size: 20px;
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            width: 250px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .col4 {
+            /* margin-left: 20px; */
+            float: left;
+
+        }
+
+        .t1 {
+            text-align: center;
+        }
+
+        .foot {
+            text-align: center;
+            font-size: 20px;
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 40%;
+            /* float: left; */
+            width: 250px;
+            background-color: #f5ca0a;
+
+        }
+
+        .footer {
+            margin-left: 40%;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            /* float: left; */
+            width: 250px;
+            background-color: #f5ca0a;
+            /* background-color: white; */
+            border-color: black;
+            font-weight: bold;
+        }
+
+        textarea {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+        }
+
+        .inp {
+            margin-top: 10px;
+            font-size: 30px;
+        }
+
+        .danger {
+            background-color: #00e600;
+            border: 2px solid;
+            border-style: outline;
+            border-color: yellow;
+        }
+
+        .danger:hover {
+            font-weight:bolder;
+            width:300px;
+           height:60px;
+            transition: .7s;
+           
+        }
+
+        .btn {
+            border: 2px solid;
+            border-style: outline;
+            border-color:  #f5ca0a;
+            color: black;
+           
+            cursor: pointer;
+            width: 250px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="header">
+        <form action="insert_product.php" method="post" enctype="multipart/form-data">
 
-    <form action="insert_product.php" method="post" enctype="multipart/form-data">
-        <br>
-        <table id="tab" align="center" width="600" border=3>
-            <tr id="ins" align="center">
-                <td colspan=4>
-                    <h2>Insert New Product Here</h2>
-                </td>
-            </tr>
+            <!-- <div class="inp">Insert New Product Here</div> -->
+            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Insert New Product Here</b></label></div>
 
+    </div>
+    <br>
 
 
-            <tr id="protitle">
-                <td align="center"><b>Product Title:</b></td>
-                <td colspan=2><input type="text" name="product_title" size="65" required></td>
-            </tr>
 
-            <tr id="procat">
-                <td align="center"><b>Product Categories:</b></td>
-                <td colspan=2>
-                    <select name="product_cat" required>
-                        <option>Select a Category</option>
-                        <?php
-                        $get_cats = "select * from categories";
+    <table>
+        <tr id="protitle">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Product Title:</b> </div>
 
-                        $run_cats =  mysqli_query($con, $get_cats);
+                    <div class="col2"><input class="text1" type="text" name="product_title" required>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
 
-                        while ($row_cats = mysqli_fetch_array($run_cats)) {
+                    <div class="col3 t1"><b>Product Stock:(In kg</b>)</div>
+                    <div class="col4">
+                        <input type="text " class="text1" name="product_stock" required>
+                    </div>
 
-                            $cat_id = $row_cats['cat_id'];
-                            $cat_title = $row_cats['cat_title'];
+            </td>
 
-                            echo "<option value='$cat_id'>$cat_title</option>";
-                        }
-                        ?>
-                    </select>
-                </td>
-            </tr>
+            </div>
 
-            <tr id="prostock">
-                <td align="center"><b>Product type : <br></b></td>
-                <td colspan=2><input type="text" name="product_type" required></td>
-            </tr>
+        </tr>
 
-            <tr id="procalender">
-                <td align="center"><b>Product Expiry : <br></b></td>
-                <td colspan=2> <input type="date" name="bday"></td>
-            </tr>
-            <tr id="proimg">
-                <td align="center"><b>Product Image :</b></td>
-                <td colspan=2><input type="file" name="product_image"></td>
-            </tr>
+        <tr id="procat">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1">
+                        <b> Product Categories:</b></div>
+                    <div class="col2">
+                        <select name="product_cat" required>
+                            <option>Select a Category</option>
+                            <?php
+                            $get_cats = "select * from categories";
 
-            <tr id="prostock">
-                <td align="center"><b>Product Stock : <br>(In kg)</b></td>
-                <td colspan=2><input type="text" name="product_stock" required></td>
-            </tr>
+                            $run_cats =  mysqli_query($con, $get_cats);
 
-            <tr id="proprice">
-                <td align="center"><b>Product Price : <br>(Per kg)</b></td>
-                <td colspan=2><input type="text" name="product_price" required></td>
-            </tr>
+                            while ($row_cats = mysqli_fetch_array($run_cats)) {
 
-            <tr id="prodesc">
+                                $cat_id = $row_cats['cat_id'];
+                                $cat_title = $row_cats['cat_title'];
 
-                <td align="center"><b>Product Description:</b></td>
-                <td colspan=2><textarea name="product_desc" id="" cols="40" rows="8"></textarea></td>
-            </tr>
+                                echo "<option value='$cat_id'>$cat_title</option>";
+                            }
+                            ?>
+                        </select>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
 
-            <tr id="prokey">
-                <td align="center"><b>Product Keywords:</b></td>
-                <td colspan=2><input type="text" name="product_keywords" size="60"></td>
-            </tr>
+                    <div class="col3 t1"><b> Product type :</b> </div>
+                    <div class="col4"> <input type="text" class="text1" name="product_type" required>
+                    </div>
+            </td>
+            </div>
+        </tr>
 
-            <tr id="dev">
-                <td align="center"><b>Delivery :</b></td>
-                <td id="yes"><input type="radio" name="product_delivery" value="yes">Yes</td>
-                <td id="no"><input type="radio" name="product_delivery" value="no">No</td>
-            </tr>
+        <tr id="procalender">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1"><b>Product Expiry :</b></div>
+                    <div class="col2">
+                        <input type="date" class="text1" name="bday">
+            </td>
+            </div>
 
-            <tr align="center">
-                <td colspan=4><input type="submit" id="insnow" name="insert_post" value="Insert Product Now"></td>
-            </tr>
-        </table>
+            </div>
+            <td>
+                <div class="grp2">
+                    <div class="col3 t1">
+                        <b> Product Image :</b> </div>
+                    <div class="col4">
+                        <input type="file" class="text1" name="product_image">
+            </td>
+            </td>
+            </div>
+
+            </div>
+
+
+        <tr id="proprice">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Product MRP : (Per kg) </b></div>
+                    <div class="col2">
+                        <input type="text" class="text1" name="product_price" required>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
+                    <div class="col3 t1"> <b>Product Base Price:(Per kg) </b></div>
+                    <div class="col4">
+
+                        <input type="text" class="text1" name="product_price" required>
+            </td>
+            </td>
+            </div>
+            </div>
+
+
+        <tr id="prodesc">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1">
+
+                        <b> Product Description:</b> </div>
+                    <div class="col2">
+                        <textarea name="product_desc" class="text1" cols="40" rows="8"></textarea>
+            </td>
+            </div>
+            </div>
+
+            <td>
+                <div class="grp2">
+                    <div class="col3 t1"><b> Product Keywords:</b> </div>
+
+                    <div class="col4"> <input type="text" class="text1" name="product_keywords" size="60">
+            </td>
+            </td>
+            </div>
+            </div>
+    </table>
+
+    <div class="foot">
+        <b> Delivery :</b>
+        <input type="radio" class="yes" name="product_delivery" value="yes">Yes
+        <input type="radio" class="yes" name="product_delivery" value="no">No
+    </div>
+    <!-- <div class="footer"> -->
+    <button class="footer btn danger" id="insnow" name="insert_post">
+        Insert Product Now <i style="color: #f5ca0a;" class="fas fa-shopping-bag"></i></button>
     </form>
 
 </body>

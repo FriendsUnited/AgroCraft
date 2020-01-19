@@ -22,6 +22,101 @@
     <script src="../portal_files/bootstrap.min.js.download"></script>
 
     <style>
+<<<<<<< HEAD
+       	* {
+			margin: 0;
+			box-sizing: border-box;
+		}
+ b
+
+		.header {
+			position: sticky;
+			z-index: 100;
+			top: 0rem;
+			height: 69px;
+			width: 100%;
+			background-color: #00b300;
+		}
+
+		.select_element {
+			width: 20px;
+			background-color: transparent;
+			border: none;
+			text: none;
+		}
+
+
+		#logo {
+			height: 66px;
+			width: 100px;
+			text-align: left;
+			float: left;
+		}
+
+		.search_input {
+			clear: none;
+			float: left;
+			margin-left: 20px;
+			margin-top: 20px;
+
+		}
+
+		.proicon {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
+		}
+
+		#icon {
+			background-color: red;
+			color: white;
+		}
+
+		.dropdown {
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
+
+
+		}
+
+		.options {
+			color: yellow;
+			margin-left: 5px;
+			margin-right: 26px;
+		}
+
+		.icon2 {
+			float: right;
+			margin-right: 10px;
+			margin-top: 20px;
+
+
+		}
+
+		.filter {
+			float: right;
+			margin-right: 800px;
+			margin-top: 15px;
+			background-color: transparent;
+			color: black;
+
+
+		}
+
+		.filterbutton {
+			background-color: transparent;
+			border: none;
+			margin-top: 5px;
+			color: white;
+		}
+
+		.loginz {
+			float: right;
+			margin-right: 20px;
+			margin-top: 20px;
+		}
+=======
         * {
             margin: 0;
             box-sizing: border-box;
@@ -116,6 +211,7 @@
             margin-top: 20px;
         }
 
+>>>>>>> f3b56735b766edba5c1672e4ddd20455f854a2ba
         .headerdown {
             background-color: transparent;
             height: 50px;
@@ -439,6 +535,84 @@
 
 <body>
 
+<<<<<<< HEAD
+   	<div class="header">
+
+		<a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
+
+		<div class="search_input">
+			<form action="SearchResults.php" method="get" enctype="multipart/form-data">
+				<i class="fas fa-search" style="font-size:20px;color:white; "></i>
+				<input type="text" id="input1" name="search" placeholder="Search...">
+			</form>
+		</div>
+		<div class="dropdown">
+			<button class="btn btn-default dropdown-toggle" type="button" id="menu1" class="dric" data-toggle="dropdown" style="margin-top:-5px;"> </span></button>
+			<ul class="dropdown-menu etc">
+				<?php
+				if (isset($_SESSION['phonenumber'])) {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Profile</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
+
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
+				} else {
+					echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '../auth/BuyerLogin.php'><label class='makeitgreen'>Login</label></a></li>";
+				}
+				?>
+		</div>
+		<div class="proicon">
+			<?php
+			if (!isset($_SESSION['phonenumber'])) {
+				echo "<a href='../auth/BuyerLogin.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+			} else {
+				echo "<a href='BuyerProfile.php'> <i class='far fa-user-circle' style='font-size:30px; color: white'></i></a>";
+			}
+			?>
+		</div>
+
+		<div class="icon2">
+			<a href="CartPage.php"> <i class="fa" style="font-size:30px; color:white ;">&#61562;</i></a>
+			<span id="icon"> <?php echo totalItems(); ?> </span>
+		</div>
+
+		<div class="loginz">
+			<?php getUsername(); ?>
+		</div>
+
+		<div class="filter">
+			<button class="filterbutton " onclick="display()">Filter
+				<i class="fas fa-filter"></i></button>
+		</div>
+	</div>
+    <div class="headerdown">
+        <div class="sel1 sel">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">CROPS
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu  ">
+                <?php getCrops(); ?>
+            </ul>
+        </div>
+        <div class="sel2 sel">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">VEGETABLES </i>
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu ">
+                <!-- <?php getVegetables(); ?> -->
+            </ul>
+        </div>
+        <div class="sel3 sel">
+            <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">FRUITS </i>
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu ">
+                <!-- <?php getFruits(); ?> -->
+            </ul>
+=======
 
     <div class="header">
 
@@ -574,6 +748,7 @@
 
 
             </table>
+>>>>>>> f3b56735b766edba5c1672e4ddd20455f854a2ba
         </div>
     </div>
 
@@ -623,6 +798,7 @@
 
 
     </ul>
+
 
 
 

@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -26,6 +26,7 @@ include("../Functions/functions.php");
      <script>
           function state() {
                var a = document.getElementById('states').value;
+
                if (a === '31') {
                     var array = ['Andamans', 'Nicobars'];
                } else if (a === '01') {
@@ -50,6 +51,8 @@ include("../Functions/functions.php");
                     var array = ['Sheopur *', 'Morena', 'Bhind', 'Gwalior', 'Datia', 'Shivpuri', 'Guna', 'Tikamgarh', 'Chhatarpur', 'Panna', 'Sagar', 'Damoh', 'Satna', 'Rewa', 'Umaria *', 'Shahdol', 'Sidhi', 'Neemuch *', 'Mandsaur', 'Ratlam', 'Ujjain', 'Shajapur', 'Dewas', 'Jhabua', 'Dhar', 'Indore', 'West Nimar', 'Barwani *', 'East Nimar', 'Rajgarh', 'Vidisha', 'Bhopal', 'Sehore', 'Raisen', 'Betul', 'Harda *', 'Hoshangabad', 'Katni *', 'Jabalpur', 'Narsimhapur', 'Dindori *', 'Mandla', 'Chhindwara', 'Seoni', 'Balaghat'];
                } else if (a === '11') {
                     var array = ['Nandurbar *', 'Dhule', 'Jalgaon', 'Buldana', 'Akola', 'Washim *', 'Amravati', 'Wardha', 'Nagpur', 'Bhandara', 'Gondiya *', 'Gadchiroli', 'Chandrapur', 'Yavatmal', 'Nanded', 'Hingoli *', 'Parbhani', 'Jalna', 'Aurangabad', 'Nashik', 'Thane', 'Mumbai (Suburban) *', 'Mumbai', 'Raigarh', 'Pune', 'Ahmadnagar', 'Bid', 'Latur', 'Osmanabad', 'Solapur', 'Satara', 'Ratnagiri', 'Sindhudurg', 'Kolhapur', 'Sangli'];
+               } else if (a == 12) {
+                    var array = ['Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
                } else if (a === '18') {
                     var array = ['Thiruvallur', 'Chennai', 'Kancheepuram', 'Vellore', 'Dharmapuri', 'Tiruvannamalai', 'Viluppuram', 'Salem', 'Namakkal   *', 'Erode', 'The Nilgiris', 'Coimbatore', 'Dindigul', 'Karur  *', 'Tiruchirappalli', 'Perambalur  *', 'Ariyalur  *', 'Cuddalore', 'Nagapattinam  *', 'Thiruvarur', 'Thanjavur', 'Pudukkottai', 'Sivaganga', 'Madurai', 'Theni  *', 'Virudhunagar', 'Ramanathapuram', 'Thoothukkudi', 'Tirunelveli ', 'Kanniyakumari'];
                } else if (a === '39') {
@@ -79,7 +82,7 @@ include("../Functions/functions.php");
                } else if (a === '16') {
                     var array = ['Gurdaspur', 'Amritsar', 'Kapurthala', 'Jalandhar', 'Hoshiarpur', 'Nawanshahr *', 'Rupnagar', 'Fatehgarh Sahib *', 'Ludhiana', 'Moga *', 'Firozpur', 'Muktsar *', 'Faridkot', 'Bathinda', 'Mansa *', 'Sangrur', 'Patiala'];
                } else if (a === '14') {
-                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek', 'MANIPUR', 'Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
+                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek'];
                } else if (a === '19') {
                     var array = ['West Tripura ', 'South Tripura ', 'Dhalai  *', 'North Tripura '];
                } else if (a === '38') {
@@ -356,8 +359,6 @@ include("../Functions/functions.php");
           .wrapper {
                display: grid;
                grid-template-columns: 20% 20% 20% 20%;
-
-
                grid-column-gap: 20px;
                grid-row-gap: 10px;
                grid-column-gap: 20px;
@@ -665,6 +666,7 @@ include("../Functions/functions.php");
 
      <div class="header">
 
+
           <a href="BuyerHomepage.php"><img id="logo" src="../portal_files/logo.jpg"></a>
 
           <div class="search_input">
@@ -682,11 +684,11 @@ include("../Functions/functions.php");
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransactions.php'><label class='makeitgreen'>Transactions</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'Farmers.php'><label class='makeitgreen'>Farmer</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
@@ -791,36 +793,34 @@ include("../Functions/functions.php");
                          <option>Select District</option>
                     </select>
 
+
                </table>
           </div>
      </div>
+     <?php
+     cart();
+     ?>
+     <?php
+     if (isset($_GET['type'])) {
 
-
-     <div>
-          <?php
-          cart();
-          ?>
-          <?php
-          if (isset($_GET['type'])) {
-
-               $search_query = $_GET['type'];
-               $get_pro = "select * from products where product_type = '$search_query'";
-               $run_pro = mysqli_query($con, $get_pro);
-               // $count = mysqli_num_rows($run_pro);
-               if ($run_pro) {
-                    echo "<br>";
-                    while ($rows = mysqli_fetch_array($run_pro)) {
-                         $product_id = $rows['product_id'];
-                         $product_title = $rows['product_title'];
-                         $product_image = $rows['product_image'];
-                         $product_price = $rows['product_price'];
-                         $product_delivery = $rows['product_delivery'];
-                         if ($product_delivery == "yes") {
-                              $product_delivery = "Delivery by Farmer";
-                         } else {
-                              $product_delivery = "Delivery by Farmer Not Available";
-                         }
-                         echo " <div class='inputwrapper'>
+          $search_query = $_GET['type'];
+          $get_pro = "select * from products where product_type = '$search_query'";
+          $run_pro = mysqli_query($con, $get_pro);
+          // $count = mysqli_num_rows($run_pro);
+          if ($run_pro) {
+               echo "<br>";
+               while ($rows = mysqli_fetch_array($run_pro)) {
+                    $product_id = $rows['product_id'];
+                    $product_title = $rows['product_title'];
+                    $product_image = $rows['product_image'];
+                    $product_price = $rows['product_price'];
+                    $product_delivery = $rows['product_delivery'];
+                    if ($product_delivery == "yes") {
+                         $product_delivery = "Delivery by Farmer";
+                    } else {
+                         $product_delivery = "Delivery by Farmer Not Available";
+                    }
+                    echo " <div class='inputwrapper'>
                                                   <br>
                                                   <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt= 'Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
                                                   <label>$product_title</label><br>
@@ -831,39 +831,39 @@ include("../Functions/functions.php");
                                                   <button type = 'submit' name = 'cart' class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>    
                                                   </form>
                                                   </div> ";
-                         if (isset($_POST['cart'])) {
+                    if (isset($_POST['cart'])) {
 
-                              if (isset($_POST['quantity'])) {
-                                   $qty = $_POST['quantity'];
+                         if (isset($_POST['quantity'])) {
+                              $qty = $_POST['quantity'];
+                         } else {
+                              $qty = 1;
+                         }
+                         global $con;
+                         if (isset($_SESSION['phonenumber'])) {
+                              $sess_phone_number = $_SESSION['phonenumber'];
+
+                              $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
+
+                              $run_check = mysqli_query($con, $check_pro);
+
+                              if (mysqli_num_rows($run_check) > 0) {
+                                   echo "";
                               } else {
-                                   $qty = 1;
+                                   $subtotal = $product_price * $qty;
+                                   $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
+                                   $run_insert_pro = mysqli_query($con, $insert_pro);
+                                   echo "<script>window.location.reload(true)</script>";
                               }
-                              global $con;
-                              if (isset($_SESSION['phonenumber'])) {
-                                   $sess_phone_number = $_SESSION['phonenumber'];
-
-                                   $check_pro = "select * from cart where phonenumber = $sess_phone_number and product_id='$product_id' ";
-
-                                   $run_check = mysqli_query($con, $check_pro);
-
-                                   if (mysqli_num_rows($run_check) > 0) {
-                                        echo "";
-                                   } else {
-                                        $subtotal = $product_price * $qty;
-                                        $insert_pro = "insert into cart (product_id,phonenumber,qty,subtotal) values ('$product_id','$sess_phone_number','$qty','$subtotal')";
-                                        $run_insert_pro = mysqli_query($con, $insert_pro);
-                                        echo "<script>window.location.reload(true)</script>";
-                                   }
-                              } else {
-                                   echo "<script>window.alert('Please Login First!');</script>";
-                              }
+                         } else {
+                              echo "<script>window.alert('Please Login First!');</script>";
                          }
                     }
-               } else {
-                    echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
                }
+          } else {
+               echo "<br><br><hr><h1 align = center>Product's Not Available !</h1><br><br><hr>";
           }
-          ?>
+     }
+     ?>
      </div>
 
 

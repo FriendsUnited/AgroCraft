@@ -1,6 +1,6 @@
 <!-- <?php
      include("../Functions/functions.php");
-     ?>  -->
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -11,21 +11,17 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
      <title>Agrocraft Homepage</title>
-     <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
-     <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
-     <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <script src="https://kit.fontawesome.com/c587fc1763.js" crossorigin="anonymous"></script>
-     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
      <link rel="stylesheet" href="../portal_files/bootstrap.min.css">
      <script src="../portal_files/jquery.min.js.download"></script>
      <script src="../portal_files/popper.min.js.download"></script>
      <script src="../portal_files/bootstrap.min.js.download"></script>
-
      <script>
           function state() {
                var a = document.getElementById('states').value;
+
                if (a === '31') {
                     var array = ['Andamans', 'Nicobars'];
                } else if (a === '01') {
@@ -50,6 +46,8 @@
                     var array = ['Sheopur *', 'Morena', 'Bhind', 'Gwalior', 'Datia', 'Shivpuri', 'Guna', 'Tikamgarh', 'Chhatarpur', 'Panna', 'Sagar', 'Damoh', 'Satna', 'Rewa', 'Umaria *', 'Shahdol', 'Sidhi', 'Neemuch *', 'Mandsaur', 'Ratlam', 'Ujjain', 'Shajapur', 'Dewas', 'Jhabua', 'Dhar', 'Indore', 'West Nimar', 'Barwani *', 'East Nimar', 'Rajgarh', 'Vidisha', 'Bhopal', 'Sehore', 'Raisen', 'Betul', 'Harda *', 'Hoshangabad', 'Katni *', 'Jabalpur', 'Narsimhapur', 'Dindori *', 'Mandla', 'Chhindwara', 'Seoni', 'Balaghat'];
                } else if (a === '11') {
                     var array = ['Nandurbar *', 'Dhule', 'Jalgaon', 'Buldana', 'Akola', 'Washim *', 'Amravati', 'Wardha', 'Nagpur', 'Bhandara', 'Gondiya *', 'Gadchiroli', 'Chandrapur', 'Yavatmal', 'Nanded', 'Hingoli *', 'Parbhani', 'Jalna', 'Aurangabad', 'Nashik', 'Thane', 'Mumbai (Suburban) *', 'Mumbai', 'Raigarh', 'Pune', 'Ahmadnagar', 'Bid', 'Latur', 'Osmanabad', 'Solapur', 'Satara', 'Ratnagiri', 'Sindhudurg', 'Kolhapur', 'Sangli'];
+               } else if (a == 12) {
+                    var array = ['Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
                } else if (a === '18') {
                     var array = ['Thiruvallur', 'Chennai', 'Kancheepuram', 'Vellore', 'Dharmapuri', 'Tiruvannamalai', 'Viluppuram', 'Salem', 'Namakkal   *', 'Erode', 'The Nilgiris', 'Coimbatore', 'Dindigul', 'Karur  *', 'Tiruchirappalli', 'Perambalur  *', 'Ariyalur  *', 'Cuddalore', 'Nagapattinam  *', 'Thiruvarur', 'Thanjavur', 'Pudukkottai', 'Sivaganga', 'Madurai', 'Theni  *', 'Virudhunagar', 'Ramanathapuram', 'Thoothukkudi', 'Tirunelveli ', 'Kanniyakumari'];
                } else if (a === '39') {
@@ -79,7 +77,7 @@
                } else if (a === '16') {
                     var array = ['Gurdaspur', 'Amritsar', 'Kapurthala', 'Jalandhar', 'Hoshiarpur', 'Nawanshahr *', 'Rupnagar', 'Fatehgarh Sahib *', 'Ludhiana', 'Moga *', 'Firozpur', 'Muktsar *', 'Faridkot', 'Bathinda', 'Mansa *', 'Sangrur', 'Patiala'];
                } else if (a === '14') {
-                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek', 'MANIPUR', 'Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
+                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek'];
                } else if (a === '19') {
                     var array = ['West Tripura ', 'South Tripura ', 'Dhalai  *', 'North Tripura '];
                } else if (a === '38') {
@@ -122,7 +120,6 @@
 
           }
      </script>
-
      <style>
           * {
                margin: 0;
@@ -656,6 +653,115 @@
           .dric {
                margin-left: -50px;
           }
+
+          .tab {
+               width: 100%;
+
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+
+          }
+
+          th {
+               border-color: white;
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+
+          }
+
+          .tableyhead {
+
+               color: red;
+
+          }
+
+          .thy {
+               background-color: #555;
+               color: white;
+
+          }
+
+          .trow {
+               align-content: center;
+          }
+
+          .cont {
+               border-radius: 25%;
+               border-style: solid;
+               background-color: #FFD700;
+               padding: 10px;
+               margin-top: 40px;
+               /* margin-left:46%; */
+               transition: 1s;
+
+          }
+
+          .cont:hover {
+               padding-top: 15px;
+               padding-bottom: 20px;
+               transition: 1s;
+               width: 270px;
+               height: 70px;
+               font-size: 22px;
+          }
+
+          .order {
+               font-size: 30px;
+               /* margin-left:20%; */
+               border-color: #00b300;
+               border-style: solid;
+               border-radius: 100%;
+               padding: 15px;
+
+               border-width: 2px;
+
+          }
+
+          .order1 {
+               background-color: #FFD700;
+
+          }
+
+
+
+
+
+          .a1 {
+               /* width:100px; */
+               margin-left: 400px;
+               margin-top: -44px;
+               margin-bottom: 10px;
+               /* margin-bottom: 100px; */
+          }
+
+          ul {
+               list-style: none;
+               /* display: inline-block; */
+               text-align: center;
+               /* width:200px; */
+          }
+
+          .ash1 {
+               width: 300px;
+               text-align: center;
+
+               /* background-color: greenyellow; */
+               display: inline-block;
+          }
+
+
+          /* .fa:after {
+               content: "";
+               display: block;
+               height: 2px;
+               width: 200px;
+               color: red;
+               /* background-color: black; */
+          }
+
+          */
      </style>
 
 </head>
@@ -681,11 +787,11 @@
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= '#'><label class='makeitgreen'>Save For Later</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransaction.php'><label class='makeitgreen'>Transactions</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerTransactions.php'><label class='makeitgreen'>Transactions</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Customer Care</label></a></li>";
 
-                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'BuyerProfile.php'><label class='makeitgreen'>Farmer</label></a></li>";
+                         echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href= 'Farmers.php'><label class='makeitgreen'>Farmer</label></a></li>";
 
                          echo "<li class='options' role='presentation'><a role='menuitem' tabindex='-1' href='../Includes/logout.php'><label class='makeitgreen'>Logout</label></a></li>";
                     } else {
@@ -791,30 +897,110 @@
                     </select>
 
 
-
-
-
-
                </table>
           </div>
      </div>
 
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
-     <hr>
+     <br><br>
 
+     <ul class="ash">
+          <li class="ash1"> <i class='fas fa-people-carry order order1 '></i>
+               <br><i class="fa fa-check aria" aria-hidden="true"></i><br>Packaging
+          </li>
+          <li class="ash1"> <i class="fas fa-truck order order2"></i>
+               <br><i class="fa fa-check aria" aria-hidden="true"></i><br>Dispatch
+          </li>
+          <li class="ash1"> <i class="fas fa-road order order3"></i>
+               <br><i class="fa fa-refresh aria" aria-hidden="true"></i>
+               <br>Half way </li>
+          <li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i>
+               <br>Reached
+          </li>
+
+
+
+     </ul>
+
+
+
+
+     <br>
+     <br>
+     <table class=tab>
+          <thead align="center" class=tableyhead>
+               <th class=thy>Farmer Name</th>
+               <th class=thy>Phone</th>
+               <th class=thy>Delivery Address</th>
+               <th class=thy>Product Title</th>
+               <th class=thy>Quantity</th>
+               <th class=thy>Delivery Mode</th>
+               <th class=thy>Payment Mode</th>
+               <th class=thy>Amount</th>
+          </thead>
+          <?php
+          $sess_phone_number = $_SESSION['phonenumber'];
+          $check_query = "select * from orders where phonenumber = $sess_phone_number ";
+          $run = mysqli_query($con, $check_query);
+          if ($run) {
+               while ($rows = mysqli_fetch_array($run)) {
+                    $deliveryMode = $rows['delivery'];
+                    $amount = $rows['total'];
+                    $address = $rows['address'];
+                    $qty = $rows['qty'];
+                    $payment = $rows['payment'];
+                    $product_id = $rows['product_id'];
+
+                    $farmer_query = "select * from products where product_id = $product_id ";
+                    $farmer_run = mysqli_query($con, $farmer_query);
+                    while ($row = mysqli_fetch_array($farmer_run)) {
+                         $farmer_id = $row['farmer_fk'];
+                         $title = $row['product_title'];
+                    }
+
+                    $farmer_details = "select * from farmerregistration where farmer_id = $farmer_id ";
+                    $details_run = mysqli_query($con, $farmer_details);
+                    while ($detail = mysqli_fetch_array($details_run)) {
+                         $farmer_name = $detail['farmer_name'];
+                         $farmer_phone = $detail['farmer_phone'];
+                    }
+
+
+          ?>
+                    <tr align="center" class=trow>
+                         <th align="center"><?php echo $farmer_name; ?></th>
+                         <th align="center"><?php echo $farmer_phone; ?></th>
+                         <th align="center"><?php echo $address; ?></th>
+                         <th align="center"><?php echo $title; ?></th>
+                         <th align="center"><?php echo $qty; ?></th>
+                         <th align="center"><?php echo $deliveryMode; ?></th>
+                         <th align="center"><?php echo $payment; ?></th>
+                         <th align="center"><?php echo $amount; ?></th>
+                    </tr>
+
+          <?php
+               }
+          }
+          ?>
+     </table>
+
+     <br><br><br>
+
+
+     <a href="BuyerHomepage.php" style="color:black;margin-left:5%;"><label class="cont">CONTINUE SHOPPING <i class="fas fa-shopping-bag"></i></label></a>
 
 
 
      <div class="footer">
           <hr>
+
           <label class="payment">Payment Options:-</label>
           <div class="cash"><img src="../Images/Website/cash.jpg" height="75px" width="125px"></div>
           <div class="patym"><img src="../Images/Website/petm.jpg" height="75px" width="125px"></div>
      </div><br><br>
      <h3><span> GET SOCIAL WITH US </span></h3>
      </div>
-     <div class="morefooter">
 
+     <div class="morefooter">
           <div class="call">
                <i class="fas fa-phone-alt call_color"></i>
                <a href="#" style="color:black;">+91-8191046421</a>
@@ -830,16 +1016,15 @@
      </div>
      <div class="instaid">
           <div class="text"><a href="#" style="color:black;">@AgroCraft</a></div>
-
           <div class="gmailid">
-               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a>
-          </div>
+               <a href="#" class="hypher" style="color:black;">agrocraft6@gmail.com</a></div>
 
      </div>
+
+
      <div class="copy">
           <h5 style="test-align:center; padding-top:40px;margin-left:650px; background-color:'grey';">Copyright &copy; 2022 by www.AgroCraft.com</h5>
      </div>
-
 </body>
 
 </html>

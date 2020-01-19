@@ -351,8 +351,13 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
 <?php
 
-    $sql = "select * from products where ";
+    $sql = "select p.* from products as p, farmerregistration as f 
+            where f.farmer_phone='$sessphonenumber'
+            and p.farmer_fk = f.farmer_id";
     $run_query = mysqli_query($con, $sql);
+    echo $run_query;
+
+
     while ($row = mysqli_fetch_array($run_query)) {
         $title = $row['product_title'];
         $category = $row['product_cat'];
@@ -364,6 +369,56 @@ $sessphonenumber = $_SESSION['phonenumber'];
         $key = $row['product_keywords'];
         $delivery = $row['product_delivery'];
     }
+
+
+    if (isset($_POST['insert_pro'])) {
+        $prod_title = mysqli_real_escape_string( $con, $_POST['product_title']);
+        $prod_cat = mysqli_real_escape_string( $con, $_POST['product_cat']);
+        $prod_type = mysqli_real_escape_string( $con, $_POST['product_type']);
+        $prod_stock = mysqli_real_escape_string( $con, $_POST['product_stock']);
+        $prod_mrp = mysqli_real_escape_string( $con, $_POST['product_mrp']);
+        $prod_base = mysqli_real_escape_string( $con, $_POST['product_baseprice']);
+        $prod_desc = mysqli_real_escape_string( $con, $_POST['product_desc']);
+        $prod_key = mysqli_real_escape_string( $con, $_POST['product_keywords']);
+        $prod_delivery = mysqli_real_escape_string( $con, $_POST['product_delivery']);
+
+
+        $query = "update products 
+                set product_title = '$prod_title', product_cat = '$prod_cat',
+                product_type = '$prod_type', product_stock = '$prod_stock',
+                product_mrp = '$prod_mrp',  product_baseprice = '$prod_base',
+                product_desc = '$prod_desc',  product_keywords = '$prod_key',
+                product_delivery = '$prod_delivery'
+                where farmer_id 
+                in (select farmer_id from farmerregistration 
+                where f.farmer_phone='$sessphonenumber' 
+                and f.farmer_id = p.farmer_fk)";
+        echo $query;
+        $run = mysqli_query($con, $query);
+    }
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     if (isset($_POST['insert_pro'])) {    // when button is clicked
 
@@ -409,4 +464,3 @@ $sessphonenumber = $_SESSION['phonenumber'];
     }
 
 
-?>

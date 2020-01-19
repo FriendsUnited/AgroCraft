@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-include("includes/db.php");  // db connections
+include("../Includes/db.php");  // db connections
 ?>
 
 <html lang="en">
@@ -20,7 +20,7 @@ include("includes/db.php");  // db connections
     tinymce.init({selector:'textarea'});
     </script> -->
 
-    <title>Inserting Product</title>
+    <title>Edit Product</title>
     <!-- <link rel="stylesheet" type="text/css" href="../Styles/insert_product.css"> -->
 
 
@@ -205,9 +205,9 @@ include("includes/db.php");  // db connections
 <body>
     <div class="header">
         <form action="insert_product.php" method="post" enctype="multipart/form-data">
-
+        <br>
             <!-- <div class="inp">Insert New Product Here</div> -->
-            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Insert New Product Here</b></label></div>
+            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Edit Product</b><i style = "padding-left:1%;color:green;" class="fas fa-leaf"></i></label></div>
 
     </div>
     <br>
@@ -347,7 +347,7 @@ include("includes/db.php");  // db connections
     </div>
     <!-- <div class="footer"> -->
     <button class="footer btn danger" id="insnow" name="insert_post">
-        Insert Product Now <i style="color: #f5ca0a;" class="fas fa-shopping-bag"></i></button>
+        Confirm Updation <i style="color: #f5ca0a;" class="fas fa-shopping-bag"></i></button>
     </form>
 
 </body>

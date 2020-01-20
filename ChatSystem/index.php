@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,8 @@
 	width:100%;
 	margin:10px auto;
     padding:10px;
-    text-align:center;
+    text-align:left;
+    font-size:25px;
 }
 
 .siglemessage{

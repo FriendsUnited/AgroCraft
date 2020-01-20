@@ -1,6 +1,6 @@
-<?php
-include("../Functions/functions.php");
-?>
+<!-- <?php
+     include("../Functions/functions.php");
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -173,6 +173,7 @@ include("../Functions/functions.php");
           .content_item {
                text-align: center;
                justify-content: center;
+               display: inline;
           }
 
           .etc {
@@ -526,7 +527,7 @@ include("../Functions/functions.php");
           }
 
           .products {
-               margin-left: 5%;
+               margin-left: 9%;
 
           }
 
@@ -543,7 +544,7 @@ include("../Functions/functions.php");
 
           .productbox img {
                height: 200px;
-               width: 200px;
+               width: 250px;
                border-style: double;
                border: 2px solid;
                border-color: brown;
@@ -570,9 +571,26 @@ include("../Functions/functions.php");
                text-align: center;
                text-decoration: underline;
                /* font-weight: bold; */
+          
+          .add{
+               background-color: #FFD700;
+               margin-right:-900px;
+               margin-left: 300px;
+          }
+          .imag{
+               width:900px;
+          }
+          .pluz{
+               margin-left: 200px;;
+               margin-top: -72px;
+               /* background-color: red; */
+               font-size: 40px;
           }
 
-          */
+         .x{
+              margin-top: -12px;
+         }
+         
      </style>
 
 </head>
@@ -633,8 +651,9 @@ include("../Functions/functions.php");
      <br>
      <div class="items">
 
-          <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;">
-                    <b>All Product's</b></label>
+          <div class=content_item><label style="font-size :40px;margin-left:650px;margin-right:100px; text-shadow: 1px 1px 1px gray;">
+                    <b><div class="isc">All Product's  </div></b></label>
+                    <a href="InsertProduct.php"><button class="add" style="margin-left:50px;border-style:solid;border-color:black;font-size:30px;border-radius:30%;width:250px;height:100px;"><b><div class="x"1> Add More Products</div></b><div class="pluz"> <i class="fas fa-plus "></div></i> </button></a>
           </div>
 
           <div class="products">

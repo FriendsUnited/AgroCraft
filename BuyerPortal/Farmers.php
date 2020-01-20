@@ -1,6 +1,6 @@
 <!-- <?php
      include("../Functions/functions.php");
-     ?>  -->
+     ?> -->
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Farmer Page</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -26,6 +26,7 @@
      <script>
           function state() {
                var a = document.getElementById('states').value;
+
                if (a === '31') {
                     var array = ['Andamans', 'Nicobars'];
                } else if (a === '01') {
@@ -50,6 +51,8 @@
                     var array = ['Sheopur *', 'Morena', 'Bhind', 'Gwalior', 'Datia', 'Shivpuri', 'Guna', 'Tikamgarh', 'Chhatarpur', 'Panna', 'Sagar', 'Damoh', 'Satna', 'Rewa', 'Umaria *', 'Shahdol', 'Sidhi', 'Neemuch *', 'Mandsaur', 'Ratlam', 'Ujjain', 'Shajapur', 'Dewas', 'Jhabua', 'Dhar', 'Indore', 'West Nimar', 'Barwani *', 'East Nimar', 'Rajgarh', 'Vidisha', 'Bhopal', 'Sehore', 'Raisen', 'Betul', 'Harda *', 'Hoshangabad', 'Katni *', 'Jabalpur', 'Narsimhapur', 'Dindori *', 'Mandla', 'Chhindwara', 'Seoni', 'Balaghat'];
                } else if (a === '11') {
                     var array = ['Nandurbar *', 'Dhule', 'Jalgaon', 'Buldana', 'Akola', 'Washim *', 'Amravati', 'Wardha', 'Nagpur', 'Bhandara', 'Gondiya *', 'Gadchiroli', 'Chandrapur', 'Yavatmal', 'Nanded', 'Hingoli *', 'Parbhani', 'Jalna', 'Aurangabad', 'Nashik', 'Thane', 'Mumbai (Suburban) *', 'Mumbai', 'Raigarh', 'Pune', 'Ahmadnagar', 'Bid', 'Latur', 'Osmanabad', 'Solapur', 'Satara', 'Ratnagiri', 'Sindhudurg', 'Kolhapur', 'Sangli'];
+               } else if (a == 12) {
+                    var array = ['Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
                } else if (a === '18') {
                     var array = ['Thiruvallur', 'Chennai', 'Kancheepuram', 'Vellore', 'Dharmapuri', 'Tiruvannamalai', 'Viluppuram', 'Salem', 'Namakkal   *', 'Erode', 'The Nilgiris', 'Coimbatore', 'Dindigul', 'Karur  *', 'Tiruchirappalli', 'Perambalur  *', 'Ariyalur  *', 'Cuddalore', 'Nagapattinam  *', 'Thiruvarur', 'Thanjavur', 'Pudukkottai', 'Sivaganga', 'Madurai', 'Theni  *', 'Virudhunagar', 'Ramanathapuram', 'Thoothukkudi', 'Tirunelveli ', 'Kanniyakumari'];
                } else if (a === '39') {
@@ -79,7 +82,7 @@
                } else if (a === '16') {
                     var array = ['Gurdaspur', 'Amritsar', 'Kapurthala', 'Jalandhar', 'Hoshiarpur', 'Nawanshahr *', 'Rupnagar', 'Fatehgarh Sahib *', 'Ludhiana', 'Moga *', 'Firozpur', 'Muktsar *', 'Faridkot', 'Bathinda', 'Mansa *', 'Sangrur', 'Patiala'];
                } else if (a === '14') {
-                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek', 'MANIPUR', 'Senapati', 'Tamenglong', 'Churachandpur', 'Bishnupur', 'Thoubal', 'Imphal West', 'Imphal East *', 'Ukhrul', 'Chandel'];
+                    var array = ['Mon', 'Tuensang', 'Mokokchung', 'Zunheboto', 'Wokha', 'Dimapur *', 'Kohima', 'Phek'];
                } else if (a === '19') {
                     var array = ['West Tripura ', 'South Tripura ', 'Dhalai  *', 'North Tripura '];
                } else if (a === '38') {
@@ -413,6 +416,15 @@
                margin-left: 100px;
           }
 
+          .inputwrapper {
+               float: left;
+               border-style: double;
+               text-align: center;
+               margin-left: 80px;
+               width: 280px;
+               margin-bottom: 20px;
+               clear: auto;
+          }
 
           .picha {
                height: 300px;
@@ -799,8 +811,47 @@
           </div>
      </div>
 
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
+
+
+
+
+     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Farmers </b></label></div><br>
      <hr>
+
+
+
+
+
+
+
+
+     <div class='inputwrapper'>
+          <br>
+          <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt='Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
+          <label>$product_title</label><br>
+          <label>PRICE:- $product_price Rs/kg</label><br>
+          <label id='shop2'></label>$product_delivery<br>Qty:-
+          <form action='' method='post'>
+               <input class='numberinput' type='number' name='quantity' value='1'>
+          </form>
+          <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

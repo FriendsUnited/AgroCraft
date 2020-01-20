@@ -1,4 +1,4 @@
-<
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +15,7 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/export-data.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src = "con.js"></script>
     <title>Graphs</title>
 </head>
 <body>
@@ -23,7 +24,6 @@
             <div class="col-sm-6 col-md-6">
                 <div id="container1"></div>
             </div>
-
         </div>
     </div>
 

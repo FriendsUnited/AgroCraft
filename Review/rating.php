@@ -1,20 +1,4 @@
-<?php
-	include("../Includes/db.php");
 
-	if(isset($_GET['add_stars']) AND isset($_GET['post_id'])){
-		$id = (int)$_GET['post_id'];
-		$stars = (int)$_GET['add_stars'];
-		$query = $con->query("INSERT INTO review (stars) VALUES ({$stars})");
-		if($query){
-			echo 1;
-		}else{
-			echo 0;
-		}
-	}else{
-		//$result = $con->query("SELECT post.*, count(stars.id) AS total, sum(stars.stars) AS stars FROM post LEFT JOIN stars ON post.id = stars.post_id GROUP BY post.id");
-	}
-
-?>
 
 
 <!DOCTYPE html>

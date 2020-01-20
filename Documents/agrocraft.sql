@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2020 at 12:51 PM
+-- Generation Time: Jan 19, 2020 at 11:39 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -48,7 +48,7 @@ CREATE TABLE `buyerregistration` (
 
 INSERT INTO `buyerregistration` (`buyer_id`, `buyer_name`, `buyer_phone`, `buyer_addr`, `buyer_comp`, `buyer_license`, `buyer_bank`, `buyer_pan`, `buyer_mail`, `buyer_username`, `buyer_password`) VALUES
 (15, 'Abhishek', 1234567890, ' Raj Uday 234', 'Elysian.org', '02082000', 2147483647, '1234567890', 'abhi@hmil.com', 'admin', 'm8bf5+Y='),
-(16, 'Arpit', 7666610976, '69 India Earth', 'Mafia Pvt Ltd', '99', 12345, '987', 'abcd@gmail.com', 'redhawk', 'm9HW6O8B'),
+(16, 'Arpit', 7666610976, 'Bhat Mansion', 'Mafia Pvt Ltd', '99', 12345, '987', 'abcd@gmail.com', 'redhawk', 'm9HW6O8B'),
 (17, 'calista', 2589631472, '4/2,rose building .wadala', 'apple', 'w3566908', 8947, '2436467897', 'rose21@gmail.com', 'melissa', 'nM7d+e0b41E='),
 (18, 'Lokesh', 9029788504, 'SEC -13 , PALM BEACH ROAD', '', 'MAHARASHTRA', 0, '1234567890', 'abhi@hmil.com', 'lokesh', 'yw==');
 
@@ -64,6 +64,14 @@ CREATE TABLE `cart` (
   `qty` int(10) NOT NULL DEFAULT 1,
   `subtotal` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`product_id`, `phonenumber`, `qty`, `subtotal`) VALUES
+(21, 1234567890, 1, 0),
+(1, 1234567890, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -218,11 +226,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `product_id`, `qty`, `address`, `delivery`, `phonenumber`, `total`, `payment`) VALUES
-(0, 18, 1, ' Raj Uday 234', 'Courier', 1234567890, 2, 'paytm'),
+(1, 17, 2, '69 India Earth', 'Courier', 7666610976, 60, 'cod'),
 (31, 25, 1, ' Raj Uday 234', 'Courier', 1234567890, 80, 'paytm'),
 (32, 29, 2, ' Raj Uday 234', 'Courier', 1234567890, 100, 'paytm'),
 (33, 27, 1, ' Raj Uday 234', 'Farmer', 1234567890, 200, 'paytm'),
-(34, 17, 1, ' Raj Uday 234', 'Courier', 1234567890, 30, 'paytm');
+(34, 17, 1, ' Raj Uday 234', 'Courier', 1234567890, 30, 'paytm'),
+(35, 23, 2, 'Bhat Mansion', 'Farmer', 7666610976, 112, 'cod');
 
 -- --------------------------------------------------------
 
@@ -328,6 +337,12 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `farmerregistration`
   MODIFY `farmer_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `order_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

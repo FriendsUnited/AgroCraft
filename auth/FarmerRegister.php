@@ -297,11 +297,11 @@ if (isset($_POST['register'])) {
     if (strcmp($password, $confirmpassword) == 0) {
 
         $query = "insert into farmerregistration (farmer_name,farmer_phone,
-            farmer_address, farmer_state, farmer_district,
-            farmer_pan,farmer_bank,farmer_password) 
-            values ('$name','$phonenumber','$address',
-            '$state','$district','$pan','$account',
-			'$encryption')";
+                farmer_address, farmer_state, farmer_district,
+                farmer_pan,farmer_bank,farmer_password) 
+                values ('$name','$phonenumber','$address',
+                '$state','$district','$pan','$account',
+                '$encryption')";
 
         $run_register_query = mysqli_query($con, $query);
         echo "<script>alert('SucessFully Inserted');</script>";

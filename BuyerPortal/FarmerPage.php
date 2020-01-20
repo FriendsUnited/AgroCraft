@@ -1,6 +1,6 @@
-<!-- <?php
+<?php
      include("../Functions/functions.php");
-     ?>  -->
+     ?> 
 
 <!DOCTYPE html>
 
@@ -10,7 +10,7 @@
      <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>Agrocraft Homepage</title>
+     <title>Farmer Page</title>
      <!-- <link rel="stylesheet" type="text/css" href="../Styles/BuyerHomepage.css"> -->
      <!-- <link rel="stylesheet" href="portal_files/font-awesome.min.css"> -->
      <!-- <script src="../portal_files/c587fc1763.js.download" crossorigin="anonymous"></script> -->
@@ -665,6 +665,42 @@
           .dric {
                margin-left: -50px;
           }
+          .container{
+               float:left;
+          }
+          .profile-img{
+               float:left;
+               width:340px;
+               height: 200px;
+
+          }
+          .profile-img img{
+               border-radius: 50%;
+               height: 230px;
+               width: 230px;
+               border:4px solid white;
+               left: 50px
+          }
+          /* .profile-header{
+               background:whitesmoke;
+               width: 100%;
+               display:flex;
+          } */
+          .box {
+            color: rgb(6, 36, 7);
+            width: 650px;
+             line-height: 40px; 
+            margin: auto;
+            text-align: center;
+            margin-top: 450px;
+            padding: 5px;
+            border-style: outset;
+            /* border-width: 5px;
+            border-radius: 16px; */
+            border-color: green;
+            /* font-size:20px; */
+        }
+        
      </style>
 
 </head>
@@ -808,10 +844,50 @@
           </div>
      </div>
 
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br>
-     <hr>
+       <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br> 
+     
+<div class="container">
+ <div class="profile-header">
+      <div class="profile-img">
+           <img src="../Images/Website/Farmer.jpg" width="200">
+      </div>
+<div class="profile-nav-info">
+<h4 class="username">Calista Gonsalves</h4>
+<div class="address"><p class="state">newyork,USA</p>
+ </div>
+          </div>
+
+    <div class="profile-option">
+         <div class="notification">
+              <button>continue shopping<i class="fa-cart-arrow-down fa-2x"></i></button>
+         </div>
+    </div>    
+  <div class="main-bd">
+       <div class="left-side">
+            <div class="profile-side">
+                 <p class="jagah">idhar address likho</p>
+            </div>
+       </div>
+  </div>        
+  <div class="right-side">
+       <div class="nav">
+            <ul>
+                 <li oneclick="tabs(0)"
+                 class="user-postactive"></li>
+                 <li oneclick="tabs(1)"
+                 class="user-review"></li>
+            </ul>
+        </div> -->
 
 
+       <div class="profile-body">
+            <div class="profile-poststab">
+                <br><br><h1>Images</h1>
+            </div>
+       </div>
+  </div>        
+</div>    
+</div>
      <div class='inputwrapper'>
           <br>
           <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt='Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
@@ -822,12 +898,40 @@
                <input class='numberinput' type='number' name='quantity' value='1'>
           </form>
           <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>
-     </div>
+     </div> 
+ 
+     <div class="box">
+        <form action="EditProfile.php" method="post">
+        <table align = "center">
+            <tr colspan = 2>
+                <h1> FARMER'S  PROFILE</h1>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Name :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Phone Number :</b></label></td>
+                <td><textarea rows="2" column="10" disabled> <?php echo $phone?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td><label><b>Address :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
+            </tr>
 
+            <tr align = "center">
+                <td><label><b>State :</b></label></td>
+                <td><textarea rows="3" column="56" disabled> <?php echo $state?> </textarea><br></td>
+            </tr>
+            <tr align = "center">
+                <td align="center"><label><b>District :</b></label></td>
+                <td align="center"><textarea rows="3" column="56" disabled> <?php echo $district?> </textarea><br></td>
+            </tr>
 
+          
+            </table>
 
-
-
+          </div>
 
 
 

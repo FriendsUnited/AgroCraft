@@ -1,6 +1,6 @@
 <!-- <?php
-	include("../Functions/functions.php");
-	?> -->
+		include("../Functions/functions.php");
+		?> -->
 
 <!DOCTYPE html>
 
@@ -92,14 +92,14 @@
 				var array = ['Uttarkashi', 'Chamoli', 'Rudraprayag *', 'Tehri Garhwal', 'Dehradun', 'Garhwal', 'Pithoragarh', 'Bageshwar', 'Almora', 'Champawat', 'Nainital', 'Udham Singh Nagar *', 'Hardwar'];
 			}
 
-
+			console.log(a);
 			var string = "";
 			for (let i = 0; i < array.length; i++) {
 				string = string + "<option>" + array[i] + "</option>";
-
 			}
 			string = "<select nmae = 'lol'>" + string + "</select>"
 			document.getElementById('district').innerHTML = string;
+
 		}
 	</script>
 	<script>
@@ -114,7 +114,6 @@
 				document.getElementById("majic").style.visibility = "visible";
 				document.getElementById("show").style.visibility = "hidden";
 				// document.getElementById("show").style. visibility= "hidden";
-
 				return a = 0;
 			}
 
@@ -739,56 +738,70 @@
 				</ul>
 			</div>
 		</div>
+		<form action="" method="post">
 		<div id="majic" class="headerdown ">
-			<table>
-				<select id="states" onchange="state()" tabindex="1">
-					<option value="0">Select State</option>
-					<option value="31">ANDAMAN & NICOBAR ISLANDS</option>
-					<option value="01">ANDHRA PRADESH</option>
-					<option value="32">ARUNACHAL PRADESH</option>
-					<option value="02">ASSAM</option>
-					<option value="03">BIHAR</option>
-					<option value="33">CHANDIGARH</option>
-					<option value="23">CHHATTISGARH</option>
-					<option value="34">DADRA AND NAGAR HAVELI</option>
-					<option value="36">DAMAN AND DIU</option>
-					<option value="35">DELHI</option>
-					<option value="42">GOA</option>
-					<option value="04">GUJARAT</option>
-					<option value="05">HARYANA</option>
-					<option value="06">HIMACHAL PRADESH</option>
-					<option value="07">JAMMU AND KASHMIR</option>
-					<option value="24">JHARKAND</option>
-					<option value="08">KARNATAKA</option>
-					<option value="09">KERALA</option>
-					<option value="37">LAKSHADWEEP</option>
-					<option value="10">MADHYA PRADESH</option>
-					<option value="11">MAHARASHTRA</option>
-					<option value="12">MANIPUR</option>
-					<option value="13">MEGHALAYA</option>
-					<option value="38">MIZORAM</option>
-					<option value="14">NAGALAND</option>
-					<option value="15">ODISHA</option>
-					<option value="39">PUDUCHERRY</option>
-					<option value="16">PUNJAB</option>
-					<option value="17">RAJASTHAN</option>
-					<option value="22">SIKKIM</option>
-					<option value="18">TAMIL NADU</option>
-					<option value="26">TELANGANA</option>
-					<option value="19">TRIPURA</option>
-					<option value="20">UTTAR PRADESH</option>
-					<option value="25">UTTARAKHAND</option>
-					<option value="40">UTTARANCHAL</option>
-					<option value="21">WEST BENGAL</option>
+			
+				<table>
+					<select id="states" name= "selectState"  tabindex="1">
+						<option value="0">Select State</option>
+						<option value="31">ANDAMAN & NICOBAR ISLANDS</option>
+						<option value="01">ANDHRA PRADESH</option>
+						<option value="32">ARUNACHAL PRADESH</option>
+						<option value="02">ASSAM</option>
+						<option value="03">BIHAR</option>
+						<option value="33">CHANDIGARH</option>
+						<option value="23">CHHATTISGARH</option>
+						<option value="34">DADRA AND NAGAR HAVELI</option>
+						<option value="36">DAMAN AND DIU</option>
+						<option value="35">DELHI</option>
+						<option value="42">GOA</option>
+						<option value="04">GUJARAT</option>
+						<option value="05">HARYANA</option>
+						<option value="06">HIMACHAL PRADESH</option>
+						<option value="07">JAMMU AND KASHMIR</option>
+						<option value="24">JHARKAND</option>
+						<option value="08">KARNATAKA</option>
+						<option value="09">KERALA</option>
+						<option value="37">LAKSHADWEEP</option>
+						<option value="10">MADHYA PRADESH</option>
+						<option value="11">MAHARASHTRA</option>
+						<option value="12">MANIPUR</option>
+						<option value="13">MEGHALAYA</option>
+						<option value="38">MIZORAM</option>
+						<option value="14">NAGALAND</option>
+						<option value="15">ODISHA</option>
+						<option value="39">PUDUCHERRY</option>
+						<option value="16">PUNJAB</option>
+						<option value="17">RAJASTHAN</option>
+						<option value="22">SIKKIM</option>
+						<option value="18">TAMIL NADU</option>
+						<option value="26">TELANGANA</option>
+						<option value="19">TRIPURA</option>
+						<option value="20">UTTAR PRADESH</option>
+						<option value="25">UTTARAKHAND</option>
+						<option value="40">UTTARANCHAL</option>
+						<option value="21">WEST BENGAL</option>
 
-				</select>
+					</select>
 
 
-				<select name="" id="district">
-					<option>Select District</option>
-				</select>
+					<select name="selectDistrict" id="district">
+						<option>Select District</option>
+					</select>
 
-			</table>
+				</table>
+			</form>
+			<?php 
+				if(isset($_POST['selectState']))
+				{
+					$selectState = $_POST['selectState'];
+					echo "<script>window.alert($selectState);</script>";
+				}
+				else {
+					$selectState = $_POST['selectState'];
+					echo "<script>alert($selectState);</script>";	
+				}
+			?>
 		</div>
 	</div>
 

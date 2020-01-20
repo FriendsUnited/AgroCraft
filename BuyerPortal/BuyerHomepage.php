@@ -231,7 +231,7 @@
 		#states {
 			float: left;
 			width: 150px;
-			margin-left: -400px;
+			margin-left: -800px;
 			margin-top: 20px;
 			padding: 10px;
 
@@ -246,8 +246,8 @@
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding: 10px;
-			margin-left: 150px;
-			margin-right: -400px;
+			margin-left: -400px;
+			/* margin-right: -400px; */
 		}
 
 		.makeitgreen {
@@ -652,6 +652,33 @@
 		.dric {
 			margin-left: -50px;
 		}
+		#select1{
+			/* margin-left: -700px; */
+			float: right;
+			/* margin-right: -100px; */
+			border-radius: 25%;
+			border-color: #00b300;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding: 10px;
+			margin-right: 400px;
+		 margin-left: -450px;
+		/*	margin-right: -400px; */
+		}
+		.submit{
+			float: right;
+			/* margin-right: 20px; */
+			margin-right: -70px;
+background-color: transparent;
+border-style: solid;
+border-width: 1px;
+			border-radius: 25%;
+			border-color: #00b300;
+			margin-bottom: 20px;
+			margin-top: 20px;
+			padding: 10px;
+
+		}
 	</style>
 
 </head>
@@ -742,6 +769,12 @@
 		<div id="majic" class="headerdown ">
 			
 				<table>
+					<input class="submit" type="submit" value="SUBMIT">
+					<select id="select1"><option value="0" >Prices</option>
+					<option value="1">High to low</option>
+					<option value="2">Low to High</option>
+
+					</select>
 					<select id="states" name= "selectState"  tabindex="1">
 						<option value="0">Select State</option>
 						<option value="31">ANDAMAN & NICOBAR ISLANDS</option>
@@ -788,6 +821,8 @@
 					<select name="selectDistrict" id="district">
 						<option>Select District</option>
 					</select>
+<!-- Price:low to hight  -->
+ 
 
 				</table>
 			</form>

@@ -1,7 +1,25 @@
 <?php
-include("../Includes/db.php");
-session_start();
-$sessphonenumber = $_SESSION['phonenumber'];
+    include("../Includes/db.php");
+    session_start();
+    $sessphonenumber = $_SESSION['phonenumber'];
+
+    $sql = "select * from products 
+                where product_id = 36";
+    $run_query = mysqli_query($con, $sql);
+        // echo $run_query;
+
+
+        while ($row = mysqli_fetch_array($run_query)) {
+            $title = $row['product_title'];
+            $category = $row['product_cat'];
+            $type = $row['product_type'];
+            $stock = $row['product_stock'];
+            $mrp = $row['product_mrp'];
+            $base = $row['product_baseprice'];
+            $desc = $row['product_desc'];
+            $key = $row['product_keywords'];
+            $delivery = $row['product_delivery'];
+        }
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +34,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
 
 
-    <title>Inserting Product</title>
+    <title>Editing Product</title>
 
 
 
@@ -199,10 +217,10 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
 <body>
     <div class="header">
-        <form action="Insertproduct.php" method="post" enctype="multipart/form-data">
+        <form action="Editproduct.php" method="post" enctype="multipart/form-data">
             <br>
             <!-- <div class="inp">Insert New Product Here</div> -->
-            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Insert New Product Here</b><i style="padding-left:1%;color:green;" class="fas fa-leaf "></i></label></div>
+            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Edit Product Here</b><i style="padding-left:1%;color:green;" class="fas fa-leaf "></i></label></div>
 
     </div>
     <br>
@@ -215,7 +233,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="grp1">
                     <div class="col1 t1"><b> Product Title:</b> </div>
 
-                    <div class="col2"><input class="text1" type="text" name="product_title" required>
+                    <div class="col2"><input class="text1" type="text" name="product_title" value="<?php echo $title ?>" >
             </td>
             </div>
             </div>
@@ -224,7 +242,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
                     <div class="col3 t1"><b>Product Stock:(In kg</b>)</div>
                     <div class="col4">
-                        <input type="text " class="text1" name="product_stock" required>
+                        <input type="text " class="text1" name="product_stock" value="<?php echo $stock ?>">
                     </div>
 
             </td>
@@ -262,7 +280,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="grp2">
 
                     <div class="col3 t1"><b> Product type :</b> </div>
-                    <div class="col4"> <input type="text" class="text1" name="product_type" required>
+                    <div class="col4"> <input type="text" class="text1" name="product_type" value="<?php echo $type ?>">
                     </div>
             </td>
             </div>
@@ -283,7 +301,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                     <div class="col3 t1">
                         <b> Product Image :</b> </div>
                     <div class="col4">
-                        <input type="file" class="text1" name="product_image">
+                        <input type="file" class="text1" name="product_image"  value="<?php echo $title ?>">
             </td>
             </td>
             </div>
@@ -296,7 +314,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="grp1">
                     <div class="col1 t1"><b> Product MRP : (Per kg) </b></div>
                     <div class="col2">
-                        <input type="text" class="text1" name="product_mrp" required>
+                        <input type="text" class="text1" name="product_mrp" value="<?php echo $mrp ?>">
             </td>
             </div>
             </div>
@@ -305,7 +323,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                     <div class="col3 t1"> <b>Product Base Price:(Per kg) </b></div>
                     <div class="col4">
 
-                        <input type="text" class="text1" name="product_baseprice" required>
+                        <input type="text" class="text1" name="product_baseprice" value="<?php echo $base ?>">
             </td>
             </td>
             </div>
@@ -319,7 +337,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
                         <b> Product Description:</b> </div>
                     <div class="col2">
-                        <textarea name="product_desc" class="text1" cols="40" rows="8"></textarea>
+                        <textarea name="product_desc" class="text1" cols="40" rows="8" value="<?php echo $desc ?>"></textarea>
             </td>
             </div>
             </div>
@@ -328,7 +346,7 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 <div class="grp2">
                     <div class="col3 t1"><b> Product Keywords:</b> </div>
 
-                    <div class="col4"> <input type="text" class="text1" name="product_keywords" size="60">
+                    <div class="col4"> <input type="text" class="text1" name="product_keywords" size="60" value="<?php echo $key ?>">
             </td>
             </td>
             </div>
@@ -351,25 +369,6 @@ $sessphonenumber = $_SESSION['phonenumber'];
 
 <?php
 
-    $sql = "select p.* from products as p, farmerregistration as f 
-            where f.farmer_phone='$sessphonenumber'
-            and p.farmer_fk = f.farmer_id";
-    $run_query = mysqli_query($con, $sql);
-    echo $run_query;
-
-
-    while ($row = mysqli_fetch_array($run_query)) {
-        $title = $row['product_title'];
-        $category = $row['product_cat'];
-        $type = $row['product_type'];
-        $stock = $row['product_stock'];
-        $mrp = $row['product_mrp'];
-        $base = $row['product_baseprice'];
-        $desc = $row['product_desc'];
-        $key = $row['product_keywords'];
-        $delivery = $row['product_delivery'];
-    }
-
 
     if (isset($_POST['insert_pro'])) {
         $prod_title = mysqli_real_escape_string( $con, $_POST['product_title']);
@@ -389,78 +388,8 @@ $sessphonenumber = $_SESSION['phonenumber'];
                 product_mrp = '$prod_mrp',  product_baseprice = '$prod_base',
                 product_desc = '$prod_desc',  product_keywords = '$prod_key',
                 product_delivery = '$prod_delivery'
-                where farmer_id 
-                in (select farmer_id from farmerregistration 
-                where f.farmer_phone='$sessphonenumber' 
-                and f.farmer_id = p.farmer_fk)";
+                where product_id = 36";
         echo $query;
         $run = mysqli_query($con, $query);
     }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    if (isset($_POST['insert_pro'])) {    // when button is clicked
-
-        // getting the text data from fields
-        $product_title = $_POST['product_title'];
-        $product_cat = $_POST['product_cat'];
-        $product_type = $_POST['product_type'];
-        $product_stock = $_POST['product_stock'];
-        $product_mrp = $_POST['product_mrp'];
-        $product_baseprice = $_POST['product_baseprice'];
-        $product_desc = $_POST['product_desc'];
-        $product_keywords = $_POST['product_keywords'];
-        $product_delivery = $_POST['product_delivery'];
-
-        // getting image
-        $product_image = $_FILES['product_image']['name'];
-        $product_image_tmp = $_FILES['product_image']['tmp_name'];  // for server
-
-        if (isset($_SESSION['phonenumber'])) {
-            move_uploaded_file($product_image_tmp, "../Admin/product_images/$product_image");
-
-            $phone = $_SESSION['phonenumber'];
-            $getting_id = "select * from farmerregistration where farmer_phone = $sessphonenumber";
-            $run = mysqli_query($con, $getting_id);
-            $row = mysqli_fetch_array($run);
-            $id = $row['farmer_id'];
-            $insert_product = "insert into products (farmer_fk, product_cat, product_title,
-                                    product_type, product_stock, product_mrp, product_baseprice,
-                                    product_desc, product_image, product_keywords, product_delivery) 
-                                    values ('$id','$product_cat','$product_title','$product_type','$product_stock',
-                                            '$product_mrp','$product_baseprice','$product_desc',
-                                            '$product_image','$product_keywords','$product_delivery')";
-
-            $insert_query = mysqli_query($con, $insert_product);
-            echo $insert_product;
-            if ($insert_query) {
-                echo "<script>alert('Product has been added')</script>";
-                echo "<script>window.open('Homepage.php','_self')</script>";
-            } else {
-                echo "<script>alert('Error Uploading Data Please Check your Connections ')</script>";
-            }
-        }
-    }
-
-

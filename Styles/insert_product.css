@@ -8,8 +8,7 @@
                         font-family: 'Times New Roman', Times, serif;
                         border-collapse: collapse;
                     }
-                    
-                    #prodesc {
+                    /* #prodesc {
                         border-color: transparent;
                     }
                     
@@ -29,7 +28,11 @@
                         border-color: transparent;
                     }
                     
-                    #proprice {
+                    #propriceMax {
+                        border-color: transparent;
+                    }
+                    
+                    #propriceMin {
                         border-color: transparent;
                     }
                     
@@ -44,6 +47,7 @@
                     #ins {
                         border-color: transparent;
                     }
+                     */
                     
                     #insnow {
                         border-color: transparent;
@@ -51,14 +55,14 @@
                         height: 40px;
                         background-color: lawngreen;
                     }
-                    
+                    /*                     
                     #yes {
                         border-color: transparent;
                     }
                     
                     #no {
                         border-color: transparent;
-                    }
+                    } */
                     
                     #tab {
                         border-color: transparent;

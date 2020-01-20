@@ -19,6 +19,7 @@
             $desc = $row['product_desc'];
             $key = $row['product_keywords'];
             $delivery = $row['product_delivery'];
+            // echo $delivery;
         }
 ?>
 
@@ -219,8 +220,9 @@
     <div class="header">
         <form action="Editproduct.php" method="post" enctype="multipart/form-data">
             <br>
-            <!-- <div class="inp">Insert New Product Here</div> -->
-            <div><label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Edit Product Here</b><i style="padding-left:1%;color:green;" class="fas fa-leaf "></i></label></div>
+            <div>
+                <label style="font-size :50px; text-shadow: 1px 1px 1px gray;"><b>Edit Product Here</b><i style="padding-left:1%;color:green;" class="fas fa-leaf "></i></label>
+            </div>
 
     </div>
     <br>
@@ -337,7 +339,7 @@
 
                         <b> Product Description:</b> </div>
                     <div class="col2">
-                        <textarea name="product_desc" class="text1" cols="40" rows="8" value="<?php echo $desc ?>"></textarea>
+                        <textarea name="product_desc" class="text1" cols="40" rows="8" ><?php echo $desc ?></textarea>
             </td>
             </div>
             </div>
@@ -355,11 +357,13 @@
 
     <div class="foot">
         <b> Delivery :</b>
-        <input type="radio" class="yes" name="product_delivery" value="yes"/>Yes
-        <input type="radio" class="yes" name="product_delivery" value="no"/>No
+       
+        <input type="radio" name="product_delivery" checked=<?php $delivery=="Yes" ? "checked" : ""?> value="Yes">Yes
+        <input type="radio" name="product_delivery" checked=<?php $delivery=="No" ? "checked" : ""?> value="No">No
+        <!--<input type="radio" class="yes" name="product_delivery" value="yes"? checked : null/>Yes-->
+        <!--<input type="radio" class="yes" name="product_delivery" value="no"/>No-->
     </div>
-    <!-- <div class="footer"> -->
-    <button class="footer btn danger" id="insnow" name="insert_pro">
+        <button class = "footer btn danger" id="insnow" name="insert_pro">
             Insert Product Now <i style="color: #f5ca0a;" class="fas fa-shopping-bag"></i></button>
     </form>
 
@@ -389,7 +393,7 @@
                 product_desc = '$prod_desc',  product_keywords = '$prod_key',
                 product_delivery = '$prod_delivery'
                 where product_id = 36";
-        echo $query;
+        // echo $query;
         $run = mysqli_query($con, $query);
     }
 ?>

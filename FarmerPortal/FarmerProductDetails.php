@@ -88,18 +88,7 @@ font-weight: bold;
 
     </table>
 <div class="foot text">Stock :<label class="lab text">20kgs</label>
-    <!-- <ul class="divst1">img src="Pota.jpg">
-            <div class="item0"><</div>
-
-            <div class="item1">CATEGORY :Vegetables</div>
-            
-            <div class="item2">Type:potatoes</div>
-            
-
-            <div class="item3">CATEGORY :Vegetables</div>
-            
-            <div class="item4">Type:potatoes</div>
-        </ul> -->
+    
 
     </div>
 </body>

@@ -225,8 +225,6 @@
                height: 70px;
                width: 100%;
                visibility: hidden;
-
-
           }
 
           #states {

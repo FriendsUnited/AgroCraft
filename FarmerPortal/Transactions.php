@@ -533,6 +533,38 @@
                font-weight: bolder;
                padding-top: 10px;
           }
+          .tab {
+               width: 100%;
+
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+
+          }
+
+          th {
+               border-color: white;
+               border-style: solid;
+               border-width: 2px;
+               padding: 2px;
+
+          }
+          
+          .tableyhead {
+
+color: red;
+
+}
+
+.thy {
+background-color: #555;
+color: white;
+
+}
+
+.trow {
+align-content: center;
+}
      </style>
 
 </head>
@@ -597,26 +629,27 @@
           <br> <br>
           <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>TRANSACTION HISTORY</b></label></div>
 
-          <table align="center" border="2" style="margin-left:8%;">
+        <table align="center" border="2" style="margin-left:8%;">
 
-               <tr align="center">
-                    <th width=200px>Date</th>
-                    <th width=200px>Name</th>
-                    <th width=200px>Phone Number</th>
-                    <th width=300px>Address</th>
-                    <th width=200px>Quantity</th>
-                    <th width=200px>Price</th>
-               </tr>
-
-               <tr align="center">
-                    <td>12-1-2000</td>
-                    <td>melissa</td>
-                    <td>1234567890</td>
-                    <td>sajgdkagdd</td>
-                    <td>500</td>
-                    <td>200</td>
-               </tr>
-
+            
+               <table class=tab>
+          <thead align="center" class=tableyhead>
+               <th class=thy>Date</th>
+               <th class=thy>Name</th>
+               <th class=thy>Phone Number</th>
+               <th class=thy>Address</th>
+               <th class=thy>Quantity</th>
+               <!-- <th class=thy>Phone Number</th> -->
+          <th class=thy>Price</th>
+          </thead>
+          <tr align="center">
+                    <th>12-1-2000</th>
+                    <th>melissa</th>
+                    <th>1234567890</th>
+                    <th>sajgdkagdd</th>
+                    <th>500</th>
+                    <th>200</th>
+               </tr> 
           </table>
      </div>
 

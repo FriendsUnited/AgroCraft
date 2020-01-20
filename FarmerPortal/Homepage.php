@@ -506,60 +506,130 @@
           #navbar i {
                padding-right: 1%;
           }
-          .time{background-color:red; 
+
+          .time {
+               background-color: red;
                /* margin-left: 20px; */
           }
-       .whats{
-text-align: center;
-margin-left: 30%;       }
 
-.f1{
-     float: left;
-     background-color:#fff;
-    border:1px solid red;    
-    height:200px;
-    border-radius:50%;
-  width: 200px;
-     padding-top: 20px;
-     border-style: solid;
-     background-image: url("../Images/Website/f2.jpg");
-background-size: 200px 200px;
-background-repeat:no-repeat;
-     border-color: #000;
-/* opacity: 5%; */
-}
-.t1{
-     padding-top: 70px;
-     text-align: center;
-     justify-items: center;
-     color: black;
-     font-weight: bold;
-}
-.t5{
-margin-top:-13px; 
-}
-.t4{
-     margin-top:-13px; 
+          .whats {
+               text-align: center;
+               margin-left: 30%;
+          }
 
-}
-.whatsnew{
-     /* background-image: url("../Images/Website/back.jpeg"); */
+          .f1 {
+               float: left;
+               background-color: #fff;
+               border: 1px solid red;
+               height: 200px;
+               border-radius: 50%;
+               width: 200px;
+               padding-top: 20px;
+               border-style: solid;
+               background-image: url("../Images/Website/f2.jpg");
+               background-size: 200px 200px;
+               background-repeat: no-repeat;
+               border-color: #000;
+               /* opacity: 5%; */
+          }
 
-     background-color: red;
-     
-}
-.f2{
-     margin-left: 130px;
-     margin-right: 150px;
-}
-.f3{
-     margin-right: 150px;
+          .t1 {
+               padding-top: 70px;
+               text-align: center;
+               justify-items: center;
+               color: black;
+               font-weight: bold;
+          }
 
-}
-      .f4{
-          margin-right: 150px;
-      }
-      .f1:hover
+          .t5 {
+               margin-top: -13px;
+          }
+
+          .t4 {
+               margin-top: -13px;
+
+          }
+
+          .whatsnew {
+               /* background-image: url("../Images/Website/back.jpeg"); */
+
+               background-color: red;
+
+          }
+
+          .f2 {
+               margin-left: 130px;
+               margin-right: 150px;
+          }
+
+          .f3 {
+               margin-right: 150px;
+
+          }
+
+          .f4 {
+               margin-right: 150px;
+          }
+
+          .pictus {
+               margin-top: 200px;
+               /* background-color: red; */
+          }
+
+          .pictus>img {
+               height: 100px;
+
+               width: 150px;
+          }
+
+          .imag1 {
+               margin-top: 20px;
+               margin-left: 180px;
+          }
+
+          .imag2 {
+               margin-top: 20px;
+
+               margin-left: 340px;
+
+          }
+
+          .imag3 {
+               margin-top: 20px;
+
+               margin-left: 350px;
+
+          }
+
+          .imag1_under {
+               max-width: 250px;
+               width: 100%;
+               min-height: 100px;
+               margin-left: 100px;
+               text-align: center;
+               font-size: 20px;
+
+          }
+
+          .imag2_under {
+               max-width: 250px;
+               width: 100%;
+               min-height: 100px;
+               margin-left: 290px;
+               margin-top: 20px;
+               text-align: center;
+               font-size: 20px;
+          }
+
+          .imag3_under {
+               max-width: 250px;
+               width: 100%;
+               font-size: 20px;
+
+               min-height: 100px;
+               margin-left: 290px;
+               text-align: center;
+          }
      </style>
 
 </head>
@@ -637,37 +707,73 @@ margin-top:-13px;
                          <img class="images1" src="../Images/Website/Farmer2.jpeg" height="500px" width="1350px" alt="...">
                     </div>
                     <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/Farmer4.jpg"height="500px" width="1350px" alt="...">
+                         <img class="images1" src="../Images/Website/Farmer4.jpg" height="500px" width="1350px" alt="...">
                     </div>
                </div>
           </div>
      </div>
+
+
+     <div class="pictus">
+          
+          <div class=content_item><label style="font-size :40px; text-shadow: 1px 1px 1px gray;"><b>Features</b></label></div>
+
+          <table>
+               <tr>
+                    <td><img class="imag1" src="../Images/Website/picha1.jpg">
+                    <td><img class="imag3" src="../Images/Website/picha3.jpg"></td>
+                    <td><img class="imag2" src="../Images/Website/picha4.jpg"></td>
+
+
+               </tr>
+               <tr>
+                    <td><label class="imag1_under"><b>Fixed Price Selling</b>
+                              Registered buyers can order organic products online by making online payment for the product which was set by the seller</label></td>
+                    </td>
+                    <td><label class="imag2_under">
+                              <b> Enquiry Based Buying</b>
+                              Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers </td>
+                    </td>
+                    <td><label class="imag3_under">
+                              <b> Raising Future Demands</b>
+                              Registered buyers can place their request for products which will be produced by the farmers in future </td>
+                    </td>
+               </tr>
+          </table>
+
+     </div>
+
+
+
+
      <img class="whats" src="../Images/Website/whats.jpeg">
 
-<div class="whatsnew">
-<!-- <img class="whats" src="../Images/Website/whats.jpeg"> -->
-                    
-     <div class="f1 f2">
-       <div class="t1">   SMS SYSTEM </div>
-          <!-- <img class="images1" src="../Images/Website/back.jpg"> -->
+     <div class="whatsnew">
+          <!-- <img class="whats" src="../Images/Website/whats.jpeg"> -->
 
-     </div>
-     <div class="f1 f3">
-      <div class="t1">    CALL CENTER </div>
+          <div class="f1 f2">
+               <div class="t1"> SMS SYSTEM </div>
+               <!-- <img class="images1" src="../Images/Website/back.jpg"> -->
 
-     </div>
- <div class="f1 f4">
-      <div class="t1 t4"> PAYTM & OTHER OPTIONS</div>
-      
-     </div>
-     <div class="f1 f5">
-      <div class="t1 t5">WIDE RANGE OF BUYERS
           </div>
-      
+          <div class="f1 f3">
+               <div class="t1"> CALL CENTER </div>
+
+          </div>
+          <div class="f1 f4">
+               <div class="t1 t4"> PAYTM & OTHER OPTIONS</div>
+
+          </div>
+          <div class="f1 f5">
+               <div class="t1 t5">WIDE RANGE OF BUYERS
+               </div>
+
+          </div>
+
      </div>
 
-</div>
-<div class="slideshow" id="showing">
+
+     <div class="slideshow" id="showing">
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
@@ -685,7 +791,7 @@ margin-top:-13px;
                          <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
                     </div>
                     <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/quote1.jpeg"height="500px" width="1350px" alt="...">
+                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
                     </div>
                </div>
           </div>

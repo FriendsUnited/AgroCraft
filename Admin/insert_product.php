@@ -19,8 +19,34 @@ include("includes/db.php");  // db connections
     </script> -->
 
     <title>Inserting Product</title>
-    <link rel="stylesheet" type="text/css" href="../Styles/insert_product.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./Styles/insert_product.css"> -->
 </head>
+
+<style>
+    body {
+        background-image: url(../Images/Website/FarmerLogin.jpg);
+        position: relative;
+        text-align: center;
+        background-size: 30px;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Times New Roman', Times, serif;
+        /* border-collapse: collapse; */
+    }
+
+
+    #insnow {
+        
+        width: 200px;
+        height: 40px;
+        background-color: lawngreen;
+    }
+
+    #tab {
+        font-size: 19px;
+        table-layout: fixed;
+    }
+</style>
 
 <body>
 
@@ -81,11 +107,14 @@ include("includes/db.php");  // db connections
                 <td colspan=2><input type="text" name="product_stock" required></td>
             </tr>
 
-            <tr id="proprice">
-                <td align="center"><b>Product Price : <br>(Per kg)</b></td>
+            <tr id="propriceMax">
+                <td align="center"><b>Product MRP : <br>(Per kg)</b></td>
                 <td colspan=2><input type="text" name="product_price" required></td>
             </tr>
-
+            <tr id="propriceMin">
+                <td align="center"><b>Product Base Price : <br>(Per kg)</b></td>
+                <td colspan=2><input type="text" name="product_price" required></td>
+            </tr>
             <tr id="prodesc">
 
                 <td align="center"><b>Product Description:</b></td>

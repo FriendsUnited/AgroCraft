@@ -1,3 +1,20 @@
+var requirejs = require('requirejs');
+
+requirejs.config({
+
+    nodeRequire: require
+});
+const express = require('express');
+const mysql = require('mysql');
+
+const app = express();
+app.listen('3000')
+const con = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "agrocraft"
+});
 
 var __slice = [].slice;
 
@@ -110,7 +127,7 @@ $(document).ready(function () {
     var id = $(this).parent().find('input.post_id').val();
     $.get('http://localhost/AgroCraft/Review/rating.php?add_stars=' + value + "&post_id=" + id, function (data) {
       if (data) {
-        alert(data);
+        alert(value);
       } else {
         alert("Error Insertin Record!!!");
       }

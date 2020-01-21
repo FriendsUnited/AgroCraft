@@ -97,7 +97,6 @@
                     var array = ['Uttarkashi', 'Chamoli', 'Rudraprayag *', 'Tehri Garhwal', 'Dehradun', 'Garhwal', 'Pithoragarh', 'Bageshwar', 'Almora', 'Champawat', 'Nainital', 'Udham Singh Nagar *', 'Hardwar'];
                }
 
-
                var string = "";
                for (let i = 0; i < array.length; i++) {
                     string = string + "<option>" + array[i] + "</option>";

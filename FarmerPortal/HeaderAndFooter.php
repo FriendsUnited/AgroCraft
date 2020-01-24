@@ -690,113 +690,27 @@
 
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
-
-               <div class="carousel-inner">
-
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/Farmer1.jpeg" height="500px" width="1350px" alt=".x.">
-                         <div class="time"></div>
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/Farmer2.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/Farmer4.jpg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
-          </div>
-     </div>
-
-
-     <div class="pictus">
-
-          <div class=content_item><label style="font-size :40px; text-shadow: 1px 1px 1px gray;"><b>Features</b></label></div>
-
-          <table>
-               <tr>
-                    <td><img class="imag1" src="../Images/Website/picha1.jpg">
-                    <td><img class="imag3" src="../Images/Website/picha3.jpg"></td>
-                    <td><img class="imag2" src="../Images/Website/picha4.jpg"></td>
-
-
-               </tr>
-               <tr>
-                    <td><label class="imag1_under"><b>Fixed Price Selling</b>
-                              Registered buyers can order organic products online by making online payment for the product which was set by the seller</label></td>
-                    </td>
-                    <td><label class="imag2_under">
-                              <b> Enquiry Based Buying</b>
-                              Registered buyers can place enquiry of a product and eligible sellers can place their quotes. The buyer can then buy from the qualified sellers </td>
-                    </td>
-                    <td><label class="imag3_under">
-                              <b> Raising Future Demands</b>
-                              Registered buyers can place their request for products which will be produced by the farmers in future </td>
-                    </td>
-               </tr>
-          </table>
-
-     </div>
 
 
 
 
-     <img class="whats" src="../Images/Website/whats.jpeg">
-
-     <div class="whatsnew">
-          <!-- <img class="whats" src="../Images/Website/whats.jpeg"> -->
-
-          <div class="f1 f2">
-               <div class="t1"> SMS SYSTEM </div>
-               <!-- <img class="images1" src="../Images/Website/back.jpg"> -->
-
-          </div>
-          <div class="f1 f3">
-               <div class="t1"> CALL CENTER </div>
-
-          </div>
-          <div class="f1 f4">
-               <div class="t1 t4"> PAYTM & OTHER OPTIONS</div>
-
-          </div>
-          <div class="f1 f5">
-               <div class="t1 t5">WIDE RANGE OF BUYERS
-               </div>
-
-          </div>
-
-     </div>
 
 
-     <div class="slideshow" id="showing">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-               <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               </ol>
 
-               <div class="carousel-inner">
 
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt=".x.">
-                         <div class="time"></div>
-                    </div>
-                    <div class="carousel-item active">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                         <img class="images1" src="../Images/Website/quote1.jpeg" height="500px" width="1350px" alt="...">
-                    </div>
-               </div>
-          </div>
-     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

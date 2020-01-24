@@ -1,10 +1,6 @@
-<?php
+<!-- <?php
      include("../Functions/functions.php");
-<<<<<<< HEAD
-     ?> 
-=======
      ?> -->
->>>>>>> 03a64252d40d6438e0aa5335514172210b63f247
 
 <!DOCTYPE html>
 
@@ -672,42 +668,45 @@
           .dric {
                margin-left: -50px;
           }
-          .container{
-               float:left;
+
+          .container {
+               float: left;
           }
-          .profile-img{
-               float:left;
-               width:340px;
+
+          .profile-img {
+               float: left;
+               width: 340px;
                height: 200px;
 
           }
-          .profile-img img{
+
+          .profile-img img {
                border-radius: 50%;
                height: 230px;
                width: 230px;
-               border:4px solid white;
+               border: 4px solid white;
                left: 50px
           }
+
           /* .profile-header{
                background:whitesmoke;
                width: 100%;
                display:flex;
           } */
           .box {
-            color: rgb(6, 36, 7);
-            width: 650px;
-             line-height: 40px; 
-            margin: auto;
-            text-align: center;
-            margin-top: 450px;
-            padding: 5px;
-            border-style: outset;
-            /* border-width: 5px;
+               color: rgb(6, 36, 7);
+               width: 650px;
+               line-height: 40px;
+               margin: auto;
+               text-align: center;
+               margin-top: 450px;
+               padding: 5px;
+               border-style: outset;
+               /* border-width: 5px;
             border-radius: 16px; */
-            border-color: green;
-            /* font-size:20px; */
-        }
-        
+               border-color: green;
+               /* font-size:20px; */
+          }
      </style>
 
 </head>
@@ -851,7 +850,7 @@
           </div>
      </div>
 
-       <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br> 
+     <!-- <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Best Products </b></label></div><br> 
      
 <div class="container">
  <div class="profile-header">
@@ -887,14 +886,15 @@
         </div> -->
 
 
-       <div class="profile-body">
-            <div class="profile-poststab">
-                <br><br><h1>Images</h1>
-            </div>
-       </div>
-  </div>        
-</div>    
-</div>
+     <div class="profile-body">
+          <div class="profile-poststab">
+               <br><br>
+               <h1>Images</h1>
+          </div>
+     </div>
+     </div>
+     </div>
+     </div>
      <div class='inputwrapper'>
           <br>
           <a href='../BuyerPortal/BuyerProductDetails.php?id=$product_id'><img src='../Admin/product_images/$product_image' alt='Image Not Available' onerror=this.src='../Images/Website/noimage.jpg' style='height: 100px; width: 100px;'><br><br></a>
@@ -905,40 +905,40 @@
                <input class='numberinput' type='number' name='quantity' value='1'>
           </form>
           <a href='../BuyerPortal/BuyerHomepage.php?add_cart=$product_id'><button class='addtocart'>ADD TO CART <i class='fas fa-shopping-cart' style=' background-color:#FFD700'></i></button></a><br><br>
-     </div> 
- 
+     </div>
+
      <div class="box">
-        <form action="EditProfile.php" method="post">
-        <table align = "center">
-            <tr colspan = 2>
-                <h1> FARMER'S  PROFILE</h1>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Name :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $name?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Phone Number :</b></label></td>
-                <td><textarea rows="2" column="10" disabled> <?php echo $phone?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td><label><b>Address :</b></label></td>
-                <td><textarea rows="3" column="56" disabled> <?php echo $address?> </textarea><br></td>
-            </tr>
+          <form action="EditProfile.php" method="post">
+               <table align="center">
+                    <tr colspan=2>
+                         <h1> FARMER'S PROFILE</h1>
+                    </tr>
+                    <tr align="center">
+                         <td><label><b>Name :</b></label></td>
+                         <td><textarea rows="2" column="10" disabled> <?php echo $name ?> </textarea><br></td>
+                    </tr>
+                    <tr align="center">
+                         <td><label><b>Phone Number :</b></label></td>
+                         <td><textarea rows="2" column="10" disabled> <?php echo $phone ?> </textarea><br></td>
+                    </tr>
+                    <tr align="center">
+                         <td><label><b>Address :</b></label></td>
+                         <td><textarea rows="3" column="56" disabled> <?php echo $address ?> </textarea><br></td>
+                    </tr>
 
-            <tr align = "center">
-                <td><label><b>State :</b></label></td>
-                <td><textarea rows="3" column="56" disabled> <?php echo $state?> </textarea><br></td>
-            </tr>
-            <tr align = "center">
-                <td align="center"><label><b>District :</b></label></td>
-                <td align="center"><textarea rows="3" column="56" disabled> <?php echo $district?> </textarea><br></td>
-            </tr>
+                    <tr align="center">
+                         <td><label><b>State :</b></label></td>
+                         <td><textarea rows="3" column="56" disabled> <?php echo $state ?> </textarea><br></td>
+                    </tr>
+                    <tr align="center">
+                         <td align="center"><label><b>District :</b></label></td>
+                         <td align="center"><textarea rows="3" column="56" disabled> <?php echo $district ?> </textarea><br></td>
+                    </tr>
 
-          
-            </table>
 
-          </div>
+               </table>
+
+     </div>
 
 
 

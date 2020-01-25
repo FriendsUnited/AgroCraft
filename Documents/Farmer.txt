@@ -17,7 +17,6 @@ Portal for Farmers to sell the product at a better rate
 	o Overall profitability in the deal for the buyer to purchase directly from farm , excluding transportation 
 
 • How does this help CDK : What’s in it for us 
-	o No Direct link
 
 • Technology that can be used as a platform for connecting car buyer to Seller Domain Bucket 
 	o Agriculture 

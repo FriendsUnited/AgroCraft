@@ -631,6 +631,110 @@
                margin-left: 290px;
                text-align: center;
           }
+          .order {
+               font-size: 30px;
+               /* margin-left:20%; */
+               border-color: #00b300;
+               border-style: solid;
+               border-radius: 100%;
+               padding: 15px;
+               margin-top: 20px;
+
+               border-width: 2px;
+
+          }
+
+          .order1 {
+               background-color: #FFD700;
+
+          }
+
+          .selectsionz{
+               border-radius: 25%;
+          padding: 2%;
+          border-color:black;
+          margin-top: 10px;
+               /* background-color: transparent; */
+               background-color: #FFD700;
+
+
+          }
+
+
+
+          .a1 {
+               /* width:100px; */
+               margin-left: 400px;
+               margin-top: -44px;
+               margin-bottom: 10px;
+               /* margin-bottom: 100px; */
+          }
+
+          ul {
+               list-style: none;
+               /* display: inline-block; */
+               text-align: center;
+               /* width:200px; */
+          }
+
+          .ash1 {
+               width: 300px;
+               text-align: center;
+
+               /* background-color: greenyellow; */
+               display: inline-block;
+          }
+
+          .col1 {
+            font-size: 20px;
+            background-color: #f5ca0a;
+
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            float: left;
+            width: 250px;
+            margin-left: 100px;
+
+        }
+        .col2 {
+            float: left;
+            margin-left: 20px;
+
+        }
+
+        .text1 {
+            font-size: 20px;
+            height: 50px;
+            width: 300px;
+            border-radius: 10px;
+            border-style: solid;
+            padding: 10px;
+        }
+
+        .grp2 {
+             margin-left: 30px;
+            /* float: left; */
+        }
+
+        .col3 {
+            background-color: #f5ca0a;
+
+            font-size: 20px;
+            border-style: solid;
+            border-radius: 10px;
+            padding: 10px;
+            width: 250px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .col4 {
+            /* margin-left: 20px; */
+            float: left;
+
+        }
+
      </style>
 
 </head>
@@ -688,6 +792,132 @@
           <hr>
      </div>
 
+
+     <ul class="ash">
+          <li class="ash1"> <i class='fas fa-people-carry order order1 '></i>
+               <br><i class="fa fa-check aria" aria-hidden="true"></i><br><button class="selectsionz">Packing</button>
+          </li>
+          <li class="ash1"> <i class="fas fa-truck order order2"></i>
+               <br><i class="fa fa-check aria" aria-hidden="true"></i><br><button class="selectsionz">Dispatch</button>
+          </li>
+          <li class="ash1"> <i class="fas fa-road order order3"></i>
+               <br><i class="fa fa-refresh aria" aria-hidden="true"></i>
+               <br><button class="selectsionz">Half way </button></li>
+          <li class="ash1"><i class="fas fa-map-marker-alt order order4"></i><br><i class="fa fa-times aria" aria-hidden="true"></i>
+               <br><button class="selectsionz">Reached</button>
+          </li>
+     </ul>
+
+<table>
+        <tr id="protitle">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Name</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>Gladina</label>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
+
+                    <div class="col3 t1"><b>Phone number</b></div>
+                    <div class="col4">
+                    <label class="text1" name="product_title" >9819104641</label>            </div>
+
+            </td>
+
+            </div>
+
+        </tr>
+        <tr id="protitle">
+            <td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Address</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>mumbai</label>
+            </td>
+            </div>
+            </div>
+            <td>
+             
+
+        </tr>
+        <tr>  
+             <td>
+          
+           
+                <div class="grp1 movedown">
+                    <div class="col1 t1"><b> Delivary time</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>approx 3 am</label>
+            </td>
+            </div>
+            </div>
+            <td>
+           
+                <div class="grp2 movedown">
+
+                    <div class="col3 t1"><b>Delivary date</b></div>
+                    <div class="col4">
+                    <label class="text1" name="product_title" >8th December</label>            </div>
+
+            </td>
+
+            </div>
+          </tr>
+          <tr><td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Payment Mode</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>COD</label>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
+
+                    <div class="col3 t1"><b>Delivary Mode</b></div>
+                    <div class="col4">
+
+                    <label class="text1" name="product_title" >By Farmer</label>            </div>
+
+            </td>
+
+            </div>
+          </tr>
+          <tr><td>
+                <div class="grp1">
+                    <div class="col1 t1 movedown"><b> Item Name</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>COD</label>
+            </td>
+            </div>
+            </div>
+            
+          </tr>
+          
+        <tr><td>
+                <div class="grp1">
+                    <div class="col1 t1"><b> Price</b> </div>
+
+                    <div class="col2"><label class="text1" name="product_title" required>200</label>
+            </td>
+            </div>
+            </div>
+            <td>
+                <div class="grp2">
+
+                    <div class="col3 t1"><b>Quantity</b></div>
+                    <div class="col4">
+                    <label class="text1" name="product_title" >2 kg</label>            </div>
+
+            </td>
+
+            </div>
+          </tr>
+
+</table>
 
 
 

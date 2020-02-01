@@ -2,8 +2,8 @@
 	include("../Includes/db.php");
 	//session_start();
 	include("../Functions/functions.php");
-	?> 
-	  -->
+	?>  -->
+	 
 
 <!DOCTYPE html>
 <html>

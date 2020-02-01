@@ -603,6 +603,25 @@
           .trow {
                align-content: center;
           }
+          .bg{
+               background-color: #f5ca0a;
+width:220px;
+margin-left:650px;
+font-size: 20px;
+border-style: solid;
+border-radius: 10px;
+padding: 10px;
+          }
+          .sp{
+               background-color: #f5ca0a;
+width:620px;
+margin-left:650px;
+font-size: 20px;
+border-style: solid;
+border-radius: 10px;
+padding: 10px;
+margin-left:500px;
+          }
      </style>
 
 </head>
@@ -661,8 +680,20 @@
 
 
      <br>
-
-     <div class=content_item><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Call Center , Location's & Langauges</b></label></div>
+     <div class="content_item bg"><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>SMS</b></label></div>
+     <div class="content_item " ><label style="font-size :24px; text-shadow: 1px 1px 1px gray;"><b>Insert Product</b></label></div>
+     <hr>
+     <div class=content_item ><label style="font-size :18px; text-shadow: 1px 1px 1px gray;">*#*,insert,password,product title,product category , product type , product stock ,MRP,Base Price, product keywords , product description ,product delivery</label></div>
+     <hr>
+     <div class="content_item "><label style="font-size :24px; text-shadow: 1px 1px 1px gray;"><b>Update Product</b></label></div>
+     <hr>
+     <div class=content_item><label style="font-size :18px; text-shadow: 1px 1px 1px gray;">*#*,update,password,product title,product category , product type , product stock ,MRP,Base Price, product keywords , product description ,product delivery</label></div>
+     <hr>
+     <div class="content_item "><label style="font-size :24px; text-shadow: 1px 1px 1px gray;"><b>Delete Product</b></label></div>
+     <hr>
+     <div class=content_item><label style="font-size :18px; text-shadow: 1px 1px 1px gray;">*#*,delete,password,product title,MRP</label></div>
+     <hr>
+     <div class="content_item sp"><label style="font-size :30px; text-shadow: 1px 1px 1px gray;"><b>Call Center , Location's & Langauges</b></label></div>
      <br>
      <h4 align="center">Phone Number : 9820835845</h4>
      <br>
